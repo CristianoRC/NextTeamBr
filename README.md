@@ -1,6 +1,5 @@
-# LogBook-NextTeamBr
 
-<h1>Sistema de LogBook NextTeamBr
+<h1>Sistema de LogBook NextTeamBr</h1>
 
 <b>Site:</b> http://cristianoprogramador.com/
 
@@ -11,4 +10,4 @@
 <b>Site NextTeamB:</b> http://www.nextteambr.com.br/
 
 <p> </p>
-<h2>Telemetry Server: https://git.io/vgEBB
+<h2>Telemetry Server: https://git.io/vgEBB<h2>
