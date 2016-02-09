@@ -11,6 +11,8 @@ namespace NextteamBr
         bool CargaIntregue = false;
         bool VerificarDistanciaLocalDeEntrega = true;
         bool Som3KMExecutado = false;
+        Frete InformacoesFrete = new Frete();
+
 
         public Frm_Principal()
         {
@@ -55,6 +57,9 @@ namespace NextteamBr
                     Inicio.Play();
 
                     Btm_FreteCancelado.Enabled = true;
+
+                    InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
+                    InformacoesFrete.Dano = informacoesGame.trailer.wear;
                 }
             }
 
@@ -83,21 +88,33 @@ namespace NextteamBr
 
                 if (CargaIntregue == false)
                 {
-                    if (informacoesGame.navigation.estimatedDistance <= 80 && informacoesGame.navigation.estimatedDistance >= 50)
+                    if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
                     {
                         SoundPlayer Entregue = new SoundPlayer(Properties.Resources.CargaEntregue);
                         Entregue.Play();
 
                         CargaIntregue = true;
+
+                        InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
                     }
                 }
             }
 
+            //Aviso sobre dano no trailler
+
+            if (informacoesGame.trailer.wear > InformacoesFrete.Dano)
+            {
+                InformacoesFrete.Dano = informacoesGame.trailer.wear;
+
+                SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
+                Dano.Play();
+            }
+
+
+            //Verificando se a carga foi entregue guardando informacoes
             if (CargaIntregue == true)
             {
 
-
-                Application.Restart();
             }
         }
 
