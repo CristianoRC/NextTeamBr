@@ -10,6 +10,7 @@ namespace NextteamBr
         bool inicioViajem = false;
         bool CargaIntregue = false;
         bool VerificarDistanciaLocalDeEntrega = true;
+        bool Som3KMExecutado = false;
 
         public Frm_Principal()
         {
@@ -18,11 +19,10 @@ namespace NextteamBr
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
-            Btm_IniciarViagem.Enabled = true;
+
             Btm_FreteCancelado.Enabled = false;
         }
 
-        //Refazer esse código quando estiver pronto
         private void timer1_Tick(object sender, EventArgs e)
         {
             ControllerTelemetry.GerarInformacoes();
@@ -42,7 +42,7 @@ namespace NextteamBr
 
             //TODO:Transformar todos os ifs em métodos.
 
-           
+
             //Verificando se carga esta conectada e se estiver desabilita essa estrutura de controle.
 
             if (inicioViajem == false)
@@ -53,43 +53,62 @@ namespace NextteamBr
 
                     SoundPlayer Inicio = new SoundPlayer(Properties.Resources.CarregadoComSucesso);
                     Inicio.Play();
+
+                    Btm_FreteCancelado.Enabled = true;
                 }
             }
-           
+
             //Ele fica verificando a distancia de entrega até chegar aos 3KM faltando.
             if (VerificarDistanciaLocalDeEntrega)
             {
-                if (Ferramentas.VerificarDistanciaEntrega(informacoesGame.navigation.estimatedDistance))
+                if (Som3KMExecutado == false)
                 {
-                    VerificarDistanciaLocalDeEntrega = false;
+                    if (informacoesGame.navigation.estimatedDistance <= 3000 && informacoesGame.navigation.estimatedDistance >= 2000) //2000 esta apenas usado para viajens pequenas.
+                    {
+                        VerificarDistanciaLocalDeEntrega = false;
+
+                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.EstaProximo);
+                        Entregue.Play();
+
+                        Som3KMExecutado = true;
+                    }
                 }
             }
 
 
             //Se ele estiver mais perto do que 3 km da empresa ele verifica se esta a menos de 100 m para dar o aviso de carga finalizada
-            if(VerificarDistanciaLocalDeEntrega == false)
+
+            if (VerificarDistanciaLocalDeEntrega == false)//Passa se estiver abaixo dos 3 km
             {
-                if (Ferramentas.EntrouNaEmpresa(informacoesGame.navigation.estimatedDistance))
+
+                if (CargaIntregue == false)
                 {
-                    CargaIntregue = true;
+                    if (informacoesGame.navigation.estimatedDistance <= 80 && informacoesGame.navigation.estimatedDistance >= 50)
+                    {
+                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.CargaEntregue);
+                        Entregue.Play();
 
-                    SoundPlayer Entregue = new SoundPlayer(Properties.Resources.CargaEntregue);
-                    Entregue.Play();
-
-                    //TODO:Código para salvar informações no arquivo final aqui.
+                        CargaIntregue = true;
+                    }
                 }
             }
 
-            if (CargaIntregue)
+            if (CargaIntregue == true)
             {
+
+
                 Application.Restart();
             }
         }
 
         private void Btm_FreteCancelado_Click(object sender, EventArgs e)
         {
-            Ferramentas.ZerarInformacoes();
             Application.Restart();
+        }
+
+        private void Frm_Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Ferramentas.ZerarInformacoes(); //Fecha o servidor(API)
         }
 
         private void Btm_IniciarViagem_Click(object sender, EventArgs e)
@@ -102,11 +121,6 @@ namespace NextteamBr
             Btm_FreteCancelado.Enabled = true;
 
             Process.Start(@"server\Ets2Telemetry.exe");
-        }
-
-        private void Frm_Principal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Ferramentas.ZerarInformacoes();
         }
     }
 }

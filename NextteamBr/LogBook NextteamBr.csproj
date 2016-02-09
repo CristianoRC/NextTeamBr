@@ -99,9 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\CarregadoComSucesso.wav" />
     <None Include="Resources\LogBook.wav" />
     <None Include="Resources\Colisao.wav" />
-    <None Include="Resources\CarregadoComSucesso.wav" />
     <None Include="Resources\EstaProximo.wav" />
     <None Include="Resources\CargaEntregue.wav" />
     <None Include="Img\registro_km_layout.jpg" />

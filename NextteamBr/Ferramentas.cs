@@ -31,44 +31,6 @@ namespace NextteamBr
         }
 
         /// <summary>
-        /// Verificando se a distancia para chegar até o ponto de entrega é menos a 3KM (3000 m)
-        /// </summary>
-        /// <returns></returns>
-        public static bool VerificarDistanciaEntrega(int DistanciaEstimada)
-        {
-            bool saida = false;
-
-            if (DistanciaEstimada == 3000)
-            {
-                SoundPlayer EstaProximo = new SoundPlayer(Properties.Resources.EstaProximo);
-                EstaProximo.Play();
-
-                saida = true;
-            }
-
-            return saida;
-        }
-
-        /// <summary>
-        /// Verificando se o motorista esta perto da empresa para finalizar a carga.
-        /// </summary>
-        /// <returns></returns>
-        public static bool EntrouNaEmpresa(int DistanciaEstimada)
-        {
-            bool saida = false;
-
-            if (DistanciaEstimada == 100)
-            {
-                SoundPlayer CargaEntregue = new SoundPlayer(Properties.Resources.CargaEntregue);
-                CargaEntregue.Play();
-
-                saida = true;
-            }
-
-            return saida;
-        }
-
-        /// <summary>
         ///Finalizando o servidor 
         /// </summary>
         public static void ZerarInformacoes()
