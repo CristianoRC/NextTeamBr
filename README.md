@@ -7,7 +7,7 @@
 
 <b>E-mail:</b> contato@cristianoprogramador.com
 
-<b>Site NextTeamB:</b> http://www.nextteambr.com.br/
+<b>Site NextTeamBr:</b> http://www.nextteambr.com.br/
 
 <p> </p>
-<h2>Telemetry Server: https://git.io/vgEBB<h2>
+<h2>Telemetry Server:<h2> <b>https://git.io/vgEBB<b>
