@@ -1,7 +1,6 @@
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\LogBook NextteamBr.exe.config
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\LogBook NextteamBr.exe
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\LogBook NextteamBr.pdb
-D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\Ets2SdkClient.dll
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\Newtonsoft.Json.dll
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\Newtonsoft.Json.xml
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\NextteamBr.Frm_Principal.resources
@@ -9,3 +8,4 @@ D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\NextteamBr.Properties.Reso
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.exe
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.pdb
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache

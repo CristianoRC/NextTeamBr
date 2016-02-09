@@ -138,22 +138,29 @@
             // 
             // Btm_FreteCancelado
             // 
-            this.Btm_FreteCancelado.Location = new System.Drawing.Point(483, 49);
+            this.Btm_FreteCancelado.BackColor = System.Drawing.Color.Transparent;
+            this.Btm_FreteCancelado.Enabled = false;
+            this.Btm_FreteCancelado.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Btm_FreteCancelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btm_FreteCancelado.Location = new System.Drawing.Point(483, 121);
             this.Btm_FreteCancelado.Name = "Btm_FreteCancelado";
             this.Btm_FreteCancelado.Size = new System.Drawing.Size(108, 23);
             this.Btm_FreteCancelado.TabIndex = 9;
             this.Btm_FreteCancelado.Text = "Frete Cancelado";
-            this.Btm_FreteCancelado.UseVisualStyleBackColor = true;
+            this.Btm_FreteCancelado.UseVisualStyleBackColor = false;
             this.Btm_FreteCancelado.Click += new System.EventHandler(this.Btm_FreteCancelado_Click);
             // 
             // Btm_IniciarViagem
             // 
-            this.Btm_IniciarViagem.Location = new System.Drawing.Point(483, 12);
+            this.Btm_IniciarViagem.BackColor = System.Drawing.Color.Transparent;
+            this.Btm_IniciarViagem.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Btm_IniciarViagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btm_IniciarViagem.Location = new System.Drawing.Point(483, 84);
             this.Btm_IniciarViagem.Name = "Btm_IniciarViagem";
             this.Btm_IniciarViagem.Size = new System.Drawing.Size(108, 23);
             this.Btm_IniciarViagem.TabIndex = 10;
             this.Btm_IniciarViagem.Text = "Iniciar";
-            this.Btm_IniciarViagem.UseVisualStyleBackColor = true;
+            this.Btm_IniciarViagem.UseVisualStyleBackColor = false;
             this.Btm_IniciarViagem.Click += new System.EventHandler(this.Btm_IniciarViagem_Click);
             // 
             // Frm_Principal
@@ -179,6 +186,7 @@
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogBook NextTeamBr";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Principal_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
