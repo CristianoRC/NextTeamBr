@@ -114,7 +114,7 @@ namespace NextteamBr
             //Verificando se a carga foi entregue guardando informacoes
             if (CargaIntregue == true)
             {
-
+                //Implementar no metodo da ControllerTelemetry
             }
         }
 
@@ -137,7 +137,11 @@ namespace NextteamBr
             Btm_IniciarViagem.Enabled = false;
             Btm_FreteCancelado.Enabled = true;
 
-            Process.Start(@"server\Ets2Telemetry.exe");
+            Process processo = new Process();
+
+            processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
+            processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            processo.Start();
         }
     }
 }

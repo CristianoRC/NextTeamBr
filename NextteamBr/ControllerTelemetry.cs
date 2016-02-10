@@ -7,6 +7,8 @@ namespace NextteamBr
     public class ControllerTelemetry
     {
 
+        //TODO:Converter métodos para assíncronos.
+
         /// <summary>
         /// Classe usada para gerar arquivo de informações da viajem
         /// </summary>
@@ -21,16 +23,18 @@ namespace NextteamBr
         /// <returns></returns>
         public static string GetJSON()
         {
+
+
             WebRequest req = WebRequest.Create("http://localhost:25555/api/ets2/telemetry");
             WebResponse res = req.GetResponse();
             Stream dataStream = res.GetResponseStream();
             StreamReader reader = new StreamReader(dataStream);
-            string resposta = reader.ReadToEnd();
 
+            string Resposta = reader.ReadToEnd();
             reader.Close();
             res.Close();
 
-            return resposta;
+            return Resposta;
         }
 
         /// <summary>
