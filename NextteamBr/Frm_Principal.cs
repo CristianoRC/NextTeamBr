@@ -73,6 +73,8 @@ namespace NextteamBr
             processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
             processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             processo.Start();
+
+            InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
         }
 
 
@@ -85,10 +87,6 @@ namespace NextteamBr
 
                 SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
                 Dano.Play();
-            }
-            else
-            {
-                InformacoesFrete.Dano = informacoesGame.trailer.wear;
             }
         }
 
@@ -155,12 +153,22 @@ namespace NextteamBr
 
                         ControllerFrete.SalvarFrete(InformacoesFrete, "NextTeamBr");
 
+                        InformacoesFrete.KmRodado = CalcularKMRodado(InformacoesFrete.DistanciaInicial, informacoesGame.truck.odometer);
+
                         Thread.Sleep(6000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
 
                         Application.Restart();
                     }
                 }
             }
+        }
+
+        private double CalcularKMRodado(double Inicial, double Final)
+        {
+            double saida = Final - Inicial;
+
+
+            return saida;
         }
     }
 }
