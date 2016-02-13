@@ -7,6 +7,8 @@
 
 <b>E-mail:</b> contato@cristianoprogramador.com
 
+<b>Tarefas:</b> https://trello.com/b/JmAecxek/log-book-euro-truck-2
+
 <b>Site NextTeamBr:</b> http://www.nextteambr.com.br/
 
 <p> </p>
