@@ -14,5 +14,11 @@
 <b>License:</b> <a href="https://github.com/CristianoRC/SoftwareOrdemDeServico/blob/master/LICENSE.txt" target="License" >License.</a>
 
 <p> </p>
-<h2>Telemetry Server:<h2> <b>https://git.io/vgEBB<b>
+<b>Telemetry Server:<b> <b>https://git.io/vgEBB<b>
+
+<hr> </hr>
+
+<b>License:</b> <a href="https://github.com/CristianoRC/SoftwareOrdemDeServico/blob/master/LICENSE.txt" target="License" >License.</a>
+
+<hr> </hr>
 
