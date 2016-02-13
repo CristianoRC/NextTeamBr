@@ -9,3 +9,4 @@ D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csproj.
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.exe
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.pdb
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\Spartacus.dll

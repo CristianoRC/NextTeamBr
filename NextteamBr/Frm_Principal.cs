@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Media;
 using System.Diagnostics;
+using System.Threading;
 
 namespace NextteamBr
 {
@@ -12,7 +13,7 @@ namespace NextteamBr
         bool VerificarDistanciaLocalDeEntrega = true;
         bool Som3KMExecutado = false;
         Frete InformacoesFrete = new Frete();
-        RootObject informacoesGame = ControllerTelemetry.ConvertJSON();
+        RootObject informacoesGame;
 
 
         public Frm_Principal()
@@ -28,6 +29,8 @@ namespace NextteamBr
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            informacoesGame = ControllerTelemetry.ConvertJSON();
+
             Lbl_CidadeInicial.Text = informacoesGame.job.sourceCity;
             Lbl_CidadeDestino.Text = informacoesGame.job.destinationCity;
             Lbl_EmpresaInicial.Text = informacoesGame.job.sourceCompany;
@@ -147,6 +150,14 @@ namespace NextteamBr
                         CargaIntregue = true;
 
                         InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
+
+                        InformacoesFrete.DataFinalFrete = DateTime.Now;
+
+                        ControllerFrete.SalvarFrete(InformacoesFrete, "NextTeamBr");
+
+                        Thread.Sleep(6000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
+
+                        Application.Restart();
                     }
                 }
             }

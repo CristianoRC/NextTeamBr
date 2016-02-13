@@ -42,6 +42,10 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Spartacus, Version=0.40.0.19897, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spartacus.0.40.0\lib\net40\Spartacus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -57,9 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControllerTelemetry.cs" />
+    <Compile Include="Frete\ControllerFrete.cs" />
+    <Compile Include="Telemetry\ControllerTelemetry.cs" />
     <Compile Include="Ferramentas.cs" />
-    <Compile Include="Frete.cs" />
+    <Compile Include="Frete\Frete.cs" />
     <Compile Include="Frm_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,7 +73,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telemetry.cs" />
+    <Compile Include="Telemetry\Telemetry.cs" />
     <EmbeddedResource Include="Frm_Principal.resx">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,10 +104,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\EstaProximo.wav" />
     <None Include="Resources\CarregadoComSucesso.wav" />
     <None Include="Resources\LogBook.wav" />
     <None Include="Resources\Colisao.wav" />
-    <None Include="Resources\EstaProximo.wav" />
     <None Include="Resources\CargaEntregue.wav" />
     <None Include="Img\registro_km_layout.jpg" />
   </ItemGroup>

@@ -9,3 +9,4 @@ D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\LogBook NextteamBr.exe
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\LogBook NextteamBr.pdb
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.exe
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.pdb
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\Spartacus.dll
