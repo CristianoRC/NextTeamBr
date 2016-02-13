@@ -12,6 +12,7 @@ namespace NextteamBr
         bool VerificarDistanciaLocalDeEntrega = true;
         bool Som3KMExecutado = false;
         Frete InformacoesFrete = new Frete();
+        RootObject informacoesGame = ControllerTelemetry.ConvertJSON();
 
 
         public Frm_Principal()
@@ -27,10 +28,6 @@ namespace NextteamBr
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ControllerTelemetry.GerarInformacoes();
-
-            RootObject informacoesGame = ControllerTelemetry.ConvertJSON();
-
             Lbl_CidadeInicial.Text = informacoesGame.job.sourceCity;
             Lbl_CidadeDestino.Text = informacoesGame.job.destinationCity;
             Lbl_EmpresaInicial.Text = informacoesGame.job.sourceCompany;
@@ -42,80 +39,11 @@ namespace NextteamBr
             Lbl_RPM.Text = informacoesGame.truck.engineRpm.ToString("0.0");
 
 
-            //TODO:Transformar todos os ifs em métodos.
+            VerificarDanoDaCarga();
+            VerificarCargaConectada();
+            VerificarDistanciaEntrega();
+            VerificarCargaEntregue();
 
-
-            //Verificando se carga esta conectada e se estiver desabilita essa estrutura de controle.
-
-            if (inicioViajem == false)
-            {
-                if (informacoesGame.trailer.attached == true)
-                {
-                    inicioViajem = true;
-
-                    SoundPlayer Inicio = new SoundPlayer(Properties.Resources.CarregadoComSucesso);
-                    Inicio.Play();
-
-                    Btm_FreteCancelado.Enabled = true;
-
-                    InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
-                    InformacoesFrete.Dano = informacoesGame.trailer.wear;
-                }
-            }
-
-            //Ele fica verificando a distancia de entrega até chegar aos 3KM faltando.
-            if (VerificarDistanciaLocalDeEntrega)
-            {
-                if (Som3KMExecutado == false)
-                {
-                    if (informacoesGame.navigation.estimatedDistance <= 3000 && informacoesGame.navigation.estimatedDistance >= 2000) //2000 esta apenas usado para viajens pequenas.
-                    {
-                        VerificarDistanciaLocalDeEntrega = false;
-
-                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.EstaProximo);
-                        Entregue.Play();
-
-                        Som3KMExecutado = true;
-                    }
-                }
-            }
-
-
-            //Se ele estiver mais perto do que 3 km da empresa ele verifica se esta a menos de 100 m para dar o aviso de carga finalizada
-
-            if (VerificarDistanciaLocalDeEntrega == false)//Passa se estiver abaixo dos 3 km
-            {
-
-                if (CargaIntregue == false)
-                {
-                    if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
-                    {
-                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.CargaEntregue);
-                        Entregue.Play();
-
-                        CargaIntregue = true;
-
-                        InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
-                    }
-                }
-            }
-
-            //Aviso sobre dano no trailler
-
-            if (informacoesGame.trailer.wear > InformacoesFrete.Dano)
-            {
-                InformacoesFrete.Dano = informacoesGame.trailer.wear;
-
-                SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
-                Dano.Play();
-            }
-
-
-            //Verificando se a carga foi entregue guardando informacoes
-            if (CargaIntregue == true)
-            {
-                //Implementar no metodo da ControllerTelemetry
-            }
         }
 
         private void Btm_FreteCancelado_Click(object sender, EventArgs e)
@@ -142,6 +70,86 @@ namespace NextteamBr
             processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
             processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             processo.Start();
+        }
+
+
+
+        private void VerificarDanoDaCarga()
+        {
+            if (informacoesGame.trailer.wear > InformacoesFrete.Dano)
+            {
+                InformacoesFrete.Dano = informacoesGame.trailer.wear;
+
+                SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
+                Dano.Play();
+            }
+            else
+            {
+                InformacoesFrete.Dano = informacoesGame.trailer.wear;
+            }
+        }
+
+        private void VerificarCargaConectada()
+        {
+            //Verificando se carga esta conectada e se estiver desabilita essa estrutura de controle.
+
+            if (inicioViajem == false)
+            {
+                if (informacoesGame.trailer.attached == true)
+                {
+                    inicioViajem = true;
+
+                    SoundPlayer Inicio = new SoundPlayer(Properties.Resources.CarregadoComSucesso);
+                    Inicio.Play();
+
+                    Btm_FreteCancelado.Enabled = true;
+
+                    InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
+                    InformacoesFrete.Dano = informacoesGame.trailer.wear;
+                }
+            }
+        }
+
+        private void VerificarDistanciaEntrega()
+        {
+            //Ele fica verificando a distancia de entrega até chegar aos 5KM faltando.
+            if (VerificarDistanciaLocalDeEntrega)
+            {
+                if (Som3KMExecutado == false)
+                {
+                    if (informacoesGame.navigation.estimatedDistance <= 5000 && informacoesGame.navigation.estimatedDistance >= 2000) //2000 esta apenas usado para viajens pequenas.
+                    {
+                        VerificarDistanciaLocalDeEntrega = false;
+
+                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.EstaProximo);
+                        Entregue.Play();
+
+                        Som3KMExecutado = true;
+                    }
+                }
+            }
+        }
+
+        private void VerificarCargaEntregue()
+        {
+            //Se ele estiver mais perto do que 3 km da empresa ele verifica se esta a menos de 100 m para dar o aviso de carga finalizada
+
+            if (VerificarDistanciaLocalDeEntrega == false)//Passa se estiver abaixo dos 3 km
+            {
+
+                if (CargaIntregue == false)
+                {
+                    if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
+                    {
+                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.CargaEntregue);
+                        Entregue.Play();
+
+                        CargaIntregue = true;
+
+                        InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
+                    }
+                }
+            }
         }
     }
 }
