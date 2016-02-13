@@ -11,8 +11,8 @@
 
 <b>Site NextTeamBr:</b> http://www.nextteambr.com.br/
 
+<b>License:</b> <a href="https://github.com/CristianoRC/SoftwareOrdemDeServico/blob/master/LICENSE.txt" target="License" >License.</a>
+
 <p> </p>
 <h2>Telemetry Server:<h2> <b>https://git.io/vgEBB<b>
 
-<p> License <p>
-<a href="https://github.com/CristianoRC/SoftwareOrdemDeServico/blob/master/LICENSE.txt" target="License" >License.</a>
