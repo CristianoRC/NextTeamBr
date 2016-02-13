@@ -13,3 +13,6 @@
 
 <p> </p>
 <h2>Telemetry Server:<h2> <b>https://git.io/vgEBB<b>
+
+<h1> License </h1>
+<a href="https://github.com/CristianoRC/SoftwareOrdemDeServico/blob/master/LICENSE.txt" target="License" >License.</a>
