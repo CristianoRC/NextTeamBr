@@ -12,6 +12,7 @@ namespace NextteamBr
         bool CargaIntregue = false;
         bool VerificarDistanciaLocalDeEntrega = true;
         bool Som3KMExecutado = false;
+        bool pegouValorInicial = false;
         Frete InformacoesFrete = new Frete();
         RootObject informacoesGame;
 
@@ -23,8 +24,7 @@ namespace NextteamBr
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
-
-            Btm_FreteCancelado.Enabled = false;
+            IniciarServidor();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace NextteamBr
             Lbl_KMH.Text = Convert.ToInt16(informacoesGame.truck.speed).ToString();
             Lbl_KMRegistrado.Text = informacoesGame.truck.odometer.ToString("0.0");
             Lbl_RPM.Text = informacoesGame.truck.engineRpm.ToString("0.0");
+
+            if (!pegouValorInicial)
+            {
+                InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
+            }
 
 
             VerificarDanoDaCarga();
@@ -58,25 +63,6 @@ namespace NextteamBr
         {
             Ferramentas.ZerarInformacoes(); //Fecha o servidor(API)
         }
-
-        private void Btm_IniciarViagem_Click(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-
-            timer1.Start();
-
-            Btm_IniciarViagem.Enabled = false;
-            Btm_FreteCancelado.Enabled = true;
-
-            Process processo = new Process();
-
-            processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
-            processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            processo.Start();
-
-            InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
-        }
-
 
 
         private void VerificarDanoDaCarga()
@@ -147,20 +133,37 @@ namespace NextteamBr
 
                         CargaIntregue = true;
 
-                        InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
-
                         InformacoesFrete.DataFinalFrete = DateTime.Now;
 
-                        ControllerFrete.SalvarFrete(InformacoesFrete, "NextTeamBr");
+                        InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
 
-                        InformacoesFrete.KmRodado = CalcularKMRodado(InformacoesFrete.DistanciaInicial, informacoesGame.truck.odometer);
+                        InformacoesFrete.KmRodado = CalcularKMRodado(InformacoesFrete.DistanciaInicial, InformacoesFrete.DistanciaFinal);
 
-                        Thread.Sleep(6000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
+                        ControllerFrete.SalvarFrete(InformacoesFrete, "NxT");
+
+
+
+                        Thread.Sleep(12000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
 
                         Application.Restart();
                     }
                 }
             }
+        }
+
+        private void IniciarServidor()
+        {
+            timer1.Enabled = true;
+
+            timer1.Start();
+
+            Btm_FreteCancelado.Enabled = true;
+
+            Process processo = new Process();
+
+            processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
+            processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            processo.Start();
         }
 
         private double CalcularKMRodado(double Inicial, double Final)
@@ -170,5 +173,6 @@ namespace NextteamBr
 
             return saida;
         }
+
     }
 }

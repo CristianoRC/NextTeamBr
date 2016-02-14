@@ -40,7 +40,6 @@
             this.Lbl_EmpresaDestino = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Btm_FreteCancelado = new System.Windows.Forms.Button();
-            this.Btm_IniciarViagem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_Cambio
@@ -133,35 +132,22 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 3000;
+            this.timer1.Interval = 1500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Btm_FreteCancelado
             // 
-            this.Btm_FreteCancelado.BackColor = System.Drawing.Color.Transparent;
+            this.Btm_FreteCancelado.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Btm_FreteCancelado.Enabled = false;
             this.Btm_FreteCancelado.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Btm_FreteCancelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_FreteCancelado.Location = new System.Drawing.Point(483, 121);
+            this.Btm_FreteCancelado.Location = new System.Drawing.Point(483, 113);
             this.Btm_FreteCancelado.Name = "Btm_FreteCancelado";
             this.Btm_FreteCancelado.Size = new System.Drawing.Size(108, 23);
             this.Btm_FreteCancelado.TabIndex = 9;
             this.Btm_FreteCancelado.Text = "Frete Cancelado";
             this.Btm_FreteCancelado.UseVisualStyleBackColor = false;
             this.Btm_FreteCancelado.Click += new System.EventHandler(this.Btm_FreteCancelado_Click);
-            // 
-            // Btm_IniciarViagem
-            // 
-            this.Btm_IniciarViagem.BackColor = System.Drawing.Color.Transparent;
-            this.Btm_IniciarViagem.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Btm_IniciarViagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_IniciarViagem.Location = new System.Drawing.Point(483, 84);
-            this.Btm_IniciarViagem.Name = "Btm_IniciarViagem";
-            this.Btm_IniciarViagem.Size = new System.Drawing.Size(108, 23);
-            this.Btm_IniciarViagem.TabIndex = 10;
-            this.Btm_IniciarViagem.Text = "Iniciar";
-            this.Btm_IniciarViagem.UseVisualStyleBackColor = false;
-            this.Btm_IniciarViagem.Click += new System.EventHandler(this.Btm_IniciarViagem_Click);
             // 
             // Frm_Principal
             // 
@@ -170,7 +156,6 @@
             this.BackgroundImage = global::NextteamBr.Properties.Resources.registro_km_layout;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(603, 148);
-            this.Controls.Add(this.Btm_IniciarViagem);
             this.Controls.Add(this.Btm_FreteCancelado);
             this.Controls.Add(this.Lbl_EmpresaDestino);
             this.Controls.Add(this.Lbl_CidadeDestino);
@@ -205,6 +190,5 @@
         private System.Windows.Forms.Label Lbl_EmpresaDestino;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button Btm_FreteCancelado;
-        private System.Windows.Forms.Button Btm_IniciarViagem;
     }
 }

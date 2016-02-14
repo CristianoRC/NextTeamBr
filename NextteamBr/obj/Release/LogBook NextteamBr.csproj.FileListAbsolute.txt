@@ -8,5 +8,5 @@ D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\NextteamBr.Properties.Reso
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.exe
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.pdb
-D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\Spartacus.dll
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
