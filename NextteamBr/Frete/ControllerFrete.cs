@@ -16,7 +16,7 @@ namespace NextteamBr
         /// <param name="InformacoesFrete"></param>
         /// <param name="NomeArquivo"></param>
         /// <returns></returns>
-        public static string SalvarFrete(Frete InformacoesFrete, string NomeArquivo) //TODO:Mudar o nome do parâmetro
+        public static string SalvarFrete(Frete InformacoesFrete) //TODO:Mudar o nome do parâmetro
         {
             Cryptor cr;
             string Saida = "";
@@ -26,7 +26,7 @@ namespace NextteamBr
 
             try
             {
-                sw = new StreamWriter($"Fretes/{NomeArquivo}.Nxt");
+                sw = new StreamWriter($"Fretes/{InformacoesFrete.DataFinalFrete.ToFileTime()}.Nxt");
 
                 sw.WriteLine(cr.Encrypt(InformacoesFrete.KmRodado.ToString()));
                 sw.WriteLine(cr.Encrypt(InformacoesFrete.Dano.ToString()));

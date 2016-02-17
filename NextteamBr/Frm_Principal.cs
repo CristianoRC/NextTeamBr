@@ -57,7 +57,7 @@ namespace NextteamBr
         private void Btm_FreteCancelado_Click(object sender, EventArgs e)
         {
             Application.Restart();
-        }
+        } 
 
         private void Frm_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -139,7 +139,7 @@ namespace NextteamBr
 
                         InformacoesFrete.KmRodado = CalcularKMRodado(InformacoesFrete.DistanciaInicial, InformacoesFrete.DistanciaFinal);
 
-                        ControllerFrete.SalvarFrete(InformacoesFrete, "NxT");
+                        ControllerFrete.SalvarFrete(InformacoesFrete);
 
 
 
@@ -164,6 +164,8 @@ namespace NextteamBr
             processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
             processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             processo.Start();
+
+            Thread.Sleep(3000);
         }
 
         private double CalcularKMRodado(double Inicial, double Final)
