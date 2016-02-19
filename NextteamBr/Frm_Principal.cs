@@ -57,7 +57,7 @@ namespace NextteamBr
         private void Btm_FreteCancelado_Click(object sender, EventArgs e)
         {
             Application.Restart();
-        } 
+        }
 
         private void Frm_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -153,12 +153,6 @@ namespace NextteamBr
 
         private void IniciarServidor()
         {
-            timer1.Enabled = true;
-
-            timer1.Start();
-
-            Btm_FreteCancelado.Enabled = true;
-
             Process processo = new Process();
 
             processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
@@ -176,5 +170,14 @@ namespace NextteamBr
             return saida;
         }
 
+        private void Btm_Iniciar_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+
+            timer1.Start();
+
+            Btm_FreteCancelado.Enabled = true;
+            Btm_Iniciar.Enabled = false;
+        }
     }
 }

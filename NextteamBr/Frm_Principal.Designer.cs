@@ -40,6 +40,7 @@
             this.Lbl_EmpresaDestino = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Btm_FreteCancelado = new System.Windows.Forms.Button();
+            this.Btm_Iniciar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_Cambio
@@ -149,6 +150,19 @@
             this.Btm_FreteCancelado.UseVisualStyleBackColor = false;
             this.Btm_FreteCancelado.Click += new System.EventHandler(this.Btm_FreteCancelado_Click);
             // 
+            // Btm_Iniciar
+            // 
+            this.Btm_Iniciar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Btm_Iniciar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Btm_Iniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btm_Iniciar.Location = new System.Drawing.Point(483, 89);
+            this.Btm_Iniciar.Name = "Btm_Iniciar";
+            this.Btm_Iniciar.Size = new System.Drawing.Size(108, 23);
+            this.Btm_Iniciar.TabIndex = 10;
+            this.Btm_Iniciar.Text = "Iniciar Cancelado";
+            this.Btm_Iniciar.UseVisualStyleBackColor = false;
+            this.Btm_Iniciar.Click += new System.EventHandler(this.Btm_Iniciar_Click);
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +170,7 @@
             this.BackgroundImage = global::NextteamBr.Properties.Resources.registro_km_layout;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(603, 148);
+            this.Controls.Add(this.Btm_Iniciar);
             this.Controls.Add(this.Btm_FreteCancelado);
             this.Controls.Add(this.Lbl_EmpresaDestino);
             this.Controls.Add(this.Lbl_CidadeDestino);
@@ -190,5 +205,6 @@
         private System.Windows.Forms.Label Lbl_EmpresaDestino;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button Btm_FreteCancelado;
+        private System.Windows.Forms.Button Btm_Iniciar;
     }
 }
