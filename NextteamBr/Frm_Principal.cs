@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Media;
 using System.Diagnostics;
 using System.Threading;
 
@@ -15,7 +14,6 @@ namespace NextteamBr
         bool pegouValorInicial = false;
         Frete InformacoesFrete = new Frete();
         RootObject informacoesGame;
-
 
         public Frm_Principal()
         {
@@ -45,13 +43,6 @@ namespace NextteamBr
             {
                 InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
             }
-
-
-            VerificarDanoDaCarga();
-            VerificarCargaConectada();
-            VerificarDistanciaEntrega();
-            VerificarCargaEntregue();
-
         }
 
         private void Btm_FreteCancelado_Click(object sender, EventArgs e)
@@ -70,7 +61,11 @@ namespace NextteamBr
             if (informacoesGame.trailer.wear > InformacoesFrete.Dano)
             {
                 InformacoesFrete.Dano = informacoesGame.trailer.wear;
-                ControllerAudio.ExecutarAudio("Dano");
+
+                if (Check_Audio.Checked)
+                {
+                    ControllerAudio.ExecutarAudio("Dano");
+                }
             }
         }
 
@@ -84,7 +79,10 @@ namespace NextteamBr
                 {
                     inicioViajem = true;
 
-                    ControllerAudio.ExecutarAudio("Conectada");
+                    if (Check_Audio.Checked)
+                    {
+                        ControllerAudio.ExecutarAudio("Conectada");
+                    }
 
                     Btm_FreteCancelado.Enabled = true;
 
@@ -105,7 +103,10 @@ namespace NextteamBr
                     {
                         VerificarDistanciaLocalDeEntrega = false;
 
-                        ControllerAudio.ExecutarAudio("Distancia");
+                        if (Check_Audio.Checked)
+                        {
+                            ControllerAudio.ExecutarAudio("Distancia");
+                        }
 
                         Som5KMExecutado = true;
                     }
@@ -124,7 +125,11 @@ namespace NextteamBr
                 {
                     if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
                     {
-                        ControllerAudio.ExecutarAudio("Entregue");
+                        if (Check_Audio.Checked)
+                        {
+                            ControllerAudio.ExecutarAudio("Entregue");
+                        }
+
 
                         CargaIntregue = true;
 

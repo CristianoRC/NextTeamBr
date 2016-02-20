@@ -41,6 +41,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Btm_FreteCancelado = new System.Windows.Forms.Button();
             this.Btm_Iniciar = new System.Windows.Forms.Button();
+            this.Check_Audio = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Lbl_Cambio
@@ -138,11 +139,11 @@
             // 
             // Btm_FreteCancelado
             // 
-            this.Btm_FreteCancelado.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Btm_FreteCancelado.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btm_FreteCancelado.Enabled = false;
             this.Btm_FreteCancelado.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Btm_FreteCancelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_FreteCancelado.Location = new System.Drawing.Point(483, 113);
+            this.Btm_FreteCancelado.Location = new System.Drawing.Point(489, 125);
             this.Btm_FreteCancelado.Name = "Btm_FreteCancelado";
             this.Btm_FreteCancelado.Size = new System.Drawing.Size(108, 23);
             this.Btm_FreteCancelado.TabIndex = 9;
@@ -152,24 +153,41 @@
             // 
             // Btm_Iniciar
             // 
-            this.Btm_Iniciar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Btm_Iniciar.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Btm_Iniciar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Btm_Iniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_Iniciar.Location = new System.Drawing.Point(483, 89);
+            this.Btm_Iniciar.Location = new System.Drawing.Point(489, 101);
             this.Btm_Iniciar.Name = "Btm_Iniciar";
             this.Btm_Iniciar.Size = new System.Drawing.Size(108, 23);
             this.Btm_Iniciar.TabIndex = 10;
-            this.Btm_Iniciar.Text = "Iniciar Cancelado";
+            this.Btm_Iniciar.Text = "Iniciar frete";
             this.Btm_Iniciar.UseVisualStyleBackColor = false;
             this.Btm_Iniciar.Click += new System.EventHandler(this.Btm_Iniciar_Click);
+            // 
+            // Check_Audio
+            // 
+            this.Check_Audio.AutoSize = true;
+            this.Check_Audio.BackColor = System.Drawing.Color.Transparent;
+            this.Check_Audio.Checked = true;
+            this.Check_Audio.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Check_Audio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Check_Audio.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Check_Audio.Location = new System.Drawing.Point(489, 78);
+            this.Check_Audio.Name = "Check_Audio";
+            this.Check_Audio.Size = new System.Drawing.Size(62, 20);
+            this.Check_Audio.TabIndex = 11;
+            this.Check_Audio.Text = "Áudio";
+            this.Check_Audio.UseVisualStyleBackColor = false;
             // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::NextteamBr.Properties.Resources.registro_km_layout;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(603, 148);
+            this.ClientSize = new System.Drawing.Size(612, 157);
+            this.Controls.Add(this.Check_Audio);
             this.Controls.Add(this.Btm_Iniciar);
             this.Controls.Add(this.Btm_FreteCancelado);
             this.Controls.Add(this.Lbl_EmpresaDestino);
@@ -206,5 +224,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button Btm_FreteCancelado;
         private System.Windows.Forms.Button Btm_Iniciar;
+        private System.Windows.Forms.CheckBox Check_Audio;
     }
 }
