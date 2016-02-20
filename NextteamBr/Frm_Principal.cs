@@ -55,6 +55,15 @@ namespace NextteamBr
             Ferramentas.ZerarInformacoes(); //Fecha o servidor(API)
         }
 
+        private void Btm_Iniciar_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+
+            timer1.Start();
+
+            Btm_FreteCancelado.Enabled = true;
+            Btm_Iniciar.Enabled = false;
+        }
 
         private void VerificarDanoDaCarga()
         {
@@ -137,10 +146,9 @@ namespace NextteamBr
 
                         InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
 
-                        InformacoesFrete.KmRodado = CalcularKMRodado(InformacoesFrete.DistanciaInicial, InformacoesFrete.DistanciaFinal);
+                        InformacoesFrete.KmRodado = InformacoesFrete.DistanciaFinal - InformacoesFrete.DistanciaInicial;
 
                         ControllerFrete.SalvarFrete(InformacoesFrete);
-
 
 
                         Thread.Sleep(12000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
@@ -170,14 +178,5 @@ namespace NextteamBr
             return saida;
         }
 
-        private void Btm_Iniciar_Click(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-
-            timer1.Start();
-
-            Btm_FreteCancelado.Enabled = true;
-            Btm_Iniciar.Enabled = false;
-        }
     }
 }
