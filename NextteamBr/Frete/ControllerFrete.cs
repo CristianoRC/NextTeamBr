@@ -1,10 +1,5 @@
 ﻿using Spartacus.Utils;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NextteamBr
 {
@@ -16,7 +11,7 @@ namespace NextteamBr
         /// <param name="InformacoesFrete"></param>
         /// <param name="NomeArquivo"></param>
         /// <returns></returns>
-        public static string SalvarFrete(Frete InformacoesFrete) //TODO:Mudar o nome do parâmetro
+        public static string SalvarFrete(Frete InformacoesFrete)
         {
             Cryptor cr;
             string Saida = "";
@@ -30,7 +25,7 @@ namespace NextteamBr
 
                 sw.WriteLine(cr.Encrypt(InformacoesFrete.KmRodado.ToString()));
                 sw.WriteLine(cr.Encrypt(InformacoesFrete.Dano.ToString()));
-                sw.WriteLine(cr.Encrypt(InformacoesFrete.DataFinalFrete.ToString()));
+                sw.WriteLine(cr.Encrypt(InformacoesFrete.DataFinalFrete.ToString("0.00")));
 
                 Saida = "Arquivo de configuração gerado com sucesso!";
             }
@@ -46,6 +41,5 @@ namespace NextteamBr
 
             return Saida;
         }
-
     }
 }

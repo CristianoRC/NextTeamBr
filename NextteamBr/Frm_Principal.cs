@@ -11,7 +11,6 @@ namespace NextteamBr
         bool CargaIntregue = false;
         bool VerificarDistanciaLocalDeEntrega = true;
         bool Som5KMExecutado = false;
-        bool pegouValorInicial = false;
         Frete InformacoesFrete = new Frete();
         RootObject informacoesGame;
 
@@ -39,10 +38,11 @@ namespace NextteamBr
             Lbl_KMRegistrado.Text = informacoesGame.truck.odometer.ToString("0.0");
             Lbl_RPM.Text = informacoesGame.truck.engineRpm.ToString("0.0");
 
-            if (!pegouValorInicial)
-            {
-                InformacoesFrete.DistanciaInicial = informacoesGame.truck.odometer;
-            }
+            VerificarCargaConectada();
+            VerificarCargaEntregue();
+            VerificarDanoDaCarga();
+            VerificarDistanciaEntrega();
+
         }
 
         private void Btm_FreteCancelado_Click(object sender, EventArgs e)
@@ -64,6 +64,7 @@ namespace NextteamBr
             Btm_FreteCancelado.Enabled = true;
             Btm_Iniciar.Enabled = false;
         }
+
 
         private void VerificarDanoDaCarga()
         {
@@ -127,34 +128,30 @@ namespace NextteamBr
         {
             //Se ele estiver mais perto do que 3 km da empresa ele verifica se esta a menos de 100 m para dar o aviso de carga finalizada
 
-            if (VerificarDistanciaLocalDeEntrega == false)//Passa se estiver abaixo dos 3 km
+            if (CargaIntregue == false)
             {
-
-                if (CargaIntregue == false)
+                if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
                 {
-                    if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
+                    if (Check_Audio.Checked)
                     {
-                        if (Check_Audio.Checked)
-                        {
-                            ControllerAudio.ExecutarAudio("Entregue");
-                        }
-
-
-                        CargaIntregue = true;
-
-                        InformacoesFrete.DataFinalFrete = DateTime.Now;
-
-                        InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
-
-                        InformacoesFrete.KmRodado = InformacoesFrete.DistanciaFinal - InformacoesFrete.DistanciaInicial;
-
-                        ControllerFrete.SalvarFrete(InformacoesFrete);
-
-
-                        Thread.Sleep(12000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
-
-                        Application.Restart();
+                        ControllerAudio.ExecutarAudio("Entregue");
                     }
+
+
+                    CargaIntregue = true;
+
+                    InformacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
+
+                    InformacoesFrete.KmRodado = InformacoesFrete.DistanciaFinal - InformacoesFrete.DistanciaInicial;
+
+                    InformacoesFrete.DataFinalFrete = DateTime.Now;
+
+                    ControllerFrete.SalvarFrete(InformacoesFrete);
+
+
+                    Thread.Sleep(12000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
+
+                    Application.Restart();
                 }
             }
         }
@@ -168,14 +165,6 @@ namespace NextteamBr
             processo.Start();
 
             Thread.Sleep(3000);
-        }
-
-        private double CalcularKMRodado(double Inicial, double Final)
-        {
-            double saida = Final - Inicial;
-
-
-            return saida;
         }
 
     }
