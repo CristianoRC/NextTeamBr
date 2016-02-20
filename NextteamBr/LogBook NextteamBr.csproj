@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frete\ControllerAudio.cs" />
     <Compile Include="Frete\ControllerFrete.cs" />
     <Compile Include="Telemetry\ControllerTelemetry.cs" />
     <Compile Include="Ferramentas.cs" />

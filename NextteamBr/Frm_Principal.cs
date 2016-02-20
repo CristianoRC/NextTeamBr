@@ -11,7 +11,7 @@ namespace NextteamBr
         bool inicioViajem = false;
         bool CargaIntregue = false;
         bool VerificarDistanciaLocalDeEntrega = true;
-        bool Som3KMExecutado = false;
+        bool Som5KMExecutado = false;
         bool pegouValorInicial = false;
         Frete InformacoesFrete = new Frete();
         RootObject informacoesGame;
@@ -70,9 +70,7 @@ namespace NextteamBr
             if (informacoesGame.trailer.wear > InformacoesFrete.Dano)
             {
                 InformacoesFrete.Dano = informacoesGame.trailer.wear;
-
-                SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
-                Dano.Play();
+                ControllerAudio.ExecutarAudio("Dano");
             }
         }
 
@@ -86,8 +84,7 @@ namespace NextteamBr
                 {
                     inicioViajem = true;
 
-                    SoundPlayer Inicio = new SoundPlayer(Properties.Resources.CarregadoComSucesso);
-                    Inicio.Play();
+                    ControllerAudio.ExecutarAudio("Conectada");
 
                     Btm_FreteCancelado.Enabled = true;
 
@@ -102,16 +99,15 @@ namespace NextteamBr
             //Ele fica verificando a distancia de entrega até chegar aos 5KM faltando.
             if (VerificarDistanciaLocalDeEntrega)
             {
-                if (Som3KMExecutado == false)
+                if (Som5KMExecutado == false)
                 {
                     if (informacoesGame.navigation.estimatedDistance <= 5000 && informacoesGame.navigation.estimatedDistance >= 2000) //2000 esta apenas usado para viajens pequenas.
                     {
                         VerificarDistanciaLocalDeEntrega = false;
 
-                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.EstaProximo);
-                        Entregue.Play();
+                        ControllerAudio.ExecutarAudio("Distancia");
 
-                        Som3KMExecutado = true;
+                        Som5KMExecutado = true;
                     }
                 }
             }
@@ -128,8 +124,7 @@ namespace NextteamBr
                 {
                     if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
                     {
-                        SoundPlayer Entregue = new SoundPlayer(Properties.Resources.CargaEntregue);
-                        Entregue.Play();
+                        ControllerAudio.ExecutarAudio("Entregue");
 
                         CargaIntregue = true;
 
