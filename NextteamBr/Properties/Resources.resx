@@ -118,22 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LogBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogBook.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Faixa-Fundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Faixa-Fundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CargaEntregue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CargaEntregue.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CarregadoComSucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CarregadoComSucesso.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Colisao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Colisao.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="EstaProximo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EstaProximo.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LogBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogBook.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="registro_km_layout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\registro_km_layout.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fundo-Novo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Fundo-Novo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Colisao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Colisao.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CarregadoComSucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CarregadoComSucesso.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Medium Volume-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medium Volume-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mute-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mute-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

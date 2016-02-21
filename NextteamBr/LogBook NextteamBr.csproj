@@ -105,6 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\Mute-50.png" />
+    <None Include="Resources\Medium Volume-50.png" />
+    <None Include="Resources\Mute-100.png" />
+    <None Include="Resources\High Volume-100.png" />
+    <None Include="Img\Fundo-Novo.png" />
+    <None Include="Img\Faixa-Fundo.png" />
     <None Include="Resources\EstaProximo.wav" />
     <None Include="Resources\CarregadoComSucesso.wav" />
     <None Include="Resources\LogBook.wav" />
@@ -112,6 +118,7 @@
     <None Include="Resources\CargaEntregue.wav" />
     <None Include="Img\registro_km_layout.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -30,26 +30,117 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
-            this.Lbl_Cambio = new System.Windows.Forms.Label();
-            this.Lbl_KMH = new System.Windows.Forms.Label();
-            this.Lbl_RPM = new System.Windows.Forms.Label();
-            this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
-            this.Lbl_CidadeInicial = new System.Windows.Forms.Label();
-            this.Lbl_EmpresaInicial = new System.Windows.Forms.Label();
-            this.Lbl_CidadeDestino = new System.Windows.Forms.Label();
-            this.Lbl_EmpresaDestino = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureSom = new System.Windows.Forms.PictureBox();
             this.Btm_FreteCancelado = new System.Windows.Forms.Button();
             this.Btm_Iniciar = new System.Windows.Forms.Button();
-            this.Check_Audio = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Lbl_RPM = new System.Windows.Forms.Label();
+            this.Lbl_Cambio = new System.Windows.Forms.Label();
+            this.Lbl_KMH = new System.Windows.Forms.Label();
+            this.Lbl_EmpresaDestino = new System.Windows.Forms.Label();
+            this.Lbl_CidadeDestino = new System.Windows.Forms.Label();
+            this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
+            this.Lbl_EmpresaInicial = new System.Windows.Forms.Label();
+            this.Lbl_CidadeInicial = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::NextteamBr.Properties.Resources.Faixa_Fundo;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.pictureSom);
+            this.panel2.Controls.Add(this.Btm_FreteCancelado);
+            this.panel2.Controls.Add(this.Btm_Iniciar);
+            this.panel2.Location = new System.Drawing.Point(1, 148);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(598, 88);
+            this.panel2.TabIndex = 13;
+            // 
+            // pictureSom
+            // 
+            this.pictureSom.Image = global::NextteamBr.Properties.Resources.Medium_Volume_50;
+            this.pictureSom.Location = new System.Drawing.Point(542, 24);
+            this.pictureSom.Name = "pictureSom";
+            this.pictureSom.Size = new System.Drawing.Size(53, 38);
+            this.pictureSom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureSom.TabIndex = 12;
+            this.pictureSom.TabStop = false;
+            this.pictureSom.Click += new System.EventHandler(this.pictureSom_Click);
+            // 
+            // Btm_FreteCancelado
+            // 
+            this.Btm_FreteCancelado.BackColor = System.Drawing.Color.Transparent;
+            this.Btm_FreteCancelado.Enabled = false;
+            this.Btm_FreteCancelado.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.Btm_FreteCancelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btm_FreteCancelado.Location = new System.Drawing.Point(25, 38);
+            this.Btm_FreteCancelado.Name = "Btm_FreteCancelado";
+            this.Btm_FreteCancelado.Size = new System.Drawing.Size(122, 23);
+            this.Btm_FreteCancelado.TabIndex = 9;
+            this.Btm_FreteCancelado.Text = "Frete Cancelado";
+            this.Btm_FreteCancelado.UseVisualStyleBackColor = false;
+            this.Btm_FreteCancelado.Click += new System.EventHandler(this.Btm_FreteCancelado_Click);
+            // 
+            // Btm_Iniciar
+            // 
+            this.Btm_Iniciar.BackColor = System.Drawing.Color.Transparent;
+            this.Btm_Iniciar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
+            this.Btm_Iniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btm_Iniciar.Location = new System.Drawing.Point(25, 3);
+            this.Btm_Iniciar.Name = "Btm_Iniciar";
+            this.Btm_Iniciar.Size = new System.Drawing.Size(122, 23);
+            this.Btm_Iniciar.TabIndex = 10;
+            this.Btm_Iniciar.Text = "Iniciar frete";
+            this.Btm_Iniciar.UseVisualStyleBackColor = false;
+            this.Btm_Iniciar.Click += new System.EventHandler(this.Btm_Iniciar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.statusStrip1);
+            this.panel1.Controls.Add(this.Lbl_RPM);
+            this.panel1.Controls.Add(this.Lbl_Cambio);
+            this.panel1.Controls.Add(this.Lbl_KMH);
+            this.panel1.Controls.Add(this.Lbl_EmpresaDestino);
+            this.panel1.Controls.Add(this.Lbl_CidadeDestino);
+            this.panel1.Controls.Add(this.Lbl_KMRegistrado);
+            this.panel1.Controls.Add(this.Lbl_EmpresaInicial);
+            this.panel1.Controls.Add(this.Lbl_CidadeInicial);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(599, 216);
+            this.panel1.TabIndex = 12;
+            // 
+            // Lbl_RPM
+            // 
+            this.Lbl_RPM.AutoSize = true;
+            this.Lbl_RPM.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_RPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_RPM.Location = new System.Drawing.Point(157, 49);
+            this.Lbl_RPM.Name = "Lbl_RPM";
+            this.Lbl_RPM.Size = new System.Drawing.Size(23, 15);
+            this.Lbl_RPM.TabIndex = 2;
+            this.Lbl_RPM.Text = "00";
             // 
             // Lbl_Cambio
             // 
             this.Lbl_Cambio.AutoSize = true;
             this.Lbl_Cambio.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Cambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Cambio.Location = new System.Drawing.Point(33, 49);
+            this.Lbl_Cambio.Location = new System.Drawing.Point(40, 49);
             this.Lbl_Cambio.Name = "Lbl_Cambio";
             this.Lbl_Cambio.Size = new System.Drawing.Size(23, 15);
             this.Lbl_Cambio.TabIndex = 0;
@@ -60,144 +151,80 @@
             this.Lbl_KMH.AutoSize = true;
             this.Lbl_KMH.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_KMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_KMH.Location = new System.Drawing.Point(92, 49);
+            this.Lbl_KMH.Location = new System.Drawing.Point(99, 49);
             this.Lbl_KMH.Name = "Lbl_KMH";
             this.Lbl_KMH.Size = new System.Drawing.Size(23, 15);
             this.Lbl_KMH.TabIndex = 1;
             this.Lbl_KMH.Text = "00";
-            // 
-            // Lbl_RPM
-            // 
-            this.Lbl_RPM.AutoSize = true;
-            this.Lbl_RPM.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_RPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_RPM.Location = new System.Drawing.Point(150, 49);
-            this.Lbl_RPM.Name = "Lbl_RPM";
-            this.Lbl_RPM.Size = new System.Drawing.Size(23, 15);
-            this.Lbl_RPM.TabIndex = 2;
-            this.Lbl_RPM.Text = "00";
-            // 
-            // Lbl_KMRegistrado
-            // 
-            this.Lbl_KMRegistrado.AutoSize = true;
-            this.Lbl_KMRegistrado.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_KMRegistrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_KMRegistrado.Location = new System.Drawing.Point(33, 102);
-            this.Lbl_KMRegistrado.Name = "Lbl_KMRegistrado";
-            this.Lbl_KMRegistrado.Size = new System.Drawing.Size(23, 15);
-            this.Lbl_KMRegistrado.TabIndex = 3;
-            this.Lbl_KMRegistrado.Text = "00";
-            // 
-            // Lbl_CidadeInicial
-            // 
-            this.Lbl_CidadeInicial.AutoSize = true;
-            this.Lbl_CidadeInicial.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_CidadeInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CidadeInicial.Location = new System.Drawing.Point(243, 89);
-            this.Lbl_CidadeInicial.Name = "Lbl_CidadeInicial";
-            this.Lbl_CidadeInicial.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_CidadeInicial.TabIndex = 4;
-            this.Lbl_CidadeInicial.Text = ".";
-            // 
-            // Lbl_EmpresaInicial
-            // 
-            this.Lbl_EmpresaInicial.AutoSize = true;
-            this.Lbl_EmpresaInicial.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_EmpresaInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EmpresaInicial.Location = new System.Drawing.Point(243, 112);
-            this.Lbl_EmpresaInicial.Name = "Lbl_EmpresaInicial";
-            this.Lbl_EmpresaInicial.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_EmpresaInicial.TabIndex = 5;
-            this.Lbl_EmpresaInicial.Text = ".";
-            // 
-            // Lbl_CidadeDestino
-            // 
-            this.Lbl_CidadeDestino.AutoSize = true;
-            this.Lbl_CidadeDestino.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_CidadeDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CidadeDestino.Location = new System.Drawing.Point(320, 89);
-            this.Lbl_CidadeDestino.Name = "Lbl_CidadeDestino";
-            this.Lbl_CidadeDestino.Size = new System.Drawing.Size(10, 13);
-            this.Lbl_CidadeDestino.TabIndex = 6;
-            this.Lbl_CidadeDestino.Text = ".";
             // 
             // Lbl_EmpresaDestino
             // 
             this.Lbl_EmpresaDestino.AutoSize = true;
             this.Lbl_EmpresaDestino.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_EmpresaDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EmpresaDestino.Location = new System.Drawing.Point(320, 112);
+            this.Lbl_EmpresaDestino.Location = new System.Drawing.Point(319, 113);
             this.Lbl_EmpresaDestino.Name = "Lbl_EmpresaDestino";
-            this.Lbl_EmpresaDestino.Size = new System.Drawing.Size(10, 13);
+            this.Lbl_EmpresaDestino.Size = new System.Drawing.Size(0, 13);
             this.Lbl_EmpresaDestino.TabIndex = 7;
-            this.Lbl_EmpresaDestino.Text = ".";
             // 
-            // timer1
+            // Lbl_CidadeDestino
             // 
-            this.timer1.Interval = 1500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.Lbl_CidadeDestino.AutoSize = true;
+            this.Lbl_CidadeDestino.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_CidadeDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_CidadeDestino.Location = new System.Drawing.Point(319, 90);
+            this.Lbl_CidadeDestino.Name = "Lbl_CidadeDestino";
+            this.Lbl_CidadeDestino.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_CidadeDestino.TabIndex = 6;
             // 
-            // Btm_FreteCancelado
+            // Lbl_KMRegistrado
             // 
-            this.Btm_FreteCancelado.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Btm_FreteCancelado.Enabled = false;
-            this.Btm_FreteCancelado.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Btm_FreteCancelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_FreteCancelado.Location = new System.Drawing.Point(489, 125);
-            this.Btm_FreteCancelado.Name = "Btm_FreteCancelado";
-            this.Btm_FreteCancelado.Size = new System.Drawing.Size(108, 23);
-            this.Btm_FreteCancelado.TabIndex = 9;
-            this.Btm_FreteCancelado.Text = "Frete Cancelado";
-            this.Btm_FreteCancelado.UseVisualStyleBackColor = false;
-            this.Btm_FreteCancelado.Click += new System.EventHandler(this.Btm_FreteCancelado_Click);
+            this.Lbl_KMRegistrado.AutoSize = true;
+            this.Lbl_KMRegistrado.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_KMRegistrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_KMRegistrado.Location = new System.Drawing.Point(40, 102);
+            this.Lbl_KMRegistrado.Name = "Lbl_KMRegistrado";
+            this.Lbl_KMRegistrado.Size = new System.Drawing.Size(23, 15);
+            this.Lbl_KMRegistrado.TabIndex = 3;
+            this.Lbl_KMRegistrado.Text = "00";
             // 
-            // Btm_Iniciar
+            // Lbl_EmpresaInicial
             // 
-            this.Btm_Iniciar.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Btm_Iniciar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Btm_Iniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_Iniciar.Location = new System.Drawing.Point(489, 101);
-            this.Btm_Iniciar.Name = "Btm_Iniciar";
-            this.Btm_Iniciar.Size = new System.Drawing.Size(108, 23);
-            this.Btm_Iniciar.TabIndex = 10;
-            this.Btm_Iniciar.Text = "Iniciar frete";
-            this.Btm_Iniciar.UseVisualStyleBackColor = false;
-            this.Btm_Iniciar.Click += new System.EventHandler(this.Btm_Iniciar_Click);
+            this.Lbl_EmpresaInicial.AutoSize = true;
+            this.Lbl_EmpresaInicial.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_EmpresaInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_EmpresaInicial.Location = new System.Drawing.Point(242, 113);
+            this.Lbl_EmpresaInicial.Name = "Lbl_EmpresaInicial";
+            this.Lbl_EmpresaInicial.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_EmpresaInicial.TabIndex = 5;
             // 
-            // Check_Audio
+            // Lbl_CidadeInicial
             // 
-            this.Check_Audio.AutoSize = true;
-            this.Check_Audio.BackColor = System.Drawing.Color.Transparent;
-            this.Check_Audio.Checked = true;
-            this.Check_Audio.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Check_Audio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Check_Audio.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Check_Audio.Location = new System.Drawing.Point(489, 78);
-            this.Check_Audio.Name = "Check_Audio";
-            this.Check_Audio.Size = new System.Drawing.Size(62, 20);
-            this.Check_Audio.TabIndex = 11;
-            this.Check_Audio.Text = "Áudio";
-            this.Check_Audio.UseVisualStyleBackColor = false;
+            this.Lbl_CidadeInicial.AutoSize = true;
+            this.Lbl_CidadeInicial.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_CidadeInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_CidadeInicial.Location = new System.Drawing.Point(242, 90);
+            this.Lbl_CidadeInicial.Name = "Lbl_CidadeInicial";
+            this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_CidadeInicial.TabIndex = 4;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 194);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(599, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BackgroundImage = global::NextteamBr.Properties.Resources.registro_km_layout;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(612, 157);
-            this.Controls.Add(this.Check_Audio);
-            this.Controls.Add(this.Btm_Iniciar);
-            this.Controls.Add(this.Btm_FreteCancelado);
-            this.Controls.Add(this.Lbl_EmpresaDestino);
-            this.Controls.Add(this.Lbl_CidadeDestino);
-            this.Controls.Add(this.Lbl_EmpresaInicial);
-            this.Controls.Add(this.Lbl_CidadeInicial);
-            this.Controls.Add(this.Lbl_KMRegistrado);
-            this.Controls.Add(this.Lbl_RPM);
-            this.Controls.Add(this.Lbl_KMH);
-            this.Controls.Add(this.Lbl_Cambio);
+            this.ClientSize = new System.Drawing.Size(599, 225);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -206,8 +233,11 @@
             this.Text = "LogBook NextTeamBr";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Principal_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Principal_Load);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -224,6 +254,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button Btm_FreteCancelado;
         private System.Windows.Forms.Button Btm_Iniciar;
-        private System.Windows.Forms.CheckBox Check_Audio;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureSom;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
