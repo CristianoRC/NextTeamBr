@@ -111,7 +111,7 @@ namespace NextteamBr.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Fundo_Novo {
             get {
-                object obj = ResourceManager.GetObject("Fundo-Novo", resourceCulture);
+                object obj = ResourceManager.GetObject("Fundo_Novo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

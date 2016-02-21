@@ -36,6 +36,7 @@
             this.Btm_FreteCancelado = new System.Windows.Forms.Button();
             this.Btm_Iniciar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Lbl_RPM = new System.Windows.Forms.Label();
             this.Lbl_Cambio = new System.Windows.Forms.Label();
             this.Lbl_KMH = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
             this.Lbl_EmpresaInicial = new System.Windows.Forms.Label();
             this.Lbl_CidadeInicial = new System.Windows.Forms.Label();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.panel1.SuspendLayout();
@@ -124,6 +124,14 @@
             this.panel1.Size = new System.Drawing.Size(599, 216);
             this.panel1.TabIndex = 12;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 194);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(599, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // Lbl_RPM
             // 
             this.Lbl_RPM.AutoSize = true;
@@ -162,7 +170,7 @@
             this.Lbl_EmpresaDestino.AutoSize = true;
             this.Lbl_EmpresaDestino.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_EmpresaDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EmpresaDestino.Location = new System.Drawing.Point(319, 113);
+            this.Lbl_EmpresaDestino.Location = new System.Drawing.Point(456, 129);
             this.Lbl_EmpresaDestino.Name = "Lbl_EmpresaDestino";
             this.Lbl_EmpresaDestino.Size = new System.Drawing.Size(0, 13);
             this.Lbl_EmpresaDestino.TabIndex = 7;
@@ -172,7 +180,7 @@
             this.Lbl_CidadeDestino.AutoSize = true;
             this.Lbl_CidadeDestino.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_CidadeDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CidadeDestino.Location = new System.Drawing.Point(319, 90);
+            this.Lbl_CidadeDestino.Location = new System.Drawing.Point(456, 106);
             this.Lbl_CidadeDestino.Name = "Lbl_CidadeDestino";
             this.Lbl_CidadeDestino.Size = new System.Drawing.Size(0, 13);
             this.Lbl_CidadeDestino.TabIndex = 6;
@@ -193,7 +201,7 @@
             this.Lbl_EmpresaInicial.AutoSize = true;
             this.Lbl_EmpresaInicial.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_EmpresaInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EmpresaInicial.Location = new System.Drawing.Point(242, 113);
+            this.Lbl_EmpresaInicial.Location = new System.Drawing.Point(258, 130);
             this.Lbl_EmpresaInicial.Name = "Lbl_EmpresaInicial";
             this.Lbl_EmpresaInicial.Size = new System.Drawing.Size(0, 13);
             this.Lbl_EmpresaInicial.TabIndex = 5;
@@ -203,18 +211,10 @@
             this.Lbl_CidadeInicial.AutoSize = true;
             this.Lbl_CidadeInicial.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_CidadeInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CidadeInicial.Location = new System.Drawing.Point(242, 90);
+            this.Lbl_CidadeInicial.Location = new System.Drawing.Point(258, 107);
             this.Lbl_CidadeInicial.Name = "Lbl_CidadeInicial";
             this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 13);
             this.Lbl_CidadeInicial.TabIndex = 4;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 194);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(599, 22);
-            this.statusStrip1.TabIndex = 8;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // Frm_Principal
             // 

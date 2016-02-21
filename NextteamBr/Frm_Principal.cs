@@ -147,10 +147,10 @@ namespace NextteamBr
 
                     informacoesFrete.DataFinalFrete = DateTime.Now;
 
-                    ControllerFrete.SalvarFrete(informacoesFrete);
+                    ControllerFrete.SalvarFrete(informacoesFrete, informacoesGame);
 
 
-                    Thread.Sleep(12000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
+                    Thread.Sleep(25000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
 
                     Application.Restart();
                 }
