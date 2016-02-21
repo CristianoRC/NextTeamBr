@@ -127,11 +127,9 @@ namespace NextteamBr
 
         private void VerificarCargaEntregue()
         {
-            //Se ele estiver mais perto do que 3 km da empresa ele verifica se esta a menos de 100 m para dar o aviso de carga finalizada
-
             if (cargaIntregue == false)
             {
-                if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
+                if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 5)
                 {
                     if (executarAudio)
                     {
