@@ -45,6 +45,7 @@
             this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
             this.Lbl_EmpresaInicial = new System.Windows.Forms.Label();
             this.Lbl_CidadeInicial = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,9 +64,9 @@
             this.panel2.Controls.Add(this.pictureSom);
             this.panel2.Controls.Add(this.Btm_FreteCancelado);
             this.panel2.Controls.Add(this.Btm_Iniciar);
-            this.panel2.Location = new System.Drawing.Point(1, 148);
+            this.panel2.Location = new System.Drawing.Point(0, 148);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(598, 88);
+            this.panel2.Size = new System.Drawing.Size(600, 88);
             this.panel2.TabIndex = 13;
             // 
             // pictureSom
@@ -216,6 +217,12 @@
             this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 13);
             this.Lbl_CidadeInicial.TabIndex = 4;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Log Book NextTeamBr";
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +240,7 @@
             this.Text = "LogBook NextTeamBr";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Principal_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Principal_Load);
+            this.Resize += new System.EventHandler(this.Frm_Principal_Resize);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -258,5 +266,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureSom;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

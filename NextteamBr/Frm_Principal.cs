@@ -181,5 +181,21 @@ namespace NextteamBr
                 pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
             }
         }
+
+        private void Frm_Principal_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                notifyIcon1.Visible = true;
+                this.ShowInTaskbar = false;
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            notifyIcon1.Visible = false;
+            this.ShowInTaskbar = false;
+            this.WindowState = FormWindowState.Normal;
+        }
     }
 }

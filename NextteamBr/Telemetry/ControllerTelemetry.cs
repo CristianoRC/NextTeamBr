@@ -6,7 +6,6 @@ namespace NextteamBr
 {
     public class ControllerTelemetry
     {
-
         /// <summary>
         /// Pegando as informações da API e transformando no "código JSON"
         /// </summary>
