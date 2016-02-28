@@ -66,6 +66,37 @@ namespace NextteamBr
             Btm_Iniciar.Enabled = false;
         }
 
+        private void pictureSom_Click(object sender, EventArgs e)
+        {
+            if (executarAudio)
+            {
+                executarAudio = false;
+
+                pictureSom.Image = NextteamBr.Properties.Resources.Mute_50;
+            }
+            else
+            {
+                executarAudio = true;
+
+                pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
+            }
+        }
+
+        private void Frm_Principal_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                notifyIcon1.Visible = true;
+                this.ShowInTaskbar = false;
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            notifyIcon1.Visible = false;
+            this.ShowInTaskbar = false;
+            this.WindowState = FormWindowState.Normal;
+        }
 
         private void VerificarDanoDaCarga()
         {
@@ -164,38 +195,6 @@ namespace NextteamBr
             processo.Start();
 
             Thread.Sleep(3000);
-        }
-
-        private void pictureSom_Click(object sender, EventArgs e)
-        {
-            if (executarAudio)
-            {
-                executarAudio = false;
-
-                pictureSom.Image = NextteamBr.Properties.Resources.Mute_50;
-            }
-            else
-            {
-                executarAudio = true;
-
-                pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
-            }
-        }
-
-        private void Frm_Principal_Resize(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                notifyIcon1.Visible = true;
-                this.ShowInTaskbar = false;
-            }
-        }
-
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            notifyIcon1.Visible = false;
-            this.ShowInTaskbar = false;
-            this.WindowState = FormWindowState.Normal;
         }
     }
 }
