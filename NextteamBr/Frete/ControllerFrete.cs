@@ -11,17 +11,20 @@ namespace NextteamBr
         /// <param name="InformacoesFrete"></param>
         /// <param name="NomeArquivo"></param>
         /// <returns></returns>
-        public static string SalvarFrete(Frete InformacoesFrete, RootObject informacoesGame)
+        public static bool SalvarFrete(Frete InformacoesFrete, RootObject informacoesGame)
         {
-            Cryptor cr;
-            string Saida = "";
+            //Cryptor cr;
+            bool Saida = false;
 
             StreamWriter sw = null;
-            cr = new Cryptor("p@$$w0rdNxtBrC#");
+            //    cr = new Cryptor("p@$$w0rdNxtBrC#");
 
             try
             {
                 sw = new StreamWriter($"Fretes/{InformacoesFrete.DataFinalFrete.ToFileTime()}.Nxt");
+                /*
+
+                    Salvando já criptografado
 
                 sw.WriteLine(cr.Encrypt(InformacoesFrete.KmRodado.ToString("0.00")));
                 sw.WriteLine(cr.Encrypt(InformacoesFrete.Dano.ToString("0.00")));
@@ -32,12 +35,23 @@ namespace NextteamBr
                 sw.WriteLine(cr.Encrypt(informacoesGame.job.destinationCity));
                 sw.WriteLine(cr.Encrypt(informacoesGame.job.destinationCompany));
                 sw.WriteLine(cr.Encrypt(InformacoesFrete.DataFinalFrete.ToString()));
+                */
 
-                Saida = "Arquivo de configuração gerado com sucesso!";
+                sw.WriteLine(InformacoesFrete.KmRodado.ToString("0.00"));
+                sw.WriteLine(InformacoesFrete.Dano.ToString("0.00"));
+                sw.WriteLine(informacoesGame.trailer.name);
+                sw.WriteLine(informacoesGame.trailer.mass.ToString());
+                sw.WriteLine(informacoesGame.job.sourceCity);
+                sw.WriteLine(informacoesGame.job.sourceCompany);
+                sw.WriteLine(informacoesGame.job.destinationCity);
+                sw.WriteLine(informacoesGame.job.destinationCompany);
+                sw.WriteLine(InformacoesFrete.DataFinalFrete.ToString());
+
+                Saida = true;
             }
-            catch (System.Exception exc)
+            catch (System.Exception)
             {
-                Saida = $"Ocorreu um erro - {exc.Message} ";
+                Saida = false;
             }
             finally
             {

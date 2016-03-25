@@ -10,3 +10,15 @@ D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.exe
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.pdb
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Release\Spartacus.dll
 D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\LogBook NextteamBr.exe.config
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.exe
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.pdb
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Frm_Principal.resources
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Properties.Resources.resources
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\LogBook NextteamBr.exe
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\LogBook NextteamBr.pdb
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Newtonsoft.Json.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Spartacus.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Newtonsoft.Json.xml

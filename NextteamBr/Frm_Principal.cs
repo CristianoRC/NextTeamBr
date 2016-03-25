@@ -8,7 +8,6 @@ namespace NextteamBr
     public partial class Frm_Principal : Form
     {
         bool inicioViajem = false;
-        bool cargaIntregue = false;
         bool verificarDistanciaLocalDeEntrega = true;
         bool som5KMExecutado = false;
         bool executarAudio = true;
@@ -40,10 +39,13 @@ namespace NextteamBr
             Lbl_RPM.Text = informacoesGame.truck.engineRpm.ToString("0.0");
 
             VerificarCargaConectada();
-            VerificarCargaEntregue();
-            VerificarDanoDaCarga();
-            VerificarDistanciaEntrega();
 
+            if (informacoesGame.trailer.attached)
+            {
+                VerificarDistanciaEntrega();
+                VerificarCargaEntregue();
+                VerificarDanoDaCarga();
+            }
         }
 
         private void Btm_FreteCancelado_Click(object sender, EventArgs e)
@@ -86,6 +88,7 @@ namespace NextteamBr
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
+                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
                 notifyIcon1.Visible = true;
                 this.ShowInTaskbar = false;
             }
@@ -141,7 +144,7 @@ namespace NextteamBr
             {
                 if (som5KMExecutado == false)
                 {
-                    if (informacoesGame.navigation.estimatedDistance <= 5000 && informacoesGame.navigation.estimatedDistance >= 2000) //2000 esta apenas usado para viajens pequenas.
+                    if (informacoesGame.navigation.estimatedDistance <= 5000 && informacoesGame.navigation.estimatedDistance >= 2000) //2000 esta apenas usado para pequenas distancias..
                     {
                         verificarDistanciaLocalDeEntrega = false;
 
@@ -158,32 +161,37 @@ namespace NextteamBr
 
         private void VerificarCargaEntregue()
         {
-            if (cargaIntregue == false)
+
+            if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 50)
             {
-                if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 5)
+                if (executarAudio)
                 {
-                    if (executarAudio)
-                    {
-                        ControllerAudio.ExecutarAudio("Entregue");
-                    }
-
-
-                    cargaIntregue = true;
-
-                    informacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
-
-                    informacoesFrete.KmRodado = informacoesFrete.DistanciaFinal - informacoesFrete.DistanciaInicial;
-
-                    informacoesFrete.DataFinalFrete = DateTime.Now;
-
-                    ControllerFrete.SalvarFrete(informacoesFrete, informacoesGame);
-
-
-                    Thread.Sleep(25000); //Fazedo a aplicação parar por 6 segundos ates de reiniciar para que o audio de carga finalizada seja executado.
-
-                    Application.Restart();
+                    ControllerAudio.ExecutarAudio("Entregue");
                 }
+
+                informacoesFrete.DistanciaFinal = informacoesGame.truck.odometer;
+
+                informacoesFrete.KmRodado = informacoesFrete.DistanciaFinal - informacoesFrete.DistanciaInicial;
+
+                informacoesFrete.DataFinalFrete = DateTime.Now;
+
+
+                SalvarCarga();
+
             }
+        }
+
+        private void SalvarCarga()
+        {
+            ControllerFrete.SalvarFrete(informacoesFrete, informacoesGame);
+
+            inicioViajem = false;
+            verificarDistanciaLocalDeEntrega = true;
+            som5KMExecutado = false;
+
+            timer1.Stop();
+            Btm_Iniciar.Enabled = true;
+            Btm_FreteCancelado.Enabled = false;
         }
 
         private void IniciarServidor()
