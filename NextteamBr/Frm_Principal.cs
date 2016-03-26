@@ -144,7 +144,7 @@ namespace NextteamBr
             {
                 if (som5KMExecutado == false)
                 {
-                    if (informacoesGame.navigation.estimatedDistance <= 5000 && informacoesGame.navigation.estimatedDistance >= 2000) //2000 esta apenas usado para pequenas distancias..
+                    if (informacoesGame.navigation.estimatedDistance <= 20000 && informacoesGame.navigation.estimatedDistance >= 19600) //2000 esta apenas usado para pequenas distancias..
                     {
                         verificarDistanciaLocalDeEntrega = false;
 
@@ -162,7 +162,7 @@ namespace NextteamBr
         private void VerificarCargaEntregue()
         {
 
-            if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 50)
+            if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
             {
                 if (executarAudio)
                 {

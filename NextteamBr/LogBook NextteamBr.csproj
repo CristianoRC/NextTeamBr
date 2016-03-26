@@ -105,13 +105,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\EstaProximo.wav" />
     <None Include="Resources\Mute-50.png" />
     <None Include="Resources\Medium Volume-50.png" />
     <None Include="Resources\Mute-100.png" />
     <None Include="Resources\High Volume-100.png" />
     <None Include="Img\Fundo-Novo.png" />
     <None Include="Img\Faixa-Fundo.png" />
-    <None Include="Resources\EstaProximo.wav" />
     <None Include="Resources\CarregadoComSucesso.wav" />
     <None Include="Resources\LogBook.wav" />
     <None Include="Resources\Colisao.wav" />
