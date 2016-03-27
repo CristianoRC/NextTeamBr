@@ -144,7 +144,7 @@ namespace NextteamBr
             {
                 if (som5KMExecutado == false)
                 {
-                    if (informacoesGame.navigation.estimatedDistance <= 20000 && informacoesGame.navigation.estimatedDistance >= 19600) //2000 esta apenas usado para pequenas distancias..
+                    if (informacoesGame.navigation.estimatedDistance <= 20000 && informacoesGame.navigation.estimatedDistance >= 19000) //2000 esta apenas usado para pequenas distancias..
                     {
                         verificarDistanciaLocalDeEntrega = false;
 
