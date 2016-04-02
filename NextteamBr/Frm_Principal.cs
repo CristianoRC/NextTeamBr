@@ -21,7 +21,7 @@ namespace NextteamBr
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
-            IniciarServidor();
+            Ferramentas.LigarServidor();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace NextteamBr
 
         private void Frm_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Ferramentas.ZerarInformacoes(); //Fecha o servidor(API)
+            Ferramentas.DesligarServidor();
         }
 
         private void Btm_Iniciar_Click(object sender, EventArgs e)
@@ -193,16 +193,6 @@ namespace NextteamBr
             Btm_Iniciar.Enabled = true;
             Btm_FreteCancelado.Enabled = false;
         }
-
-        private void IniciarServidor()
-        {
-            Process processo = new Process();
-
-            processo.StartInfo.FileName = @"server\Ets2Telemetry.exe";
-            processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            processo.Start();
-
-            Thread.Sleep(3000);
-        }
+        
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using System.Media;
+using System.Threading;
 
 namespace NextteamBr
 {
@@ -33,7 +33,7 @@ namespace NextteamBr
         /// <summary>
         ///Finalizando o servidor 
         /// </summary>
-        public static void ZerarInformacoes()
+        public static void DesligarServidor()
         {
             Process[] processes = Process.GetProcesses();
             for (int i = 0; i < processes.Length; i++)
@@ -47,6 +47,15 @@ namespace NextteamBr
             }
         }
 
-        //TODO: Para verificar o inicio da viagem verificar se esta com carga e se a distancia e != de 0 KM
+        public static void LigarServidor()
+        {
+            Process processo = new Process();
+
+            processo.StartInfo.FileName = @"ets2-telemetry-server-3.2.5\server\Ets2Telemetry.exe";
+            processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            processo.Start();
+
+            Thread.Sleep(3000);
+        }
     }
 }
