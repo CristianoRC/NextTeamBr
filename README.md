@@ -1,5 +1,7 @@
 
-<h1>Sistema de LogBook NextTeamBr</h1>
+<h1>Sistema de LogBook eletrônico</h1>
+
+<b>Sistema de LogBook eletrônico desenvolvido para Euro Truck Simulator 2 e American truck Simulator<b>
 
 <b>Site:</b> http://cristianoprogramador.com/
 
