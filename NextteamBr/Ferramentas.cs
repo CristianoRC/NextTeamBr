@@ -55,7 +55,7 @@ namespace NextteamBr
             processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             processo.Start();
 
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
         }
     }
 }

@@ -6,3 +6,4 @@ D:\LogBookEletronico-Ets2\RelatorioLogBook\obj\Debug\RelatorioLogBook.Properties
 D:\LogBookEletronico-Ets2\RelatorioLogBook\obj\Debug\RelatorioLogBook.csproj.GenerateResource.Cache
 D:\LogBookEletronico-Ets2\RelatorioLogBook\obj\Debug\Relatorio LogBook.exe
 D:\LogBookEletronico-Ets2\RelatorioLogBook\obj\Debug\Relatorio LogBook.pdb
+D:\LogBookEletronico-Ets2\RelatorioLogBook\obj\Debug\RelatorioLogBook.csprojResolveAssemblyReference.cache

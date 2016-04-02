@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.Threading;
 
 namespace NextteamBr
 {
@@ -38,13 +36,17 @@ namespace NextteamBr
             Lbl_KMRegistrado.Text = informacoesGame.truck.odometer.ToString("0.0");
             Lbl_RPM.Text = informacoesGame.truck.engineRpm.ToString("0.0");
 
-            VerificarCargaConectada();
 
-            if (informacoesGame.trailer.attached)
+            if (informacoesGame.game.paused == false)
             {
-                VerificarDistanciaEntrega();
-                VerificarCargaEntregue();
-                VerificarDanoDaCarga();
+                VerificarCargaConectada();
+
+                if (informacoesGame.trailer.attached)
+                {
+                    VerificarDistanciaEntrega();
+                    VerificarCargaEntregue();
+                    VerificarDanoDaCarga();
+                }
             }
         }
 
@@ -175,9 +177,7 @@ namespace NextteamBr
 
                 informacoesFrete.DataFinalFrete = DateTime.Now;
 
-
                 SalvarCarga();
-
             }
         }
 
@@ -188,11 +188,6 @@ namespace NextteamBr
             inicioViajem = false;
             verificarDistanciaLocalDeEntrega = true;
             som5KMExecutado = false;
-
-            timer1.Stop();
-            Btm_Iniciar.Enabled = true;
-            Btm_FreteCancelado.Enabled = false;
         }
-        
     }
 }
