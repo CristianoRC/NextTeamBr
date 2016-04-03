@@ -22,3 +22,12 @@ D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\LogBook NextteamBr.pdb
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Newtonsoft.Json.dll
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Spartacus.dll
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Newtonsoft.Json.xml
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\EntityFramework.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\EntityFramework.SqlServer.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\System.Data.SQLite.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\System.Data.SQLite.EF6.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\System.Data.SQLite.Linq.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\EntityFramework.xml
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\EntityFramework.SqlServer.xml
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\System.Data.SQLite.xml
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Frm_InfoMotorista.resources

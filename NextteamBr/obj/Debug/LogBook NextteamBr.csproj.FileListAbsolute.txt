@@ -23,3 +23,11 @@ D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resource
 D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
 D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
 D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_InfoMotorista.resources
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.SqlServer.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.EF6.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.Linq.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.xml
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.SqlServer.xml
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.xml
