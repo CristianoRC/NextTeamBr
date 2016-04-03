@@ -122,7 +122,7 @@ namespace NextteamBr
 
             if (inicioViajem == false)
             {
-                if (informacoesGame.trailer.attached == true)
+                if (informacoesGame.trailer.attached == true && informacoesGame.navigation.estimatedDistance >200)
                 {
                     inicioViajem = true;
 
