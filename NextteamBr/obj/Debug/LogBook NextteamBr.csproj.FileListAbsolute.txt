@@ -22,3 +22,4 @@ D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csprojResolveA
 D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
 D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
 D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_InfoMotorista.resources

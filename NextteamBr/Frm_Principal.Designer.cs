@@ -86,6 +86,7 @@
             this.Btm_FreteCancelado.Enabled = false;
             this.Btm_FreteCancelado.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
             this.Btm_FreteCancelado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btm_FreteCancelado.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btm_FreteCancelado.Location = new System.Drawing.Point(25, 38);
             this.Btm_FreteCancelado.Name = "Btm_FreteCancelado";
             this.Btm_FreteCancelado.Size = new System.Drawing.Size(122, 23);
@@ -99,6 +100,7 @@
             this.Btm_Iniciar.BackColor = System.Drawing.Color.Transparent;
             this.Btm_Iniciar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDark;
             this.Btm_Iniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btm_Iniciar.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btm_Iniciar.Location = new System.Drawing.Point(25, 3);
             this.Btm_Iniciar.Name = "Btm_Iniciar";
             this.Btm_Iniciar.Size = new System.Drawing.Size(122, 23);
@@ -137,10 +139,10 @@
             // 
             this.Lbl_RPM.AutoSize = true;
             this.Lbl_RPM.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_RPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_RPM.Location = new System.Drawing.Point(157, 49);
+            this.Lbl_RPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_RPM.Location = new System.Drawing.Point(147, 47);
             this.Lbl_RPM.Name = "Lbl_RPM";
-            this.Lbl_RPM.Size = new System.Drawing.Size(23, 15);
+            this.Lbl_RPM.Size = new System.Drawing.Size(25, 19);
             this.Lbl_RPM.TabIndex = 2;
             this.Lbl_RPM.Text = "00";
             // 
@@ -148,10 +150,10 @@
             // 
             this.Lbl_Cambio.AutoSize = true;
             this.Lbl_Cambio.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Cambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Cambio.Location = new System.Drawing.Point(40, 49);
+            this.Lbl_Cambio.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Cambio.Location = new System.Drawing.Point(30, 47);
             this.Lbl_Cambio.Name = "Lbl_Cambio";
-            this.Lbl_Cambio.Size = new System.Drawing.Size(23, 15);
+            this.Lbl_Cambio.Size = new System.Drawing.Size(25, 19);
             this.Lbl_Cambio.TabIndex = 0;
             this.Lbl_Cambio.Text = "00";
             // 
@@ -159,10 +161,10 @@
             // 
             this.Lbl_KMH.AutoSize = true;
             this.Lbl_KMH.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_KMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_KMH.Location = new System.Drawing.Point(99, 49);
+            this.Lbl_KMH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_KMH.Location = new System.Drawing.Point(89, 47);
             this.Lbl_KMH.Name = "Lbl_KMH";
-            this.Lbl_KMH.Size = new System.Drawing.Size(23, 15);
+            this.Lbl_KMH.Size = new System.Drawing.Size(25, 19);
             this.Lbl_KMH.TabIndex = 1;
             this.Lbl_KMH.Text = "00";
             // 
@@ -170,30 +172,30 @@
             // 
             this.Lbl_EmpresaDestino.AutoSize = true;
             this.Lbl_EmpresaDestino.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_EmpresaDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EmpresaDestino.Location = new System.Drawing.Point(456, 129);
+            this.Lbl_EmpresaDestino.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_EmpresaDestino.Location = new System.Drawing.Point(457, 128);
             this.Lbl_EmpresaDestino.Name = "Lbl_EmpresaDestino";
-            this.Lbl_EmpresaDestino.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_EmpresaDestino.Size = new System.Drawing.Size(0, 15);
             this.Lbl_EmpresaDestino.TabIndex = 7;
             // 
             // Lbl_CidadeDestino
             // 
             this.Lbl_CidadeDestino.AutoSize = true;
             this.Lbl_CidadeDestino.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_CidadeDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CidadeDestino.Location = new System.Drawing.Point(456, 106);
+            this.Lbl_CidadeDestino.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_CidadeDestino.Location = new System.Drawing.Point(457, 105);
             this.Lbl_CidadeDestino.Name = "Lbl_CidadeDestino";
-            this.Lbl_CidadeDestino.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_CidadeDestino.Size = new System.Drawing.Size(0, 15);
             this.Lbl_CidadeDestino.TabIndex = 6;
             // 
             // Lbl_KMRegistrado
             // 
             this.Lbl_KMRegistrado.AutoSize = true;
             this.Lbl_KMRegistrado.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_KMRegistrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_KMRegistrado.Location = new System.Drawing.Point(40, 102);
+            this.Lbl_KMRegistrado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_KMRegistrado.Location = new System.Drawing.Point(30, 100);
             this.Lbl_KMRegistrado.Name = "Lbl_KMRegistrado";
-            this.Lbl_KMRegistrado.Size = new System.Drawing.Size(23, 15);
+            this.Lbl_KMRegistrado.Size = new System.Drawing.Size(25, 19);
             this.Lbl_KMRegistrado.TabIndex = 3;
             this.Lbl_KMRegistrado.Text = "00";
             // 
@@ -201,20 +203,20 @@
             // 
             this.Lbl_EmpresaInicial.AutoSize = true;
             this.Lbl_EmpresaInicial.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_EmpresaInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_EmpresaInicial.Location = new System.Drawing.Point(258, 130);
+            this.Lbl_EmpresaInicial.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_EmpresaInicial.Location = new System.Drawing.Point(259, 129);
             this.Lbl_EmpresaInicial.Name = "Lbl_EmpresaInicial";
-            this.Lbl_EmpresaInicial.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_EmpresaInicial.Size = new System.Drawing.Size(0, 15);
             this.Lbl_EmpresaInicial.TabIndex = 5;
             // 
             // Lbl_CidadeInicial
             // 
             this.Lbl_CidadeInicial.AutoSize = true;
             this.Lbl_CidadeInicial.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_CidadeInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_CidadeInicial.Location = new System.Drawing.Point(258, 107);
+            this.Lbl_CidadeInicial.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_CidadeInicial.Location = new System.Drawing.Point(259, 106);
             this.Lbl_CidadeInicial.Name = "Lbl_CidadeInicial";
-            this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 15);
             this.Lbl_CidadeInicial.TabIndex = 4;
             // 
             // notifyIcon1
