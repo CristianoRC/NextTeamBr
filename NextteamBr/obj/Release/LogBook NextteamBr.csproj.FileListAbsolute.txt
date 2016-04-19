@@ -31,3 +31,15 @@ D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\EntityFramework.xml
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\EntityFramework.SqlServer.xml
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Release\System.Data.SQLite.xml
 D:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Frm_InfoMotorista.resources
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Release\LogBook NextteamBr.exe.config
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.exe
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.pdb
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Release\LogBook NextteamBr.exe
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Release\LogBook NextteamBr.pdb
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Newtonsoft.Json.dll
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Spartacus.dll
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Release\Newtonsoft.Json.xml
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Frm_Principal.resources
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Properties.Resources.resources
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.csproj.GenerateResource.Cache

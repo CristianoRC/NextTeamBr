@@ -31,3 +31,14 @@ D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.Linq.dll
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.xml
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.SqlServer.xml
 D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.xml
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe.config
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.pdb
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Newtonsoft.Json.dll
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Spartacus.dll
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Newtonsoft.Json.xml
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.exe
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.pdb

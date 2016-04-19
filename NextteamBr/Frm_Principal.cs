@@ -5,6 +5,7 @@ namespace NextteamBr
 {
     public partial class Frm_Principal : Form
     {
+        uint NumeroDeMultas = 0;
         bool inicioViajem = false;
         bool verificarDistanciaLocalDeEntrega = true;
         bool som5KMExecutado = false;
@@ -62,9 +63,9 @@ namespace NextteamBr
 
         private void Btm_Iniciar_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+            timerVerificacaoGheral.Enabled = true;
 
-            timer1.Start();
+            timerVerificacaoGheral.Start();
 
             Btm_FreteCancelado.Enabled = true;
             Btm_Iniciar.Enabled = false;
@@ -107,7 +108,7 @@ namespace NextteamBr
         {
             if (informacoesGame.trailer.wear > informacoesFrete.Dano)
             {
-                informacoesFrete.Dano = informacoesGame.trailer.wear;
+                informacoesFrete.Dano = (informacoesGame.trailer.wear + 0.08);
 
                 if (executarAudio)
                 {
@@ -118,11 +119,12 @@ namespace NextteamBr
 
         private void VerificarCargaConectada()
         {
-            //Verificando se carga esta conectada e se estiver desabilita essa estrutura de controle.
+
+            timerLimitVelocidade.Start();
 
             if (inicioViajem == false)
             {
-                if (informacoesGame.trailer.attached == true && informacoesGame.navigation.estimatedDistance >200)
+                if (informacoesGame.trailer.attached == true && informacoesGame.navigation.estimatedDistance > 300)
                 {
                     inicioViajem = true;
 
@@ -163,7 +165,6 @@ namespace NextteamBr
 
         private void VerificarCargaEntregue()
         {
-
             if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
             {
                 if (executarAudio)
@@ -175,9 +176,27 @@ namespace NextteamBr
 
                 informacoesFrete.KmRodado = informacoesFrete.DistanciaFinal - informacoesFrete.DistanciaInicial;
 
+                if (NumeroDeMultas > 0)
+                {
+                    informacoesFrete.KmRodado -= (NumeroDeMultas * 1000);
+                }
+
                 informacoesFrete.DataFinalFrete = DateTime.Now;
 
                 SalvarCarga();
+
+                timerLimitVelocidade.Stop();
+            }
+        }
+
+        private void VerificarVelocidade()
+        {
+            if (informacoesGame.truck.speed > informacoesGame.navigation.speedLimit)
+            {
+                if (informacoesGame.truck.speed > 110)
+                {
+                    NumeroDeMultas++;
+                }
             }
         }
 
@@ -188,6 +207,11 @@ namespace NextteamBr
             inicioViajem = false;
             verificarDistanciaLocalDeEntrega = true;
             som5KMExecutado = false;
+        }
+
+        private void timerLimitVelocidade_Tick(object sender, EventArgs e)
+        {
+            VerificarVelocidade();
         }
     }
 }

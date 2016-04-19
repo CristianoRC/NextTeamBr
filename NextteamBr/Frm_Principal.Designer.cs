@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerVerificacaoGheral = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timerLimitVelocidade = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureSom = new System.Windows.Forms.PictureBox();
             this.Btm_FreteCancelado = new System.Windows.Forms.Button();
             this.Btm_Iniciar = new System.Windows.Forms.Button();
@@ -45,22 +48,35 @@
             this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
             this.Lbl_EmpresaInicial = new System.Windows.Forms.Label();
             this.Lbl_CidadeInicial = new System.Windows.Forms.Label();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // timer1
+            // timerVerificacaoGheral
             // 
-            this.timer1.Interval = 1850;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timerVerificacaoGheral.Interval = 40000;
+            this.timerVerificacaoGheral.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Log Book NextTeamBr";
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // timerLimitVelocidade
+            // 
+            this.timerLimitVelocidade.Interval = 1650;
+            this.timerLimitVelocidade.Tick += new System.EventHandler(this.timerLimitVelocidade_Tick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::NextteamBr.Properties.Resources.Faixa_Fundo;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pictureSom);
             this.panel2.Controls.Add(this.Btm_FreteCancelado);
             this.panel2.Controls.Add(this.Btm_Iniciar);
@@ -68,6 +84,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 88);
             this.panel2.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NextteamBr.Properties.Resources.Administrative_Tools_1001;
+            this.pictureBox1.Location = new System.Drawing.Point(469, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureSom
             // 
@@ -219,13 +245,6 @@
             this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 15);
             this.Lbl_CidadeInicial.TabIndex = 4;
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Log Book NextTeamBr";
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +264,7 @@
             this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.Resize += new System.EventHandler(this.Frm_Principal_Resize);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -262,7 +282,7 @@
         private System.Windows.Forms.Label Lbl_EmpresaInicial;
         private System.Windows.Forms.Label Lbl_CidadeDestino;
         private System.Windows.Forms.Label Lbl_EmpresaDestino;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerVerificacaoGheral;
         private System.Windows.Forms.Button Btm_FreteCancelado;
         private System.Windows.Forms.Button Btm_Iniciar;
         private System.Windows.Forms.Panel panel1;
@@ -270,5 +290,7 @@
         private System.Windows.Forms.PictureBox pictureSom;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Timer timerLimitVelocidade;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
