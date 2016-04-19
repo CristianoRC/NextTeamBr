@@ -9,8 +9,6 @@
 
 <b>E-mail:</b> contato@cristianoprogramador.com
 
-<b>Site NextTeamBr:</b> http://www.nextteambr.com.br/
-
 <p> </p>
 <b>Telemetry Server:<b> <b>https://git.io/vgEBB<b>
 
