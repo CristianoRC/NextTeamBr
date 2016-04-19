@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Threading;
 using Spartacus.Database;
+using System.Linq;
 
 namespace NextteamBr
 {
@@ -50,13 +51,27 @@ namespace NextteamBr
 
         public static void LigarServidor()
         {
+           bool  Servidorligado = false;
+
             Process processo = new Process();
 
             processo.StartInfo.FileName = @"ets2-telemetry-server-3.2.5\server\Ets2Telemetry.exe";
             processo.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            processo.StartInfo.CreateNoWindow = false;
             processo.Start();
 
-            Thread.Sleep(2000);
+            while (!Servidorligado)
+            {
+                var isOpen = Process.GetProcesses().Any(p =>
+                    p.ProcessName == "Ets2Telemetry");
+
+                if (isOpen)
+                {
+                    Servidorligado = true;
+                }
+
+                Thread.Sleep(500);
+            }
         }
     }
 }
