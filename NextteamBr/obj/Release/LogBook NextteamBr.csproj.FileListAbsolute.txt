@@ -43,3 +43,4 @@ E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.csprojResolv
 E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Frm_Principal.resources
 E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Properties.Resources.resources
 E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Release\NextteamBr.Frm_Config.resources

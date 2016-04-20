@@ -143,7 +143,6 @@ namespace NextteamBr
 
         private void VerificarDistanciaEntrega()
         {
-            //Ele fica verificando a distancia de entrega até chegar aos 5KM faltando.
             if (verificarDistanciaLocalDeEntrega)
             {
                 if (som5KMExecutado == false)
@@ -176,10 +175,7 @@ namespace NextteamBr
 
                 informacoesFrete.KmRodado = informacoesFrete.DistanciaFinal - informacoesFrete.DistanciaInicial;
 
-                if (NumeroDeMultas > 0)
-                {
-                    informacoesFrete.KmRodado -= (NumeroDeMultas * 1000);
-                }
+                informacoesFrete.KmRodado -= NumeroDeMultas * 1000;
 
                 informacoesFrete.DataFinalFrete = DateTime.Now;
 
@@ -193,7 +189,7 @@ namespace NextteamBr
         {
             if (informacoesGame.truck.speed > informacoesGame.navigation.speedLimit)
             {
-                if (informacoesGame.truck.speed > 110)
+                if (informacoesGame.truck.speed > ControleVelocidade.VelocidadeMaxima())
                 {
                     NumeroDeMultas++;
                 }
@@ -212,6 +208,13 @@ namespace NextteamBr
         private void timerLimitVelocidade_Tick(object sender, EventArgs e)
         {
             VerificarVelocidade();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Frm_Config frm_Config = new Frm_Config();
+
+            frm_Config.Show();
         }
     }
 }
