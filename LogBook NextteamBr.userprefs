@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="NextteamBr/LogBook NextteamBr.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NextteamBr/Frete/Frete.cs">
+    <Files>
+      <File FileName="NextteamBr/Frm_Principal.cs" Line="2" Column="28" />
+      <File FileName="NextteamBr/Frete/Frete.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
