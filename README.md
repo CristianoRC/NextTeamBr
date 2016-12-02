@@ -10,7 +10,7 @@
 <b>E-mail:</b> contato@cristianoprogramador.com
 
 <p> </p>
-<b>Telemetry Server:<b> <b>https://git.io/vgEBB<b>
+<b>Telemetry SDK:<b> <b>https://git.io/v1c0e<b>
 
 <hr> </hr>
 
