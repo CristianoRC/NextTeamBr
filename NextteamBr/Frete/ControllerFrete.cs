@@ -2,20 +2,27 @@
 
 namespace NextteamBr
 {
-	class ControllerFrete
-	{
-		public static string SalvarFrete(Frete InformacoesFrete)
-		{
-			string Saida;
+    class ControllerFrete
+    {
+        public static string SalvarFrete(Frete InformacoesFrete)
+        {
+            string Saida;
 
-			Saida = JsonConvert.SerializeObject(InformacoesFrete);
+            InformacoesFrete.Dano = double.Parse(InformacoesFrete.Dano.ToString("0.00"));
+            InformacoesFrete.KmRodado = double.Parse(InformacoesFrete.KmRodado.ToString("0.00"));
+            InformacoesFrete.Pontuacao = double.Parse(InformacoesFrete.Pontuacao.ToString("0.00"));
 
-			System.IO.StreamWriter sw;
-			sw = new System.IO.StreamWriter("Informacoes.JSON");
+            Saida = JsonConvert.SerializeObject(InformacoesFrete);
 
-			sw.WriteLine(Saida);
+            System.IO.StreamWriter sw;
 
-			return Saida;
-		}
-	}
+            sw = new System.IO.StreamWriter("Informacoes.JSON");
+
+            sw.WriteLine(Saida);
+
+            sw.Close();
+
+            return Saida;
+        }
+    }
 }
