@@ -1,111 +1,161 @@
 ﻿using System;
 using System.Windows.Forms;
+using Ets2SdkClient;
 
 namespace NextteamBr
 {
-    public partial class Frm_Principal : Form
-    {
-        uint NumeroDeMultas = 0;
-        bool inicioViajem = false;
-        bool verificarDistanciaLocalDeEntrega = true;
-        bool som5KMExecutado = false;
-        bool executarAudio = true;
-        Frete informacoesFrete = new Frete();
-        RootObject informacoesGame;
+	public partial class Frm_Principal : Form
+	{
 
-        public Frm_Principal()
-        {
-            InitializeComponent();
-        }
+		public Ets2SdkTelemetry Telemetria;
 
-        private void Frm_Principal_Load(object sender, EventArgs e)
-        {
-            Ferramentas.LigarServidor();
-        }
+		//uint NumeroDeMultas = 0;
+		bool executarAudio = true;
+		bool ObterInformacoesIniciais = false;
+		bool ObterInformacoesFinais = false;
+		Frete informacoesFrete = new Frete();
+		Odometro informacoesOdometro = new Odometro();
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            informacoesGame = ControllerTelemetry.ConvertJSON();
+		public Frm_Principal()
+		{
+			InitializeComponent();
 
-            Lbl_CidadeInicial.Text = informacoesGame.job.sourceCity;
-            Lbl_CidadeDestino.Text = informacoesGame.job.destinationCity;
-            Lbl_EmpresaInicial.Text = informacoesGame.job.sourceCompany;
-            Lbl_EmpresaDestino.Text = informacoesGame.job.destinationCompany;
+			Telemetria = new Ets2SdkTelemetry();
+			Telemetria.Data += Telemetry_Data;
 
-            Lbl_Cambio.Text = Convert.ToInt16(informacoesGame.truck.gear).ToString();
-            Lbl_KMH.Text = Convert.ToInt16(informacoesGame.truck.speed).ToString();
-            Lbl_KMRegistrado.Text = informacoesGame.truck.odometer.ToString("0.0");
-            Lbl_RPM.Text = informacoesGame.truck.engineRpm.ToString("0.0");
+			Telemetria.JobFinished += TelemetryOnJobFinished;
+			Telemetria.JobStarted += TelemetryOnJobStarted;
 
+			if (Telemetria.Error != null)
+			{
+				MessageBox.Show(
+					"General info:\r\nFailed to open memory map " + Telemetria.Map +
+						" - on some systems you need to run the client (this app) with elevated permissions, because e.g. you're running Steam/ETS2 with elevated permissions as well. .NET reported the following Exception:\r\n" +
+					Telemetria.Error.Message + "\r\n\r\nStacktrace:\r\n" + Telemetria.Error.StackTrace);
+			}
 
-            if (informacoesGame.game.paused == false)
-            {
-                VerificarCargaConectada();
+		}
 
-                if (informacoesGame.trailer.attached)
-                {
-                    VerificarDistanciaEntrega();
-                    VerificarCargaEntregue();
-                    VerificarDanoDaCarga();
-                }
-            }
-        }
+		#region Infomações Telemetria
 
-        private void Btm_FreteCancelado_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
+		private void TelemetryOnJobStarted(object sender, EventArgs e)
+		{
+			ObterInformacoesIniciais = true;
 
-        private void Frm_Principal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Ferramentas.DesligarServidor();
-        }
+			if (executarAudio)
+			{
+				ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
+			}
 
-        private void Btm_Iniciar_Click(object sender, EventArgs e)
-        {
-            timerVerificacaoGheral.Enabled = true;
+		}
 
-            timerVerificacaoGheral.Start();
+		private void TelemetryOnJobFinished(object sender, EventArgs args)
+		{
+			ObterInformacoesFinais = true;
 
-            Btm_FreteCancelado.Enabled = true;
-            Btm_Iniciar.Enabled = false;
-        }
+			if (executarAudio)
+			{
+				ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+			}
 
-        private void pictureSom_Click(object sender, EventArgs e)
-        {
-            if (executarAudio)
-            {
-                executarAudio = false;
+			informacoesFrete.KmRodado = informacoesOdometro.ObterKilometroRodados();
 
-                pictureSom.Image = NextteamBr.Properties.Resources.Mute_50;
-            }
-            else
-            {
-                executarAudio = true;
+			MessageBox.Show(String.Format("{0}, {1}, {2}, {3}", informacoesFrete.KmRodado, informacoesFrete.Carga,
+										  informacoesFrete.CidadeInicial, informacoesFrete.CidadeDestino));
+		}
 
-                pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
-            }
-        }
+		private void Telemetry_Data(Ets2Telemetry InformacoesTelemetria, bool updated)
+		{
+			try
+			{
+				if (this.InvokeRequired)
+				{
+					this.Invoke(new TelemetryData(Telemetry_Data), new object[2] { InformacoesTelemetria, updated });
+					return;
+				}
 
-        private void Frm_Principal_Resize(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-                notifyIcon1.Visible = true;
-                this.ShowInTaskbar = false;
-            }
-        }
+				var grps = new object[]
+					   {
+							InformacoesTelemetria.Drivetrain, InformacoesTelemetria.Physics, InformacoesTelemetria.Controls,
+							InformacoesTelemetria.Axilliary, InformacoesTelemetria.Damage, InformacoesTelemetria.Lights, InformacoesTelemetria.Job
+					   };
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            notifyIcon1.Visible = false;
-            this.ShowInTaskbar = false;
-            this.WindowState = FormWindowState.Normal;
-        }
+				#region Informações da tela
 
-        private void VerificarDanoDaCarga()
-        {
+				Lbl_CidadeInicial.Text = InformacoesTelemetria.Job.CitySource.ToString();
+				Lbl_CidadeDestino.Text = InformacoesTelemetria.Job.CityDestination.ToString();
+				Lbl_EmpresaInicial.Text = InformacoesTelemetria.Job.CompanySource.ToString();
+				Lbl_EmpresaDestino.Text = InformacoesTelemetria.Job.CompanyDestination.ToString();
+
+				Lbl_Cambio.Text = Convert.ToInt16(InformacoesTelemetria.Drivetrain.Gear).ToString();
+				Lbl_KMH.Text = Convert.ToInt16(InformacoesTelemetria.Drivetrain.SpeedKmh).ToString();
+				Lbl_KMRegistrado.Text = InformacoesTelemetria.Drivetrain.TruckOdometer.ToString("0.0");
+				Lbl_RPM.Text = InformacoesTelemetria.Drivetrain.EngineRpm.ToString("0.0");
+				#endregion
+
+				#region Variaveis
+
+				if (ObterInformacoesIniciais)
+				{
+					informacoesOdometro.ValorInicial = InformacoesTelemetria.Drivetrain.TruckOdometer;
+
+					informacoesFrete.CidadeInicial = InformacoesTelemetria.Job.CitySource.ToString();
+					informacoesFrete.CidadeDestino = InformacoesTelemetria.Job.CityDestination.ToString();
+					informacoesFrete.Carga = InformacoesTelemetria.Job.TrailerName.ToString();
+
+					ObterInformacoesIniciais = false;
+				}
+				else if (ObterInformacoesFinais)
+				{
+					informacoesOdometro.ValorAtual = InformacoesTelemetria.Drivetrain.TruckOdometer;
+
+					ObterInformacoesFinais = false;
+				}
+				#endregion
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		#endregion
+		private void pictureSom_Click(object sender, EventArgs e)
+		{
+			if (executarAudio)
+			{
+				executarAudio = false;
+
+				pictureSom.Image = NextteamBr.Properties.Resources.Mute_50;
+			}
+			else
+			{
+				executarAudio = true;
+
+				pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
+			}
+		}
+
+		private void Frm_Principal_Resize(object sender, EventArgs e)
+		{
+			if (this.WindowState == FormWindowState.Minimized)
+			{
+				notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+				notifyIcon1.Visible = true;
+				this.ShowInTaskbar = false;
+			}
+		}
+
+		private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+		{
+			notifyIcon1.Visible = false;
+			this.ShowInTaskbar = false;
+			this.WindowState = FormWindowState.Normal;
+		}
+
+		private void VerificarDanoDaCarga()
+		{
+			/*
             if (informacoesGame.trailer.wear > informacoesFrete.Dano)
             {
                 informacoesFrete.Dano = (informacoesGame.trailer.wear + 0.08);
@@ -115,11 +165,12 @@ namespace NextteamBr
                     ControllerAudio.ExecutarAudio("Dano");
                 }
             }
-        }
+            */
+		}
 
-        private void VerificarCargaConectada()
-        {
-
+		private void VerificarCargaConectada()
+		{
+			/*
             timerLimitVelocidade.Start();
 
             if (inicioViajem == false)
@@ -128,7 +179,7 @@ namespace NextteamBr
                 {
                     inicioViajem = true;
 
-                    if (executarAudio)
+	                    if (executarAudio)
                     {
                         ControllerAudio.ExecutarAudio("Conectada");
                     }
@@ -139,11 +190,13 @@ namespace NextteamBr
                     informacoesFrete.Dano = informacoesGame.trailer.wear;
                 }
             }
-        }
+            */
+		}
 
-        private void VerificarDistanciaEntrega()
-        {
-            if (verificarDistanciaLocalDeEntrega)
+		private void VerificarDistanciaEntrega()
+		{
+			/*
+			if (verificarDistanciaLocalDeEntrega)
             {
                 if (som5KMExecutado == false)
                 {
@@ -160,10 +213,12 @@ namespace NextteamBr
                     }
                 }
             }
-        }
+            */
+		}
 
-        private void VerificarCargaEntregue()
-        {
+		private void VerificarCargaEntregue()
+		{
+			/*
             if (informacoesGame.navigation.estimatedDistance <= 90 && informacoesGame.navigation.estimatedDistance >= 10)
             {
                 if (executarAudio)
@@ -183,38 +238,35 @@ namespace NextteamBr
 
                 timerLimitVelocidade.Stop();
             }
-        }
+            */
+		}
 
-        private void VerificarVelocidade()
-        {
-            if (informacoesGame.truck.speed > informacoesGame.navigation.speedLimit)
+		private void VerificarVelocidade()
+		{
+			/*
+			if (informacoesGame.truck.speed > informacoesGame.navigation.speedLimit)
             {
                 if (informacoesGame.truck.speed > ControleVelocidade.VelocidadeMaxima())
                 {
                     NumeroDeMultas++;
                 }
             }
-        }
+            */
+		}
 
-        private void SalvarCarga()
-        {
-            ControllerFrete.SalvarFrete(informacoesFrete, informacoesGame);
+		private void SalvarCarga()
+		{
+
+			/*ControllerFrete.SalvarFrete(informacoesFrete, informacoesGame);
 
             inicioViajem = false;
             verificarDistanciaLocalDeEntrega = true;
-            som5KMExecutado = false;
-        }
+            som5KMExecutado = false;*/
+		}
 
-        private void timerLimitVelocidade_Tick(object sender, EventArgs e)
-        {
-            VerificarVelocidade();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Frm_Config frm_Config = new Frm_Config();
-
-            frm_Config.Show();
-        }
-    }
+		private void timerLimitVelocidade_Tick(object sender, EventArgs e)
+		{
+			VerificarVelocidade();
+		}
+	}
 }

@@ -11,7 +11,7 @@ namespace NextteamBr
         /// <param name="InformacoesFrete"></param>
         /// <param name="NomeArquivo"></param>
         /// <returns></returns>
-        public static void SalvarFrete(Frete InformacoesFrete, RootObject informacoesGame)
+        public static void SalvarFrete(Frete InformacoesFrete)
         {
             //TODO:Desenvolver sistema de salver frete no banco de dados.
         }

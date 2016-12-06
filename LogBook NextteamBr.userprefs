@@ -1,13 +1,16 @@
-﻿<Properties StartupItem="NextteamBr/LogBook NextteamBr.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="NextteamBr/Frete/Frete.cs">
+﻿<Properties StartupConfiguration="{443789AE-E4C2-4CAC-9118-78BBA31BAC20}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NextteamBr/Frm_Principal.Designer.cs">
     <Files>
-      <File FileName="NextteamBr/Frm_Principal.cs" Line="2" Column="28" />
-      <File FileName="NextteamBr/Frete/Frete.cs" Line="1" Column="1" />
+      <File FileName="NextteamBr/Frm_Principal.cs" Line="141" Column="8" />
+      <File FileName="NextteamBr/Frete/Frete.cs" Line="16" Column="1" />
+      <File FileName="Ets2SdkClient/Ets2Telemetry.cs" Line="194" Column="4" />
+      <File FileName="NextteamBr/Frm_Principal.Designer.cs" Line="103" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LogBook_220NextteamBr PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
