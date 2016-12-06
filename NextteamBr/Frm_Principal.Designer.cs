@@ -30,7 +30,6 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
-			this.timerVerificacaoGheral = new System.Windows.Forms.Timer(this.components);
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
 			this.timerLimitVelocidade = new System.Windows.Forms.Timer(this.components);
 			this.panel2 = new System.Windows.Forms.Panel();
@@ -246,7 +245,6 @@
 		private System.Windows.Forms.Label Lbl_EmpresaInicial;
 		private System.Windows.Forms.Label Lbl_CidadeDestino;
 		private System.Windows.Forms.Label Lbl_EmpresaDestino;
-		private System.Windows.Forms.Timer timerVerificacaoGheral;
 		private System.Windows.Forms.Button Btm_FreteCancelado;
 		private System.Windows.Forms.Button Btm_Iniciar;
 		private System.Windows.Forms.Panel panel1;

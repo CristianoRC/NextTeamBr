@@ -1,4 +1,4 @@
-/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Release/NextteamBr.Frm_Principal.resources
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Release/NextteamBr.Properties.Resources.resources
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Release/LogBook NextteamBr.exe.config

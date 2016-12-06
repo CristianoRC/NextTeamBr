@@ -74,12 +74,6 @@ namespace NextteamBr
 					return;
 				}
 
-				var grps = new object[]
-					   {
-							InformacoesTelemetria.Drivetrain, InformacoesTelemetria.Physics, InformacoesTelemetria.Controls,
-							InformacoesTelemetria.Axilliary, InformacoesTelemetria.Damage, InformacoesTelemetria.Lights, InformacoesTelemetria.Job
-					   };
-
 				#region Informações da tela
 
 				Lbl_CidadeInicial.Text = InformacoesTelemetria.Job.CitySource.ToString();
