@@ -1,0 +1,12 @@
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Debug/NextteamBr.Frm_Principal.resources
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Debug/NextteamBr.Properties.Resources.resources
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/LogBook NextteamBr.exe.config
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/LogBook NextteamBr.exe.mdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/LogBook NextteamBr.exe
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Debug/LogBook NextteamBr.exe
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/Debug/LogBook NextteamBr.exe.mdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/Newtonsoft.Json.dll
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/Spartacus.dll
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/Ets2SdkClient.dll
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/Ets2SdkClient.dll.mdb

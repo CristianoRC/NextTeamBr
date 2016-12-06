@@ -1,0 +1,56 @@
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\Newtonsoft.Json.dll
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\Newtonsoft.Json.xml
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\LogBook NextteamBr.exe.config
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\LogBook NextteamBr.exe
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\LogBook NextteamBr.pdb
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.exe
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.pdb
+D:\Projetos\LogBook-NextTeamBr\NextteamBr\bin\Debug\Spartacus.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe.config
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.exe
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.pdb
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.pdb
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Newtonsoft.Json.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Spartacus.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Newtonsoft.Json.xml
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+D:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_InfoMotorista.resources
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.SqlServer.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.EF6.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.Linq.dll
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.xml
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\EntityFramework.SqlServer.xml
+D:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\System.Data.SQLite.xml
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe.config
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.pdb
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Newtonsoft.Json.dll
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Spartacus.dll
+E:\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Newtonsoft.Json.xml
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.exe
+E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe.config
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Ets2SdkClient.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Spartacus.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Ets2SdkClient.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.pdb
