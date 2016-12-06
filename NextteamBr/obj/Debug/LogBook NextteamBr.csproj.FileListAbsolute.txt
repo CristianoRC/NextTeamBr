@@ -42,3 +42,15 @@ E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.r
 E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
 E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.exe
 E:\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe.config
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\LogBook NextteamBr.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Ets2SdkClient.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Spartacus.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\Debug\Ets2SdkClient.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\Debug\LogBook NextteamBr.pdb

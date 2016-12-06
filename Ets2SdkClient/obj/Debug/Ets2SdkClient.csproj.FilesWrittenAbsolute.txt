@@ -1,5 +1,0 @@
-/home/cristiano/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/obj/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
-/home/cristiano/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll.mdb
-/home/cristiano/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll
-/home/cristiano/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll
-/home/cristiano/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll.mdb
