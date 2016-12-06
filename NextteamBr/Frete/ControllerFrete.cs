@@ -1,19 +1,20 @@
-﻿using Spartacus.Utils;
-using System.IO;
-
+﻿using Newtonsoft.Json;
 namespace NextteamBr
 {
-    class ControllerFrete
-    {
-        /// <summary>
-        /// Salvando informações do frete em um arquivo criptografado
-        /// </summary>
-        /// <param name="InformacoesFrete"></param>
-        /// <param name="NomeArquivo"></param>
-        /// <returns></returns>
-        public static void SalvarFrete(Frete InformacoesFrete)
-        {
-            //TODO:Desenvolver sistema de salver frete no banco de dados.
-        }
-    }
+	class ControllerFrete
+	{
+		public static string SalvarFrete(Frete InformacoesFrete)
+		{
+			string Saida;
+
+			Saida = JsonConvert.SerializeObject(InformacoesFrete);
+
+			System.IO.StreamWriter sw;
+			sw = new System.IO.StreamWriter("Informacoes.JSON");
+
+			sw.WriteLine(Saida);
+
+			return Saida;
+		}
+	}
 }

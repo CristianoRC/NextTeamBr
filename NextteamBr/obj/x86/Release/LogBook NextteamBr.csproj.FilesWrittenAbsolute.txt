@@ -1,0 +1,15 @@
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/NextteamBr.Frm_Principal.resources
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/NextteamBr.Properties.Resources.resources
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/LogBook NextteamBr.exe
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/LogBook NextteamBr.pdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/Newtonsoft.Json.dll
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/Spartacus.dll
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/Ets2SdkClient.dll
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/Ets2SdkClient.dll.mdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/Ets2SdkClient.pdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/LogBook NextteamBr.exe.config
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/LogBook NextteamBr.exe.mdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/LogBook NextteamBr.pdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/LogBook NextteamBr.exe
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/LogBook NextteamBr.exe.mdb
