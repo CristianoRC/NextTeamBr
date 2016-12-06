@@ -2,8 +2,9 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bi
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\x86\Release\Ets2SdkClient.dll
-C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\x86\Release\Spartacus.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\x86\Release\Newtonsoft.Json.dll
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\bin\x86\Release\Newtonsoft.Json.xml
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
