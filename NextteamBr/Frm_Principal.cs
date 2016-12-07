@@ -142,5 +142,17 @@ namespace NextteamBr
             this.ShowInTaskbar = false;
             this.WindowState = FormWindowState.Normal;
         }
+
+        private void Btm_Continuar_Click(object sender, EventArgs e)
+        {
+            if (Btm_Continuar.FlatAppearance.BorderColor == System.Drawing.Color.DarkRed)
+            {
+                Btm_Continuar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                Btm_Continuar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            }
+        }
     }
 }
