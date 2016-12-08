@@ -44,7 +44,6 @@
             this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
             this.Lbl_EmpresaInicial = new System.Windows.Forms.Label();
             this.Lbl_CidadeInicial = new System.Windows.Forms.Label();
-            this.Btm_Continuar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,7 +61,6 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::NextteamBr.Properties.Resources.Faixa_Fundo;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.Btm_Continuar);
             this.panel2.Controls.Add(this.Lbl_i);
             this.panel2.Controls.Add(this.pictureSom);
             this.panel2.Location = new System.Drawing.Point(0, 148);
@@ -202,21 +200,6 @@
             this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 15);
             this.Lbl_CidadeInicial.TabIndex = 4;
             // 
-            // Btm_Continuar
-            // 
-            this.Btm_Continuar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btm_Continuar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.Btm_Continuar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Btm_Continuar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Btm_Continuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_Continuar.Location = new System.Drawing.Point(21, 24);
-            this.Btm_Continuar.Name = "Btm_Continuar";
-            this.Btm_Continuar.Size = new System.Drawing.Size(183, 38);
-            this.Btm_Continuar.TabIndex = 13;
-            this.Btm_Continuar.Text = "Continuar Frete";
-            this.Btm_Continuar.UseVisualStyleBackColor = true;
-            this.Btm_Continuar.Click += new System.EventHandler(this.Btm_Continuar_Click);
-            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +241,5 @@
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.NotifyIcon notifyIcon1;
 		private System.Windows.Forms.Label Lbl_i;
-        private System.Windows.Forms.Button Btm_Continuar;
     }
 }

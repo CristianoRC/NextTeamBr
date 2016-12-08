@@ -11,3 +11,4 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\ob
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Debug\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Debug\LogBook NextteamBr.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Login.resources

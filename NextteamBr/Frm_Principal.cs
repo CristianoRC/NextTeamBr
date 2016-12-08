@@ -47,7 +47,6 @@ namespace NextteamBr
             {
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
             }
-
         }
 
         private void TelemetryOnJobFinished(object sender, EventArgs args)
@@ -100,7 +99,6 @@ namespace NextteamBr
 
                 v_OdometroFinal = data.Drivetrain.TruckOdometer;
                 informacoesFrete.Dano = data.Damage.WearTrailer;
-
                 #endregion
 
                 VelocidadeAtual = data.Drivetrain.SpeedKmh;
@@ -141,18 +139,6 @@ namespace NextteamBr
             notifyIcon1.Visible = false;
             this.ShowInTaskbar = false;
             this.WindowState = FormWindowState.Normal;
-        }
-
-        private void Btm_Continuar_Click(object sender, EventArgs e)
-        {
-            if (Btm_Continuar.FlatAppearance.BorderColor == System.Drawing.Color.DarkRed)
-            {
-                Btm_Continuar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            }
-            else
-            {
-                Btm_Continuar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            }
         }
     }
 }
