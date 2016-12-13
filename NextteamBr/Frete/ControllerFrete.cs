@@ -1,28 +1,46 @@
 ﻿using Newtonsoft.Json;
+using System.IO;
+using System.Net;
+using System.Text;
 
 namespace NextteamBr
 {
     class ControllerFrete
     {
-        public static string SalvarFrete(Frete InformacoesFrete)
+        public static bool SalvarFrete(Frete InformacoesFrete)
         {
-            string Saida;
 
-            InformacoesFrete.Dano = double.Parse(InformacoesFrete.Dano.ToString("0.00"));
-            InformacoesFrete.KmRodado = double.Parse(InformacoesFrete.KmRodado.ToString("0.00"));
-            InformacoesFrete.Pontuacao = double.Parse(InformacoesFrete.Pontuacao.ToString("0.00"));
+            bool saida;
+            string StrJSON;
+            try
+            {
+                InformacoesFrete.Dano = double.Parse(InformacoesFrete.Dano.ToString("0.00"));
+                InformacoesFrete.KmRodado = double.Parse(InformacoesFrete.KmRodado.ToString("0.00"));
+                InformacoesFrete.Pontuacao = double.Parse(InformacoesFrete.Pontuacao.ToString("0.00"));
 
-            Saida = JsonConvert.SerializeObject(InformacoesFrete);
+                StrJSON = JsonConvert.SerializeObject(InformacoesFrete);
 
-            System.IO.StreamWriter sw;
+                string url = "http://nextteambr.com.br/nxt.php";
+                HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(url);
+                ASCIIEncoding encoding = new ASCIIEncoding();
+                string postData = StrJSON;
+                byte[] data = encoding.GetBytes(postData); httpWReq.Method = "POST";
+                httpWReq.ContentType = "application/x-www-form-urlencoded";
+                httpWReq.ContentLength = data.Length;
+                using (Stream stream = httpWReq.GetRequestStream())
+                {
+                    stream.Write(data, 0, data.Length);
+                }
+                HttpWebResponse response = (HttpWebResponse)httpWReq.GetResponse();
+                string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 
-            sw = new System.IO.StreamWriter("Informacoes.JSON");
-
-            sw.WriteLine(Saida);
-
-            sw.Close();
-
-            return Saida;
+                saida = true;
+            }
+            catch (System.Exception)
+            {
+                saida = false;
+            }
+            return saida;
         }
     }
 }

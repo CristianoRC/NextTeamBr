@@ -1,49 +1,41 @@
-﻿    using System.Diagnostics;
+﻿using System.Diagnostics;
 
-    namespace NextteamBr
+namespace NextteamBr
+{
+    public static class Ferramentas
     {
-        public static class Ferramentas
+        public static bool VerificarTeamSpeak()
         {
-            /// <summary>
-            /// Verificando se é ATS ou ETS2
-            /// </summary>
-            /// <returns></returns>
-            public static string VerificarGame()
-            {
-                string saida = "";
+            bool saida = false;
 
-                Process[] processes = Process.GetProcesses();
-                for (int i = 0; i < processes.Length; i++)
+            Process[] processes = Process.GetProcesses();
+            for (int i = 0; i < processes.Length; i++)
+            {
+                Process process = processes[i];
+                if (process.MainWindowTitle.Contains("TeamSpeak 3"))
                 {
-                    Process process = processes[i];
-                    if (process.MainWindowTitle.Contains("Euro Truck Simulator 2"))
-                    {
-                        saida = "Euro Truck Simulator 2";
-                    }
-                    if (process.MainWindowTitle.Contains("American Truck Simulator"))
-                    {
-                        saida = "American Truck Simulator";
-                    }
+                    saida = true;
                 }
-
-                return saida;
             }
 
-            public static double CalcularPontuacao(double KmRodado, double Dano)
-            {
-                //A cada 20 infrações perde 1 KM.
-                //A cada 1 KM 0.01 ponto
-                // a cada 0.02 de dano perde 1 KM.
+            return saida;
+        }
 
-                double saida;
-                double KmPerdido;
+        public static double CalcularPontuacao(double KmRodado, double Dano)
+        {
+            //A cada 20 infrações perde 1 KM.
+            //A cada 1 KM 0.01 ponto
+            // a cada 0.02 de dano perde 1 KM.
 
-                KmPerdido = (Dano / 0.02);
+            double saida;
+            double KmPerdido;
 
-                double KmFinal = KmRodado - KmPerdido;
-                saida = (KmFinal * 0.01);
+            KmPerdido = (Dano / 0.02);
 
-                return saida;
-            }
+            double KmFinal = KmRodado - KmPerdido;
+            saida = (KmFinal * 0.01);
+
+            return saida;
         }
     }
+}

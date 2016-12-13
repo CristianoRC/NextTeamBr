@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace NextteamBr
@@ -32,6 +26,11 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
+            if (Ferramentas.VerificarTeamSpeak())
+            {
+                MessageBox.Show("Ta no ts3");
+            }
+
             Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
 
             string Resultado = ControleVersao.VerificarAtualizacoes();

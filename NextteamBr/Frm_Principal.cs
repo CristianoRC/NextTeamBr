@@ -51,16 +51,22 @@ namespace NextteamBr
 
         private void TelemetryOnJobFinished(object sender, EventArgs args)
         {
-            if (executarAudio)
-            {
-                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
-            }
-
             informacoesFrete.KmRodado = v_OdometroFinal - v_OdometroInical;
             informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
             informacoesFrete.DataFinalFrete = DateTime.Now;
 
-            MessageBox.Show(ControllerFrete.SalvarFrete(informacoesFrete));
+            if (ControllerFrete.SalvarFrete(informacoesFrete))
+            {
+                if (executarAudio)
+                {
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                }
+                else
+                {
+                    //Menssagem de erro aqui
+                }
+            }
+
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)

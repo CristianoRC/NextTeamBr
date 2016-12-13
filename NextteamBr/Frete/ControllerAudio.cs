@@ -20,7 +20,7 @@ namespace NextteamBr
 				case "Dano":
 
 					SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
-					Dano.Play();
+                    Dano.Play();
 
 					break;
 				case "Conectada":
