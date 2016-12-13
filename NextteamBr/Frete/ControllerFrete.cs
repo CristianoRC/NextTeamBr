@@ -20,7 +20,7 @@ namespace NextteamBr
 
                 StrJSON = JsonConvert.SerializeObject(InformacoesFrete);
 
-                string url = "http://nextteambr.com.br/nxt.php";
+                string url = @"http://nextteambr.com.br/nxt.php";
                 HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(url);
                 ASCIIEncoding encoding = new ASCIIEncoding();
                 string postData = StrJSON;

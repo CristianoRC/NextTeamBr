@@ -18,14 +18,20 @@ namespace NextteamBr
 
         private void Btm_Logar_Click(object sender, EventArgs e)
         {
-            Frm_Principal frm_Principal = new Frm_Principal();
+            Usuario uso = new Usuario(Txt_Login.Text, Txt_Senha.Text);
+
+            MessageBox.Show(uso.Logar());
+
+            /*Frm_Principal frm_Principal = new Frm_Principal();
             this.Visible = false;
             frm_Principal.ShowDialog();
-            this.Dispose();
+            this.Dispose(); */
         }
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(DateTime.Now.ToString(""));
+
             if (Ferramentas.VerificarTeamSpeak())
             {
                 MessageBox.Show("Ta no ts3");

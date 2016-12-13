@@ -10,7 +10,7 @@ namespace NextteamBr
 		public string Carga { get; set; }
 		public string CidadeInicial { get; set; }
 		public string CidadeDestino { get; set; }
-		public DateTime DataFinalFrete { get; set; }
+		public string DataFinalFrete { get; set; }
 		public double Pontuacao { get; set; }
 	}
 }

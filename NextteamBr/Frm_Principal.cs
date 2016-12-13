@@ -53,7 +53,7 @@ namespace NextteamBr
         {
             informacoesFrete.KmRodado = v_OdometroFinal - v_OdometroInical;
             informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
-            informacoesFrete.DataFinalFrete = DateTime.Now;
+            informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             if (ControllerFrete.SalvarFrete(informacoesFrete))
             {
