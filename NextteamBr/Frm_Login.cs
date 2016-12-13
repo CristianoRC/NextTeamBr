@@ -20,7 +20,7 @@ namespace NextteamBr
         {
             Usuario uso = new Usuario(Txt_Login.Text, Txt_Senha.Text);
 
-            MessageBox.Show(uso.Logar());
+            MessageBox.Show(ControllerUsuario.Logar(uso));
 
             /*Frm_Principal frm_Principal = new Frm_Principal();
             this.Visible = false;
@@ -30,13 +30,6 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(DateTime.Now.ToString(""));
-
-            if (Ferramentas.VerificarTeamSpeak())
-            {
-                MessageBox.Show("Ta no ts3");
-            }
-
             Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
 
             string Resultado = ControleVersao.VerificarAtualizacoes();

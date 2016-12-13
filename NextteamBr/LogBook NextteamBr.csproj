@@ -108,7 +108,8 @@
     <Compile Include="Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Usuario\Usuario.cs" />
+    <Compile Include="Usuario\ControllerUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Login.resx">
