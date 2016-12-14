@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
 
@@ -18,7 +17,7 @@ namespace NextteamBr
             {
                 StrJSON = JsonConvert.SerializeObject(uso);
 
-                string url = "http://www.nextteambr.com.br/nextapp/loginapp.php";
+                string url = "http://painel.nextteambr.com.br/loginapp.php";
                 HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(url);
                 ASCIIEncoding encoding = new ASCIIEncoding();
                 string postData = StrJSON;

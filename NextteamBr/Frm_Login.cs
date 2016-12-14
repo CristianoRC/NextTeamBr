@@ -18,14 +18,47 @@ namespace NextteamBr
 
         private void Btm_Logar_Click(object sender, EventArgs e)
         {
-            Usuario uso = new Usuario(Txt_Login.Text, Txt_Senha.Text);
+            //LoginTrue -- Login e senha OK
+            //LoginFalse -- Login errado
+            //LoginIncorrect  -- Senha errada
+            //LoginInativo --Não ativo
 
-            MessageBox.Show(ControllerUsuario.Logar(uso));
+            if (!String.IsNullOrWhiteSpace(Txt_Login.Text) && !String.IsNullOrWhiteSpace(Txt_Senha.Text))
+            {
+                Usuario uso = new Usuario(Txt_Login.Text, Ferramentas.getMD5Hash(Txt_Senha.Text));
 
-            /*Frm_Principal frm_Principal = new Frm_Principal();
+                string resultado = ControllerUsuario.Logar(uso);
+
+                MessageBox.Show(resultado);
+
+                switch (resultado)
+                {
+                    case "LoginTrue":
+                        ChamarFormularioPrincipal();
+                        break;
+                    case "LoginFalse":
+                        MessageBox.Show("Login inválido!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    case "LoginIncorrect":
+                        MessageBox.Show("Senha inválida!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    case "LoginInativo":
+                        MessageBox.Show("Seu usuário ainda não foi ativado, entre em contato com um dos administradores", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Insira seu login e senha!", "Alterta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void ChamarFormularioPrincipal()
+        {
+            Frm_Principal frm_Principal = new Frm_Principal();
             this.Visible = false;
             frm_Principal.ShowDialog();
-            this.Dispose(); */
+            this.Dispose();
         }
 
         private void Frm_Login_Load(object sender, EventArgs e)
