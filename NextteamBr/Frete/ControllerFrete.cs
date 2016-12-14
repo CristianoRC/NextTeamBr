@@ -27,8 +27,8 @@ namespace NextteamBr
                 string postData = StrJSON;
                 byte[] data = encoding.GetBytes(postData);
                 httpWReq.Method = "POST";
-                //httpWReq.ContentType = "application/x-www-form-urlencoded";
-                httpWReq.ContentType = "application / json; charset = utf-8";
+                httpWReq.ContentType = "application/x-www-form-urlencoded";
+                // httpWReq.ContentType = "application / json; charset = utf-8";
                 httpWReq.ContentLength = data.Length;
                 using (Stream stream = httpWReq.GetRequestStream())
                 {

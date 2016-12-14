@@ -55,18 +55,24 @@ namespace NextteamBr
             informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
             informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            if (ControllerFrete.SalvarFrete(informacoesFrete))
+            if(Ferramentas.VerificarTeamSpeak())
             {
-                if (executarAudio)
+                if (ControllerFrete.SalvarFrete(informacoesFrete))
                 {
-                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                    if (executarAudio)
+                    {
+                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                    }
                 }
                 else
                 {
-                    //Menssagem de erro aqui
+                   MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!","Erro!",MessageBoxButtons.Yes, MessageBoxIcon.Error);
                 }
             }
-
+            else
+            {
+                MessageBox.Show("Sua caraga não foi registrada pois você não está logado no Team Speak da NextTeam BR ","Eu avisei que não iria dar",MessageBoxButtons.Yes, MessageBoxIcon.Information);
+            }
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)

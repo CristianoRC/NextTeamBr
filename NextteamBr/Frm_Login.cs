@@ -27,9 +27,7 @@ namespace NextteamBr
             {
                 Usuario uso = new Usuario(Txt_Login.Text, Ferramentas.getMD5Hash(Txt_Senha.Text));
 
-                string resultado = ControllerUsuario.Logar(uso);
-
-                MessageBox.Show(resultado);
+                string resultado = ControllerUsuario.Logar(uso);                
 
                 switch (resultado)
                 {
@@ -72,7 +70,7 @@ namespace NextteamBr
                 MessageBox.Show("Verifique a sua conexão, para poder continuar utilizando o software", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Btm_Logar.Enabled = false;
             }
-            else if (Resultado != String.Empty || Resultado.Contains("Erro ao tentar fazer a requisição:"))
+            else if (Resultado != String.Empty && !Resultado.Contains("Erro ao tentar fazer a requisição:"))
             {
                 MessageBox.Show("Atualize o seu Software para poder continuar Utilizando!", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Btm_Logar.Enabled = false;
