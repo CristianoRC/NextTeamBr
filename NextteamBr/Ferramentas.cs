@@ -28,8 +28,6 @@ namespace NextteamBr
 
         public static bool VerificarTeamSpeak()
         {
-            TeamSpeak3QueryApi.Net.Specialized.Responses.GetChannelInfo canal = new TeamSpeak3QueryApi.Net.Specialized.Responses.GetChannelInfo();
-
             bool saida = false;
 
             Process[] processes = Process.GetProcesses();
@@ -38,10 +36,7 @@ namespace NextteamBr
                 Process process = processes[i];
                 if (process.MainWindowTitle.Contains("TeamSpeak 3"))
                 {
-                    if (canal.Name == "NextTeamBr")
-                    {
-                        saida = true;
-                    }
+                    saida = true;
                 }
             }
 

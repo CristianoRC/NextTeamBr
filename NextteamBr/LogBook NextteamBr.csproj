@@ -91,9 +91,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TeamSpeak3QueryApi">
-      <HintPath>..\packages\Team Speak 3 SDK\TeamSpeak3QueryApi.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControleVersao.cs" />

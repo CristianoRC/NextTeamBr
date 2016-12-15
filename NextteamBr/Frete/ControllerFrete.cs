@@ -7,10 +7,10 @@ namespace NextteamBr
 {
     class ControllerFrete
     {
-        public static string SalvarFrete(Frete InformacoesFrete)
+        public static bool SalvarFrete(Frete InformacoesFrete)
         {
 
-            string saida;
+            bool saida;
             string StrJSON;
             try
             {
@@ -26,7 +26,7 @@ namespace NextteamBr
                 byte[] data = encoding.GetBytes(postData);
                 httpWReq.Method = "POST";
                 //httpWReq.ContentType = "application/x-www-form-urlencoded";
-                 httpWReq.ContentType = "application / json; charset = utf-8";
+                httpWReq.ContentType = "application / json; charset = utf-8";
                 httpWReq.ContentLength = data.Length;
                 using (Stream stream = httpWReq.GetRequestStream())
                 {
@@ -35,11 +35,11 @@ namespace NextteamBr
                 HttpWebResponse response = (HttpWebResponse)httpWReq.GetResponse();
                 string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 
-                saida = responseString;
+                saida = true;
             }
             catch (System.Exception e)
             {
-                saida = e.Message;
+                saida = false;
             }
             return saida;
         }

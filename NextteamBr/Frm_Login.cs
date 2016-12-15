@@ -24,6 +24,7 @@ namespace NextteamBr
             //LoginIncorrect  -- Senha errada
             //LoginInativo --Não ativo
 
+
             if (!String.IsNullOrWhiteSpace(Txt_Login.Text) && !String.IsNullOrWhiteSpace(Txt_Senha.Text))
             {
 
@@ -67,19 +68,6 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-            Frete f = new Frete();
-
-            f.Carga = "Barco 23,15t";
-            f.CidadeDestino = "Porto Alegre";
-            f.CidadeInicial = "Peltas";
-            f.Dano = 0;
-            f.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            f.KmRodado = 300;
-            f.LoginMotorista = "CristianoCunha";
-            f.Pontuacao = 3;
-
-            MessageBox.Show(ControllerFrete.SalvarFrete(f));
-
             Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
 
             string Resultado = ControleVersao.VerificarAtualizacoes();
