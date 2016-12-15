@@ -13,3 +13,6 @@
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Debug/Ets2SdkClient.dll
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Debug/Ets2SdkClient.dll.mdb
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Debug/Ets2SdkClient.pdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Debug/NextteamBr.Frm_Login.resources
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Debug/TeamSpeak3QueryApi.dll

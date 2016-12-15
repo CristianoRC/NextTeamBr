@@ -1,23 +1,12 @@
 ﻿<Properties StartupConfiguration="{443789AE-E4C2-4CAC-9118-78BBA31BAC20}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="NextteamBr/Frm_Principal.cs">
     <Files>
-      <File FileName="NextteamBr/Frm_Principal.cs" Line="61" Column="37" />
+      <File FileName="NextteamBr/Frm_Principal.cs" Line="156" Column="1" />
       <File FileName="NextteamBr/Frete/Frete.cs" Line="10" Column="28" />
       <File FileName="NextteamBr/Ferramentas.cs" Line="10" Column="16" />
-      <File FileName="NextteamBr/Frete/ControllerFrete.cs" Line="6" Column="59" />
+      <File FileName="NextteamBr/Frete/ControllerFrete.cs" Line="6" Column="21" />
+      <File FileName="NextteamBr/Usuario/ControllerUsuario.cs" Line="33" Column="59" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="LogBook NextteamBr" expanded="True">
-            <Node name="LogBook NextteamBr" expanded="True">
-              <Node name="Frete" expanded="True" />
-              <Node name="Frm_Principal.cs" expanded="True" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
