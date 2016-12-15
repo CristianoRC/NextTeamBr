@@ -28,9 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.Lbl_i = new System.Windows.Forms.Label();
             this.pictureSom = new System.Windows.Forms.PictureBox();
@@ -48,13 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Log Book NextTeamBr";
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // panel2
             // 
@@ -215,7 +206,6 @@
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogBook NextTeamBr";
-            this.Resize += new System.EventHandler(this.Frm_Principal_Resize);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).EndInit();
@@ -239,7 +229,6 @@
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.PictureBox pictureSom;
 		private System.Windows.Forms.StatusStrip statusStrip1;
-		private System.Windows.Forms.NotifyIcon notifyIcon1;
 		private System.Windows.Forms.Label Lbl_i;
     }
 }

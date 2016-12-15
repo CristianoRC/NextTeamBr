@@ -11,16 +11,21 @@ namespace NextteamBr
 
         bool executarAudio = true;
         bool ObterInformacoesIniciais = false;
+        bool FinalizarFrete = false;
         double VelocidadeAtual;
-        Double v_OdometroFinal;
         Double v_OdometroInical;
+        Double v_OdometroFinal;
+        String Login;
         Frete informacoesFrete = new Frete();
+
 
         public Ets2SdkTelemetry Telemetry;
 
-        public Frm_Principal()
+        public Frm_Principal(String p_Login)
         {
             InitializeComponent();
+
+            Login = p_Login;
 
             Telemetry = new Ets2SdkTelemetry();
             Telemetry.Data += Telemetry_Data;
@@ -42,6 +47,7 @@ namespace NextteamBr
         private void TelemetryOnJobStarted(object sender, EventArgs e)
         {
             ObterInformacoesIniciais = true;
+            FinalizarFrete = false;
 
             if (executarAudio)
             {
@@ -51,27 +57,35 @@ namespace NextteamBr
 
         private void TelemetryOnJobFinished(object sender, EventArgs args)
         {
-            informacoesFrete.KmRodado = v_OdometroFinal - v_OdometroInical;
-            informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
-            informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-            if(Ferramentas.VerificarTeamSpeak())
+            if (FinalizarFrete == true)
             {
-                if (ControllerFrete.SalvarFrete(informacoesFrete))
+                informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
+                informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                informacoesFrete.LoginMotorista = Login;
+                informacoesFrete.KmRodado = (int)Math.Ceiling(v_OdometroFinal - v_OdometroInical);
+
+                if (Ferramentas.VerificarTeamSpeak())
                 {
-                    if (executarAudio)
+                    String Resultado = ControllerFrete.SalvarFrete(informacoesFrete);
+
+                    if (Resultado == "registroCargaTrue" || Resultado == "registroCargaFalse" || true)
                     {
-                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                        MessageBox.Show(ControllerFrete.SalvarFrete(informacoesFrete));
+
+                        if (executarAudio)
+                        {
+                            ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                   MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!","Erro!",MessageBoxButtons.Yes, MessageBoxIcon.Error);
+                    MessageBox.Show("Sua caraga não foi registrada pois você não está logado no Team Speak da NextTeam BR ", "Eu avisei que não iria dar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Sua caraga não foi registrada pois você não está logado no Team Speak da NextTeam BR ","Eu avisei que não iria dar",MessageBoxButtons.Yes, MessageBoxIcon.Information);
             }
         }
 
@@ -96,20 +110,29 @@ namespace NextteamBr
                 Lbl_KMH.Text = Convert.ToInt16(data.Drivetrain.SpeedKmh).ToString();
                 Lbl_KMRegistrado.Text = data.Drivetrain.TruckOdometer.ToString("0.0");
                 Lbl_RPM.Text = data.Drivetrain.EngineRpm.ToString("0.0");
-                #endregion
-
+                #endregion  
                 #region Variaveis
+
+                if (data.Job.NavigationDistanceLeft < 5000 && data.Job.NavigationDistanceLeft > 800)
+                {
+                    v_OdometroFinal = data.Drivetrain.TruckOdometer;
+                    FinalizarFrete = true;
+                }
+                else
+                {
+                    FinalizarFrete = false;
+                }
+
 
                 if (ObterInformacoesIniciais)
                 {
                     v_OdometroInical = data.Drivetrain.TruckOdometer;
                     informacoesFrete.CidadeInicial = data.Job.CitySource.ToString();
                     informacoesFrete.CidadeDestino = data.Job.CityDestination.ToString();
-                    informacoesFrete.Carga = data.Job.TrailerName.ToString();
+                    informacoesFrete.Carga = String.Format("{0} {1}t", data.Job.TrailerName.ToString(), (data.Job.Mass / 1000).ToString());
                     ObterInformacoesIniciais = false;
                 }
 
-                v_OdometroFinal = data.Drivetrain.TruckOdometer;
                 informacoesFrete.Dano = data.Damage.WearTrailer;
                 #endregion
 
@@ -136,21 +159,6 @@ namespace NextteamBr
 
                 pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
             }
-        }
-        private void Frm_Principal_Resize(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-                notifyIcon1.Visible = true;
-                this.ShowInTaskbar = false;
-            }
-        }
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            notifyIcon1.Visible = false;
-            this.ShowInTaskbar = false;
-            this.WindowState = FormWindowState.Normal;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace NextteamBr
@@ -25,9 +26,14 @@ namespace NextteamBr
 
             if (!String.IsNullOrWhiteSpace(Txt_Login.Text) && !String.IsNullOrWhiteSpace(Txt_Senha.Text))
             {
-                Usuario uso = new Usuario(Txt_Login.Text, Ferramentas.getMD5Hash(Txt_Senha.Text));
 
-                string resultado = ControllerUsuario.Logar(uso);                
+                string SenhaCriptografada = Regex.Replace(Txt_Senha.Text, "[^0-9a-zA-Z]+", ""); //Remove os caracteres epeciais.
+
+                SenhaCriptografada = Ferramentas.getMD5Hash(SenhaCriptografada);
+
+                Usuario uso = new Usuario(Txt_Login.Text, SenhaCriptografada);
+
+                string resultado = ControllerUsuario.Logar(uso);
 
                 switch (resultado)
                 {
@@ -53,7 +59,7 @@ namespace NextteamBr
 
         private void ChamarFormularioPrincipal()
         {
-            Frm_Principal frm_Principal = new Frm_Principal();
+            Frm_Principal frm_Principal = new Frm_Principal(Txt_Login.Text);
             this.Visible = false;
             frm_Principal.ShowDialog();
             this.Dispose();
@@ -61,6 +67,19 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
+            Frete f = new Frete();
+
+            f.Carga = "Barco 23,15t";
+            f.CidadeDestino = "Porto Alegre";
+            f.CidadeInicial = "Peltas";
+            f.Dano = 0;
+            f.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            f.KmRodado = 300;
+            f.LoginMotorista = "CristianoCunha";
+            f.Pontuacao = 3;
+
+            MessageBox.Show(ControllerFrete.SalvarFrete(f));
+
             Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
 
             string Resultado = ControleVersao.VerificarAtualizacoes();

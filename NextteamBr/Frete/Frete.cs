@@ -5,7 +5,7 @@ namespace NextteamBr
 	class Frete
 	{
 		public string LoginMotorista { get; set; }
-		public double KmRodado { get; set; }
+		public int KmRodado { get; set; }
 		public double Dano { get; set; }
 		public string Carga { get; set; }
 		public string CidadeInicial { get; set; }

@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace NextteamBr
 {
@@ -7,20 +9,27 @@ namespace NextteamBr
 
         public static string getMD5Hash(string input)
         {
-            System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
-            byte[] hash = md5.ComputeHash(inputBytes);
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            for (int i = 0; i < hash.Length; i++)
+            MD5 md5Hash = MD5.Create();
+            // Converter a String para array de bytes, que é como a biblioteca trabalha.
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Cria-se um StringBuilder para recompôr a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop para formatar cada byte como uma String em hexadecimal
+            for (int i = 0; i < data.Length; i++)
             {
-                sb.Append(hash[i].ToString("X2"));
+                sBuilder.Append(data[i].ToString("x2"));
             }
-            return sb.ToString();
+
+            return sBuilder.ToString();
         }
 
 
         public static bool VerificarTeamSpeak()
         {
+            TeamSpeak3QueryApi.Net.Specialized.Responses.GetChannelInfo canal = new TeamSpeak3QueryApi.Net.Specialized.Responses.GetChannelInfo();
+
             bool saida = false;
 
             Process[] processes = Process.GetProcesses();
@@ -29,7 +38,10 @@ namespace NextteamBr
                 Process process = processes[i];
                 if (process.MainWindowTitle.Contains("TeamSpeak 3"))
                 {
-                    saida = true;
+                    if (canal.Name == "NextTeamBr")
+                    {
+                        saida = true;
+                    }
                 }
             }
 
@@ -39,13 +51,14 @@ namespace NextteamBr
         public static double CalcularPontuacao(double KmRodado, double Dano)
         {
             //A cada 20 infrações perde 1 KM.
-            //A cada 1 KM 0.01 ponto
+            //A cada 1 KM 0.005 ponto
             // a cada 0.02 de dano perde 1 KM.
+            // 0,5 pts/  A cada 100 KM rodado.
 
             double saida;
             double KmPerdido;
 
-            KmPerdido = (Dano / 0.02);
+            KmPerdido = (Dano / 0.001);
 
             double KmFinal = KmRodado - KmPerdido;
             saida = (KmFinal * 0.01);
