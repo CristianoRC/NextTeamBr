@@ -37,7 +37,7 @@ namespace NextteamBr
 
                 saida = true;
             }
-            catch (System.Exception e)
+            catch
             {
                 saida = false;
             }
