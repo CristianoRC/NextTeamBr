@@ -31,15 +31,14 @@ namespace NextteamBr
             bool saida = false;
 
             Process[] processes = Process.GetProcesses();
-            for (int i = 0; i < processes.Length; i++)
+
+            foreach (var item in processes)
             {
-                Process process = processes[i];
-                if (process.MainWindowTitle.Contains("TeamSpeak 3"))
+                if (item.MainWindowTitle.Contains("TeamSpeak 3"))
                 {
-                    saida = true;
+                    return true;
                 }
             }
-
             return saida;
         }
 

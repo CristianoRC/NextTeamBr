@@ -74,14 +74,6 @@ namespace NextteamBr
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
         {
-            if (!Ferramentas.VerificarTeamSpeak() && avisoTs3)
-            {
-                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
-                avisoTs3 = false;
-                Thread.Sleep(12000);
-                Application.Exit();
-            }
-
             try
             {
                 if (this.InvokeRequired)
@@ -138,6 +130,17 @@ namespace NextteamBr
                 executarAudio = true;
 
                 pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
+            }
+        }
+
+        private void timerTs3_Tick(object sender, EventArgs e)
+        {
+            if (!Ferramentas.VerificarTeamSpeak() && avisoTs3)
+            {
+                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
+                avisoTs3 = false;
+                Thread.Sleep(12000);
+                Application.Exit();
             }
         }
     }

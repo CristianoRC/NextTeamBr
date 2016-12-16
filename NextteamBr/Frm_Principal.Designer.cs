@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
             this.panel2 = new System.Windows.Forms.Panel();
             this.Lbl_i = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
             this.Lbl_EmpresaInicial = new System.Windows.Forms.Label();
             this.Lbl_CidadeInicial = new System.Windows.Forms.Label();
+            this.timerTs3 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.panel1.SuspendLayout();
@@ -191,6 +193,12 @@
             this.Lbl_CidadeInicial.Size = new System.Drawing.Size(0, 15);
             this.Lbl_CidadeInicial.TabIndex = 4;
             // 
+            // timerTs3
+            // 
+            this.timerTs3.Enabled = true;
+            this.timerTs3.Interval = 350000;
+            this.timerTs3.Tick += new System.EventHandler(this.timerTs3_Tick);
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,5 +238,6 @@
 		private System.Windows.Forms.PictureBox pictureSom;
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.Label Lbl_i;
+        private System.Windows.Forms.Timer timerTs3;
     }
 }
