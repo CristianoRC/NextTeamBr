@@ -10,20 +10,27 @@ namespace NextteamBr
 			Dano,
 			Conectada,
 			Distancia,
-			Entregue
+			Entregue,
+            Ts3
 		};
 
 		public static void ExecutarAudio(Audios TipoDeAviso)
 		{
 			switch (TipoDeAviso.ToString())
 			{
-				case "Dano":
+				case "Ts3":
 
-					SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
-                    Dano.Play();
+					SoundPlayer ts = new SoundPlayer(Properties.Resources.Ts3);
+                    ts.Play();
 
 					break;
-				case "Conectada":
+                case "Dano":
+
+                    SoundPlayer Dano = new SoundPlayer(Properties.Resources.Colisao);
+                    Dano.Play();
+
+                    break;
+                case "Conectada":
 
 					SoundPlayer Inicio = new SoundPlayer(Properties.Resources.CarregadoComSucesso);
 					Inicio.Play();

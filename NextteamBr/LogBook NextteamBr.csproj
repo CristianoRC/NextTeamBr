@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\Ts3.wav" />
     <None Include="Resources\client.png" />
     <None Include="Resources\Administrative Tools-1001.png" />
     <None Include="Resources\Administrative Tools-50.png" />

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using Ets2SdkClient;
+using System.Threading;
 
 namespace NextteamBr
 {
     public partial class Frm_Principal : Form
     {
         public Ets2SdkTelemetry Telemetria;
-
+        bool avisoTs3 = true;
         bool executarAudio = true;
         bool ObterInformacoesIniciais = false;
         Double v_OdometroInical;
@@ -58,29 +59,29 @@ namespace NextteamBr
             informacoesFrete.LoginMotorista = Login;
             informacoesFrete.KmRodado = (int)Math.Ceiling(v_OdometroFinal - v_OdometroInical);
 
-            if (Ferramentas.VerificarTeamSpeak())
+            if (ControllerFrete.SalvarFrete(informacoesFrete))
             {
-                if (ControllerFrete.SalvarFrete(informacoesFrete))
+                if (executarAudio)
                 {
-                    if (executarAudio)
-                    {
-                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
                 }
             }
             else
             {
-                MessageBox.Show("Sua caraga não foi registrada pois você não está logado no Team Speak da NextTeam BR ", "Eu avisei que não iria dar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
         {
+            if (!Ferramentas.VerificarTeamSpeak() && avisoTs3)
+            {
+                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
+                avisoTs3 = false;
+                Thread.Sleep(12000);
+                Application.Exit();
+            }
+
             try
             {
                 if (this.InvokeRequired)

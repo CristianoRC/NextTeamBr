@@ -194,5 +194,14 @@ namespace NextteamBr.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Ts3 {
+            get {
+                return ResourceManager.GetStream("Ts3", resourceCulture);
+            }
+        }
     }
 }

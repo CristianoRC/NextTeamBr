@@ -24,10 +24,8 @@ namespace NextteamBr
             //LoginIncorrect  -- Senha errada
             //LoginInativo --Não ativo
 
-
             if (!String.IsNullOrWhiteSpace(Txt_Login.Text) && !String.IsNullOrWhiteSpace(Txt_Senha.Text))
             {
-
                 string SenhaCriptografada = Regex.Replace(Txt_Senha.Text, "[^0-9a-zA-Z]+", ""); //Remove os caracteres epeciais.
 
                 SenhaCriptografada = Ferramentas.getMD5Hash(SenhaCriptografada);
@@ -56,6 +54,7 @@ namespace NextteamBr
             {
                 MessageBox.Show("Insira seu login e senha!", "Alterta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
         }
 
         private void ChamarFormularioPrincipal()
