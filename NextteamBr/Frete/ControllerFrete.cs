@@ -36,8 +36,6 @@ namespace NextteamBr
                 HttpWebResponse response = (HttpWebResponse)httpWReq.GetResponse();
                 string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 
-                MessageBox.Show(StrJSON);
-
                 saida = true;
             }
             catch

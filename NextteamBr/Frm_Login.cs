@@ -7,6 +7,8 @@ namespace NextteamBr
 {
     public partial class Frm_Login : Form
     {
+        String IDmotorista;
+
         public Frm_Login()
         {
             InitializeComponent();
@@ -34,32 +36,40 @@ namespace NextteamBr
 
                 string resultado = ControllerUsuario.Logar(uso);
 
-                switch (resultado)
+                if (resultado.Contains("LoginTrue"))
                 {
-                    case "LoginTrue":
-                        ChamarFormularioPrincipal();
-                        break;
-                    case "LoginFalse":
-                        MessageBox.Show("Login inválido!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
-                    case "LoginIncorrect":
-                        MessageBox.Show("Senha inválida!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
-                    case "LoginInativo":
-                        MessageBox.Show("Seu usuário ainda não foi ativado, entre em contato com um dos administradores", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
+                    int id;
+
+                    string[] linha = resultado.Split(';');
+                    id = Convert.ToInt32(linha[1]);
+                    ChamarFormularioPrincipal(id);
+                }
+                else
+                {
+                    switch (resultado)
+                    {
+                        case "LoginFalse":
+                            MessageBox.Show("Login inválido!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                        case "LoginIncorrect":
+                            MessageBox.Show("Senha inválida!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                        case "LoginInativo":
+                            MessageBox.Show("Seu usuário ainda não foi ativado, entre em contato com um dos administradores", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("Insira seu login e senha!", "Alterta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
         }
 
-        private void ChamarFormularioPrincipal()
+
+        private void ChamarFormularioPrincipal(int resultado)
         {
-            Frm_Principal frm_Principal = new Frm_Principal(Txt_Login.Text);
+            Frm_Principal frm_Principal = new Frm_Principal(resultado);
             this.Visible = false;
             frm_Principal.ShowDialog();
             this.Dispose();

@@ -188,6 +188,16 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Registro_de_Carga {
+            get {
+                object obj = ResourceManager.GetObject("Registro de Carga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap registro_km_layout {
             get {
                 object obj = ResourceManager.GetObject("registro_km_layout", resourceCulture);

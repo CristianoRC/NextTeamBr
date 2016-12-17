@@ -13,17 +13,16 @@ namespace NextteamBr
         bool informacoesFinaisObtidas = false;
         bool ObterInformacoesIniciais = false;
         Double v_OdometroInical;
-        String Login;
         Frete informacoesFrete = new Frete();
 
 
         public Ets2SdkTelemetry Telemetry;
 
-        public Frm_Principal(String p_Login)
+        public Frm_Principal(int IDmotorista)
         {
             InitializeComponent();
 
-            Login = p_Login;
+            informacoesFrete.IdMotorista = IDmotorista;
 
             Telemetry = new Ets2SdkTelemetry();
             Telemetry.Data += Telemetry_Data;
@@ -33,10 +32,10 @@ namespace NextteamBr
 
             if (Telemetry.Error != null)
             {
-                Lbl_i.Text =
-                    "General info:\r\nFailed to open memory map " + Telemetry.Map +
-                        " - on some systems you need to run the client (this app) with elevated permissions, because e.g. you're running Steam/ETS2 with elevated permissions as well. .NET reported the following Exception:\r\n" +
-                        Telemetry.Error.Message + "\r\n\r\nStacktrace:\r\n" + Telemetry.Error.StackTrace;
+                MessageBox.Show(
+                     "General info:\r\nFailed to open memory map " + Telemetry.Map +
+                         " - on some systems you need to run the client (this app) with elevated permissions, because e.g. you're running Steam/ETS2 with elevated permissions as well. .NET reported the following Exception:\r\n" +
+                         Telemetry.Error.Message + "\r\n\r\nStacktrace:\r\n" + Telemetry.Error.StackTrace);
             }
         }
 
@@ -60,7 +59,6 @@ namespace NextteamBr
             if (cargaEntregue)
             {
                 informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                informacoesFrete.LoginMotorista = Login;
                 informacoesFrete.KmRodado = Convert.ToDouble(informacoesFrete.KmRodado.ToString("0.00"));
                 informacoesFrete.Dano = Convert.ToDouble(informacoesFrete.Dano.ToString("0.00"));
                 informacoesFrete.Pontuacao = Convert.ToDouble(informacoesFrete.Pontuacao.ToString("0.00"));
@@ -91,10 +89,9 @@ namespace NextteamBr
 
                 #region Informações da tela
 
-                Lbl_CidadeInicial.Text = data.Job.CitySource.ToString();
-                Lbl_CidadeDestino.Text = data.Job.CityDestination.ToString();
-                Lbl_EmpresaInicial.Text = data.Job.CompanySource.ToString();
-                Lbl_EmpresaDestino.Text = data.Job.CompanyDestination.ToString();
+
+                Lbl_Destino.Text = data.Job.CityDestination + " / " + data.Job.CompanyDestination;
+                Lbl_Partida.Text = data.Job.CitySource + " / " + data.Job.CompanySource;
 
                 Lbl_Cambio.Text = Convert.ToInt16(data.Drivetrain.Gear).ToString();
                 Lbl_KMH.Text = Convert.ToInt16(data.Drivetrain.SpeedKmh).ToString();
