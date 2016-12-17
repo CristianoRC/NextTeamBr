@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Windows.Forms;
 
 namespace NextteamBr
 {
@@ -14,8 +15,8 @@ namespace NextteamBr
             string StrJSON;
             try
             {
-                InformacoesFrete.Dano = double.Parse(InformacoesFrete.Dano.ToString("0.00"));
-                InformacoesFrete.Pontuacao = double.Parse(InformacoesFrete.Pontuacao.ToString("0.00"));
+                InformacoesFrete.Dano = InformacoesFrete.Dano;
+                InformacoesFrete.Pontuacao = InformacoesFrete.Pontuacao;
 
                 StrJSON = JsonConvert.SerializeObject(InformacoesFrete);
 
@@ -34,6 +35,8 @@ namespace NextteamBr
                 }
                 HttpWebResponse response = (HttpWebResponse)httpWReq.GetResponse();
                 string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+
+                MessageBox.Show(StrJSON);
 
                 saida = true;
             }

@@ -55,8 +55,8 @@ namespace NextteamBr
             KmPerdido = (Dano / 0.001);
 
             double KmFinal = KmRodado - KmPerdido;
-            saida = (KmFinal * 0.01);
-
+            //saida = (KmFinal * 0.01);
+            saida = (KmFinal * 0.005);
             return saida;
         }
     }

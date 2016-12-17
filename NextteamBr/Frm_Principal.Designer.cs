@@ -196,7 +196,7 @@
             // timerTs3
             // 
             this.timerTs3.Enabled = true;
-            this.timerTs3.Interval = 350000;
+            this.timerTs3.Interval = 60000;
             this.timerTs3.Tick += new System.EventHandler(this.timerTs3_Tick);
             // 
             // Frm_Principal

@@ -8,11 +8,11 @@ namespace NextteamBr
     public partial class Frm_Principal : Form
     {
         public Ets2SdkTelemetry Telemetria;
-        bool avisoTs3 = true;
         bool executarAudio = true;
+        bool cargaEntregue = false;
+        bool informacoesFinaisObtidas = false;
         bool ObterInformacoesIniciais = false;
         Double v_OdometroInical;
-        Double v_OdometroFinal;
         String Login;
         Frete informacoesFrete = new Frete();
 
@@ -49,26 +49,33 @@ namespace NextteamBr
             if (executarAudio)
             {
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
+
+                cargaEntregue = false;
+                informacoesFinaisObtidas = false;
             }
         }
 
         private void TelemetryOnJobFinished(object sender, EventArgs args)
         {
-            informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
-            informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            informacoesFrete.LoginMotorista = Login;
-            informacoesFrete.KmRodado = (int)Math.Ceiling(v_OdometroFinal - v_OdometroInical);
+            if (cargaEntregue)
+            {
+                informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                informacoesFrete.LoginMotorista = Login;
+                informacoesFrete.KmRodado = Convert.ToDouble(informacoesFrete.KmRodado.ToString("0.00"));
+                informacoesFrete.Dano = Convert.ToDouble(informacoesFrete.Dano.ToString("0.00"));
+                informacoesFrete.Pontuacao = Convert.ToDouble(informacoesFrete.Pontuacao.ToString("0.00"));
 
-            if (ControllerFrete.SalvarFrete(informacoesFrete))
-            {
-                if (executarAudio)
+                if (ControllerFrete.SalvarFrete(informacoesFrete))
                 {
-                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                    if (executarAudio)
+                    {
+                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -105,8 +112,16 @@ namespace NextteamBr
                     ObterInformacoesIniciais = false;
                 }
 
-                informacoesFrete.Dano = data.Damage.WearTrailer;
-                v_OdometroFinal = data.Drivetrain.TruckOdometer;
+                if ((informacoesFinaisObtidas == false) && data.Job.NavigationDistanceLeft < 1500 && data.Job.NavigationDistanceLeft > 800)
+                {
+                    informacoesFrete.Dano = data.Damage.WearTrailer;
+                    informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
+                    informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
+
+                    cargaEntregue = true;
+                    informacoesFinaisObtidas = true;
+                }
+
                 #endregion
             }
             catch (Exception)
@@ -135,10 +150,9 @@ namespace NextteamBr
 
         private void timerTs3_Tick(object sender, EventArgs e)
         {
-            if (!Ferramentas.VerificarTeamSpeak() && avisoTs3)
+            if (!Ferramentas.VerificarTeamSpeak())
             {
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
-                avisoTs3 = false;
                 Thread.Sleep(12000);
                 Application.Exit();
             }
