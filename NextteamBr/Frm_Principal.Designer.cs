@@ -39,14 +39,14 @@
             this.Lbl_Cambio = new System.Windows.Forms.Label();
             this.Lbl_KMH = new System.Windows.Forms.Label();
             this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
+            this.timerVelocidade = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.SuspendLayout();
             // 
             // timerTs3
             // 
-            this.timerTs3.Enabled = true;
-            this.timerTs3.Interval = 60000;
+            this.timerTs3.Interval = 40000;
             this.timerTs3.Tick += new System.EventHandler(this.timerTs3_Tick);
             // 
             // panel1
@@ -142,6 +142,11 @@
             this.Lbl_KMRegistrado.TabIndex = 3;
             this.Lbl_KMRegistrado.Text = "00";
             // 
+            // timerVelocidade
+            // 
+            this.timerVelocidade.Interval = 10000;
+            this.timerVelocidade.Tick += new System.EventHandler(this.timerVelocidade_Tick);
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,5 +179,6 @@
         private System.Windows.Forms.Timer timerTs3;
         private System.Windows.Forms.Label Lbl_Destino;
         private System.Windows.Forms.Label Lbl_Partida;
+        private System.Windows.Forms.Timer timerVelocidade;
     }
 }

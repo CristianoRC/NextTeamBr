@@ -59,7 +59,7 @@ namespace NextteamBr
             return saida;
         }
 
-        public static double CalcularPontuacao(double KmRodado, double Dano)
+        public static double CalcularPontuacao(double KmRodado, double Dano, int NumeroDeMultas)
         {
             //A cada 20 infrações perde 1 KM.
             //A cada 1 KM 0.005 ponto
@@ -69,11 +69,16 @@ namespace NextteamBr
             double saida;
             double KmPerdido;
 
-            KmPerdido = (Dano * 0.3);
+            KmPerdido = (NumeroDeMultas * 0.5);
+            KmPerdido = (Dano * 0.5);
+
             double KmFinal = KmRodado - KmPerdido;
             saida = (KmFinal * 0.005);
 
-            saida = Convert.ToInt32(saida.ToString("0,00"));
+            if (NumeroDeMultas == 0 && Dano < 3)
+            {
+                KmFinal += (KmFinal * 5) / 100;
+            }
 
             return saida;
         }

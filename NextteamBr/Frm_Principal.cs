@@ -7,12 +7,14 @@ namespace NextteamBr
 {
     public partial class Frm_Principal : Form
     {
-        int IDMotorista;
-        public Ets2SdkTelemetry Telemetria;
         bool executarAudio = true;
         bool cargaEntregue = false;
         bool informacoesFinaisObtidas = false;
         bool ObterInformacoesIniciais = false;
+        bool VerificarMultaNovamente = false;
+        int IDMotorista;
+        int NumeroDeMultas = 0;
+        float VelocidadeAtual = 0;
         Double v_OdometroInical;
         Frete informacoesFrete = new Frete();
 
@@ -47,20 +49,21 @@ namespace NextteamBr
             if (Ferramentas.VerificarETS2MP() == false)
             {
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
-                Thread.Sleep(1000);
+                Thread.Sleep(12000);
                 Application.Exit();
             }
             else
             {
-                ObterInformacoesIniciais = true;
-
                 if (executarAudio)
                 {
                     ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
-
-                    cargaEntregue = false;
-                    informacoesFinaisObtidas = false;
                 }
+
+                ObterInformacoesIniciais = true;
+                NumeroDeMultas = 0;
+                cargaEntregue = false;
+                informacoesFinaisObtidas = false;
+
             }
         }
 
@@ -70,10 +73,6 @@ namespace NextteamBr
             {
                 informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 informacoesFrete.IdMotorista = IDMotorista;
-                informacoesFrete.Dano = Convert.ToInt32((informacoesFrete.Dano * 100).ToString("0,00"));
-                informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
-
-                MessageBox.Show("Chegou aqui!");
 
                 if (ControllerFrete.SalvarFrete(informacoesFrete))
                 {
@@ -94,6 +93,10 @@ namespace NextteamBr
                     ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Cancelada);
                 }
             }
+
+            timerTs3.Enabled = true;
+            timerVelocidade.Enabled = true;
+            VelocidadeAtual = 0;
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
@@ -117,7 +120,10 @@ namespace NextteamBr
                 Lbl_KMRegistrado.Text = data.Drivetrain.TruckOdometer.ToString("0.0");
                 Lbl_RPM.Text = data.Drivetrain.EngineRpm.ToString("0.0");
                 #endregion
+
                 #region
+
+                VelocidadeAtual = data.Drivetrain.SpeedKmh;
 
                 if (ObterInformacoesIniciais)
                 {
@@ -126,14 +132,16 @@ namespace NextteamBr
                     informacoesFrete.CidadeDestino = data.Job.CityDestination.ToString();
                     informacoesFrete.Carga = String.Format("{0} {1}t", data.Job.TrailerName.ToString(), (data.Job.Mass / 1000).ToString());
                     ObterInformacoesIniciais = false;
+                    timerTs3.Enabled = true;
+                    timerVelocidade.Enabled = true;
                 }
 
                 if ((informacoesFinaisObtidas == false) && data.Job.NavigationDistanceLeft < 1300 && data.Job.NavigationDistanceLeft > 500)
                 {
-                    informacoesFrete.Dano = data.Damage.WearTrailer;
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
-                    informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
                     informacoesFrete.IdMotorista = IDMotorista;
+                    informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, Convert.ToDouble(data.Damage.WearTrailer), NumeroDeMultas);
+                    informacoesFrete.Dano = data.Damage.WearTrailer * 100;
 
                     cargaEntregue = true;
                     informacoesFinaisObtidas = true;
@@ -172,6 +180,24 @@ namespace NextteamBr
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
                 Thread.Sleep(12000);
                 Application.Exit();
+            }
+        }
+
+        private void timerVelocidade_Tick(object sender, EventArgs e)
+        {
+            if (VerificarMultaNovamente && (VelocidadeAtual > 100))
+            {
+                NumeroDeMultas++;
+
+                VerificarMultaNovamente = false;
+            }
+            else if (VelocidadeAtual > 100)
+            {
+                VerificarMultaNovamente = true;
+            }
+            else
+            {
+                VerificarMultaNovamente = false;
             }
         }
     }

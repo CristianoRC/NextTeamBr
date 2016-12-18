@@ -7,8 +7,6 @@ namespace NextteamBr
 {
     public partial class Frm_Login : Form
     {
-        String IDmotorista;
-
         public Frm_Login()
         {
             InitializeComponent();
