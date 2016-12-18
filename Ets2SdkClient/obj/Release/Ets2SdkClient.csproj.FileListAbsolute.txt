@@ -5,6 +5,5 @@ C:\Users\Cristiano Cunha\Desktop\ets2-client\C#\Ets2SdkClient\obj\Release\Ets2Sd
 C:\Users\Cristiano Cunha\Desktop\ets2-client\C#\Ets2SdkClient\obj\Release\Ets2SdkClient.pdb
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\bin\Release\Ets2SdkClient.dll
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\bin\Release\Ets2SdkClient.pdb
-C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\obj\Release\Ets2SdkClient.csprojResolveAssemblyReference.cache
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\obj\Release\Ets2SdkClient.dll
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\obj\Release\Ets2SdkClient.pdb
