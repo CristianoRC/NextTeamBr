@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -23,6 +24,22 @@ namespace NextteamBr
             }
 
             return sBuilder.ToString();
+        }
+
+        public static bool VerificarETS2MP()
+        {
+            bool saida = false;
+
+            Process[] processes = Process.GetProcesses();
+
+            foreach (var item in processes)
+            {
+                if (item.MainWindowTitle.Contains("Euro Truck Simulator 2 Multiplayer"))
+                {
+                    return true;
+                }
+            }
+            return saida;
         }
 
 
@@ -52,11 +69,12 @@ namespace NextteamBr
             double saida;
             double KmPerdido;
 
-            KmPerdido = (Dano / 0.001);
-
+            KmPerdido = (Dano * 0.3);
             double KmFinal = KmRodado - KmPerdido;
-            //saida = (KmFinal * 0.01);
             saida = (KmFinal * 0.005);
+
+            saida = Convert.ToInt32(saida.ToString("0,00"));
+
             return saida;
         }
     }

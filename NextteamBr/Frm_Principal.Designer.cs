@@ -30,31 +30,24 @@
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
-            this.pictureSom = new System.Windows.Forms.PictureBox();
+            this.timerTs3 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Lbl_Destino = new System.Windows.Forms.Label();
+            this.Lbl_Partida = new System.Windows.Forms.Label();
+            this.pictureSom = new System.Windows.Forms.PictureBox();
             this.Lbl_RPM = new System.Windows.Forms.Label();
             this.Lbl_Cambio = new System.Windows.Forms.Label();
             this.Lbl_KMH = new System.Windows.Forms.Label();
             this.Lbl_KMRegistrado = new System.Windows.Forms.Label();
-            this.timerTs3 = new System.Windows.Forms.Timer(this.components);
-            this.Lbl_Partida = new System.Windows.Forms.Label();
-            this.Lbl_Destino = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureSom
+            // timerTs3
             // 
-            this.pictureSom.BackColor = System.Drawing.Color.Transparent;
-            this.pictureSom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureSom.Image = global::NextteamBr.Properties.Resources.Medium_Volume_50;
-            this.pictureSom.Location = new System.Drawing.Point(559, 219);
-            this.pictureSom.Name = "pictureSom";
-            this.pictureSom.Size = new System.Drawing.Size(53, 38);
-            this.pictureSom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureSom.TabIndex = 12;
-            this.pictureSom.TabStop = false;
-            this.pictureSom.Click += new System.EventHandler(this.pictureSom_Click);
+            this.timerTs3.Enabled = true;
+            this.timerTs3.Interval = 60000;
+            this.timerTs3.Tick += new System.EventHandler(this.timerTs3_Tick);
             // 
             // panel1
             // 
@@ -72,12 +65,45 @@
             this.panel1.Size = new System.Drawing.Size(621, 273);
             this.panel1.TabIndex = 12;
             // 
+            // Lbl_Destino
+            // 
+            this.Lbl_Destino.AutoSize = true;
+            this.Lbl_Destino.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Destino.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Destino.Location = new System.Drawing.Point(35, 230);
+            this.Lbl_Destino.Name = "Lbl_Destino";
+            this.Lbl_Destino.Size = new System.Drawing.Size(0, 19);
+            this.Lbl_Destino.TabIndex = 14;
+            // 
+            // Lbl_Partida
+            // 
+            this.Lbl_Partida.AutoSize = true;
+            this.Lbl_Partida.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_Partida.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Partida.Location = new System.Drawing.Point(34, 171);
+            this.Lbl_Partida.Name = "Lbl_Partida";
+            this.Lbl_Partida.Size = new System.Drawing.Size(0, 19);
+            this.Lbl_Partida.TabIndex = 13;
+            // 
+            // pictureSom
+            // 
+            this.pictureSom.BackColor = System.Drawing.Color.Transparent;
+            this.pictureSom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureSom.Image = global::NextteamBr.Properties.Resources.Medium_Volume_50;
+            this.pictureSom.Location = new System.Drawing.Point(559, 219);
+            this.pictureSom.Name = "pictureSom";
+            this.pictureSom.Size = new System.Drawing.Size(53, 38);
+            this.pictureSom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureSom.TabIndex = 12;
+            this.pictureSom.TabStop = false;
+            this.pictureSom.Click += new System.EventHandler(this.pictureSom_Click);
+            // 
             // Lbl_RPM
             // 
             this.Lbl_RPM.AutoSize = true;
             this.Lbl_RPM.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_RPM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_RPM.Location = new System.Drawing.Point(187, 38);
+            this.Lbl_RPM.Location = new System.Drawing.Point(181, 36);
             this.Lbl_RPM.Name = "Lbl_RPM";
             this.Lbl_RPM.Size = new System.Drawing.Size(25, 19);
             this.Lbl_RPM.TabIndex = 2;
@@ -88,7 +114,7 @@
             this.Lbl_Cambio.AutoSize = true;
             this.Lbl_Cambio.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Cambio.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Cambio.Location = new System.Drawing.Point(40, 38);
+            this.Lbl_Cambio.Location = new System.Drawing.Point(40, 36);
             this.Lbl_Cambio.Name = "Lbl_Cambio";
             this.Lbl_Cambio.Size = new System.Drawing.Size(25, 19);
             this.Lbl_Cambio.TabIndex = 0;
@@ -99,7 +125,7 @@
             this.Lbl_KMH.AutoSize = true;
             this.Lbl_KMH.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_KMH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_KMH.Location = new System.Drawing.Point(111, 38);
+            this.Lbl_KMH.Location = new System.Drawing.Point(112, 36);
             this.Lbl_KMH.Name = "Lbl_KMH";
             this.Lbl_KMH.Size = new System.Drawing.Size(25, 19);
             this.Lbl_KMH.TabIndex = 1;
@@ -116,30 +142,6 @@
             this.Lbl_KMRegistrado.TabIndex = 3;
             this.Lbl_KMRegistrado.Text = "00";
             // 
-            // timerTs3
-            // 
-            this.timerTs3.Enabled = true;
-            this.timerTs3.Interval = 60000;
-            this.timerTs3.Tick += new System.EventHandler(this.timerTs3_Tick);
-            // 
-            // Lbl_Partida
-            // 
-            this.Lbl_Partida.AutoSize = true;
-            this.Lbl_Partida.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Partida.Location = new System.Drawing.Point(41, 175);
-            this.Lbl_Partida.Name = "Lbl_Partida";
-            this.Lbl_Partida.Size = new System.Drawing.Size(0, 13);
-            this.Lbl_Partida.TabIndex = 13;
-            // 
-            // Lbl_Destino
-            // 
-            this.Lbl_Destino.AutoSize = true;
-            this.Lbl_Destino.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_Destino.Location = new System.Drawing.Point(41, 231);
-            this.Lbl_Destino.Name = "Lbl_Destino";
-            this.Lbl_Destino.Size = new System.Drawing.Size(0, 13);
-            this.Lbl_Destino.TabIndex = 14;
-            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,9 +156,9 @@
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogBook NextTeamBr";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).EndInit();
             this.ResumeLayout(false);
 
 		}

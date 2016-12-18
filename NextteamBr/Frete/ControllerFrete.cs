@@ -10,7 +10,6 @@ namespace NextteamBr
     {
         public static bool SalvarFrete(Frete InformacoesFrete)
         {
-
             bool saida;
             string StrJSON;
             try
@@ -19,23 +18,22 @@ namespace NextteamBr
                 InformacoesFrete.Pontuacao = InformacoesFrete.Pontuacao;
 
                 StrJSON = JsonConvert.SerializeObject(InformacoesFrete);
-
                 string url = "http://painel.nextteambr.com.br/registroapp.php";
                 HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(url);
-                ASCIIEncoding encoding = new ASCIIEncoding();
+                UTF8Encoding encoding = new UTF8Encoding();
+               
                 string postData = StrJSON;
                 byte[] data = encoding.GetBytes(postData);
                 httpWReq.Method = "POST";
                 //httpWReq.ContentType = "application/x-www-form-urlencoded";
                 httpWReq.ContentType = "application / json; charset = utf-8";
-                httpWReq.ContentLength = data.Length;
+                httpWReq.ContentLength = data.Length;         
                 using (Stream stream = httpWReq.GetRequestStream())
                 {
                     stream.Write(data, 0, data.Length);
                 }
                 HttpWebResponse response = (HttpWebResponse)httpWReq.GetResponse();
                 string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
-
                 saida = true;
             }
             catch

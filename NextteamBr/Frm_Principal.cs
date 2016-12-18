@@ -7,6 +7,7 @@ namespace NextteamBr
 {
     public partial class Frm_Principal : Form
     {
+        int IDMotorista;
         public Ets2SdkTelemetry Telemetria;
         bool executarAudio = true;
         bool cargaEntregue = false;
@@ -18,11 +19,11 @@ namespace NextteamBr
 
         public Ets2SdkTelemetry Telemetry;
 
-        public Frm_Principal(int IDmotorista)
+        public Frm_Principal(int p_IDmotorista)
         {
             InitializeComponent();
 
-            informacoesFrete.IdMotorista = IDmotorista;
+            IDMotorista = p_IDmotorista;
 
             Telemetry = new Ets2SdkTelemetry();
             Telemetry.Data += Telemetry_Data;
@@ -43,14 +44,23 @@ namespace NextteamBr
 
         private void TelemetryOnJobStarted(object sender, EventArgs e)
         {
-            ObterInformacoesIniciais = true;
-
-            if (executarAudio)
+            if (Ferramentas.VerificarETS2MP() == false)
             {
-                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
+                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
+                Thread.Sleep(1000);
+                Application.Exit();
+            }
+            else
+            {
+                ObterInformacoesIniciais = true;
 
-                cargaEntregue = false;
-                informacoesFinaisObtidas = false;
+                if (executarAudio)
+                {
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
+
+                    cargaEntregue = false;
+                    informacoesFinaisObtidas = false;
+                }
             }
         }
 
@@ -59,9 +69,11 @@ namespace NextteamBr
             if (cargaEntregue)
             {
                 informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                informacoesFrete.KmRodado = Convert.ToDouble(informacoesFrete.KmRodado.ToString("0.00"));
-                informacoesFrete.Dano = Convert.ToDouble(informacoesFrete.Dano.ToString("0.00"));
-                informacoesFrete.Pontuacao = Convert.ToDouble(informacoesFrete.Pontuacao.ToString("0.00"));
+                informacoesFrete.IdMotorista = IDMotorista;
+                informacoesFrete.Dano = Convert.ToInt32((informacoesFrete.Dano * 100).ToString("0,00"));
+                informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
+
+                MessageBox.Show("Chegou aqui!");
 
                 if (ControllerFrete.SalvarFrete(informacoesFrete))
                 {
@@ -73,6 +85,13 @@ namespace NextteamBr
                 else
                 {
                     MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                if (executarAudio)
+                {
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Cancelada);
                 }
             }
         }
@@ -109,11 +128,12 @@ namespace NextteamBr
                     ObterInformacoesIniciais = false;
                 }
 
-                if ((informacoesFinaisObtidas == false) && data.Job.NavigationDistanceLeft < 1500 && data.Job.NavigationDistanceLeft > 800)
+                if ((informacoesFinaisObtidas == false) && data.Job.NavigationDistanceLeft < 1300 && data.Job.NavigationDistanceLeft > 500)
                 {
                     informacoesFrete.Dano = data.Damage.WearTrailer;
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, informacoesFrete.Dano);
+                    informacoesFrete.IdMotorista = IDMotorista;
 
                     cargaEntregue = true;
                     informacoesFinaisObtidas = true;

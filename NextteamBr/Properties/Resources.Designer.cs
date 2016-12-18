@@ -93,6 +93,15 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Cancelada {
+            get {
+                return ResourceManager.GetStream("Cancelada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream CargaEntregue {
             get {
                 return ResourceManager.GetStream("CargaEntregue", resourceCulture);
@@ -172,6 +181,15 @@ namespace NextteamBr.Properties {
             get {
                 object obj = ResourceManager.GetObject("Medium Volume-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream MP {
+            get {
+                return ResourceManager.GetStream("MP", resourceCulture);
             }
         }
         
