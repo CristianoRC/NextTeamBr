@@ -13,6 +13,7 @@ namespace NextteamBr
         bool ObterInformacoesIniciais = false;
         bool VerificarMultaNovamente = false;
         String IDCarreta = String.Empty;
+        String IDCarretaInicio = String.Empty;
         int IDMotorista;
         int NumeroDeMultas = 0;
         float VelocidadeAtual = 0;
@@ -48,7 +49,7 @@ namespace NextteamBr
         private void TelemetryOnJobStarted(object sender, EventArgs e)
         {
 
-            if (IDCarreta == String.Empty)
+            if (IDCarreta == String.Empty || IDCarreta != IDCarretaInicio)
             {
                 if (Ferramentas.VerificarETS2MP() == false)
                 {
@@ -117,7 +118,6 @@ namespace NextteamBr
 
                 #region Informações da tela
 
-
                 Lbl_Destino.Text = data.Job.CityDestination + " / " + data.Job.CompanyDestination;
                 Lbl_Partida.Text = data.Job.CitySource + " / " + data.Job.CompanySource;
 
@@ -130,6 +130,7 @@ namespace NextteamBr
                 #region Variaveis
 
                 VelocidadeAtual = data.Drivetrain.SpeedKmh;
+                IDCarreta = data.Job.TrailerId;
 
                 if (ObterInformacoesIniciais)
                 {
@@ -140,9 +141,10 @@ namespace NextteamBr
                     ObterInformacoesIniciais = false;
                     timerTs3.Enabled = true;
                     timerVelocidade.Enabled = true;
-                    IDCarreta = data.Job.TrailerId;
+                    IDCarretaInicio = data.Job.TrailerId;
                 }
 
+                //Informações finais
                 if ((informacoesFinaisObtidas == false) && data.Job.NavigationDistanceLeft < 1300 && data.Job.NavigationDistanceLeft > 500)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
