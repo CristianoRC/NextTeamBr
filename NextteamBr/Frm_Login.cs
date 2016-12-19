@@ -36,8 +36,8 @@ namespace NextteamBr
 
                 if (resultado.Contains("LoginTrue"))
                 {
+                    ControllerUsuario.SalvarUltimoLogin(Txt_Login.Text);
                     int id;
-
                     string[] linha = resultado.Split(';');
                     id = Convert.ToInt32(linha[1]);
                     ChamarFormularioPrincipal(id);
@@ -54,6 +54,7 @@ namespace NextteamBr
                             break;
                         case "LoginInativo":
                             MessageBox.Show("Seu usuário ainda não foi ativado, entre em contato com um dos administradores", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ControllerUsuario.SalvarUltimoLogin(Txt_Login.Text);
                             break;
                     }
                 }
@@ -90,6 +91,8 @@ namespace NextteamBr
                 Btm_Logar.Enabled = false;
                 Process.Start(Resultado);
             }
+
+            Txt_Login.Text = ControllerUsuario.ObterUltimoLogin();
         }
     }
 }

@@ -12,10 +12,11 @@ namespace NextteamBr
         bool informacoesFinaisObtidas = false;
         bool ObterInformacoesIniciais = false;
         bool VerificarMultaNovamente = false;
+        String IDCarreta = String.Empty;
         int IDMotorista;
         int NumeroDeMultas = 0;
         float VelocidadeAtual = 0;
-        Double v_OdometroInical;
+        double v_OdometroInical;
         Frete informacoesFrete = new Frete();
 
 
@@ -36,9 +37,9 @@ namespace NextteamBr
             if (Telemetry.Error != null)
             {
                 MessageBox.Show(
-                     "General info:\r\nFailed to open memory map " + Telemetry.Map +
-                         " - on some systems you need to run the client (this app) with elevated permissions, because e.g. you're running Steam/ETS2 with elevated permissions as well. .NET reported the following Exception:\r\n" +
-                         Telemetry.Error.Message + "\r\n\r\nStacktrace:\r\n" + Telemetry.Error.StackTrace);
+                    "General info:\r\nFailed to open memory map " + Telemetry.Map +
+                    " - on some systems you need to run the client (this app) with elevated permissions, because e.g. you're running Steam/ETS2 with elevated permissions as well. .NET reported the following Exception:\r\n" +
+                    Telemetry.Error.Message + "\r\n\r\nStacktrace:\r\n" + Telemetry.Error.StackTrace);
             }
         }
 
@@ -46,24 +47,28 @@ namespace NextteamBr
 
         private void TelemetryOnJobStarted(object sender, EventArgs e)
         {
-            if (Ferramentas.VerificarETS2MP() == false)
+
+            if (IDCarreta == String.Empty)
             {
-                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
-                Thread.Sleep(12000);
-                Application.Exit();
-            }
-            else
-            {
-                if (executarAudio)
+                if (Ferramentas.VerificarETS2MP() == false)
                 {
-                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
+                    Thread.Sleep(12000);
+                    Application.Exit();
                 }
+                else
+                {
+                    if (executarAudio)
+                    {
+                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
+                    }
 
-                ObterInformacoesIniciais = true;
-                NumeroDeMultas = 0;
-                cargaEntregue = false;
-                informacoesFinaisObtidas = false;
+                    ObterInformacoesIniciais = true;
+                    NumeroDeMultas = 0;
+                    cargaEntregue = false;
+                    informacoesFinaisObtidas = false;
 
+                }
             }
         }
 
@@ -97,6 +102,7 @@ namespace NextteamBr
             timerTs3.Enabled = true;
             timerVelocidade.Enabled = true;
             VelocidadeAtual = 0;
+            IDCarreta = String.Empty;
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
@@ -121,7 +127,7 @@ namespace NextteamBr
                 Lbl_RPM.Text = data.Drivetrain.EngineRpm.ToString("0.0");
                 #endregion
 
-                #region
+                #region Variaveis
 
                 VelocidadeAtual = data.Drivetrain.SpeedKmh;
 
@@ -134,6 +140,7 @@ namespace NextteamBr
                     ObterInformacoesIniciais = false;
                     timerTs3.Enabled = true;
                     timerVelocidade.Enabled = true;
+                    IDCarreta = data.Job.TrailerId;
                 }
 
                 if ((informacoesFinaisObtidas == false) && data.Job.NavigationDistanceLeft < 1300 && data.Job.NavigationDistanceLeft > 500)

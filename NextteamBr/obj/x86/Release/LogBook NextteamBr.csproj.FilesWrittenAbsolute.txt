@@ -13,3 +13,5 @@
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/LogBook NextteamBr.pdb
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Release/LogBook NextteamBr.exe
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/LogBook NextteamBr.exe.mdb
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Release/NextteamBr.Frm_Login.resources

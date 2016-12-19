@@ -33,7 +33,6 @@ namespace NextteamBr
                     stream.Write(data, 0, data.Length);
                 }
                 HttpWebResponse response = (HttpWebResponse)httpWReq.GetResponse();
-                string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
                 saida = true;
             }
             catch

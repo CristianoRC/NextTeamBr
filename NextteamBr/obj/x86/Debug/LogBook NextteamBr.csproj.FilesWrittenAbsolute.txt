@@ -16,3 +16,4 @@
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Debug/NextteamBr.Frm_Login.resources
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/x86/Debug/TeamSpeak3QueryApi.dll
+/home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
