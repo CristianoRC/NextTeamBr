@@ -46,7 +46,7 @@
             // 
             // timerTs3
             // 
-            this.timerTs3.Interval = 40000;
+            this.timerTs3.Interval = 25000;
             this.timerTs3.Tick += new System.EventHandler(this.timerTs3_Tick);
             // 
             // panel1

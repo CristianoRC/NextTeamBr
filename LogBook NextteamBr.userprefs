@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{443789AE-E4C2-4CAC-9118-78BBA31BAC20}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="NextteamBr/Frm_Principal.cs">
     <Files>
-      <File FileName="NextteamBr/Frm_Principal.cs" Line="28" Column="4" />
+      <File FileName="NextteamBr/Frm_Principal.cs" Line="11" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />

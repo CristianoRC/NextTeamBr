@@ -79,9 +79,6 @@ namespace NextteamBr
 		{
 			if (cargaEntregue)
 			{
-				informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-				informacoesFrete.IdMotorista = IDMotorista;
-
 				if (ControllerFrete.SalvarFrete(informacoesFrete))
 				{
 					if (executarAudio)
@@ -154,6 +151,7 @@ namespace NextteamBr
 					informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, Convert.ToDouble(data.Damage.WearTrailer), NumeroDeMultas);
 					informacoesFrete.Dano = data.Damage.WearTrailer * 100;
 					informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
+					informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
 					cargaEntregue = true;
 					informacoesFinaisObtidas = true;
