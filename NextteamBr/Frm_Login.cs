@@ -40,7 +40,7 @@ namespace NextteamBr
                     int id;
                     string[] linha = resultado.Split(';');
                     id = Convert.ToInt32(linha[1]);
-                    ChamarFormularioPrincipal(id);
+                    ChamarFormularioDeEscolha(id);
                 }
                 else
                 {
@@ -66,11 +66,11 @@ namespace NextteamBr
         }
 
 
-        private void ChamarFormularioPrincipal(int resultado)
+        private void ChamarFormularioDeEscolha(int resultado)
         {
-            Frm_Principal frm_Principal = new Frm_Principal(resultado);
+            Frm_Escolha frm_Escolha = new Frm_Escolha(resultado);
             this.Visible = false;
-            frm_Principal.ShowDialog();
+            frm_Escolha.ShowDialog();
             this.Dispose();
         }
 

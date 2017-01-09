@@ -1,0 +1,9 @@
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.csprojResolveAssemblyReference.cache
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.Properties.Resources.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.csproj.GenerateResource.Cache
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe.config
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.Frm_Sincronizador.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.pdb

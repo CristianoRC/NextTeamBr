@@ -127,11 +127,20 @@
   <data name="Faixa-Fundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Faixa-Fundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Registro de Carga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Registro de Carga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Connection Sync-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Connection Sync-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="client" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fundo_Novo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Img\Fundo-Novo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MP.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CargaEntregue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CargaEntregue.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -141,6 +150,9 @@
   </data>
   <data name="EstaProximo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EstaProximo.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Cancelada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancelada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Ts3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ts3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -163,13 +175,7 @@
   <data name="LogBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogBook.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Registro de Carga" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Registro de Carga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cancelada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancelada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MP.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Address Book-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Address Book-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

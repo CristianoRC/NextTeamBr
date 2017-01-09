@@ -63,6 +63,16 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Address_Book_100 {
+            get {
+                object obj = ResourceManager.GetObject("Address Book-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Administrative_Tools_100 {
             get {
                 object obj = ResourceManager.GetObject("Administrative Tools-100", resourceCulture);
@@ -133,6 +143,16 @@ namespace NextteamBr.Properties {
         internal static System.IO.UnmanagedMemoryStream Colisao {
             get {
                 return ResourceManager.GetStream("Colisao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Connection_Sync_100 {
+            get {
+                object obj = ResourceManager.GetObject("Connection Sync-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -98,6 +98,12 @@
     <Compile Include="Frete\ControllerFrete.cs" />
     <Compile Include="Ferramentas.cs" />
     <Compile Include="Frete\Frete.cs" />
+    <Compile Include="Frm_Escolha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Escolha.Designer.cs">
+      <DependentUpon>Frm_Escolha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="Usuario\ControllerUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Escolha.resx">
+      <DependentUpon>Frm_Escolha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +155,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\Address Book-100.png" />
+    <None Include="Resources\Connection Sync-100.png" />
     <None Include="Resources\MP.wav" />
     <None Include="Resources\Cancelada.wav" />
     <None Include="Resources\Registro de Carga.png" />
@@ -171,6 +182,10 @@
     <ProjectReference Include="..\Ets2SdkClient\Ets2SdkClient.csproj">
       <Project>{21fb58cd-0b97-409f-ae61-cf8964e13f63}</Project>
       <Name>Ets2SdkClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SincronizadorDeCargas\SincronizadorDeCargas.csproj">
+      <Project>{61793e1d-ce1f-46b9-81b3-d6ae0bb20928}</Project>
+      <Name>SincronizadorDeCargas</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
