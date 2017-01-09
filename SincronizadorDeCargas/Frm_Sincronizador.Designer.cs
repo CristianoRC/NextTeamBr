@@ -29,9 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Sincronizador));
-            this.Btm_Sincronizar = new System.Windows.Forms.Button();
             this.Lbl_Informacao = new System.Windows.Forms.Label();
+            this.Btm_Sincronizar = new System.Windows.Forms.Button();
+            this.Lbl_Instalação = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // Lbl_Informacao
+            // 
+            this.Lbl_Informacao.AutoSize = true;
+            this.Lbl_Informacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Informacao.ForeColor = System.Drawing.Color.Green;
+            this.Lbl_Informacao.Location = new System.Drawing.Point(61, 173);
+            this.Lbl_Informacao.Name = "Lbl_Informacao";
+            this.Lbl_Informacao.Size = new System.Drawing.Size(0, 15);
+            this.Lbl_Informacao.TabIndex = 1;
             // 
             // Btm_Sincronizar
             // 
@@ -46,26 +57,28 @@
             this.Btm_Sincronizar.UseVisualStyleBackColor = true;
             this.Btm_Sincronizar.Click += new System.EventHandler(this.Btm_Sincronizar_Click);
             // 
-            // Lbl_Informacao
+            // Lbl_Instalação
             // 
-            this.Lbl_Informacao.AutoSize = true;
-            this.Lbl_Informacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Informacao.ForeColor = System.Drawing.Color.Green;
-            this.Lbl_Informacao.Location = new System.Drawing.Point(75, 173);
-            this.Lbl_Informacao.Name = "Lbl_Informacao";
-            this.Lbl_Informacao.Size = new System.Drawing.Size(0, 15);
-            this.Lbl_Informacao.TabIndex = 1;
+            this.Lbl_Instalação.AutoSize = true;
+            this.Lbl_Instalação.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Instalação.ForeColor = System.Drawing.Color.Green;
+            this.Lbl_Instalação.Location = new System.Drawing.Point(99, 159);
+            this.Lbl_Instalação.Name = "Lbl_Instalação";
+            this.Lbl_Instalação.Size = new System.Drawing.Size(0, 15);
+            this.Lbl_Instalação.TabIndex = 2;
+            this.Lbl_Instalação.Visible = false;
             // 
             // Frm_Sincronizador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 204);
+            this.Controls.Add(this.Lbl_Instalação);
             this.Controls.Add(this.Lbl_Informacao);
             this.Controls.Add(this.Btm_Sincronizar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "Frm_Sincronizador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sincronizador de cargas";
@@ -80,5 +93,6 @@
 
         private System.Windows.Forms.Button Btm_Sincronizar;
         private System.Windows.Forms.Label Lbl_Informacao;
+        private System.Windows.Forms.Label Lbl_Instalação;
     }
 }
