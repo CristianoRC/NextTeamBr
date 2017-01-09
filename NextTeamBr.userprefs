@@ -1,5 +1,21 @@
 ﻿<Properties StartupConfiguration="{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SincronizadorDeCargas/SaveGame.cs">
+    <Files>
+      <File FileName="SincronizadorDeCargas/Frm_Sincronizador.cs" Line="86" Column="2" />
+      <File FileName="SincronizadorDeCargas/SaveGame.cs" Line="88" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NextTeamBr" expanded="True">
+            <Node name="SincronizadorDeCargas" expanded="True">
+              <Node name="SaveGame.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

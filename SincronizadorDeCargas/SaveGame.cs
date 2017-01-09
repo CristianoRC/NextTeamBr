@@ -25,7 +25,7 @@ namespace SincronizadorDeCargas
 			return Caminho;
 		}
 
-		public static string ObterCaminhoDoDiretorioSaves()
+		public static string ObterCaminhoDoDiretorioSavesEts2()
 		{
 			String Caminho;
 			String MeusDocumentos = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -34,7 +34,7 @@ namespace SincronizadorDeCargas
 			return Caminho;
 		}
 
-		public static bool VerificarDiretorioDoSave()
+		public static bool VerificarExistenciaSaveNxT()
 		{
 			if (Directory.Exists(ObterCaminhoDoDiretorioSaveNext()))
 			{
@@ -56,7 +56,7 @@ namespace SincronizadorDeCargas
 			{
 				foreach (ZipEntry e in zip)
 				{
-					e.Extract(ObterCaminhoDoDiretorioSaves());
+					e.Extract(ObterCaminhoDoDiretorioSavesEts2());
 				}
 			}
 
@@ -69,6 +69,21 @@ namespace SincronizadorDeCargas
 			WebClient myWebClient = new WebClient();
 
 			myWebClient.DownloadFile(@"https://git.io/vMlUm", fileName);
+		}
+
+		internal static bool CopiarConfiguracoesSave(string CaminhoDaPastaPadrao)
+		{
+			String CaminhoArquivoCfg = String.Format(@"{0}\config.cfg", CaminhoDaPastaPadrao);
+			String CaminhoArquivoControls = String.Format(@"{0}\controls.sii", CaminhoDaPastaPadrao);
+
+			String DestinoArquivoCfg = String.Format(@"{0}\config.cfg", SaveGame.ObterCaminhoDoDiretorioSaveNext());
+			String DestinoArquivoControls = String.Format(@"{0}\controls.sii", SaveGame.ObterCaminhoDoDiretorioSaveNext());
+
+
+			File.Copy(CaminhoArquivoCfg, DestinoArquivoCfg, true);
+			File.Copy(CaminhoArquivoControls, DestinoArquivoControls, true);
+
+			return true;
 		}
 	}
 }
