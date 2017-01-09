@@ -1,0 +1,9 @@
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/obj/Debug/SincronizadorDeCargas.Frm_Sincronizador.resources
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/obj/Debug/SincronizadorDeCargas.Properties.Resources.resources
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/bin/Debug/SincronizadorDeCargas.exe.config
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/bin/Debug/SincronizadorDeCargas.exe.mdb
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/bin/Debug/SincronizadorDeCargas.exe
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/obj/Debug/SincronizadorDeCargas.exe
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/obj/Debug/SincronizadorDeCargas.exe.mdb
+/home/cristiano/Projetos/NextTeamBr/SincronizadorDeCargas/bin/Debug/DotNetZip.dll

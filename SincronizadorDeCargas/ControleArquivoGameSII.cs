@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
 using System.Net;
 
@@ -9,7 +6,7 @@ namespace SincronizadorDeCargas
 {
     internal static class ControleArquivoGameSII
     {
-        private static String ObterArquivoAtualizado()
+        private static string ObterArquivoAtualizado()
         {
             using (var wb = new WebClient())
             {
