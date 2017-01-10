@@ -11,7 +11,7 @@ namespace SincronizadorDeCargas
 		{
 			String Caminho;
 			String MeusDocumentos = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			Caminho = String.Format(@"{0}\Euro Truck Simulator 2\profiles\436C6F736368265\save\autosave\game.sii", MeusDocumentos);
+			Caminho = String.Format(@"{0}\Euro Truck Simulator 2\profiles\4E6578745465616D4252\save\autosave\game.sii", MeusDocumentos);
 
 			return Caminho;
 		}
@@ -20,7 +20,7 @@ namespace SincronizadorDeCargas
 		{
 			String Caminho;
 			String MeusDocumentos = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			Caminho = String.Format(@"{0}\Euro Truck Simulator 2\profiles\436C6F736368265\save\autosave", MeusDocumentos);
+			Caminho = String.Format(@"{0}\Euro Truck Simulator 2\profiles\4E6578745465616D4252\save\autosave", MeusDocumentos);
 
 			return Caminho;
 		}
@@ -48,7 +48,7 @@ namespace SincronizadorDeCargas
 
 		public static void EfetuarInstalacaoDoSave()
 		{
-			String ArquivoTemporario = String.Format(@"{0}\SaveNextTeamBr.rar", Path.GetTempPath());
+			String ArquivoTemporario = String.Format(@"{0}\4E6578745465616D4252.zip", Path.GetTempPath());
 
 			EfetuarDownloadDoSave();
 
@@ -64,11 +64,11 @@ namespace SincronizadorDeCargas
 
 		private static void EfetuarDownloadDoSave()
 		{
-			string fileName = String.Format(@"{0}\SaveNextTeamBr.rar", Path.GetTempPath());
+			string fileName = String.Format(@"{0}\4E6578745465616D4252.zip", Path.GetTempPath());
 
 			WebClient myWebClient = new WebClient();
 
-			myWebClient.DownloadFile(@"https://git.io/vMlUm", fileName);
+			myWebClient.DownloadFile(@"https://github.com/CristianoRC/SiteNextTeam/releases/download/1/4E6578745465616D4252.zip", fileName);
 		}
 
 		internal static bool CopiarConfiguracoesSave(string CaminhoDaPastaPadrao)

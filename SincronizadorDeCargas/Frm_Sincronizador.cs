@@ -33,12 +33,16 @@ namespace SincronizadorDeCargas
 				Lbl_Informacao.Visible = true;
 				Lbl_Instalação.Visible = false;
 
+                Thread.Sleep(500);
+
 				Atualizar();
 			}
 			else
 			{
 				Lbl_Informacao.Visible = false;
 				Lbl_Instalação.Visible = true;
+
+                Lbl_Instalação.Text = "Efetuando download e a instalação";
 
 				MessageBox.Show("O save game da NextTeamBr não foi encontrado, " +
 								"será feito o download e a instalação, isso pode demorar um pouco."
@@ -61,7 +65,7 @@ namespace SincronizadorDeCargas
 				Lbl_Informacao.ForeColor = Color.DarkRed;
 				Lbl_Informacao.Text = "Sincronizando seu frete, isso pode levar um tempo.";
 
-				Thread.Sleep(2000);
+				Thread.Sleep(3000);
 
 				ControleArquivoGameSII.SalvarArquivoAtualizado();
 
