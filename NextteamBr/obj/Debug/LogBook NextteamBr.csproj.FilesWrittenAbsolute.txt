@@ -10,3 +10,22 @@
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/Spartacus.dll
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/Ets2SdkClient.dll
 /home/cristiano/Projetos/LogBookEletronico-Ets2/NextteamBr/bin/Debug/Ets2SdkClient.dll.mdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/NextteamBr.Frm_Escolha.resources
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/NextteamBr.Frm_Login.resources
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/NextteamBr.Frm_Principal.resources
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/NextteamBr.Properties.Resources.resources
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/LogBook NextteamBr.exe.config
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/LogBook NextteamBr.exe.mdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/LogBook NextteamBr.pdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/LogBook NextteamBr.exe
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/LogBook NextteamBr.exe
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/LogBook NextteamBr.exe.mdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/LogBook NextteamBr.pdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/Newtonsoft.Json.dll
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/Ets2SdkClient.dll
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/Ets2SdkClient.dll.mdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/Ets2SdkClient.pdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/SincronizadorDeCargas.exe
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/SincronizadorDeCargas.exe.mdb
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/DotNetZip.dll

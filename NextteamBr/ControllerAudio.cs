@@ -27,7 +27,7 @@ namespace NextteamBr
                 case "Ts3":
 
                     SoundPlayer ts = new SoundPlayer(Properties.Resources.Ts3);
-                    ts.Play();               
+                    ts.Play();
                     break;
                 case "Dano":
 

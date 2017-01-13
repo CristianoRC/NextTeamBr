@@ -9,3 +9,14 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.pdb
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\DotNetZip.dll
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\DotNetZip.xml
+E:\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe.config
+E:\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe
+E:\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.pdb
+E:\NextTeamBr\SincronizadorDeCargas\bin\Release\DotNetZip.dll
+E:\NextTeamBr\SincronizadorDeCargas\bin\Release\DotNetZip.xml
+E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.csprojResolveAssemblyReference.cache
+E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.Frm_Sincronizador.resources
+E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.Properties.Resources.resources
+E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.csproj.GenerateResource.Cache
+E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.exe
+E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.pdb

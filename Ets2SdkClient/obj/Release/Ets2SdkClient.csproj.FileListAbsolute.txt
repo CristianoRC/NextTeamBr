@@ -12,3 +12,8 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\bin\Release
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.dll
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.pdb
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.csprojResolveAssemblyReference.cache
+E:\NextTeamBr\Ets2SdkClient\bin\Release\Ets2SdkClient.dll
+E:\NextTeamBr\Ets2SdkClient\bin\Release\Ets2SdkClient.pdb
+E:\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.csprojResolveAssemblyReference.cache
+E:\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.dll
+E:\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.pdb
