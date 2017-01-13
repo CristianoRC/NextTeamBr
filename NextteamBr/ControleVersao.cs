@@ -17,7 +17,7 @@ namespace NextteamBr
                 string versao, Link;
 
                 System.Net.HttpWebRequest request =
-                (HttpWebRequest)WebRequest.Create(@"http://cristianoprogramador.com/LogBook/Versao.txt");
+                (HttpWebRequest)WebRequest.Create(@"http://painel.nextteambr.com.br/app/version.txt");
 
                 WebResponse response = request.GetResponse();
 
