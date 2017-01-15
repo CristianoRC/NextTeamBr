@@ -152,6 +152,10 @@ namespace NextteamBr
 
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Bip);
             }
+            else
+            {
+                ControleVelocidade = 0;
+            }
 
             if (ControleVelocidade >= 5)
             {
@@ -228,4 +232,3 @@ namespace NextteamBr
         }
     }
 }
-

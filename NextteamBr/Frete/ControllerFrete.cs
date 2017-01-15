@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Windows.Forms;
 
 namespace NextteamBr
 {
@@ -9,15 +11,14 @@ namespace NextteamBr
     {
         public static bool SalvarFrete(Frete InformacoesFrete)
         {
-
             bool saida;
             string StrJSON;
             try
             {
                 StrJSON = JsonConvert.SerializeObject(InformacoesFrete);
-                //string url = "http://painel.nextteambr.com.br/registroapp.php";
 
-                string url = "http://192.168.0.250/next/painel/";
+                //string url = "http://192.168.0.250/next/painel/";
+                string url = "http://painel.nextteambr.com.br/registroapp.php";
 
                 HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(url);
                 UTF8Encoding encoding = new UTF8Encoding();
@@ -25,7 +26,6 @@ namespace NextteamBr
                 string postData = StrJSON;
                 byte[] data = encoding.GetBytes(postData);
                 httpWReq.Method = "POST";
-                //httpWReq.ContentType = "application/x-www-form-urlencoded";
                 httpWReq.ContentType = "application / json; charset = utf-8";
                 httpWReq.ContentLength = data.Length;
                 using (Stream stream = httpWReq.GetRequestStream())
@@ -35,8 +35,10 @@ namespace NextteamBr
                 HttpWebResponse response = (HttpWebResponse)httpWReq.GetResponse();
                 saida = true;
             }
-            catch
+            catch (Exception e)
             {
+                MessageBox.Show(e.Message);
+
                 saida = false;
             }
             return saida;

@@ -40,8 +40,7 @@ namespace NextteamBr
             }
             return saida;
         }
-
-
+        
         public static bool VerificarTeamSpeak()
         {
             Process[] processes = Process.GetProcesses();
