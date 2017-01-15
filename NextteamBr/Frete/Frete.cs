@@ -1,4 +1,6 @@
-﻿namespace NextteamBr
+﻿using System.Collections.Generic;
+
+namespace NextteamBr
 {
     class Frete
     {
@@ -10,5 +12,6 @@
         public string CidadeInicial { get; set; }
         public string CidadeDestino { get; set; }
         public string DataFinalFrete { get; set; }
+        public List<Multa> ListaDeMultas { get; set; }
     }
 }

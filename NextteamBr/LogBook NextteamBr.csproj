@@ -92,7 +92,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Multas\Multas.cs" />
+    <Compile Include="Multas\Multa.cs" />
+    <Compile Include="Multas\ControleDeMultas.cs" />
     <Compile Include="ControleVersao.cs" />
     <Compile Include="ControllerAudio.cs" />
     <Compile Include="Frete\ControllerFrete.cs" />

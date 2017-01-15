@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Ets2SdkClient;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace NextteamBr
 {
@@ -22,7 +23,7 @@ namespace NextteamBr
         double v_OdometroInical;
 
         Frete informacoesFrete = new Frete();
-
+        ControleDeMultas controleDeMultas = new ControleDeMultas();
 
         public Ets2SdkTelemetry Telemetry;
 
@@ -35,7 +36,7 @@ namespace NextteamBr
             Telemetry = new Ets2SdkTelemetry();
             Telemetry.Data += Telemetry_Data;
 
-            Telemetry.JobFinished += TelemetryOnJobFinished;
+            //Telemetry.JobFinished += TelemetryOnJobFinished;
             Telemetry.JobStarted += TelemetryOnJobStarted;
 
             if (Telemetry.Error != null)
@@ -53,11 +54,6 @@ namespace NextteamBr
         private void TelemetryOnJobStarted(object sender, EventArgs e)
         {
             IniciarFrete();
-        }
-
-        private void TelemetryOnJobFinished(object sender, EventArgs args)
-        {
-            FinaliziarFrete();
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
@@ -81,7 +77,7 @@ namespace NextteamBr
                 Lbl_RPM.Text = data.Drivetrain.EngineRpm.ToString("0.0");
                 #endregion
 
-                #region Variaveis
+                #region Controle de Inicio e fim de frete
 
                 VelocidadeAtual = data.Drivetrain.SpeedKmh;
                 IDCarreta = data.Job.TrailerId;
@@ -99,7 +95,7 @@ namespace NextteamBr
                 }
 
                 //Informações finais
-                if (data.Job.NavigationDistanceLeft < 1000 && data.Job.NavigationDistanceLeft >= 100)
+                if ((cargaEntregue == false) && data.Job.NavigationDistanceLeft < 300 && data.Job.NavigationDistanceLeft >= 50)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.IdMotorista = IDMotorista;
@@ -107,6 +103,7 @@ namespace NextteamBr
                     informacoesFrete.Dano = data.Damage.WearTrailer * 100;
                     informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
                     informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
 
                     cargaEntregue = true;
                     FinaliziarFrete();
@@ -154,6 +151,12 @@ namespace NextteamBr
             {
                 NumeroDeMultas++;
 
+                Multa multaBase = new Multa();
+
+                multaBase.IDMotorista = IDMotorista;
+                multaBase.DataDaMulta = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                controleDeMultas.AdicionarNovaMulta(multaBase);
+
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Velocidade);
                 Thread.Sleep(1000);
                 VerificarMultaNovamente = false;
@@ -178,6 +181,8 @@ namespace NextteamBr
                     {
                         ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
                     }
+
+                    Thread.Sleep(2000);
                 }
                 else
                 {
@@ -189,35 +194,35 @@ namespace NextteamBr
             timerVelocidade.Enabled = true;
             VelocidadeAtual = 0;
             IDCarreta = String.Empty;
+            cargaEntregue = true;
         }
 
         private void IniciarFrete()
         {
-
-            if (cargaEntregue)//Verifica se a carga já foi entregue para casos em que o game finalizou
+            //Verifica se é a mesma carga ou se não há cargas.
+            if (IDCarreta == String.Empty || IDCarreta != IDCarretaInicio)
             {
-                //Verifica se é a mesma carga ou se não há cargas.
-                if (IDCarreta == String.Empty || IDCarreta != IDCarretaInicio)
+                if (Ferramentas.VerificarETS2MP() == false)
                 {
-                    if (Ferramentas.VerificarETS2MP() == false)
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
+                    Thread.Sleep(12000);
+                    Application.Exit();
+                }
+                else
+                {
+                    if (executarAudio)
                     {
-                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
-                        Thread.Sleep(12000);
-                        Application.Exit();
+                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
                     }
-                    else
-                    {
-                        if (executarAudio)
-                        {
-                            ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
-                        }
 
-                        ObterInformacoesIniciais = true;
-                        NumeroDeMultas = 0;
-                        cargaEntregue = false;
-                    }
+                    informacoesFrete.ListaDeMultas.Clear();
+                    controleDeMultas.LimparListaDeMultas();
+                    ObterInformacoesIniciais = true;
+                    NumeroDeMultas = 0;
+                    cargaEntregue = false;
                 }
             }
         }
     }
 }
+

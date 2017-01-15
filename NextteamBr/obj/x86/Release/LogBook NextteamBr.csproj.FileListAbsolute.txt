@@ -22,15 +22,10 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Releas
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.xml
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Login.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\DotNetZip.dll
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\DotNetZip.xml
 E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
 E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
 E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
