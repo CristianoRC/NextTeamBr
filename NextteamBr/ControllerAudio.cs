@@ -13,7 +13,8 @@ namespace NextteamBr
             Entregue,
             Ts3,
             MP,
-            Velocidade
+            Velocidade,
+            Bip
         };
 
         public static void ExecutarAudio(Audios TipoDeAviso)
@@ -57,8 +58,14 @@ namespace NextteamBr
                     break;
                 case "Velocidade":
 
-                    SoundPlayer Velocidade = new SoundPlayer(Properties.Resources.AvisoVelocidade);
+                    SoundPlayer Velocidade = new SoundPlayer(Properties.Resources.Camera);
                     Velocidade.Play();
+
+                    break;
+                case "Bip":
+
+                    SoundPlayer bip = new SoundPlayer(Properties.Resources.alert);
+                    bip.Play();
 
                     break;
             }

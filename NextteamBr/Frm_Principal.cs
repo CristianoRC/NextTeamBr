@@ -17,8 +17,8 @@ namespace NextteamBr
         String IDCarreta = String.Empty;
         String IDCarretaInicio = String.Empty;
 
+        int ControleVelocidade = 0;
         int IDMotorista;
-        int NumeroDeMultas = 0;
         float VelocidadeAtual = 0;
         double v_OdometroInical;
 
@@ -90,16 +90,15 @@ namespace NextteamBr
                     informacoesFrete.Carga = String.Format("{0} {1}t", data.Job.TrailerName.ToString(), (data.Job.Mass / 1000).ToString());
                     ObterInformacoesIniciais = false;
                     timerTs3.Enabled = true;
-                    timerVelocidade.Enabled = true;
                     IDCarretaInicio = data.Job.TrailerId;
                 }
 
                 //Informações finais
-                if ((cargaEntregue == false) && data.Job.NavigationDistanceLeft < 300 && data.Job.NavigationDistanceLeft >= 50)
+                if ((cargaEntregue == false) && data.Job.NavigationDistanceLeft < 200 && data.Job.NavigationDistanceLeft >= 50)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.IdMotorista = IDMotorista;
-                    informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, Convert.ToDouble(data.Damage.WearTrailer), NumeroDeMultas);
+                    informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, Convert.ToDouble(data.Damage.WearTrailer), controleDeMultas.ObterNumeroDeMultas());
                     informacoesFrete.Dano = data.Damage.WearTrailer * 100;
                     informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
                     informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -145,29 +144,20 @@ namespace NextteamBr
             }
         }
 
-        private void timerVelocidade_Tick(object sender, EventArgs e)
+        private void TimerAvisoSonoro_Tick(object sender, EventArgs e)
         {
-            if (VerificarMultaNovamente && (VelocidadeAtual > 100))
+            if (VelocidadeAtual > 100)
             {
-                NumeroDeMultas++;
+                ControleVelocidade++;
 
-                Multa multaBase = new Multa();
-
-                multaBase.IDMotorista = IDMotorista;
-                multaBase.DataDaMulta = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                controleDeMultas.AdicionarNovaMulta(multaBase);
-
-                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Velocidade);
-                Thread.Sleep(1000);
-                VerificarMultaNovamente = false;
+                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Bip);
             }
-            else if (VelocidadeAtual > 100)
+
+            if (ControleVelocidade >= 5)
             {
-                VerificarMultaNovamente = true;
-            }
-            else
-            {
-                VerificarMultaNovamente = false;
+                ControleVelocidade = 0;
+
+                Multar();
             }
         }
 
@@ -191,7 +181,6 @@ namespace NextteamBr
             }
 
             timerTs3.Enabled = true;
-            timerVelocidade.Enabled = true;
             VelocidadeAtual = 0;
             IDCarreta = String.Empty;
             cargaEntregue = true;
@@ -214,14 +203,28 @@ namespace NextteamBr
                     {
                         ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
                     }
-
-                    informacoesFrete.ListaDeMultas.Clear();
                     controleDeMultas.LimparListaDeMultas();
                     ObterInformacoesIniciais = true;
-                    NumeroDeMultas = 0;
                     cargaEntregue = false;
                 }
             }
+        }
+
+        private void Multar()
+        {
+            Multa multaBase = new Multa();
+
+            multaBase.IDMotorista = IDMotorista;
+            multaBase.DataDaMulta = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            controleDeMultas.AdicionarNovaMulta(multaBase);
+
+            Thread.Sleep(1000);
+
+            ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Velocidade);
+
+            Thread.Sleep(1000);
+
+            TimerAvisoSonoro.Enabled = true;
         }
     }
 }

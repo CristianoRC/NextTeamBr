@@ -60,10 +60,10 @@ namespace NextteamBr
         public static double CalcularPontuacao(double KmRodado, double Dano, int NumeroDeMultas)
         {
             double saida;
-            double KmPerdido;
+            double KmPerdido = 0;
 
-            KmPerdido = (NumeroDeMultas * 0.5);
-            KmPerdido = (Dano * 0.5);
+            KmPerdido += NumeroDeMultas;
+            KmPerdido += Dano;
 
             double KmFinal = KmRodado - KmPerdido;
             saida = (KmFinal * 0.005);

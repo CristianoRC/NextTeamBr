@@ -147,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\Camera.wav" />
+    <None Include="Resources\alert.wav" />
+    <None Include="Resources\beep-24.wav" />
     <None Include="Resources\AvisoVelocidade.WAV" />
     <None Include="Resources\Address Book-100.png" />
     <None Include="Resources\Connection Sync-100.png" />

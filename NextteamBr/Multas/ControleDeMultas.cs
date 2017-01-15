@@ -4,7 +4,6 @@ namespace NextteamBr
 {
     public class ControleDeMultas
     {
-        
         private List<Multa> ListaDeMultas = new List<Multa>();
 
         public void AdicionarNovaMulta(Multa p_Multa)
@@ -20,6 +19,11 @@ namespace NextteamBr
         public List<Multa> ObterListaDeMultas()
         {
             return ListaDeMultas;
+        }
+
+        public int ObterNumeroDeMultas()
+        {
+            return ListaDeMultas.Count;
         }
     }
 }
