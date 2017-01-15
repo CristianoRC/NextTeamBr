@@ -29,3 +29,4 @@
 /home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/SincronizadorDeCargas.exe
 /home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/SincronizadorDeCargas.exe.mdb
 /home/cristiano/Projetos/NextTeamBr/NextteamBr/bin/Debug/DotNetZip.dll
+/home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs

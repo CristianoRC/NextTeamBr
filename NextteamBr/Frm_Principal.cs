@@ -10,15 +10,17 @@ namespace NextteamBr
         //Variáveis de controle
         bool executarAudio = true;
         bool cargaEntregue = false;
-        bool informacoesFinaisObtidas = false;
         bool ObterInformacoesIniciais = false;
         bool VerificarMultaNovamente = false;
+
         String IDCarreta = String.Empty;
         String IDCarretaInicio = String.Empty;
+
         int IDMotorista;
         int NumeroDeMultas = 0;
         float VelocidadeAtual = 0;
         double v_OdometroInical;
+
         Frete informacoesFrete = new Frete();
 
 
@@ -50,59 +52,12 @@ namespace NextteamBr
 
         private void TelemetryOnJobStarted(object sender, EventArgs e)
         {
-            //Verifica se é a mesma carga ou se não há cargas.
-            if (IDCarreta == String.Empty || IDCarreta != IDCarretaInicio)
-            {
-                if (Ferramentas.VerificarETS2MP() == false)
-                {
-                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
-                    Thread.Sleep(12000);
-                    Application.Exit();
-                }
-                else
-                {
-                    if (executarAudio)
-                    {
-                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
-                    }
-
-                    ObterInformacoesIniciais = true;
-                    NumeroDeMultas = 0;
-                    cargaEntregue = false;
-                    informacoesFinaisObtidas = false;
-
-                }
-            }
+            IniciarFrete();
         }
 
         private void TelemetryOnJobFinished(object sender, EventArgs args)
         {
-            if (cargaEntregue)
-            {
-                if (ControllerFrete.SalvarFrete(informacoesFrete))
-                {
-                    if (executarAudio)
-                    {
-                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                if (executarAudio)
-                {
-                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Cancelada);
-                }
-            }
-
-            timerTs3.Enabled = true;
-            timerVelocidade.Enabled = true;
-            VelocidadeAtual = 0;
-            IDCarreta = String.Empty;
+            FinaliziarFrete();
         }
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
@@ -144,7 +99,7 @@ namespace NextteamBr
                 }
 
                 //Informações finais
-                if ((informacoesFinaisObtidas == false) && data.Job.NavigationDistanceLeft < 1300 && data.Job.NavigationDistanceLeft > 500)
+                if (data.Job.NavigationDistanceLeft < 1000 && data.Job.NavigationDistanceLeft >= 100)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.IdMotorista = IDMotorista;
@@ -154,14 +109,14 @@ namespace NextteamBr
                     informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                     cargaEntregue = true;
-                    informacoesFinaisObtidas = true;
+                    FinaliziarFrete();
                 }
 
                 #endregion
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(String.Format("Erro: {0}", ex.Message), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -173,13 +128,13 @@ namespace NextteamBr
             {
                 executarAudio = false;
 
-                pictureSom.Image = NextteamBr.Properties.Resources.Mute_50;
+                pictureSom.Image = Properties.Resources.Mute_50;
             }
             else
             {
                 executarAudio = true;
 
-                pictureSom.Image = NextteamBr.Properties.Resources.Medium_Volume_50;
+                pictureSom.Image = Properties.Resources.Medium_Volume_50;
             }
         }
 
@@ -188,7 +143,7 @@ namespace NextteamBr
             if (!Ferramentas.VerificarTeamSpeak())
             {
                 ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
-                Thread.Sleep(12000);
+                Thread.Sleep(15000);
                 Application.Exit();
             }
         }
@@ -199,6 +154,8 @@ namespace NextteamBr
             {
                 NumeroDeMultas++;
 
+                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Velocidade);
+                Thread.Sleep(1000);
                 VerificarMultaNovamente = false;
             }
             else if (VelocidadeAtual > 100)
@@ -208,6 +165,58 @@ namespace NextteamBr
             else
             {
                 VerificarMultaNovamente = false;
+            }
+        }
+
+        private void FinaliziarFrete()
+        {
+            if (cargaEntregue)
+            {
+                if (ControllerFrete.SalvarFrete(informacoesFrete))
+                {
+                    if (executarAudio)
+                    {
+                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao tentar salvar sua carga!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            timerTs3.Enabled = true;
+            timerVelocidade.Enabled = true;
+            VelocidadeAtual = 0;
+            IDCarreta = String.Empty;
+        }
+
+        private void IniciarFrete()
+        {
+
+            if (cargaEntregue)//Verifica se a carga já foi entregue para casos em que o game finalizou
+            {
+                //Verifica se é a mesma carga ou se não há cargas.
+                if (IDCarreta == String.Empty || IDCarreta != IDCarretaInicio)
+                {
+                    if (Ferramentas.VerificarETS2MP() == false)
+                    {
+                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.MP);
+                        Thread.Sleep(12000);
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        if (executarAudio)
+                        {
+                            ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
+                        }
+
+                        ObterInformacoesIniciais = true;
+                        NumeroDeMultas = 0;
+                        cargaEntregue = false;
+                    }
+                }
             }
         }
     }

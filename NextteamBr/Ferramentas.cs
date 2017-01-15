@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -45,27 +44,21 @@ namespace NextteamBr
 
         public static bool VerificarTeamSpeak()
         {
-            bool saida = false;
-
             Process[] processes = Process.GetProcesses();
 
             foreach (var item in processes)
             {
-                if (item.MainWindowTitle.Contains("TeamSpeak 3"))
+                if (item.ProcessName.Contains("ts3client"))
                 {
                     return true;
                 }
             }
-            return saida;
+
+            return false;
         }
 
         public static double CalcularPontuacao(double KmRodado, double Dano, int NumeroDeMultas)
         {
-            //A cada 20 infrações perde 1 KM.
-            //A cada 1 KM 0.005 ponto
-            // a cada 0.02 de dano perde 1 KM.
-            // 0,5 pts/  A cada 100 KM rodado.
-
             double saida;
             double KmPerdido;
 

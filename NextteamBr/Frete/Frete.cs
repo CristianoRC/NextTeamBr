@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NextteamBr
+﻿namespace NextteamBr
 {
     class Frete
     {

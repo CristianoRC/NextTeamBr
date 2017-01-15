@@ -103,6 +103,15 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream AvisoVelocidade {
+            get {
+                return ResourceManager.GetStream("AvisoVelocidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Cancelada {
             get {
                 return ResourceManager.GetStream("Cancelada", resourceCulture);

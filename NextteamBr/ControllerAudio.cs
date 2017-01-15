@@ -12,7 +12,8 @@ namespace NextteamBr
             Cancelada,
             Entregue,
             Ts3,
-            MP
+            MP,
+            Velocidade
         };
 
         public static void ExecutarAudio(Audios TipoDeAviso)
@@ -52,6 +53,12 @@ namespace NextteamBr
 
                     SoundPlayer Finalizada = new SoundPlayer(Properties.Resources.CargaEntregue);
                     Finalizada.Play();
+
+                    break;
+                case "Velocidade":
+
+                    SoundPlayer Velocidade = new SoundPlayer(Properties.Resources.AvisoVelocidade);
+                    Velocidade.Play();
 
                     break;
             }
