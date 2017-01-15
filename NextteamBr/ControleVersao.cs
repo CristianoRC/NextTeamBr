@@ -46,5 +46,35 @@ namespace NextteamBr
 
             return Saida;
         }
+
+        public static bool VerificarSoftwareAtivo()
+        {
+            try
+            {
+                HttpWebRequest request =
+                (HttpWebRequest)WebRequest.Create(@"http://painel.nextteambr.com.br/app/appStatus.txt");
+
+                WebResponse response = request.GetResponse();
+
+                using (Stream stream = response.GetResponseStream())
+                {
+                    StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+                    string Resultado = reader.ReadToEnd();
+
+                    if (Resultado == "ativo")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

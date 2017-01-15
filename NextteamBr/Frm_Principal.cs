@@ -12,7 +12,7 @@ namespace NextteamBr
         bool executarAudio = true;
         bool cargaEntregue = false;
         bool ObterInformacoesIniciais = false;
-        bool VerificarMultaNovamente = false;
+        bool CargaConectada = false;
 
         String IDCarreta = String.Empty;
         String IDCarretaInicio = String.Empty;
@@ -91,10 +91,12 @@ namespace NextteamBr
                     ObterInformacoesIniciais = false;
                     timerTs3.Enabled = true;
                     IDCarretaInicio = data.Job.TrailerId;
+
+
                 }
 
                 //Informações finais
-                if ((cargaEntregue == false) && data.Job.NavigationDistanceLeft < 200 && data.Job.NavigationDistanceLeft >= 50)
+                if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 100 && data.Job.NavigationDistanceLeft >= 10)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.IdMotorista = IDMotorista;
@@ -216,10 +218,19 @@ namespace NextteamBr
 
         private void Multar()
         {
+            int VelocidadeTemp = 0;
             Multa multaBase = new Multa();
+
+            VelocidadeTemp = Convert.ToInt32(Math.Round(VelocidadeAtual, 1));
+
+            if (VelocidadeTemp < 100)
+            {
+                VelocidadeTemp = 103;
+            }
 
             multaBase.IDMotorista = IDMotorista;
             multaBase.DataDaMulta = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            multaBase.Velocidade = VelocidadeTemp;
             controleDeMultas.AdicionarNovaMulta(multaBase);
 
             Thread.Sleep(1000);

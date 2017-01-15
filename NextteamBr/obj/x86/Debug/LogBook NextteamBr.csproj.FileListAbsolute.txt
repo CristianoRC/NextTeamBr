@@ -12,3 +12,17 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\ob
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Debug\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Debug\LogBook NextteamBr.pdb
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Login.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.exe.config
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Debug\Ets2SdkClient.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Debug\Ets2SdkClient.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Login.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Principal.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Properties.Resources.resources
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache

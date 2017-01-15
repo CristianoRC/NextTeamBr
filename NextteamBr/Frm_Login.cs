@@ -19,10 +19,10 @@ namespace NextteamBr
 
         private void Btm_Logar_Click(object sender, EventArgs e)
         {
-            //LoginTrue -- Login e senha OK
-            //LoginFalse -- Login errado
+            //LoginTrue       -- Login e senha OK
+            //LoginFalse      -- Login errado
+            //LoginInativo    -- Não ativo
             //LoginIncorrect  -- Senha errada
-            //LoginInativo --Não ativo
 
             if (!String.IsNullOrWhiteSpace(Txt_Login.Text) && !String.IsNullOrWhiteSpace(Txt_Senha.Text))
             {
@@ -78,18 +78,48 @@ namespace NextteamBr
         {
             Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
 
-            string Resultado = ControleVersao.VerificarAtualizacoes();
+            if (ControleVersao.VerificarSoftwareAtivo() == true)
+            {
+                string Resultado = ControleVersao.VerificarAtualizacoes();
 
-            if (Resultado.Contains("Erro ao tentar fazer a requisição:"))
-            {
-                MessageBox.Show("Verifique a sua conexão, para poder continuar utilizando o software", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Btm_Logar.Enabled = false;
+                if (Resultado.Contains("Erro ao tentar fazer a requisição:"))
+                {
+                    MessageBox.Show("Verifique a sua conexão, para poder continuar utilizando o software", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Btm_Logar.Enabled = false;
+                }
+                else if (Resultado != String.Empty && !Resultado.Contains("Erro ao tentar fazer a requisição:"))
+                {
+                    MessageBox.Show("Atualize o seu Software para poder continuar Utilizando!", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Btm_Logar.Enabled = false;
+                    Process.Start(Resultado);
+                }
             }
-            else if (Resultado != String.Empty && !Resultado.Contains("Erro ao tentar fazer a requisição:"))
+            else
             {
-                MessageBox.Show("Atualize o seu Software para poder continuar Utilizando!", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                String Saudacao = String.Empty;
+
+                if (DateTime.Now.Hour >= 5 && DateTime.Now.Hour < 12)
+                {
+                    Saudacao = "Tenha um ótimo dia!";
+                }
+                else if (DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 18)
+                {
+                    Saudacao = "Tenha uma ótima tarde!";
+                }
+                else if (DateTime.Now.Hour >= 18 && DateTime.Now.Hour < 23)
+                {
+                    Saudacao = "Tenha uma ótima noite!";
+                }
+                else
+                {
+                    Saudacao = "Tenha uma ótima madrugado, tome cuidado na estrada!";
+                }
+
+                MessageBox.Show("O sistema está em manutenção em breve estaremos de volta!\n " + Saudacao, "Manutenção", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+                Txt_Login.Enabled = false;
+                Txt_Senha.Enabled = false;
                 Btm_Logar.Enabled = false;
-                Process.Start(Resultado);
             }
 
             Txt_Login.Text = ControllerUsuario.ObterUltimoLogin();
