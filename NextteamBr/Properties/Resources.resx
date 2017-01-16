@@ -118,15 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="registro_km_layout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\registro_km_layout.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Administrative Tools-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Administrative Tools-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Faixa-Fundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Faixa-Fundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Registro de Carga" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Registro de Carga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,17 +127,11 @@
   <data name="client" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fundo_Novo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Img\Fundo-Novo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MP.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CargaEntregue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CargaEntregue.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Administrative Tools-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Administrative Tools-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EstaProximo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EstaProximo.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -159,9 +144,6 @@
   </data>
   <data name="Medium Volume-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Medium Volume-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Administrative Tools-1001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Administrative Tools-1001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Colisao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Colisao.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -183,5 +165,20 @@
   </data>
   <data name="Camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Camera.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Carregado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Carregado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Descarregado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\Descarregado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fundo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\fundos\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fundo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Img\fundos\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

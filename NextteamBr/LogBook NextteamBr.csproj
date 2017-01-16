@@ -147,6 +147,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\icone.png" />
+    <None Include="Resources\ico.png" />
+    <None Include="Img\ico.png" />
+    <None Include="Img\fundos\2.png" />
+    <None Include="Img\fundos\1.png" />
+    <None Include="Img\Descarregado.png" />
+    <None Include="Img\Carregado.png" />
     <None Include="Resources\Camera.wav" />
     <None Include="Resources\alert.wav" />
     <None Include="Resources\beep-24.wav" />

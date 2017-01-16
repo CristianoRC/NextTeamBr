@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using Ets2SdkClient;
 using System.Threading;
-using System.Collections.Generic;
 
 namespace NextteamBr
 {
@@ -12,7 +11,7 @@ namespace NextteamBr
         bool executarAudio = true;
         bool cargaEntregue = false;
         bool ObterInformacoesIniciais = false;
-        bool CargaConectada = false;
+        bool PlanoDeFundo = false;
 
         String IDCarreta = String.Empty;
         String IDCarretaInicio = String.Empty;
@@ -66,22 +65,10 @@ namespace NextteamBr
                     return;
                 }
 
-                #region Informações da tela
-
-                Lbl_Destino.Text = data.Job.CityDestination + " / " + data.Job.CompanyDestination;
-                Lbl_Partida.Text = data.Job.CitySource + " / " + data.Job.CompanySource;
-
-                Lbl_Cambio.Text = Convert.ToInt16(data.Drivetrain.Gear).ToString();
-                Lbl_KMH.Text = Convert.ToInt16(data.Drivetrain.SpeedKmh).ToString();
-                Lbl_KMRegistrado.Text = data.Drivetrain.TruckOdometer.ToString("0.0");
-                Lbl_RPM.Text = data.Drivetrain.EngineRpm.ToString("0.0");
-                #endregion
-
-                #region Controle de Inicio e fim de frete
-
                 VelocidadeAtual = data.Drivetrain.SpeedKmh;
                 IDCarreta = data.Job.TrailerId;
 
+                //Informações Iniciais
                 if (ObterInformacoesIniciais)
                 {
                     v_OdometroInical = data.Drivetrain.TruckOdometer;
@@ -92,10 +79,12 @@ namespace NextteamBr
                     timerTs3.Enabled = true;
                     IDCarretaInicio = data.Job.TrailerId;
 
-
+                    Lbl_Destino.Text = data.Job.CityDestination + " / " + data.Job.CompanyDestination;
+                    Lbl_Partida.Text = data.Job.CitySource + " / " + data.Job.CompanySource;
+                    Lbl_InfoCarga.Text = informacoesFrete.Carga;
                 }
 
-                //Informações finais
+                //Informações Finais
                 if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 100 && data.Job.NavigationDistanceLeft >= 10)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
@@ -104,13 +93,28 @@ namespace NextteamBr
                     informacoesFrete.Dano = data.Damage.WearTrailer * 100;
                     informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
                     informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
+                    //TODO  informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
 
                     cargaEntregue = true;
                     FinaliziarFrete();
+
+                    Lbl_Destino.Text = String.Empty;
+                    Lbl_Partida.Text = String.Empty;
+                    Lbl_InfoCarga.Text = String.Empty;
                 }
 
-                #endregion
+
+                //Controle imagem do caminhao carregado ou descarregado
+                if (data.Job.TrailerAttached)
+                {
+                    Lbl_InfoCarga.Visible = true;
+                    PicCarga.Image = Properties.Resources.Carregado;
+                }
+                else
+                {
+                    Lbl_InfoCarga.Visible = false;
+                    PicCarga.Image = Properties.Resources.Descarregado;
+                }
             }
             catch (Exception ex)
             {
@@ -119,53 +123,6 @@ namespace NextteamBr
         }
 
         #endregion
-
-        private void pictureSom_Click(object sender, EventArgs e)
-        {
-            if (executarAudio)
-            {
-                executarAudio = false;
-
-                pictureSom.Image = Properties.Resources.Mute_50;
-            }
-            else
-            {
-                executarAudio = true;
-
-                pictureSom.Image = Properties.Resources.Medium_Volume_50;
-            }
-        }
-
-        private void timerTs3_Tick(object sender, EventArgs e)
-        {
-            if (!Ferramentas.VerificarTeamSpeak())
-            {
-                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
-                Thread.Sleep(15000);
-                Application.Exit();
-            }
-        }
-
-        private void TimerAvisoSonoro_Tick(object sender, EventArgs e)
-        {
-            if (VelocidadeAtual > 100)
-            {
-                ControleVelocidade++;
-
-                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Bip);
-            }
-            else
-            {
-                ControleVelocidade = 0;
-            }
-
-            if (ControleVelocidade >= 5)
-            {
-                ControleVelocidade = 0;
-
-                Multar();
-            }
-        }
 
         private void FinaliziarFrete()
         {
@@ -240,6 +197,69 @@ namespace NextteamBr
             Thread.Sleep(1000);
 
             TimerAvisoSonoro.Enabled = true;
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            if (PlanoDeFundo)
+            {
+                panel1.BackgroundImage = Properties.Resources.Fundo2;
+
+                PlanoDeFundo = false;
+            }
+            else
+            {
+                panel1.BackgroundImage = Properties.Resources.Fundo1;
+
+                PlanoDeFundo = true;
+            }
+        }
+
+        private void pictureSom_Click(object sender, EventArgs e)
+        {
+            if (executarAudio)
+            {
+                executarAudio = false;
+
+                pictureSom.Image = Properties.Resources.Mute_50;
+            }
+            else
+            {
+                executarAudio = true;
+
+                pictureSom.Image = Properties.Resources.Medium_Volume_50;
+            }
+        }
+
+        private void TimerTs3_Tick(object sender, EventArgs e)
+        {
+            if (!Ferramentas.VerificarTeamSpeak())
+            {
+                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Ts3);
+                Thread.Sleep(15000);
+                Application.Exit();
+            }
+        }
+
+        private void TimerAvisoSonoro_Tick(object sender, EventArgs e)
+        {
+            if (VelocidadeAtual > 100)
+            {
+                ControleVelocidade++;
+
+                ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Bip);
+            }
+            else
+            {
+                ControleVelocidade = 0;
+            }
+
+            if (ControleVelocidade >= 5)
+            {
+                ControleVelocidade = 0;
+
+                Multar();
+            }
         }
     }
 }

@@ -35,11 +35,11 @@
             this.Txt_Senha = new System.Windows.Forms.TextBox();
             this.Btm_Logar = new System.Windows.Forms.Button();
             this.Btm_Sair = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Lbl_Versao = new System.Windows.Forms.ToolStripStatusLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,16 +99,6 @@
             this.Btm_Sair.UseVisualStyleBackColor = true;
             this.Btm_Sair.Click += new System.EventHandler(this.Btm_Sair_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NextteamBr.Properties.Resources.client;
-            this.pictureBox1.Location = new System.Drawing.Point(385, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 237);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -126,6 +116,16 @@
             this.Lbl_Versao.Name = "Lbl_Versao";
             this.Lbl_Versao.Size = new System.Drawing.Size(58, 17);
             this.Lbl_Versao.Text = "Versão : 1.0.0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NextteamBr.Properties.Resources.icone;
+            this.pictureBox1.Location = new System.Drawing.Point(385, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 237);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // Frm_Login
             // 
@@ -148,9 +148,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Next TeamBr";
             this.Load += new System.EventHandler(this.Frm_Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

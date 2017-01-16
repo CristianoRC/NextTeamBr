@@ -71,36 +71,6 @@ namespace NextteamBr.Properties {
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Administrative_Tools_100 {
-            get {
-                object obj = ResourceManager.GetObject("Administrative Tools-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Administrative_Tools_1001 {
-            get {
-                object obj = ResourceManager.GetObject("Administrative Tools-1001", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Administrative_Tools_50 {
-            get {
-                object obj = ResourceManager.GetObject("Administrative Tools-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream alert {
@@ -133,6 +103,16 @@ namespace NextteamBr.Properties {
         internal static System.IO.UnmanagedMemoryStream CargaEntregue {
             get {
                 return ResourceManager.GetStream("CargaEntregue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Carregado {
+            get {
+                object obj = ResourceManager.GetObject("Carregado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -175,6 +155,16 @@ namespace NextteamBr.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Descarregado {
+            get {
+                object obj = ResourceManager.GetObject("Descarregado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream EstaProximo {
@@ -186,9 +176,9 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Faixa_Fundo {
+        internal static System.Drawing.Bitmap Fundo1 {
             get {
-                object obj = ResourceManager.GetObject("Faixa-Fundo", resourceCulture);
+                object obj = ResourceManager.GetObject("Fundo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,9 +186,19 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fundo_Novo {
+        internal static System.Drawing.Bitmap Fundo2 {
             get {
-                object obj = ResourceManager.GetObject("Fundo_Novo", resourceCulture);
+                object obj = ResourceManager.GetObject("Fundo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone {
+            get {
+                object obj = ResourceManager.GetObject("icone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -247,16 +247,6 @@ namespace NextteamBr.Properties {
         internal static System.Drawing.Bitmap Registro_de_Carga {
             get {
                 object obj = ResourceManager.GetObject("Registro de Carga", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap registro_km_layout {
-            get {
-                object obj = ResourceManager.GetObject("registro_km_layout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
