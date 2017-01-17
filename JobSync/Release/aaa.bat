@@ -1,0 +1,1 @@
+LoogBookSync.vmp.exe ".\new_game.json" ".\game.sii"

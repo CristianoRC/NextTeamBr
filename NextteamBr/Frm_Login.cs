@@ -66,9 +66,9 @@ namespace NextteamBr
         }
 
 
-        private void ChamarFormularioDeEscolha(int resultado)
+        private void ChamarFormularioDeEscolha(int p_ID)
         {
-            Frm_Principal frm_Escolha = new Frm_Principal(resultado);
+            Frm_Escolha frm_Escolha = new Frm_Escolha(p_ID);
             this.Visible = false;
             frm_Escolha.ShowDialog();
             this.Dispose();

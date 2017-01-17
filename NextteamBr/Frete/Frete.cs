@@ -12,6 +12,6 @@ namespace NextteamBr
         public string CidadeInicial { get; set; }
         public string CidadeDestino { get; set; }
         public string DataFinalFrete { get; set; }
-        //TODO public List<Multa> ListaDeMultas { get; set; }
+        public List<Multa> ListaDeMultas { get; set; }
     }
 }
