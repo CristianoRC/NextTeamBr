@@ -33,6 +33,7 @@
             this.timerTs3 = new System.Windows.Forms.Timer(this.components);
             this.TimerAvisoSonoro = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Lbl_InfoGame = new System.Windows.Forms.Label();
             this.Lbl_InfoCarga = new System.Windows.Forms.Label();
             this.Lbl_Destino = new System.Windows.Forms.Label();
             this.Lbl_Partida = new System.Windows.Forms.Label();
@@ -56,8 +57,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::NextteamBr.Properties.Resources.Fundo1;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.Lbl_InfoGame);
             this.panel1.Controls.Add(this.Lbl_InfoCarga);
             this.panel1.Controls.Add(this.Lbl_Destino);
             this.panel1.Controls.Add(this.Lbl_Partida);
@@ -69,6 +71,17 @@
             this.panel1.Size = new System.Drawing.Size(749, 300);
             this.panel1.TabIndex = 12;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // Lbl_InfoGame
+            // 
+            this.Lbl_InfoGame.AutoSize = true;
+            this.Lbl_InfoGame.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_InfoGame.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_InfoGame.ForeColor = System.Drawing.Color.White;
+            this.Lbl_InfoGame.Location = new System.Drawing.Point(10, 266);
+            this.Lbl_InfoGame.Name = "Lbl_InfoGame";
+            this.Lbl_InfoGame.Size = new System.Drawing.Size(0, 14);
+            this.Lbl_InfoGame.TabIndex = 17;
             // 
             // Lbl_InfoCarga
             // 
@@ -86,7 +99,7 @@
             this.Lbl_Destino.AutoSize = true;
             this.Lbl_Destino.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Destino.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Destino.Location = new System.Drawing.Point(425, 109);
+            this.Lbl_Destino.Location = new System.Drawing.Point(422, 81);
             this.Lbl_Destino.Name = "Lbl_Destino";
             this.Lbl_Destino.Size = new System.Drawing.Size(0, 19);
             this.Lbl_Destino.TabIndex = 14;
@@ -96,7 +109,7 @@
             this.Lbl_Partida.AutoSize = true;
             this.Lbl_Partida.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_Partida.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Partida.Location = new System.Drawing.Point(424, 68);
+            this.Lbl_Partida.Location = new System.Drawing.Point(421, 38);
             this.Lbl_Partida.Name = "Lbl_Partida";
             this.Lbl_Partida.Size = new System.Drawing.Size(0, 19);
             this.Lbl_Partida.TabIndex = 13;
@@ -156,5 +169,6 @@
         private System.Windows.Forms.Timer TimerAvisoSonoro;
         private System.Windows.Forms.PictureBox PicCarga;
         private System.Windows.Forms.Label Lbl_InfoCarga;
+        private System.Windows.Forms.Label Lbl_InfoGame;
     }
 }

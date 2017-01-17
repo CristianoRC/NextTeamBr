@@ -17,6 +17,8 @@ namespace NextteamBr
             {
                 StrJSON = JsonConvert.SerializeObject(InformacoesFrete);
 
+                File.WriteAllText("Frete.JSON",StrJSON);
+
                 //string url = "http://192.168.0.250/next/painel/";
                 string url = "http://paineldev.nextteambr.com.br/registroapp.php";
 

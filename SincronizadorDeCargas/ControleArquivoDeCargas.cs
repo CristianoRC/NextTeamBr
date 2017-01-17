@@ -13,7 +13,7 @@ namespace SincronizadorDeCargas
             {
                 try
                 {
-                    return wb.DownloadString(@"http://cristianoprogramador.com/LogBook/game.sii");
+                    return wb.DownloadString(@"http://cristianoprogramador.com/LogBook/game.sii");//TODO Meu site, verificar DNS
                 }
                 catch (Exception ex)
                 {

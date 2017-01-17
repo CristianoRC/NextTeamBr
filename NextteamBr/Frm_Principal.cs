@@ -93,7 +93,7 @@ namespace NextteamBr
                     informacoesFrete.Dano = data.Damage.WearTrailer * 100;
                     informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
                     informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    //TODO  informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
+                    informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
 
                     cargaEntregue = true;
                     FinaliziarFrete();
@@ -115,6 +115,10 @@ namespace NextteamBr
                     Lbl_InfoCarga.Visible = false;
                     PicCarga.Image = Properties.Resources.Descarregado;
                 }
+
+                Lbl_InfoGame.Text = String.Format("Velocidade {0} km/h  Distância {1} km",
+                    VelocidadeAtual.ToString("0"), (data.Job.NavigationDistanceLeft / 1000).ToString("0"));
+
             }
             catch (Exception ex)
             {

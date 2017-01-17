@@ -45,3 +45,8 @@ E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
 E:\NextTeamBr\NextteamBr\bin\x86\Release\DotNetZip.dll
 E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
 E:\NextTeamBr\NextteamBr\bin\x86\Release\DotNetZip.xml
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\DotNetZip.dll
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\DotNetZip.xml
+C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
