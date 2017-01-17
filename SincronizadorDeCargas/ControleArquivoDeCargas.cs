@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 
 namespace SincronizadorDeCargas
 {
-    internal static class ControleArquivoGameSII
+    internal static class ControleArquivoDeCargas
     {
         private static string ObterArquivoAtualizado()
         {
@@ -22,7 +23,7 @@ namespace SincronizadorDeCargas
             }
         }
 
-        internal static void SalvarArquivoAtualizado()
+        private static void SalvarArquivoAtualizado()
         {
             using (StreamWriter sw = new StreamWriter(SaveGame.ObterCaminhoDoArquivoGameSII()))
             {
@@ -39,6 +40,11 @@ namespace SincronizadorDeCargas
                     sw.Close();
                 }
             }
+        }
+
+        internal static void Sincronizar()
+        {
+
         }
     }
 }

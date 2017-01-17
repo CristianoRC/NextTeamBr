@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace NextteamBr
@@ -12,6 +6,7 @@ namespace NextteamBr
     public partial class Frm_Escolha : Form
     {
         int IdUsuario;
+
         public Frm_Escolha(int p_id)
         {
             InitializeComponent();
@@ -24,6 +19,14 @@ namespace NextteamBr
             Frm_Principal frm_Principal = new Frm_Principal(IdUsuario);
             this.Visible = false;
             frm_Principal.ShowDialog();
+            this.Dispose();
+        }
+
+        private void Btm_JobSync_Click(object sender, EventArgs e)
+        {
+            SincronizadorDeCargas.Frm_Sincronizador frm_Sync = new SincronizadorDeCargas.Frm_Sincronizador();
+            this.Visible = false;
+            frm_Sync.ShowDialog();
             this.Dispose();
         }
     }

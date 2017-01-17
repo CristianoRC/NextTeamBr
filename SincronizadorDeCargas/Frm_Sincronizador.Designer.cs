@@ -39,7 +39,7 @@
             this.Lbl_Informacao.AutoSize = true;
             this.Lbl_Informacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Informacao.ForeColor = System.Drawing.Color.Green;
-            this.Lbl_Informacao.Location = new System.Drawing.Point(61, 173);
+            this.Lbl_Informacao.Location = new System.Drawing.Point(61, 168);
             this.Lbl_Informacao.Name = "Lbl_Informacao";
             this.Lbl_Informacao.Size = new System.Drawing.Size(0, 15);
             this.Lbl_Informacao.TabIndex = 1;
@@ -50,7 +50,7 @@
             this.Btm_Sincronizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Btm_Sincronizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btm_Sincronizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_Sincronizar.Location = new System.Drawing.Point(105, 25);
+            this.Btm_Sincronizar.Location = new System.Drawing.Point(102, 12);
             this.Btm_Sincronizar.Name = "Btm_Sincronizar";
             this.Btm_Sincronizar.Size = new System.Drawing.Size(186, 131);
             this.Btm_Sincronizar.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.Lbl_Instalação.AutoSize = true;
             this.Lbl_Instalação.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Instalação.ForeColor = System.Drawing.Color.Green;
-            this.Lbl_Instalação.Location = new System.Drawing.Point(99, 159);
+            this.Lbl_Instalação.Location = new System.Drawing.Point(99, 154);
             this.Lbl_Instalação.Name = "Lbl_Instalação";
             this.Lbl_Instalação.Size = new System.Drawing.Size(0, 15);
             this.Lbl_Instalação.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 204);
+            this.ClientSize = new System.Drawing.Size(391, 205);
             this.Controls.Add(this.Lbl_Instalação);
             this.Controls.Add(this.Lbl_Informacao);
             this.Controls.Add(this.Btm_Sincronizar);

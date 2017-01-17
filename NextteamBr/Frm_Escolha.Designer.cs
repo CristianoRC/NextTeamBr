@@ -45,6 +45,7 @@
             this.Btm_JobSync.TabIndex = 0;
             this.toolTip1.SetToolTip(this.Btm_JobSync, "Job Sync");
             this.Btm_JobSync.UseVisualStyleBackColor = true;
+            this.Btm_JobSync.Click += new System.EventHandler(this.Btm_JobSync_Click);
             // 
             // Btm_LogBook
             // 

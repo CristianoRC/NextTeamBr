@@ -67,7 +67,7 @@ namespace SincronizadorDeCargas
 
                 Thread.Sleep(3000);
 
-                ControleArquivoGameSII.SalvarArquivoAtualizado();
+                ControleArquivoDeCargas.Sincronizar();
 
                 Lbl_Informacao.ForeColor = Color.Green;
                 Lbl_Informacao.Text = "Sua frete foi sincronizado " + DateTime.Now;

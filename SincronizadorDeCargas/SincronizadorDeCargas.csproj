@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControleArquivoGameSII.cs" />
+    <Compile Include="ControleArquivoDeCargas.cs" />
     <Compile Include="SaveGame.cs" />
     <Compile Include="Frm_Sincronizador.cs">
       <SubType>Form</SubType>
