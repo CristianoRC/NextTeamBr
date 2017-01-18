@@ -82,9 +82,9 @@
             // Pic_EmpresaDestino
             // 
             this.Pic_EmpresaDestino.BackColor = System.Drawing.Color.Transparent;
-            this.Pic_EmpresaDestino.Location = new System.Drawing.Point(691, 73);
+            this.Pic_EmpresaDestino.Location = new System.Drawing.Point(633, 73);
             this.Pic_EmpresaDestino.Name = "Pic_EmpresaDestino";
-            this.Pic_EmpresaDestino.Size = new System.Drawing.Size(36, 36);
+            this.Pic_EmpresaDestino.Size = new System.Drawing.Size(92, 36);
             this.Pic_EmpresaDestino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Pic_EmpresaDestino.TabIndex = 19;
             this.Pic_EmpresaDestino.TabStop = false;
@@ -92,9 +92,9 @@
             // Pic_EmrpesaPartida
             // 
             this.Pic_EmrpesaPartida.BackColor = System.Drawing.Color.Transparent;
-            this.Pic_EmrpesaPartida.Location = new System.Drawing.Point(691, 28);
+            this.Pic_EmrpesaPartida.Location = new System.Drawing.Point(633, 28);
             this.Pic_EmrpesaPartida.Name = "Pic_EmrpesaPartida";
-            this.Pic_EmrpesaPartida.Size = new System.Drawing.Size(36, 36);
+            this.Pic_EmrpesaPartida.Size = new System.Drawing.Size(92, 36);
             this.Pic_EmrpesaPartida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Pic_EmrpesaPartida.TabIndex = 18;
             this.Pic_EmrpesaPartida.TabStop = false;

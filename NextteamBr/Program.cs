@@ -13,7 +13,7 @@ namespace NextteamBr
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Principal(3));
+            Application.Run(new Frm_Login());
         }
     }
 }

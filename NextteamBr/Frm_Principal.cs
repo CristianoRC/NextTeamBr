@@ -80,15 +80,15 @@ namespace NextteamBr
                     timerTs3.Enabled = true;
                     IDCarretaInicio = data.Job.TrailerId;
 
-                    Lbl_Destino.Text = data.Job.CityDestination + " / " + data.Job.CompanyDestination;
-                    Lbl_Partida.Text = data.Job.CitySource + " / " + data.Job.CompanySource;
+                    Lbl_Destino.Text = data.Job.CityDestination;
+                    Lbl_Partida.Text = data.Job.CitySource;
                     Lbl_InfoCarga.Text = informacoesFrete.Carga;
 
                     SetarIconeDasEmpresas(data.Job.CompanySource, data.Job.CompanyDestination);
                 }
 
                 //Informações Finais
-                if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 100 && data.Job.NavigationDistanceLeft >= 10)
+                if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 80 && data.Job.NavigationDistanceLeft >= 10)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.IdMotorista = IDMotorista;
@@ -211,11 +211,8 @@ namespace NextteamBr
         private void SetarIconeDasEmpresas(string p_EmpresaPartida, string p_EmpresaDestino)
         {
             String CaminhoDasImagens = String.Format(@"{0}\Empresas", Application.StartupPath);
-            String CaminhoImgPartida = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaPartida);
-            String CaminhoImgDestino = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaDestino);
-
-            p_EmpresaDestino = p_EmpresaDestino.Trim().ToLower();
-            p_EmpresaPartida = p_EmpresaPartida.Trim().ToLower();
+            String CaminhoImgPartida = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaPartida.Trim().ToLower());
+            String CaminhoImgDestino = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaDestino.Trim().ToLower());
 
             if (File.Exists(CaminhoImgPartida))
             {
@@ -224,7 +221,7 @@ namespace NextteamBr
 
             if (File.Exists(CaminhoImgDestino))
             {
-                Pic_EmpresaDestino.ImageLocation = Pic_EmrpesaPartida.ImageLocation = CaminhoImgPartida;
+                Pic_EmpresaDestino.ImageLocation = CaminhoImgDestino;
             }
         }
 
