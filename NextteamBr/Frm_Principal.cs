@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Ets2SdkClient;
 using System.Threading;
+using System.IO;
 
 namespace NextteamBr
 {
@@ -82,6 +83,8 @@ namespace NextteamBr
                     Lbl_Destino.Text = data.Job.CityDestination + " / " + data.Job.CompanyDestination;
                     Lbl_Partida.Text = data.Job.CitySource + " / " + data.Job.CompanySource;
                     Lbl_InfoCarga.Text = informacoesFrete.Carga;
+
+                    SetarIconeDasEmpresas(data.Job.CompanySource, data.Job.CompanyDestination);
                 }
 
                 //Informações Finais
@@ -151,6 +154,8 @@ namespace NextteamBr
             VelocidadeAtual = 0;
             IDCarreta = String.Empty;
             cargaEntregue = true;
+            Pic_EmpresaDestino.Image = null;
+            Pic_EmrpesaPartida.Image = null;
         }
 
         private void IniciarFrete()
@@ -201,6 +206,26 @@ namespace NextteamBr
             Thread.Sleep(1000);
 
             TimerAvisoSonoro.Enabled = true;
+        }
+
+        private void SetarIconeDasEmpresas(string p_EmpresaPartida, string p_EmpresaDestino)
+        {
+            String CaminhoDasImagens = String.Format(@"{0}\Empresas", Application.StartupPath);
+            String CaminhoImgPartida = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaPartida);
+            String CaminhoImgDestino = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaDestino);
+
+            p_EmpresaDestino = p_EmpresaDestino.Trim().ToLower();
+            p_EmpresaPartida = p_EmpresaPartida.Trim().ToLower();
+
+            if (File.Exists(CaminhoImgPartida))
+            {
+                Pic_EmrpesaPartida.ImageLocation = CaminhoImgPartida;
+            }
+
+            if (File.Exists(CaminhoImgDestino))
+            {
+                Pic_EmpresaDestino.ImageLocation = Pic_EmrpesaPartida.ImageLocation = CaminhoImgPartida;
+            }
         }
 
         private void panel1_Click(object sender, EventArgs e)

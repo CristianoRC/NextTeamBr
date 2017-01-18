@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBook NextteamBr", "Nextt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ets2SdkClient", "Ets2SdkClient\Ets2SdkClient.csproj", "{21FB58CD-0B97-409F-AE61-CF8964E13F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizadorDeCargas", "SincronizadorDeCargas\SincronizadorDeCargas.csproj", "{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,14 +31,6 @@ Global
 		{21FB58CD-0B97-409F-AE61-CF8964E13F63}.Release|Any CPU.Build.0 = Release|Any CPU
 		{21FB58CD-0B97-409F-AE61-CF8964E13F63}.Release|x86.ActiveCfg = Release|Any CPU
 		{21FB58CD-0B97-409F-AE61-CF8964E13F63}.Release|x86.Build.0 = Release|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Debug|x86.Build.0 = Debug|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Release|x86.ActiveCfg = Release|Any CPU
-		{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

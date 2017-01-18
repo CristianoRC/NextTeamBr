@@ -33,13 +33,18 @@
             this.timerTs3 = new System.Windows.Forms.Timer(this.components);
             this.TimerAvisoSonoro = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Pic_EmpresaDestino = new System.Windows.Forms.PictureBox();
+            this.Pic_EmrpesaPartida = new System.Windows.Forms.PictureBox();
             this.Lbl_InfoGame = new System.Windows.Forms.Label();
             this.Lbl_InfoCarga = new System.Windows.Forms.Label();
             this.Lbl_Destino = new System.Windows.Forms.Label();
             this.Lbl_Partida = new System.Windows.Forms.Label();
             this.pictureSom = new System.Windows.Forms.PictureBox();
             this.PicCarga = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_EmpresaDestino)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_EmrpesaPartida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCarga)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +64,8 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.Pic_EmpresaDestino);
+            this.panel1.Controls.Add(this.Pic_EmrpesaPartida);
             this.panel1.Controls.Add(this.Lbl_InfoGame);
             this.panel1.Controls.Add(this.Lbl_InfoCarga);
             this.panel1.Controls.Add(this.Lbl_Destino);
@@ -71,6 +78,26 @@
             this.panel1.Size = new System.Drawing.Size(749, 300);
             this.panel1.TabIndex = 12;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // Pic_EmpresaDestino
+            // 
+            this.Pic_EmpresaDestino.BackColor = System.Drawing.Color.Transparent;
+            this.Pic_EmpresaDestino.Location = new System.Drawing.Point(691, 73);
+            this.Pic_EmpresaDestino.Name = "Pic_EmpresaDestino";
+            this.Pic_EmpresaDestino.Size = new System.Drawing.Size(36, 36);
+            this.Pic_EmpresaDestino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Pic_EmpresaDestino.TabIndex = 19;
+            this.Pic_EmpresaDestino.TabStop = false;
+            // 
+            // Pic_EmrpesaPartida
+            // 
+            this.Pic_EmrpesaPartida.BackColor = System.Drawing.Color.Transparent;
+            this.Pic_EmrpesaPartida.Location = new System.Drawing.Point(691, 28);
+            this.Pic_EmrpesaPartida.Name = "Pic_EmrpesaPartida";
+            this.Pic_EmrpesaPartida.Size = new System.Drawing.Size(36, 36);
+            this.Pic_EmrpesaPartida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Pic_EmrpesaPartida.TabIndex = 18;
+            this.Pic_EmrpesaPartida.TabStop = false;
             // 
             // Lbl_InfoGame
             // 
@@ -154,6 +181,8 @@
             this.Text = "LogBook NextTeamBr";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_EmpresaDestino)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_EmrpesaPartida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCarga)).EndInit();
             this.ResumeLayout(false);
@@ -170,5 +199,8 @@
         private System.Windows.Forms.PictureBox PicCarga;
         private System.Windows.Forms.Label Lbl_InfoCarga;
         private System.Windows.Forms.Label Lbl_InfoGame;
+        private System.Windows.Forms.PictureBox Pic_EmpresaDestino;
+        private System.Windows.Forms.PictureBox Pic_EmrpesaPartida;
+        private System.Windows.Forms.Timer timer1;
     }
 }

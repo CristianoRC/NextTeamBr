@@ -156,16 +156,60 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Imagens\Empresas\transinet.png" />
+    <None Include="Imagens\Empresas\trameri.png" />
+    <None Include="Imagens\Empresas\tradeaux.png" />
+    <None Include="Imagens\Empresas\stokes.png" />
+    <None Include="Imagens\Empresas\steinbruch.png" />
+    <None Include="Imagens\Empresas\sellplan.png" />
+    <None Include="Imagens\Empresas\scout.png" />
+    <None Include="Imagens\Empresas\scania.png" />
+    <None Include="Imagens\Empresas\sanbuilders.png" />
+    <None Include="Imagens\Empresas\sagtre.png" />
+    <None Include="Imagens\Empresas\renarlogistik.png" />
+    <None Include="Imagens\Empresas\posped.png" />
+    <None Include="Imagens\Empresas\polarislines.png" />
+    <None Include="Imagens\Empresas\polarfish.png" />
+    <None Include="Imagens\Empresas\nsoil.png" />
+    <None Include="Imagens\Empresas\nschemicals.png" />
+    <None Include="Imagens\Empresas\norrsken.png" />
+    <None Include="Imagens\Empresas\norrfood.png" />
+    <None Include="Imagens\Empresas\nordicstenbrott.png" />
+    <None Include="Imagens\Empresas\nordiccrown.png" />
+    <None Include="Imagens\Empresas\nbfc.png" />
+    <None Include="Imagens\Empresas\msstein.png" />
+    <None Include="Imagens\Empresas\marina.png" />
+    <None Include="Imagens\Empresas\lkw.png" />
+    <None Include="Imagens\Empresas\konstnorr.png" />
+    <None Include="Imagens\Empresas\kaarfor.png" />
+    <None Include="Imagens\Empresas\itcc.png" />
+    <None Include="Imagens\Empresas\ika.png" />
+    <None Include="Imagens\Empresas\gnt.png" />
+    <None Include="Imagens\Empresas\fcp.png" />
+    <None Include="Imagens\Empresas\eurogoodies.png" />
+    <None Include="Imagens\Empresas\euroacres.png" />
+    <None Include="Imagens\Empresas\drekkartrans.png" />
+    <None Include="Imagens\Empresas\containerport.png" />
+    <None Include="Imagens\Empresas\bjork.png" />
+    <None Include="Imagens\Empresas\bhv.png" />
+    <None Include="Imagens\Empresas\bcp.png" />
+    <None Include="Imagens\Empresas\ariafood.png" />
+    <None Include="Imagens\Empresas\agronord.png" />
+    <None Include="Imagens\Empresas\wgcc.png" />
+    <None Include="Imagens\Empresas\vpc.png" />
+    <None Include="Imagens\Empresas\volvo.png" />
+    <None Include="Imagens\Empresas\vitaspower.png" />
+    <None Include="Imagens\Empresas\treeet.png" />
     <None Include="Resources\Fundo2.png" />
     <None Include="Resources\Fundo1.png" />
     <None Include="Resources\Air.wav" />
     <None Include="Resources\icone.png" />
     <None Include="Resources\ico.png" />
-    <None Include="Img\ico.png" />
-    <None Include="Img\fundos\2.png" />
-    <None Include="Img\fundos\1.png" />
-    <None Include="Img\Descarregado.png" />
-    <None Include="Img\Carregado.png" />
+    <None Include="Imagens\ico.png" />
+    <None Include="Imagens\fundos\2.png" />
+    <None Include="Imagens\fundos\1.png" />
+    <None Include="Imagens\Descarregado.png" />
+    <None Include="Imagens\Carregado.png" />
     <None Include="Resources\Camera.wav" />
     <None Include="Resources\alert.wav" />
     <None Include="Resources\beep-24.wav" />
@@ -185,22 +229,18 @@
     <None Include="Resources\Medium Volume-50.png" />
     <None Include="Resources\Mute-100.png" />
     <None Include="Resources\High Volume-100.png" />
-    <None Include="Img\Fundo-Novo.png" />
-    <None Include="Img\Faixa-Fundo.png" />
+    <None Include="Imagens\Fundo-Novo.png" />
+    <None Include="Imagens\Faixa-Fundo.png" />
     <None Include="Resources\CarregadoComSucesso.wav" />
     <None Include="Resources\LogBook.wav" />
     <None Include="Resources\Colisao.wav" />
     <None Include="Resources\CargaEntregue.wav" />
-    <None Include="Img\registro_km_layout.jpg" />
+    <None Include="Imagens\registro_km_layout.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ets2SdkClient\Ets2SdkClient.csproj">
       <Project>{21fb58cd-0b97-409f-ae61-cf8964e13f63}</Project>
       <Name>Ets2SdkClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SincronizadorDeCargas\SincronizadorDeCargas.csproj">
-      <Project>{61793e1d-ce1f-46b9-81b3-d6ae0bb20928}</Project>
-      <Name>SincronizadorDeCargas</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

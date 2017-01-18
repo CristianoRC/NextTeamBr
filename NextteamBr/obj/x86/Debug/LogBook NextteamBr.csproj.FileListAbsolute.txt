@@ -26,3 +26,18 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Principal.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Properties.Resources.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+E:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.exe.config
+E:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.exe
+E:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.pdb
+E:\NextTeamBr\NextteamBr\bin\x86\Debug\Ets2SdkClient.dll
+E:\NextTeamBr\NextteamBr\bin\x86\Debug\Newtonsoft.Json.dll
+E:\NextTeamBr\NextteamBr\bin\x86\Debug\Ets2SdkClient.pdb
+E:\NextTeamBr\NextteamBr\bin\x86\Debug\Newtonsoft.Json.xml
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Escolha.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Login.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Principal.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Properties.Resources.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.exe
+E:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.pdb
