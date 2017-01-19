@@ -41,7 +41,6 @@
             this.Lbl_Partida = new System.Windows.Forms.Label();
             this.pictureSom = new System.Windows.Forms.PictureBox();
             this.PicCarga = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_EmpresaDestino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_EmrpesaPartida)).BeginInit();
@@ -201,6 +200,5 @@
         private System.Windows.Forms.Label Lbl_InfoGame;
         private System.Windows.Forms.PictureBox Pic_EmpresaDestino;
         private System.Windows.Forms.PictureBox Pic_EmrpesaPartida;
-        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -69,7 +69,8 @@ namespace NextteamBr
                 VelocidadeAtual = data.Drivetrain.SpeedKmh;
                 IDCarreta = data.Job.TrailerId;
 
-                //Informações Iniciais
+                #region Informações Iniciais
+
                 if (ObterInformacoesIniciais)
                 {
                     v_OdometroInical = data.Drivetrain.TruckOdometer;
@@ -86,9 +87,10 @@ namespace NextteamBr
 
                     SetarIconeDasEmpresas(data.Job.CompanySource, data.Job.CompanyDestination);
                 }
+                #endregion
 
-                //Informações Finais
-                if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 80 && data.Job.NavigationDistanceLeft >= 10)
+                #region Informações Finais
+                if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 100 && data.Job.NavigationDistanceLeft >= 10)
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.IdMotorista = IDMotorista;
@@ -105,9 +107,10 @@ namespace NextteamBr
                     Lbl_Partida.Text = String.Empty;
                     Lbl_InfoCarga.Text = String.Empty;
                 }
+                #endregion
 
+                #region Controle imagem do caminhao carregado ou descarregado
 
-                //Controle imagem do caminhao carregado ou descarregado
                 if (data.Job.TrailerAttached)
                 {
                     Lbl_InfoCarga.Visible = true;
@@ -119,9 +122,13 @@ namespace NextteamBr
                     PicCarga.Image = Properties.Resources.Descarregado;
                 }
 
+                #endregion
+
+                #region Label Velocidade e Distancia
                 Lbl_InfoGame.Text = String.Format("Velocidade {0} km/h  Distância {1} km",
                     VelocidadeAtual.ToString("0"), (data.Job.NavigationDistanceLeft / 1000).ToString("0"));
 
+                #endregion
             }
             catch (Exception ex)
             {
@@ -189,11 +196,6 @@ namespace NextteamBr
 
             VelocidadeTemp = Convert.ToInt32(Math.Round(VelocidadeAtual, 1));
 
-            if (VelocidadeTemp < 100)
-            {
-                VelocidadeTemp = 103;
-            }
-
             multaBase.IDMotorista = IDMotorista;
             multaBase.DataDaMulta = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             multaBase.Velocidade = VelocidadeTemp;
@@ -204,8 +206,6 @@ namespace NextteamBr
             ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Velocidade);
 
             Thread.Sleep(1000);
-
-            TimerAvisoSonoro.Enabled = true;
         }
 
         private void SetarIconeDasEmpresas(string p_EmpresaPartida, string p_EmpresaDestino)
