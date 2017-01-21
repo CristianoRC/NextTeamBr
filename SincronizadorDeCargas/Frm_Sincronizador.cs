@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
+using System.Diagnostics;
+using System.IO;
 
 namespace SincronizadorDeCargas
 {
@@ -26,7 +28,19 @@ namespace SincronizadorDeCargas
 
         private void Btm_Sincronizar_Click(object sender, EventArgs e)
         {
-            VerificarStatusDoDiretorio();//Se o diretorios existir ele coloca executar atualização como true.
+            Thread.Sleep(500);
+
+            Atualizar();
+
+            String ArquivoBatTemp = String.Format(@"LoogBookSync.vmp.exe #{0}# #{1}#",
+            ControleArquivoDeCargas.ObterCaminhoArquivoDeCargas(), Txt_Caminho.Text);
+
+            String ArquivoBat = ArquivoBatTemp.Replace('#', '"');
+            File.WriteAllText(String.Format(@"{0}\JobSync\Atualizacao.bat", AppDomain.CurrentDomain.BaseDirectory.ToString()), ArquivoBat);
+
+            Process.Start(String.Format(@"{0}\JobSync\Atualizacao.bat", AppDomain.CurrentDomain.BaseDirectory.ToString()));
+
+            /*VerificarStatusDoDiretorio();//Se o diretorios existir ele coloca executar atualização como true.
 
             if (ExecutarAtualizacao)
             {
@@ -55,7 +69,7 @@ namespace SincronizadorDeCargas
                 Lbl_Instalação.ForeColor = Color.Green;
                 Lbl_Instalação.Text = "Instalação finalizada com sucesso!";
 
-            }
+            }*/
         }
 
         private void Atualizar()
@@ -67,7 +81,7 @@ namespace SincronizadorDeCargas
 
                 Thread.Sleep(3000);
 
-                ControleArquivoDeCargas.Sincronizar();
+                ControleArquivoDeCargas.SalvarArquivoAtualizado();
 
                 Lbl_Informacao.ForeColor = Color.Green;
                 Lbl_Informacao.Text = "Sua frete foi sincronizado " + DateTime.Now;
@@ -85,6 +99,20 @@ namespace SincronizadorDeCargas
         private void VerificarStatusDoDiretorio()
         {
             ExecutarAtualizacao = SaveGame.VerificarExistenciaSaveNxT();
+        }
+
+        private void Btm_Procurar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.RestoreDirectory = true;
+            ofd.Filter = "SII (*.sii*)|*.sii*";
+            ofd.CheckPathExists = true;
+            ofd.CheckFileExists = true;
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                Txt_Caminho.Text = ofd.FileName;
+            }
         }
     }
 }

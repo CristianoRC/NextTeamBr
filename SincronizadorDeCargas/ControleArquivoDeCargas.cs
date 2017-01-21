@@ -7,25 +7,16 @@ namespace SincronizadorDeCargas
 {
     internal static class ControleArquivoDeCargas
     {
-        private static string ObterArquivoAtualizado()
+        internal static string ObterCaminhoArquivoDeCargas()
         {
-            using (var wb = new WebClient())
-            {
-                try
-                {
-                    return wb.DownloadString(@"http://cristianoprogramador.com/LogBook/game.sii");//TODO Meu site, verificar DNS
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Ocorreu um erro ao tentar fazer a requisição: " + ex.Message);
-                }
-
-            }
+            return String.Format("{0}Cargas.JSON", Path.GetTempPath());
         }
 
-        private static void SalvarArquivoAtualizado()
+        internal static void SalvarArquivoAtualizado()
         {
-            using (StreamWriter sw = new StreamWriter(SaveGame.ObterCaminhoDoArquivoGameSII()))
+            String caminhoDoArquivo = String.Format(@"{0}Cargas.JSON", Path.GetTempPath());
+
+            using (StreamWriter sw = new StreamWriter(caminhoDoArquivo))
             {
                 try
                 {
@@ -42,9 +33,20 @@ namespace SincronizadorDeCargas
             }
         }
 
-        internal static void Sincronizar()
+        private static string ObterArquivoAtualizado()
         {
+            using (var wb = new WebClient())
+            {
+                try
+                {
+                    return wb.DownloadString(@"http://paineldev.nextteambr.com.br/syncApp.php");
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Ocorreu um erro ao tentar fazer a requisição: " + ex.Message);
+                }
 
+            }
         }
     }
 }

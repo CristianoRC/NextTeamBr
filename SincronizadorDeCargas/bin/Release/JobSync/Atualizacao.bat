@@ -1,0 +1,1 @@
+LoogBookSync.vmp.exe "C:\Users\Cristiano Cunha\AppData\Local\Temp\Cargas.JSON" "C:\Users\Cristiano Cunha\Downloads\game___semcargas.sii"
