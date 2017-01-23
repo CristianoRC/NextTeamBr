@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Net;
 
@@ -9,12 +8,12 @@ namespace SincronizadorDeCargas
     {
         internal static string ObterCaminhoArquivoDeCargas()
         {
-            return String.Format("{0}Cargas.JSON", Path.GetTempPath());
+            return String.Format("{0}Cargas.json", Path.GetTempPath());
         }
 
         internal static void SalvarArquivoAtualizado()
         {
-            String caminhoDoArquivo = String.Format(@"{0}Cargas.JSON", Path.GetTempPath());
+            String caminhoDoArquivo = String.Format(@"{0}Cargas.json", Path.GetTempPath());
 
             using (StreamWriter sw = new StreamWriter(caminhoDoArquivo))
             {

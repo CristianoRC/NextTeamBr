@@ -32,14 +32,6 @@ namespace SincronizadorDeCargas
 
             Atualizar();
 
-            String ArquivoBatTemp = String.Format(@"LoogBookSync.vmp.exe #{0}# #{1}#",
-            ControleArquivoDeCargas.ObterCaminhoArquivoDeCargas(), Txt_Caminho.Text);
-
-            String ArquivoBat = ArquivoBatTemp.Replace('#', '"');
-            File.WriteAllText(String.Format(@"{0}\JobSync\Atualizacao.bat", AppDomain.CurrentDomain.BaseDirectory.ToString()), ArquivoBat);
-
-            Process.Start(String.Format(@"{0}\JobSync\Atualizacao.bat", AppDomain.CurrentDomain.BaseDirectory.ToString()));
-
             /*VerificarStatusDoDiretorio();//Se o diretorios existir ele coloca executar atualização como true.
 
             if (ExecutarAtualizacao)
@@ -85,6 +77,8 @@ namespace SincronizadorDeCargas
 
                 Lbl_Informacao.ForeColor = Color.Green;
                 Lbl_Informacao.Text = "Sua frete foi sincronizado " + DateTime.Now;
+
+                ExecutarJobSync();
             }
             catch (Exception ex)
             {
@@ -94,6 +88,23 @@ namespace SincronizadorDeCargas
                                  "\nSe o problema persistir entre em contato com a administração\n Erro:" + ex.Message,
                                  "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ExecutarJobSync()
+        {
+            string caminhoExecutavel = String.Format(@"{0}JobSync\LoogBookSync.vmp.exe",
+            AppDomain.CurrentDomain.BaseDirectory.ToString());
+
+            string argumentos = String.Format("#{0}# #{1}#",
+                 ControleArquivoDeCargas.ObterCaminhoArquivoDeCargas(), Txt_Caminho.Text);
+
+            string arquivoBat = String.Format("{0} {1}", caminhoExecutavel, argumentos.Replace('#', '"'));
+
+            string caminhoArquivoBat = String.Format(@"{0}\JobSync\Fretes.bat", AppDomain.CurrentDomain.BaseDirectory.ToString());
+
+            File.WriteAllText(caminhoArquivoBat, arquivoBat);
+
+            Process.Start(caminhoArquivoBat);
         }
 
         private void VerificarStatusDoDiretorio()
