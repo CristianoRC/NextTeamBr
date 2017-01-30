@@ -1,11 +1,10 @@
-﻿<Properties StartupConfiguration="{443789AE-E4C2-4CAC-9118-78BBA31BAC20}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="NextteamBr/Frm_Principal.cs">
+﻿<Properties StartupConfiguration="{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SincronizadorDeCargas/Frm_Sincronizador.cs">
     <Files>
-      <File FileName="NextteamBr/Frm_Principal.cs" Line="25" Column="46" />
-      <File FileName="NextteamBr/Frete/Frete.cs" Line="1" Column="1" />
+      <File FileName="SincronizadorDeCargas/Frm_Sincronizador.cs" Line="66" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
