@@ -42,3 +42,21 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Releas
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
+D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
+D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe.config
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.xml
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Login.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb

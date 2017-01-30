@@ -24,7 +24,10 @@ namespace NextteamBr
 
         private void Btm_JobSync_Click(object sender, EventArgs e)
         {
-
+            SincronizadorDeCargas.Frm_Sincronizador frm_Sync = new SincronizadorDeCargas.Frm_Sincronizador();
+            this.Visible = false;
+            frm_Sync.ShowDialog();
+            this.Dispose();
         }
     }
 }

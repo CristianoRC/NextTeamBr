@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Sincronizador));
             this.Lbl_Informacao = new System.Windows.Forms.Label();
             this.Btm_Sincronizar = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Caminho = new System.Windows.Forms.TextBox();
             this.Btm_Procurar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // Lbl_Informacao
@@ -53,10 +55,11 @@
             this.Btm_Sincronizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Btm_Sincronizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btm_Sincronizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_Sincronizar.Location = new System.Drawing.Point(155, 92);
+            this.Btm_Sincronizar.Location = new System.Drawing.Point(122, 44);
             this.Btm_Sincronizar.Name = "Btm_Sincronizar";
-            this.Btm_Sincronizar.Size = new System.Drawing.Size(204, 149);
+            this.Btm_Sincronizar.Size = new System.Drawing.Size(258, 197);
             this.Btm_Sincronizar.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Btm_Sincronizar, "Sincronizar carga");
             this.Btm_Sincronizar.UseVisualStyleBackColor = true;
             this.Btm_Sincronizar.Click += new System.EventHandler(this.Btm_Sincronizar_Click);
             // 
@@ -129,5 +132,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_Caminho;
         private System.Windows.Forms.Button Btm_Procurar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

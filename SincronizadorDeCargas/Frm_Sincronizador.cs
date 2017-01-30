@@ -68,7 +68,10 @@ namespace SincronizadorDeCargas
 
             File.WriteAllText(caminhoArquivoBat, arquivoBat);
 
-            Process.Start(caminhoArquivoBat);
+            Process meuProcesso = new Process();
+            meuProcesso.StartInfo.FileName = caminhoArquivoBat;
+            meuProcesso.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            meuProcesso.Start();
         }
 
         private void Btm_Procurar_Click(object sender, EventArgs e)
