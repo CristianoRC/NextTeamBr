@@ -116,7 +116,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sincronizador de cargas";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Sincronizador_FormClosed);
-            this.Load += new System.EventHandler(this.Frm_Sincronizador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,1 +1,0 @@
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\JobSync\LoogBookSync.vmp.exe "C:\Users\Cristiano Cunha\AppData\Local\Temp\Cargas.json" "C:\Users\Cristiano Cunha\Documents\Euro Truck Simulator 2\profiles\4E455854205445414D204252\save\2\game.sii"

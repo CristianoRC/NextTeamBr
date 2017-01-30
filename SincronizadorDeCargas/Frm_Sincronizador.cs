@@ -21,47 +21,11 @@ namespace SincronizadorDeCargas
             Application.Exit();
         }
 
-        private void Frm_Sincronizador_Load(object sender, EventArgs e)
-        {
-            VerificarStatusDoDiretorio();
-        }
-
         private void Btm_Sincronizar_Click(object sender, EventArgs e)
         {
             Thread.Sleep(500);
 
             Atualizar();
-
-            /*VerificarStatusDoDiretorio();//Se o diretorios existir ele coloca executar atualização como true.
-
-            if (ExecutarAtualizacao)
-            {
-                Lbl_Informacao.Visible = true;
-                Lbl_Instalação.Visible = false;
-
-                Thread.Sleep(500);
-
-                Atualizar();
-            }
-            else
-            {
-                Lbl_Informacao.Visible = false;
-                Lbl_Instalação.Visible = true;
-
-                Lbl_Instalação.Text = "Efetuando download e a instalação";
-
-                MessageBox.Show("O save game da NextTeamBr não foi encontrado, " +
-                                "será feito o download e a instalação, isso pode demorar um pouco."
-                                , "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                SaveGame.EfetuarInstalacaoDoSave();
-
-                Thread.Sleep(2000);
-
-                Lbl_Instalação.ForeColor = Color.Green;
-                Lbl_Instalação.Text = "Instalação finalizada com sucesso!";
-
-            }*/
         }
 
         private void Atualizar()
@@ -92,7 +56,7 @@ namespace SincronizadorDeCargas
 
         private void ExecutarJobSync()
         {
-            string caminhoExecutavel = String.Format(@"{0}JobSync\LoogBookSync.vmp.exe",
+            string caminhoExecutavel = String.Format(@"{0}JobSync\LoogBookSync.exe -reset ",
             AppDomain.CurrentDomain.BaseDirectory.ToString());
 
             string argumentos = String.Format("#{0}# #{1}#",
@@ -105,11 +69,6 @@ namespace SincronizadorDeCargas
             File.WriteAllText(caminhoArquivoBat, arquivoBat);
 
             Process.Start(caminhoArquivoBat);
-        }
-
-        private void VerificarStatusDoDiretorio()
-        {
-            ExecutarAtualizacao = SaveGame.VerificarExistenciaSaveNxT();
         }
 
         private void Btm_Procurar_Click(object sender, EventArgs e)
