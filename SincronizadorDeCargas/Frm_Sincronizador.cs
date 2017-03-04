@@ -49,7 +49,8 @@ namespace SincronizadorDeCargas
 				Lbl_Informacao.Text = String.Empty;
 
 				MessageBox.Show(@"Ocorreu um erro ao tentar sincronizar seu frete, verifique sua conexão." +
-								 "\nSe o problema persistir entre em contato com a administração\n Erro:" + ex.Message,
+								 "\nSe o problema persistir entre em contato com a administração\n Erro:" +
+								  ex.Message,
 								 "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
@@ -65,7 +66,8 @@ namespace SincronizadorDeCargas
 			string arquivoBat = String.Format("{0} {1}", caminhoExecutavel.Replace('#', '"'),
 											  argumentos.Replace('#', '"'));
 
-			string caminhoArquivoBat = String.Format(@"{0}\JobSync\Fretes.bat", AppDomain.CurrentDomain.BaseDirectory.ToString());
+			string caminhoArquivoBat = String.Format(@"{0}\JobSync\Fretes.bat",
+													 AppDomain.CurrentDomain.BaseDirectory.ToString());
 
 			File.WriteAllText(caminhoArquivoBat, arquivoBat);
 

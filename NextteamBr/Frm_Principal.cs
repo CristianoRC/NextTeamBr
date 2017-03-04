@@ -269,7 +269,7 @@ namespace NextteamBr
 
         private void TimerAvisoSonoro_Tick(object sender, EventArgs e)
         {
-            if (VelocidadeAtual > 100)
+            if (VelocidadeAtual > 110)
             {
                 ControleVelocidade++;
 

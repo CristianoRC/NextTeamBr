@@ -26,7 +26,6 @@ E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resourc
 E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
 E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
-E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
@@ -60,3 +59,6 @@ D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resourc
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
+E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
+E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
+E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe.config

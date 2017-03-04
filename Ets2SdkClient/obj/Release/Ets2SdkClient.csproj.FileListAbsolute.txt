@@ -21,3 +21,4 @@ D:\NextTeamBr\Ets2SdkClient\bin\Release\Ets2SdkClient.pdb
 D:\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.csprojResolveAssemblyReference.cache
 D:\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.dll
 D:\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.pdb
+E:\NextTeamBr\Ets2SdkClient\obj\Release\Ets2SdkClient.csprojResolveAssemblyReference.cache

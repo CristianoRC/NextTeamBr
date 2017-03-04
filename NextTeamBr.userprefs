@@ -1,7 +1,10 @@
-﻿<Properties StartupConfiguration="{61793E1D-CE1F-46B9-81B3-D6AE0BB20928}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SincronizadorDeCargas/Frm_Sincronizador.cs">
+﻿<Properties StartupConfiguration="{443789AE-E4C2-4CAC-9118-78BBA31BAC20}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NextteamBr/Frete/ControllerFrete.cs">
     <Files>
-      <File FileName="SincronizadorDeCargas/Frm_Sincronizador.cs" Line="66" Column="14" />
+      <File FileName="SincronizadorDeCargas/Frm_Sincronizador.cs" Line="9" Column="2" />
+      <File FileName="NextteamBr/Frm_Escolha.cs" Line="1" Column="1" />
+      <File FileName="NextteamBr/Frm_Login.cs" Line="1" Column="1" />
+      <File FileName="NextteamBr/Frete/ControllerFrete.cs" Line="8" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
