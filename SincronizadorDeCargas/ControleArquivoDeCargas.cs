@@ -38,7 +38,7 @@ namespace SincronizadorDeCargas
             {
                 try
                 {
-                    return wb.DownloadString(@"http://paineldev.nextteambr.com.br/syncApp.php");
+                    return wb.DownloadString(@"http://painel.nextteambr.com.br/syncApp.php");
                 }
                 catch (Exception ex)
                 {

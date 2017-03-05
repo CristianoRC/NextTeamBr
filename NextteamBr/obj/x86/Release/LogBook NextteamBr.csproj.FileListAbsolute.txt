@@ -62,3 +62,4 @@ D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
 E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
 E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
 E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe.config
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
