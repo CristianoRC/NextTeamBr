@@ -17,7 +17,7 @@ namespace NextteamBr
 			{
 				StrJSON = JsonConvert.SerializeObject(InformacoesFrete);
 
-				string url = "http://paineldev.nextteambr.com.br/registroapp.php";
+				string url = "http://painel.nextteambr.com.br/registroapp.php";
 
 				HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(url);
 				UTF8Encoding encoding = new UTF8Encoding();
