@@ -33,6 +33,8 @@
             this.Btm_JobSync = new System.Windows.Forms.Button();
             this.Btm_LogBook = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Btm_JobSync
@@ -59,12 +61,32 @@
             this.Btm_LogBook.UseVisualStyleBackColor = true;
             this.Btm_LogBook.Click += new System.EventHandler(this.Btm_LogBook_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(54, 202);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Sincronizador de cargas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(389, 207);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "LogBook";
+            // 
             // Frm_Escolha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(533, 207);
+            this.ClientSize = new System.Drawing.Size(533, 229);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Btm_LogBook);
             this.Controls.Add(this.Btm_JobSync);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -75,6 +97,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NextTeamBr";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -83,5 +106,7 @@
         private System.Windows.Forms.Button Btm_JobSync;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button Btm_LogBook;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
