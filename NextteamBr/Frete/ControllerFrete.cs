@@ -22,8 +22,7 @@ namespace NextteamBr
 				HttpWebRequest httpWReq = (HttpWebRequest)WebRequest.Create(url);
 				UTF8Encoding encoding = new UTF8Encoding();
 
-				string postData = StrJSON;
-				byte[] data = encoding.GetBytes(postData);
+				byte[] data = encoding.GetBytes(StrJSON);
 				httpWReq.Method = "POST";
 				httpWReq.ContentType = "application / json; charset = utf-8";
 				httpWReq.ContentLength = data.Length;
