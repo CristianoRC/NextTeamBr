@@ -6,29 +6,46 @@ namespace NextteamBr
     public partial class Frm_Escolha : Form
     {
         int IdUsuario;
+        bool Admin;
 
-        public Frm_Escolha(int p_id)
+        public Frm_Escolha(int p_id, bool admin)
         {
             InitializeComponent();
-
+            Admin = admin;
             IdUsuario = p_id;
         }
 
         private void Btm_LogBook_Click(object sender, EventArgs e)
         {
-            using (var frm_Principal = new Frm_Principal(IdUsuario))
-            {
-                this.Visible = false;
-                frm_Principal.ShowDialog();
-                this.Dispose();
-            }
+            var frm_Principal = new Frm_Principal(IdUsuario);
+
+            frm_Principal.Show();
         }
 
         private void Btm_JobSync_Click(object sender, EventArgs e)
         {
-            var frm_Ranking = new Frm_Ranking();
+            var frm_informacoes = new Frm_InformacoesPessoais(IdUsuario);
 
-            frm_Ranking.ShowDialog();
+            frm_informacoes.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var frm_rankings = new Frm_RankingMotoristas();
+
+            frm_rankings.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Admin)
+            {
+                MessageBox.Show("A funcionalidade será implementada em breve!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Somente administradores podem ter acesso a essa funcionalidade!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

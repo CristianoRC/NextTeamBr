@@ -18,25 +18,33 @@ namespace NextteamBr
 
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrEmpty(Txt_Login.Text) || string.IsNullOrEmpty(txt_Nome.Text) || string.IsNullOrEmpty(Txt_Senha.Text))
             {
-                var usuario = new Usuario(Txt_Login.Text, Txt_Senha.Text, txt_Nome.Text);
-
-                usuario.Cadastrar();
-
-                MessageBox.Show("Usuário Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Você não pode deixar nem um dos campos em branco!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            catch (System.Exception ex)
+            else
             {
-                if (ex.Message.Contains("Login"))
+                try
                 {
-                    MessageBox.Show($"Já existe um usuário com esse Login", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    var usuario = new Usuario(Txt_Login.Text, Txt_Senha.Text, txt_Nome.Text);
+
+                    usuario.Cadastrar();
+
+                    MessageBox.Show("Usuário Cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
+                catch (System.Exception ex)
                 {
-                    MessageBox.Show($"Erro ao cadastrar usuário! Entre em contato com um administrador. {ex.Message}", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (ex.Message.Contains("Login"))
+                    {
+                        MessageBox.Show($"Já existe um usuário com esse Login", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
                 }
             }
+        }
+
+        private void Frm_Cadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

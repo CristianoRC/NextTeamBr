@@ -29,7 +29,9 @@ namespace NextteamBr
                 {
                     Usuario.SalvarUltimoLogin(Txt_Login.Text);
 
-                    ChamarFormularioDeEscolha(usuario.ID);
+                    var usuarioTemp = UsuarioRepository.ObterInformacoes(Txt_Login.Text);
+
+                    ChamarFormularioDeEscolha(usuarioTemp.ID,usuarioTemp.Admin);
                 }
                 else
                 {
@@ -43,9 +45,9 @@ namespace NextteamBr
         }
 
 
-        private void ChamarFormularioDeEscolha(int p_ID)
+        private void ChamarFormularioDeEscolha(int p_ID, bool admin)
         {
-            var frm_Principal = new Frm_Escolha(p_ID);
+            var frm_Principal = new Frm_Escolha(p_ID,admin);
             this.Visible = false;
             frm_Principal.ShowDialog();
             this.Dispose();
@@ -53,7 +55,7 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-             Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
+            Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
 
             /* if (ControleVersao.VerificarSoftwareAtivo() == true)
              {

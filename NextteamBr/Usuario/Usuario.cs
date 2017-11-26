@@ -5,11 +5,13 @@ namespace NextteamBr
 {
     public class Usuario
     {
-        public int ID { get; private set; }
+        public int ID { get; set; }
         public string Nome { get; set; }
-        public string Login { get; private set; }
-        public string Senha { get; private set; }
-        public bool Admin { get; private set; }
+        public string Login { get; set; }
+        public string Senha { get; set; }
+        public bool Admin { get; set; }
+
+        public Usuario() { }
 
         public Usuario(string login, string senha, string nome)
         {

@@ -98,11 +98,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\BancoDeDados.cs" />
+    <Compile Include="Ranking\Frm_RankingMotoristas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ranking\Frm_RankingMotoristas.Designer.cs">
+      <DependentUpon>Frm_RankingMotoristas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Ranking\Ranking.cs" />
+    <Compile Include="Ranking\RankingRepository.cs" />
     <Compile Include="Relatorio\Frm_Ranking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +136,12 @@
     <Compile Include="Frete\FreteRepository.cs" />
     <Compile Include="Ferramentas.cs" />
     <Compile Include="Frete\Frete.cs" />
+    <Compile Include="Usuario\Frm_InformacoesPessoais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\Frm_InformacoesPessoais.Designer.cs">
+      <DependentUpon>Frm_InformacoesPessoais.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +161,17 @@
     <EmbeddedResource Include="Frm_Escolha.resx">
       <DependentUpon>Frm_Escolha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ranking\Frm_RankingMotoristas.resx">
+      <DependentUpon>Frm_RankingMotoristas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\Frm_Ranking.resx">
       <DependentUpon>Frm_Ranking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\Frm_Cadastro.resx">
       <DependentUpon>Frm_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Frm_InformacoesPessoais.resx">
+      <DependentUpon>Frm_InformacoesPessoais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
@@ -180,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\podium.png" />
     <None Include="Resources\Cadastro.png" />
     <None Include="Resources\truckSFndo.png" />
     <None Include="Resources\truck.png" />

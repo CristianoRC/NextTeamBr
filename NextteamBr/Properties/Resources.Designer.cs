@@ -71,6 +71,16 @@ namespace NextteamBr.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap administrator_male1600 {
+            get {
+                object obj = ResourceManager.GetObject("administrator_male1600", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream alert {
@@ -247,6 +257,16 @@ namespace NextteamBr.Properties {
         internal static System.Drawing.Bitmap Mute_50 {
             get {
                 object obj = ResourceManager.GetObject("Mute-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap podium {
+            get {
+                object obj = ResourceManager.GetObject("podium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

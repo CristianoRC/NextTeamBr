@@ -41,6 +41,10 @@ namespace NextteamBr
                     senha = usuario.Senha
                 });
 
+                var IDusuarioTemp = BancoDeDados.conexao.QueryFirst<int>("select ID from Motorista where Login = @login", new { login = usuario.Login });
+
+                InsetirNoRanking(IDusuarioTemp);
+
                 BancoDeDados.fecharConexao();
             }
             catch (Exception e)
@@ -48,5 +52,56 @@ namespace NextteamBr
                 throw new Exception("Erro:" + e.Message);
             }
         }
+
+        public static Usuario ObterInformacoes(string login)
+        {
+            var sql = $"SELECT * FROM Motorista WHERE Login = @login";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.QueryFirst<Usuario>(sql, new { login = login });
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public static Usuario ObterInformacoes(int id)
+        {
+            var sql = $"SELECT * FROM Motorista WHERE ID = @id";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.QueryFirst<Usuario>(sql, new { id = id });
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        
+        private static void InsetirNoRanking(int IDusuario)
+        {
+            var sql = $@"INSERT INTO Ranking(IDMotorista, Pontos) VALUES (@IDMotorista,0)";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = IDusuario });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro:" + e.Message);
+            }
+        }
+
     }
 }
