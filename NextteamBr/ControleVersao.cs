@@ -16,15 +16,15 @@ namespace NextteamBr
             {
                 string versao, Link;
 
-                System.Net.HttpWebRequest request =
+                var request =
                 (HttpWebRequest)WebRequest.Create(@"http://painel.nextteambr.com.br/app/version.txt");
 
-                WebResponse response = request.GetResponse();
+                var response = request.GetResponse();
 
                 using (Stream stream = response.GetResponseStream())
                 {
-                    StreamReader reader = new StreamReader(stream, Encoding.UTF8);
-                    string[] temp = (reader.ReadToEnd()).Split(';');
+                    var reader = new StreamReader(stream, Encoding.UTF8);
+                    var temp = (reader.ReadToEnd()).Split(';');
 
                     versao = temp[0];
                     Link = temp[1];
@@ -39,7 +39,7 @@ namespace NextteamBr
                     Saida = string.Empty;
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 Saida = string.Format("Erro ao tentar fazer a requisição: {0}", ex.Message);
             }
@@ -51,24 +51,17 @@ namespace NextteamBr
         {
             try
             {
-                HttpWebRequest request =
+                var request =
                 (HttpWebRequest)WebRequest.Create(@"http://painel.nextteambr.com.br/app/appStatus.txt");
 
-                WebResponse response = request.GetResponse();
+                var response = request.GetResponse();
 
                 using (Stream stream = response.GetResponseStream())
                 {
-                    StreamReader reader = new StreamReader(stream, Encoding.UTF8);
-                    string Resultado = reader.ReadToEnd();
+                    var reader = new StreamReader(stream, Encoding.UTF8);
+                    var Resultado = reader.ReadToEnd();
 
-                    if (Resultado == "ativo")
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return Resultado == "ativo" ? true : false;
                 }
             }
             catch

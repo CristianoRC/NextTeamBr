@@ -33,60 +33,47 @@
             this.Btm_JobSync = new System.Windows.Forms.Button();
             this.Btm_LogBook = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Btm_JobSync
             // 
+            this.Btm_JobSync.BackColor = System.Drawing.Color.Transparent;
+            this.Btm_JobSync.BackgroundImage = global::NextteamBr.Properties.Resources.Report;
+            this.Btm_JobSync.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btm_JobSync.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btm_JobSync.FlatAppearance.BorderSize = 0;
             this.Btm_JobSync.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_JobSync.Image = global::NextteamBr.Properties.Resources.Connection_Sync_100;
-            this.Btm_JobSync.Location = new System.Drawing.Point(12, 12);
+            this.Btm_JobSync.Location = new System.Drawing.Point(22, 33);
             this.Btm_JobSync.Name = "Btm_JobSync";
             this.Btm_JobSync.Size = new System.Drawing.Size(204, 183);
             this.Btm_JobSync.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.Btm_JobSync, "Job Sync");
-            this.Btm_JobSync.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.Btm_JobSync, "Relatórios");
+            this.Btm_JobSync.UseVisualStyleBackColor = false;
             this.Btm_JobSync.Click += new System.EventHandler(this.Btm_JobSync_Click);
             // 
             // Btm_LogBook
             // 
+            this.Btm_LogBook.BackColor = System.Drawing.Color.Transparent;
+            this.Btm_LogBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btm_LogBook.BackgroundImage")));
+            this.Btm_LogBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Btm_LogBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btm_LogBook.FlatAppearance.BorderSize = 0;
             this.Btm_LogBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_LogBook.Image = global::NextteamBr.Properties.Resources.Address_Book_100;
-            this.Btm_LogBook.Location = new System.Drawing.Point(312, 12);
+            this.Btm_LogBook.Location = new System.Drawing.Point(284, 33);
             this.Btm_LogBook.Name = "Btm_LogBook";
             this.Btm_LogBook.Size = new System.Drawing.Size(204, 183);
             this.Btm_LogBook.TabIndex = 1;
             this.toolTip1.SetToolTip(this.Btm_LogBook, "LogBook Eletrônico");
-            this.Btm_LogBook.UseVisualStyleBackColor = true;
+            this.Btm_LogBook.UseVisualStyleBackColor = false;
             this.Btm_LogBook.Click += new System.EventHandler(this.Btm_LogBook_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 202);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Sincronizador de cargas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(389, 207);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "LogBook";
             // 
             // Frm_Escolha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(533, 229);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = global::NextteamBr.Properties.Resources.Tela2;
+            this.ClientSize = new System.Drawing.Size(500, 250);
             this.Controls.Add(this.Btm_LogBook);
             this.Controls.Add(this.Btm_JobSync);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -95,9 +82,8 @@
             this.MinimizeBox = false;
             this.Name = "Frm_Escolha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NextTeamBr";
+            this.Text = "Zero Hora";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -106,7 +92,5 @@
         private System.Windows.Forms.Button Btm_JobSync;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button Btm_LogBook;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

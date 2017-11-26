@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace NextteamBr
 {
     class Frete
     {
+        public int Id { get; private set; }
         public int IdMotorista { get; set; }
         public double KmRodado { get; set; }
         public double Dano { get; set; }
@@ -11,7 +13,13 @@ namespace NextteamBr
         public string Carga { get; set; }
         public string CidadeInicial { get; set; }
         public string CidadeDestino { get; set; }
-        public string DataFinalFrete { get; set; }
-        public List<Multa> ListaDeMultas { get; set; }
+        public DateTime DataFinalFrete { get; private set; }
+
+        public bool Cadastrar()
+        {
+            DataFinalFrete = DateTime.Now;
+
+            return FreteRepository.SalvarFrete(this);
+        }
     }
 }

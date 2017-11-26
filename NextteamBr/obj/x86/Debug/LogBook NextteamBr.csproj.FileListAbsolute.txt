@@ -41,3 +41,22 @@ E:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Properties.Resources.resources
 E:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
 E:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.exe
 E:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.exe.config
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.exe
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.exe
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook NextteamBr.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\Dapper.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\Ets2SdkClient.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\MySql.Data.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\SincronizadorDeCargas.exe
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\Ets2SdkClient.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\SincronizadorDeCargas.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Debug\Dapper.xml
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Escolha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Cadastro.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Login.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Principal.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Properties.Resources.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache

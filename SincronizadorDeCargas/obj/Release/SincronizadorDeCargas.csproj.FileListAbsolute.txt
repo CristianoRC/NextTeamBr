@@ -20,6 +20,17 @@ E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.Properties
 E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.csproj.GenerateResource.Cache
 E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.exe
 E:\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.pdb
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe.config
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.pdb
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\DotNetZip.dll
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\bin\Release\DotNetZip.xml
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.csprojResolveAssemblyReference.cache
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.Frm_Sincronizador.resources
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.Properties.Resources.resources
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.csproj.GenerateResource.Cache
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.exe
+\\VBOXSVR\Projetos\NextTeamBr\SincronizadorDeCargas\obj\Release\SincronizadorDeCargas.pdb
 D:\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe.config
 D:\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.exe
 D:\NextTeamBr\SincronizadorDeCargas\bin\Release\SincronizadorDeCargas.pdb

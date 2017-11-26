@@ -9,10 +9,8 @@ namespace NextteamBr
     public partial class Frm_Principal : Form
     {
         //Variáveis de controle
-        bool executarAudio = true;
         bool cargaEntregue = false;
         bool ObterInformacoesIniciais = false;
-        bool PlanoDeFundo = false;
 
         String IDCarreta = String.Empty;
         String IDCarretaInicio = String.Empty;
@@ -83,7 +81,6 @@ namespace NextteamBr
 
                     Lbl_Destino.Text = data.Job.CityDestination;
                     Lbl_Partida.Text = data.Job.CitySource;
-                    Lbl_InfoCarga.Text = informacoesFrete.Carga;
 
                     SetarIconeDasEmpresas(data.Job.CompanySource, data.Job.CompanyDestination);
                 }
@@ -97,15 +94,13 @@ namespace NextteamBr
                     informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, Convert.ToDouble(data.Damage.WearTrailer), controleDeMultas.ObterNumeroDeMultas());
                     informacoesFrete.Dano = data.Damage.WearTrailer * 100;
                     informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
-                    informacoesFrete.DataFinalFrete = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
+                    //informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
 
                     cargaEntregue = true;
                     FinaliziarFrete();
 
                     Lbl_Destino.Text = String.Empty;
                     Lbl_Partida.Text = String.Empty;
-                    Lbl_InfoCarga.Text = String.Empty;
                 }
                 #endregion
 
@@ -113,12 +108,10 @@ namespace NextteamBr
 
                 if (data.Job.TrailerAttached)
                 {
-                    Lbl_InfoCarga.Visible = true;
                     PicCarga.Image = Properties.Resources.Carregado;
                 }
                 else
                 {
-                    Lbl_InfoCarga.Visible = false;
                     PicCarga.Image = Properties.Resources.Descarregado;
                 }
 
@@ -142,12 +135,10 @@ namespace NextteamBr
         {
             if (cargaEntregue)
             {
-                if (ControllerFrete.SalvarFrete(informacoesFrete))
+                if (informacoesFrete.Cadastrar())
                 {
-                    if (executarAudio)
-                    {
-                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
-                    }
+
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Entregue);
 
                     Thread.Sleep(2000);
                 }
@@ -178,10 +169,7 @@ namespace NextteamBr
                 }
                 else
                 {
-                    if (executarAudio)
-                    {
-                        ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
-                    }
+                    ControllerAudio.ExecutarAudio(ControllerAudio.Audios.Conectada);
                     controleDeMultas.LimparListaDeMultas();
                     ObterInformacoesIniciais = true;
                     cargaEntregue = false;
@@ -191,8 +179,8 @@ namespace NextteamBr
 
         private void Multar()
         {
-            int VelocidadeTemp = 0;
-            Multa multaBase = new Multa();
+            var VelocidadeTemp = 0;
+            var multaBase = new Multa();
 
             VelocidadeTemp = Convert.ToInt32(Math.Round(VelocidadeAtual, 1));
 
@@ -210,9 +198,9 @@ namespace NextteamBr
 
         private void SetarIconeDasEmpresas(string p_EmpresaPartida, string p_EmpresaDestino)
         {
-            String CaminhoDasImagens = String.Format(@"{0}\Empresas", Application.StartupPath);
-            String CaminhoImgPartida = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaPartida.Trim().ToLower());
-            String CaminhoImgDestino = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaDestino.Trim().ToLower());
+            var CaminhoDasImagens = String.Format(@"{0}\Empresas", Application.StartupPath);
+            var CaminhoImgPartida = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaPartida.Trim().ToLower());
+            var CaminhoImgDestino = String.Format(@"{0}\{1}.png", CaminhoDasImagens, p_EmpresaDestino.Trim().ToLower());
 
             if (File.Exists(CaminhoImgPartida))
             {
@@ -222,38 +210,6 @@ namespace NextteamBr
             if (File.Exists(CaminhoImgDestino))
             {
                 Pic_EmpresaDestino.ImageLocation = CaminhoImgDestino;
-            }
-        }
-
-        private void panel1_Click(object sender, EventArgs e)
-        {
-            if (PlanoDeFundo)
-            {
-                panel1.BackgroundImage = Properties.Resources.Fundo2;
-
-                PlanoDeFundo = false;
-            }
-            else
-            {
-                panel1.BackgroundImage = Properties.Resources.Fundo1;
-
-                PlanoDeFundo = true;
-            }
-        }
-
-        private void pictureSom_Click(object sender, EventArgs e)
-        {
-            if (executarAudio)
-            {
-                executarAudio = false;
-
-                pictureSom.Image = Properties.Resources.Mute_50;
-            }
-            else
-            {
-                executarAudio = true;
-
-                pictureSom.Image = Properties.Resources.Medium_Volume_50;
             }
         }
 

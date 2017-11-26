@@ -41,25 +41,42 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Releas
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
-D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
-D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
-D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
-D:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.dll
-D:\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.dll
-D:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
-D:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
-D:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
-D:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe.config
-D:\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.xml
-D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Login.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
-D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
-D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
 E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
 E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
 E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe.config
 E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.dll
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.dll
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.xml
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Login.resources
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
+\\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
+D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook Zero Hora.exe.config
+D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook Zero Hora.exe
+D:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook Zero Hora.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Dapper.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Release\MySql.Data.dll
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
+D:\NextTeamBr\NextteamBr\bin\x86\Release\Dapper.xml
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Cadastro.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Login.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.exe
+D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.pdb
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Ranking.resources

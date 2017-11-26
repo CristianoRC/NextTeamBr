@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NextteamBr</RootNamespace>
-    <AssemblyName>LogBook NextteamBr</AssemblyName>
+    <AssemblyName>LogBook Zero Hora</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -51,7 +51,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icone.ico</ApplicationIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -74,8 +74,13 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -92,6 +97,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banco\BancoDeDados.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\Frm_Ranking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\Frm_Ranking.Designer.cs">
+      <DependentUpon>Frm_Ranking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\Frm_Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\Frm_Cadastro.Designer.cs">
+      <DependentUpon>Frm_Cadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Escolha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,13 +125,13 @@
     <Compile Include="Multas\ControleDeMultas.cs" />
     <Compile Include="ControleVersao.cs" />
     <Compile Include="ControllerAudio.cs" />
-    <Compile Include="Frete\ControllerFrete.cs" />
+    <Compile Include="Frete\FreteRepository.cs" />
     <Compile Include="Ferramentas.cs" />
     <Compile Include="Frete\Frete.cs" />
-    <Compile Include="Frm_Login.cs">
+    <Compile Include="Usuario\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Login.Designer.cs">
+    <Compile Include="Usuario\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Principal.cs">
@@ -118,13 +141,19 @@
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario\Usuario.cs" />
-    <Compile Include="Usuario\ControllerUsuario.cs" />
+    <Compile Include="Usuario\UsuarioRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Escolha.resx">
       <DependentUpon>Frm_Escolha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Login.resx">
+    <EmbeddedResource Include="Relatorio\Frm_Ranking.resx">
+      <DependentUpon>Frm_Ranking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Frm_Cadastro.resx">
+      <DependentUpon>Frm_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal.resx">
@@ -132,14 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -155,7 +179,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icone.ico" />
+    <Content Include="favicon.ico" />
+    <None Include="Resources\Cadastro.png" />
+    <None Include="Resources\truckSFndo.png" />
+    <None Include="Resources\truck.png" />
+    <None Include="Resources\Report.png" />
+    <None Include="Imagens\New Design\Tela2.png" />
+    <None Include="Resources\Tela.png" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\Logo1.png" />
+    <None Include="Resources\ZH.png" />
+    <None Include="Resources\LogoZeroHora.png" />
     <None Include="Imagens\Empresas\transinet.png" />
     <None Include="Imagens\Empresas\trameri.png" />
     <None Include="Imagens\Empresas\tradeaux.png" />
@@ -241,10 +275,6 @@
     <ProjectReference Include="..\Ets2SdkClient\Ets2SdkClient.csproj">
       <Project>{21fb58cd-0b97-409f-ae61-cf8964e13f63}</Project>
       <Name>Ets2SdkClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SincronizadorDeCargas\SincronizadorDeCargas.csproj">
-      <Project>{61793e1d-ce1f-46b9-81b3-d6ae0bb20928}</Project>
-      <Name>SincronizadorDeCargas</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

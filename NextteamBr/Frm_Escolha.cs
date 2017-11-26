@@ -16,18 +16,19 @@ namespace NextteamBr
 
         private void Btm_LogBook_Click(object sender, EventArgs e)
         {
-            Frm_Principal frm_Principal = new Frm_Principal(IdUsuario);
-            this.Visible = false;
-            frm_Principal.ShowDialog();
-            this.Dispose();
+            using (var frm_Principal = new Frm_Principal(IdUsuario))
+            {
+                this.Visible = false;
+                frm_Principal.ShowDialog();
+                this.Dispose();
+            }
         }
 
         private void Btm_JobSync_Click(object sender, EventArgs e)
         {
-            SincronizadorDeCargas.Frm_Sincronizador frm_Sync = new SincronizadorDeCargas.Frm_Sincronizador();
-            this.Visible = false;
-            frm_Sync.ShowDialog();
-            this.Dispose();
+            var frm_Ranking = new Frm_Ranking();
+
+            frm_Ranking.ShowDialog();
         }
     }
 }
