@@ -17,14 +17,14 @@ namespace NextteamBr
                 string versao, Link;
 
                 var request =
-                (HttpWebRequest)WebRequest.Create(@"http://painel.nextteambr.com.br/app/version.txt");
+                (HttpWebRequest)WebRequest.Create(@"http://cristianoprogramador.com/ZeroHoraVersao.csv");
 
                 var response = request.GetResponse();
 
                 using (Stream stream = response.GetResponseStream())
                 {
                     var reader = new StreamReader(stream, Encoding.UTF8);
-                    var temp = (reader.ReadToEnd()).Split(';');
+                    var temp = (reader.ReadToEnd()).Split(',');
 
                     versao = temp[0];
                     Link = temp[1];
@@ -45,29 +45,6 @@ namespace NextteamBr
             }
 
             return Saida;
-        }
-
-        public static bool VerificarSoftwareAtivo()
-        {
-            try
-            {
-                var request =
-                (HttpWebRequest)WebRequest.Create(@"http://painel.nextteambr.com.br/app/appStatus.txt");
-
-                var response = request.GetResponse();
-
-                using (Stream stream = response.GetResponseStream())
-                {
-                    var reader = new StreamReader(stream, Encoding.UTF8);
-                    var Resultado = reader.ReadToEnd();
-
-                    return Resultado == "ativo" ? true : false;
-                }
-            }
-            catch
-            {
-                return false;
-            }
         }
     }
 }

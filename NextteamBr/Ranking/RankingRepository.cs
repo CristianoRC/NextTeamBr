@@ -20,7 +20,7 @@ namespace NextteamBr
 
         public static double ObterPontuacao(int idUsuario)
         {
-            var sql = $"SELECT sum(Pontuacao)FROM Frete WHERE IdMotorista = @id";
+            var sql = $"SELECT sum(Pontos)FROM Ranking WHERE IDMotorista = @id";
             try
             {
                 BancoDeDados.abrirConexao();

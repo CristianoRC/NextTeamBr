@@ -31,18 +31,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_InformacoesPessoais));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_ranking = new System.Windows.Forms.Label();
+            this.lbl_pontuacao = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lbl_fretes = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataFretes = new System.Windows.Forms.DataGridView();
             this.btn_Atualizar = new System.Windows.Forms.Button();
             this.btn_listarTodos = new System.Windows.Forms.Button();
-            this.lbl_pontuacao = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataFretes)).BeginInit();
@@ -53,10 +51,8 @@
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
             this.panel1.Controls.Add(this.lbl_pontuacao);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.lbl_ranking);
             this.panel1.Controls.Add(this.lbl_fretes);
             this.panel1.Controls.Add(this.lbl_nome);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -65,23 +61,34 @@
             this.panel1.Size = new System.Drawing.Size(1107, 159);
             this.panel1.TabIndex = 0;
             // 
-            // lbl_ranking
+            // lbl_pontuacao
             // 
-            this.lbl_ranking.AutoSize = true;
-            this.lbl_ranking.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ranking.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ranking.Location = new System.Drawing.Point(272, 118);
-            this.lbl_ranking.Name = "lbl_ranking";
-            this.lbl_ranking.Size = new System.Drawing.Size(76, 18);
-            this.lbl_ranking.TabIndex = 8;
-            this.lbl_ranking.Text = "Em breve";
+            this.lbl_pontuacao.AutoSize = true;
+            this.lbl_pontuacao.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_pontuacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pontuacao.Location = new System.Drawing.Point(272, 101);
+            this.lbl_pontuacao.Name = "lbl_pontuacao";
+            this.lbl_pontuacao.Size = new System.Drawing.Size(76, 18);
+            this.lbl_pontuacao.TabIndex = 10;
+            this.lbl_pontuacao.Text = "Em breve";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(208, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Pontos:";
             // 
             // lbl_fretes
             // 
             this.lbl_fretes.AutoSize = true;
             this.lbl_fretes.BackColor = System.Drawing.Color.Transparent;
             this.lbl_fretes.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fretes.Location = new System.Drawing.Point(272, 44);
+            this.lbl_fretes.Location = new System.Drawing.Point(272, 67);
             this.lbl_fretes.Name = "lbl_fretes";
             this.lbl_fretes.Size = new System.Drawing.Size(49, 18);
             this.lbl_fretes.TabIndex = 7;
@@ -92,29 +99,18 @@
             this.lbl_nome.AutoSize = true;
             this.lbl_nome.BackColor = System.Drawing.Color.Transparent;
             this.lbl_nome.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nome.Location = new System.Drawing.Point(287, 13);
+            this.lbl_nome.Location = new System.Drawing.Point(287, 36);
             this.lbl_nome.Name = "lbl_nome";
             this.lbl_nome.Size = new System.Drawing.Size(49, 18);
             this.lbl_nome.TabIndex = 5;
             this.lbl_nome.Text = "Nome";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(208, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 18);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Ranking:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(208, 44);
+            this.label3.Location = new System.Drawing.Point(208, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 3;
@@ -125,7 +121,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 13);
+            this.label1.Location = new System.Drawing.Point(208, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 18);
             this.label1.TabIndex = 1;
@@ -147,6 +143,7 @@
             this.dataFretes.AllowUserToDeleteRows = false;
             this.dataFretes.AllowUserToOrderColumns = true;
             this.dataFretes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataFretes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataFretes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataFretes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -187,28 +184,6 @@
             this.btn_listarTodos.UseVisualStyleBackColor = true;
             this.btn_listarTodos.Click += new System.EventHandler(this.btn_listarTodos_Click);
             // 
-            // lbl_pontuacao
-            // 
-            this.lbl_pontuacao.AutoSize = true;
-            this.lbl_pontuacao.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_pontuacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pontuacao.Location = new System.Drawing.Point(272, 78);
-            this.lbl_pontuacao.Name = "lbl_pontuacao";
-            this.lbl_pontuacao.Size = new System.Drawing.Size(76, 18);
-            this.lbl_pontuacao.TabIndex = 10;
-            this.lbl_pontuacao.Text = "Em breve";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(208, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 18);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Pontos:";
-            // 
             // Frm_InformacoesPessoais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,11 +212,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbl_ranking;
         private System.Windows.Forms.Label lbl_fretes;
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.DataGridView dataFretes;

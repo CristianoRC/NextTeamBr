@@ -40,6 +40,7 @@
             this.dataFretes.AllowUserToDeleteRows = false;
             this.dataFretes.AllowUserToOrderColumns = true;
             this.dataFretes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataFretes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataFretes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataFretes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;

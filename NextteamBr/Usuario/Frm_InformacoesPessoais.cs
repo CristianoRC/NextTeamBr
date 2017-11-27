@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace NextteamBr
@@ -21,8 +22,9 @@ namespace NextteamBr
 
             dataFretes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            var fretes = FreteRepository.ListarFretesPorMotorista(usuarioInfo.ID, 15);
-            preencherGrid(fretes);
+            var listaFretes = FreteRepository.ListarFretesPorMotorista(usuarioInfo.ID, 15);
+
+            preencherGrid(listaFretes);
 
             atualizarPontos();
         }
