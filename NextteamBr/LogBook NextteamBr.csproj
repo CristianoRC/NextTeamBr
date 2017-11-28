@@ -98,6 +98,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\BancoDeDados.cs" />
+    <Compile Include="Motorista\Frm_AlterarNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motorista\Frm_AlterarNome.Designer.cs">
+      <DependentUpon>Frm_AlterarNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Motorista\Frm_RedefinirSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motorista\Frm_RedefinirSenha.Designer.cs">
+      <DependentUpon>Frm_RedefinirSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ranking\Frm_RankingMotoristas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,17 +122,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Ranking\Ranking.cs" />
-    <Compile Include="Ranking\RankingRepository.cs" />
-    <Compile Include="Relatorio\Frm_Ranking.cs">
+    <Compile Include="Ranking\RankingService.cs" />
+    <Compile Include="Motorista\Frm_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Relatorio\Frm_Ranking.Designer.cs">
-      <DependentUpon>Frm_Ranking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario\Frm_Cadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuario\Frm_Cadastro.Designer.cs">
+    <Compile Include="Motorista\Frm_Cadastro.Designer.cs">
       <DependentUpon>Frm_Cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Escolha.cs">
@@ -133,19 +139,19 @@
     <Compile Include="Multas\ControleDeMultas.cs" />
     <Compile Include="ControleVersao.cs" />
     <Compile Include="ControllerAudio.cs" />
-    <Compile Include="Frete\FreteRepository.cs" />
+    <Compile Include="Frete\FreteService.cs" />
     <Compile Include="Ferramentas.cs" />
     <Compile Include="Frete\Frete.cs" />
-    <Compile Include="Usuario\Frm_InformacoesPessoais.cs">
+    <Compile Include="Motorista\Frm_InformacoesPessoais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuario\Frm_InformacoesPessoais.Designer.cs">
+    <Compile Include="Motorista\Frm_InformacoesPessoais.Designer.cs">
       <DependentUpon>Frm_InformacoesPessoais.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario\Frm_Login.cs">
+    <Compile Include="Motorista\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuario\Frm_Login.Designer.cs">
+    <Compile Include="Motorista\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Principal.cs">
@@ -154,26 +160,29 @@
     <Compile Include="Frm_Principal.Designer.cs">
       <DependentUpon>Frm_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario\Usuario.cs" />
-    <Compile Include="Usuario\UsuarioRepository.cs" />
+    <Compile Include="Motorista\Motorista.cs" />
+    <Compile Include="Motorista\MotoristaService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Escolha.resx">
       <DependentUpon>Frm_Escolha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Motorista\Frm_AlterarNome.resx">
+      <DependentUpon>Frm_AlterarNome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motorista\Frm_RedefinirSenha.resx">
+      <DependentUpon>Frm_RedefinirSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ranking\Frm_RankingMotoristas.resx">
       <DependentUpon>Frm_RankingMotoristas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatorio\Frm_Ranking.resx">
-      <DependentUpon>Frm_Ranking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\Frm_Cadastro.resx">
+    <EmbeddedResource Include="Motorista\Frm_Cadastro.resx">
       <DependentUpon>Frm_Cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\Frm_InformacoesPessoais.resx">
+    <EmbeddedResource Include="Motorista\Frm_InformacoesPessoais.resx">
       <DependentUpon>Frm_InformacoesPessoais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\Frm_Login.resx">
+    <EmbeddedResource Include="Motorista\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Principal.resx">

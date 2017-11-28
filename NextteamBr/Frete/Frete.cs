@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace NextteamBr
 {
@@ -19,7 +18,26 @@ namespace NextteamBr
         {
             DataFinalFrete = DateTime.Now;
 
-            return FreteRepository.SalvarFrete(this);
+            return FreteService.SalvarFrete(this);
+        }
+
+        public double CalcularPontuacao(double Dano, int NumeroDeMultas)
+        {
+            double saida;
+            double KmPerdido = 0;
+
+            KmPerdido += NumeroDeMultas;
+            KmPerdido += Dano;
+
+            var KmFinal = KmRodado - KmPerdido;
+            saida = (KmFinal * 0.005);
+
+            if (NumeroDeMultas == 0 && Dano < 3)
+            {
+                KmFinal += (KmFinal * 5) / 100;
+            }
+
+            return saida;
         }
     }
 }

@@ -45,7 +45,14 @@ namespace NextteamBr
 
         private void preencherGrid()
         {
-            dataFretes.DataSource = RankingRepository.ObterRanking();
+            var rankingAtual = RankingService.ObterRanking();
+
+            foreach (var item in rankingAtual)
+            {
+                item.Pontos = Math.Round(item.Pontos, 2);
+            }
+
+            dataFretes.DataSource = rankingAtual;
 
             dataFretes.Columns.Add("Posicao", "Posição");
             dataFretes.Columns["Posicao"].DisplayIndex = 0;

@@ -49,7 +49,7 @@
             this.Btm_JobSync.Name = "Btm_JobSync";
             this.Btm_JobSync.Size = new System.Drawing.Size(173, 89);
             this.Btm_JobSync.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.Btm_JobSync, "Relatórios");
+            this.toolTip1.SetToolTip(this.Btm_JobSync, "Minhas informações");
             this.Btm_JobSync.UseVisualStyleBackColor = false;
             this.Btm_JobSync.Click += new System.EventHandler(this.Btm_JobSync_Click);
             // 

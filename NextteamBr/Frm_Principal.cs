@@ -91,7 +91,7 @@ namespace NextteamBr
                 {
                     informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
                     informacoesFrete.IdMotorista = IDMotorista;
-                    informacoesFrete.Pontuacao = Ferramentas.CalcularPontuacao(informacoesFrete.KmRodado, Convert.ToDouble(data.Damage.WearTrailer), controleDeMultas.ObterNumeroDeMultas());
+                    informacoesFrete.Pontuacao = informacoesFrete.CalcularPontuacao(Convert.ToDouble(data.Damage.WearTrailer), controleDeMultas.ObterNumeroDeMultas());
                     informacoesFrete.Dano = data.Damage.WearTrailer * 100;
                     informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
                     //informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();

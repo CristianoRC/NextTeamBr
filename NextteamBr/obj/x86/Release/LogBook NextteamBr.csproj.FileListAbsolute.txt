@@ -79,6 +79,7 @@ D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resourc
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.exe
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.pdb
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Ranking.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_InformacoesPessoais.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RankingMotoristas.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RedefinirSenha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_AlterarNome.resources

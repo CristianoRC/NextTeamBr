@@ -9,12 +9,12 @@ namespace NextteamBr
 
         public static string getMD5Hash(string input)
         {
-            MD5 md5Hash = MD5.Create();
+            var md5Hash = MD5.Create();
             // Converter a String para array de bytes, que é como a biblioteca trabalha.
-            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+            var data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
 
             // Cria-se um StringBuilder para recompôr a string.
-            StringBuilder sBuilder = new StringBuilder();
+            var sBuilder = new StringBuilder();
 
             // Loop para formatar cada byte como uma String em hexadecimal
             for (int i = 0; i < data.Length; i++)
@@ -27,9 +27,9 @@ namespace NextteamBr
 
         public static bool VerificarETS2MP()
         {
-            bool saida = false;
+            var saida = false;
 
-            Process[] processes = Process.GetProcesses();
+            var processes = Process.GetProcesses();
 
             foreach (var item in processes)
             {
@@ -40,10 +40,10 @@ namespace NextteamBr
             }
             return saida;
         }
-        
+
         public static bool VerificarTeamSpeak()
         {
-            Process[] processes = Process.GetProcesses();
+            var processes = Process.GetProcesses();
 
             foreach (var item in processes)
             {
@@ -54,25 +54,6 @@ namespace NextteamBr
             }
 
             return false;
-        }
-
-        public static double CalcularPontuacao(double KmRodado, double Dano, int NumeroDeMultas)
-        {
-            double saida;
-            double KmPerdido = 0;
-
-            KmPerdido += NumeroDeMultas;
-            KmPerdido += Dano;
-
-            double KmFinal = KmRodado - KmPerdido;
-            saida = (KmFinal * 0.005);
-
-            if (NumeroDeMultas == 0 && Dano < 3)
-            {
-                KmFinal += (KmFinal * 5) / 100;
-            }
-
-            return saida;
         }
     }
 }
