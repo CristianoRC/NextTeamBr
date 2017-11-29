@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Dapper;
+using System.Collections.Generic;
 
 namespace NextteamBr
 {
@@ -8,7 +9,7 @@ namespace NextteamBr
     {
         public static string Logar(Motorista usuario)
         {
-            var sql = $"SELECT count(ID) FROM Motorista WHERE Login = @login and senha = @senha";
+            var sql = $"SELECT count(ID) FROM Motorista WHERE Login = @login and senha = @senha and Ativo = 1";
             try
             {
                 BancoDeDados.abrirConexao();
@@ -87,6 +88,89 @@ namespace NextteamBr
             }
         }
 
+        public static IEnumerable<Motorista> Listar()
+        {
+            var sql = $"SELECT ID,Nome,Login,Ativo,Admin FROM Motorista";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.Query<Motorista>(sql);
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public static IEnumerable<Motorista> ListarAtivos()
+        {
+            var sql = $"SELECT ID,Nome,Login,Ativo,Admin FROM Motorista WHERE Ativo = 1";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.Query<Motorista>(sql);
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public static IEnumerable<Motorista> ListarInativos()
+        {
+            var sql = $"SELECT ID,Nome,Login FROM Motorista WHERE Ativo = 0";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.Query<Motorista>(sql);
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public static void Ativar(int id)
+        {
+            var sql = "update Motorista set Ativo=true where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        public static void Desativar(int id)
+        {
+            var sql = "update Motorista set Ativo=false where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
         public static void RedefinirSenha(int id, string senha)
         {
             var sql = "update Motorista set senha=@senha where ID = @IDMotorista ";
@@ -94,6 +178,22 @@ namespace NextteamBr
             {
                 BancoDeDados.abrirConexao();
                 BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, senha = Ferramentas.getMD5Hash(senha) });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        public static void ResetarSenha(int id)
+        {
+            var sql = "update Motorista set senha=@senha where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, senha = Ferramentas.getMD5Hash("123456") });
 
                 BancoDeDados.fecharConexao();
             }

@@ -110,6 +110,36 @@
     <Compile Include="Motorista\Frm_RedefinirSenha.Designer.cs">
       <DependentUpon>Frm_RedefinirSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_ResetarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_ResetarSenha.Designer.cs">
+      <DependentUpon>Frm_ResetarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_InformacoesFrete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_InformacoesFrete.Designer.cs">
+      <DependentUpon>Frm_InformacoesFrete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_Desativar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_Desativar.Designer.cs">
+      <DependentUpon>Frm_Desativar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_Ativar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\Frm_Ativar.Designer.cs">
+      <DependentUpon>Frm_Ativar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Frm_MDI .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Frm_MDI .Designer.cs">
+      <DependentUpon>Frm_MDI .cs</DependentUpon>
+    </Compile>
     <Compile Include="Ranking\Frm_RankingMotoristas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,10 +167,10 @@
     </Compile>
     <Compile Include="Multas\Multa.cs" />
     <Compile Include="Multas\ControleDeMultas.cs" />
-    <Compile Include="ControleVersao.cs" />
-    <Compile Include="ControllerAudio.cs" />
+    <Compile Include="Ferramentas\ControleVersao.cs" />
+    <Compile Include="Ferramentas\ControllerAudio.cs" />
     <Compile Include="Frete\FreteService.cs" />
-    <Compile Include="Ferramentas.cs" />
+    <Compile Include="Ferramentas\Ferramentas.cs" />
     <Compile Include="Frete\Frete.cs" />
     <Compile Include="Motorista\Frm_InformacoesPessoais.cs">
       <SubType>Form</SubType>
@@ -172,6 +202,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Motorista\Frm_RedefinirSenha.resx">
       <DependentUpon>Frm_RedefinirSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainelAdministraivo\Motorista\Frm_ResetarSenha.resx">
+      <DependentUpon>Frm_ResetarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainelAdministraivo\Motorista\Frm_InformacoesFrete.resx">
+      <DependentUpon>Frm_InformacoesFrete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainelAdministraivo\Motorista\Frm_Desativar.resx">
+      <DependentUpon>Frm_Desativar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainelAdministraivo\Motorista\Frm_Ativar.resx">
+      <DependentUpon>Frm_Ativar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainelAdministraivo\Frm_MDI .resx">
+      <DependentUpon>Frm_MDI .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ranking\Frm_RankingMotoristas.resx">
       <DependentUpon>Frm_RankingMotoristas.cs</DependentUpon>

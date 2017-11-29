@@ -83,3 +83,8 @@ D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_InformacoesPessoais.reso
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RankingMotoristas.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RedefinirSenha.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_AlterarNome.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_MDI.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Ativar.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Desativar.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarSenha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_InformacoesFrete.resources

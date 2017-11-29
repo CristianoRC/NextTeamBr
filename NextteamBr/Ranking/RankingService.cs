@@ -37,7 +37,7 @@ namespace NextteamBr
 
         public static IEnumerable<Ranking> ObterRanking()
         {
-            var sql = $"SELECT m.Nome as Motorista,r.Pontos FROM Ranking r inner JOIN Motorista m on r.IDMotorista = m.ID order by r.Pontos DESC";
+            var sql = $"SELECT m.Nome as Motorista,r.Pontos FROM Ranking r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
             try
             {
                 BancoDeDados.abrirConexao();

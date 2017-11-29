@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NextteamBr.PainelAdministraivo;
+using System;
 using System.Windows.Forms;
 
 namespace NextteamBr
@@ -40,7 +41,9 @@ namespace NextteamBr
         {
             if (Admin)
             {
-                MessageBox.Show("A funcionalidade será implementada em breve!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var frm_ADM = new Frm_MDI();
+
+                frm_ADM.Show();
             }
             else
             {
