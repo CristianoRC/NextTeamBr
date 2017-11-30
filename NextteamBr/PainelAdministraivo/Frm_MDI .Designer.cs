@@ -106,8 +106,9 @@
             // resetarToolStripMenuItem
             // 
             this.resetarToolStripMenuItem.Name = "resetarToolStripMenuItem";
-            this.resetarToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.resetarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.resetarToolStripMenuItem.Text = "&Resetar";
+            this.resetarToolStripMenuItem.Click += new System.EventHandler(this.resetarToolStripMenuItem_Click);
             // 
             // toolsMenu
             // 

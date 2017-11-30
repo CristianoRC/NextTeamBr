@@ -91,5 +91,6 @@ namespace NextteamBr
                 throw new Exception($"Entre em contato com os administradores! {ex.Message}");
             }
         }
+
     }
 }

@@ -88,3 +88,4 @@ D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Ativ
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Desativar.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarSenha.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_InformacoesFrete.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarRanking.resources

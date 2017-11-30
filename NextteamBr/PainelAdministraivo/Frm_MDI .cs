@@ -40,29 +40,11 @@ namespace NextteamBr.PainelAdministraivo
             infoFretes.Show();
         }
 
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void resetarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            var frm_ResetarRanking = new Frm_ResetarRanking();
+            frm_ResetarRanking.MdiParent = this;
+            frm_ResetarRanking.Show();
         }
     }
 }

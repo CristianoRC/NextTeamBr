@@ -51,5 +51,20 @@ namespace NextteamBr
                 throw new Exception(e.Message);
             }
         }
+        public static void Resetar()
+        {
+            var sql = "UPDATE Ranking SET Pontos=0";
+
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql);
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"Erro:{e.Message}");
+            }
+        }
     }
 }
