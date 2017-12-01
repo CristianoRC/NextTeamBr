@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2017.2/system/resharper-host/local/Transient/ReSharperHost/v10/SolutionCaches/_NextTeamBr.2105647526.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Ets2SdkClient" t="IncludeRecursive">
+        <e p="Ets2SdkBoolean.cs" t="Include" />
+        <e p="Ets2SdkClient.csproj" t="IncludeRecursive" />
+        <e p="Ets2SdkData.cs" t="Include" />
+        <e p="Ets2SdkTelemetry.cs" t="Include" />
+        <e p="Ets2Telemetry.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SharedMemory.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+      </e>
+      <e p="NextTeamBr.sln" t="IncludeFlat" />
+      <e p="NextteamBr" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="Banco" t="Include">
+          <e p="BancoDeDados.cs" t="Include" />
+        </e>
+        <e p="Ferramentas" t="Include">
+          <e p="ControleVersao.cs" t="Include" />
+          <e p="ControllerAudio.cs" t="Include" />
+          <e p="Ferramentas.cs" t="Include" />
+        </e>
+        <e p="Frete" t="Include">
+          <e p="Frete.cs" t="Include" />
+          <e p="FreteService.cs" t="Include" />
+        </e>
+        <e p="Frm_Escolha.Designer.cs" t="Include" />
+        <e p="Frm_Escolha.cs" t="Include" />
+        <e p="Frm_Escolha.resx" t="Include" />
+        <e p="Frm_Principal.Designer.cs" t="Include" />
+        <e p="Frm_Principal.cs" t="Include" />
+        <e p="Frm_Principal.resx" t="Include" />
+        <e p="Imagens" t="Include">
+          <e p="Carregado.png" t="Include" />
+          <e p="Descarregado.png" t="Include" />
+          <e p="Empresas" t="Include">
+            <e p="agronord.png" t="Include" />
+            <e p="ariafood.png" t="Include" />
+            <e p="bcp.png" t="Include" />
+            <e p="bhv.png" t="Include" />
+            <e p="bjork.png" t="Include" />
+            <e p="containerport.png" t="Include" />
+            <e p="drekkartrans.png" t="Include" />
+            <e p="euroacres.png" t="Include" />
+            <e p="eurogoodies.png" t="Include" />
+            <e p="fcp.png" t="Include" />
+            <e p="gnt.png" t="Include" />
+            <e p="ika.png" t="Include" />
+            <e p="itcc.png" t="Include" />
+            <e p="kaarfor.png" t="Include" />
+            <e p="konstnorr.png" t="Include" />
+            <e p="lkw.png" t="Include" />
+            <e p="marina.png" t="Include" />
+            <e p="msstein.png" t="Include" />
+            <e p="nbfc.png" t="Include" />
+            <e p="nordiccrown.png" t="Include" />
+            <e p="nordicstenbrott.png" t="Include" />
+            <e p="norrfood.png" t="Include" />
+            <e p="norrsken.png" t="Include" />
+            <e p="nschemicals.png" t="Include" />
+            <e p="nsoil.png" t="Include" />
+            <e p="polarfish.png" t="Include" />
+            <e p="polarislines.png" t="Include" />
+            <e p="posped.png" t="Include" />
+            <e p="renarlogistik.png" t="Include" />
+            <e p="sagtre.png" t="Include" />
+            <e p="sanbuilders.png" t="Include" />
+            <e p="scania.png" t="Include" />
+            <e p="scout.png" t="Include" />
+            <e p="sellplan.png" t="Include" />
+            <e p="steinbruch.png" t="Include" />
+            <e p="stokes.png" t="Include" />
+            <e p="tradeaux.png" t="Include" />
+            <e p="trameri.png" t="Include" />
+            <e p="transinet.png" t="Include" />
+            <e p="treeet.png" t="Include" />
+            <e p="vitaspower.png" t="Include" />
+            <e p="volvo.png" t="Include" />
+            <e p="vpc.png" t="Include" />
+            <e p="wgcc.png" t="Include" />
+          </e>
+          <e p="Faixa-Fundo.png" t="Include" />
+          <e p="Fundo-Novo.png" t="Include" />
+          <e p="New Design" t="Include">
+            <e p="Tela2.png" t="Include" />
+          </e>
+          <e p="fundos" t="Include">
+            <e p="1.png" t="Include" />
+            <e p="2.png" t="Include" />
+          </e>
+          <e p="ico.png" t="Include" />
+          <e p="registro_km_layout.jpg" t="Include" />
+        </e>
+        <e p="LogBook NextteamBr.csproj" t="IncludeRecursive" />
+        <e p="Motorista" t="Include">
+          <e p="Frm_AlterarNome.Designer.cs" t="Include" />
+          <e p="Frm_AlterarNome.cs" t="Include" />
+          <e p="Frm_AlterarNome.resx" t="Include" />
+          <e p="Frm_Cadastro.Designer.cs" t="Include" />
+          <e p="Frm_Cadastro.cs" t="Include" />
+          <e p="Frm_Cadastro.resx" t="Include" />
+          <e p="Frm_InformacoesPessoais.Designer.cs" t="Include" />
+          <e p="Frm_InformacoesPessoais.cs" t="Include" />
+          <e p="Frm_InformacoesPessoais.resx" t="Include" />
+          <e p="Frm_Login.Designer.cs" t="Include" />
+          <e p="Frm_Login.cs" t="Include" />
+          <e p="Frm_Login.resx" t="Include" />
+          <e p="Frm_RedefinirSenha.Designer.cs" t="Include" />
+          <e p="Frm_RedefinirSenha.cs" t="Include" />
+          <e p="Frm_RedefinirSenha.resx" t="Include" />
+          <e p="Motorista.cs" t="Include" />
+          <e p="MotoristaService.cs" t="Include" />
+        </e>
+        <e p="Multas" t="Include">
+          <e p="ControleDeMultas.cs" t="Include" />
+          <e p="Multa.cs" t="Include" />
+        </e>
+        <e p="PainelAdministraivo" t="Include">
+          <e p="Frm_MDI .Designer.cs" t="Include" />
+          <e p="Frm_MDI .cs" t="Include" />
+          <e p="Frm_MDI .resx" t="Include" />
+          <e p="Motorista" t="Include">
+            <e p="Frm_Ativar.Designer.cs" t="Include" />
+            <e p="Frm_Ativar.cs" t="Include" />
+            <e p="Frm_Ativar.resx" t="Include" />
+            <e p="Frm_Desativar.Designer.cs" t="Include" />
+            <e p="Frm_Desativar.cs" t="Include" />
+            <e p="Frm_Desativar.resx" t="Include" />
+            <e p="Frm_InformacoesFrete.Designer.cs" t="Include" />
+            <e p="Frm_InformacoesFrete.cs" t="Include" />
+            <e p="Frm_InformacoesFrete.resx" t="Include" />
+            <e p="Frm_ResetarSenha.Designer.cs" t="Include" />
+            <e p="Frm_ResetarSenha.cs" t="Include" />
+            <e p="Frm_ResetarSenha.resx" t="Include" />
+          </e>
+          <e p="Ranking" t="Include">
+            <e p="Frm_ResetarRanking.Designer.cs" t="Include" />
+            <e p="Frm_ResetarRanking.cs" t="Include" />
+            <e p="Frm_ResetarRanking.resx" t="Include" />
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Ranking" t="Include">
+          <e p="Frm_RankingMotoristas.Designer.cs" t="Include" />
+          <e p="Frm_RankingMotoristas.cs" t="Include" />
+          <e p="Frm_RankingMotoristas.resx" t="Include" />
+          <e p="Ranking.cs" t="Include" />
+          <e p="RankingService.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Address Book-100.png" t="Include" />
+          <e p="Administrative Tools-100.png" t="Include" />
+          <e p="Administrative Tools-1001.png" t="Include" />
+          <e p="Administrative Tools-50.png" t="Include" />
+          <e p="Air.wav" t="Include" />
+          <e p="AvisoVelocidade.WAV" t="Include" />
+          <e p="Cadastro.png" t="Include" />
+          <e p="Camera.wav" t="Include" />
+          <e p="Cancelada.wav" t="Include" />
+          <e p="CargaEntregue.wav" t="Include" />
+          <e p="CarregadoComSucesso.wav" t="Include" />
+          <e p="Colisao.wav" t="Include" />
+          <e p="Connection Sync-100.png" t="Include" />
+          <e p="EstaProximo.wav" t="Include" />
+          <e p="Fundo1.png" t="Include" />
+          <e p="Fundo2.png" t="Include" />
+          <e p="High Volume-100.png" t="Include" />
+          <e p="LogBook.wav" t="Include" />
+          <e p="Logo.png" t="Include" />
+          <e p="Logo1.png" t="Include" />
+          <e p="LogoZeroHora.png" t="Include" />
+          <e p="MP.wav" t="Include" />
+          <e p="Medium Volume-50.png" t="Include" />
+          <e p="Mute-100.png" t="Include" />
+          <e p="Mute-50.png" t="Include" />
+          <e p="Registro de Carga.png" t="Include" />
+          <e p="Report.png" t="Include" />
+          <e p="Tela.png" t="Include" />
+          <e p="Ts3.wav" t="Include" />
+          <e p="ZH.png" t="Include" />
+          <e p="alert.wav" t="Include" />
+          <e p="beep-24.wav" t="Include" />
+          <e p="client.png" t="Include" />
+          <e p="ico.png" t="Include" />
+          <e p="icone.png" t="Include" />
+          <e p="podium.png" t="Include" />
+          <e p="truck.png" t="Include" />
+          <e p="truckSFndo.png" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="favicon.ico" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="123cea7e-ff64-476b-937c-ed3fee928cb8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll" afterPath="$PROJECT_DIR$/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ets2SdkClient/bin/Debug/Ets2SdkClient.pdb" afterPath="$PROJECT_DIR$/Ets2SdkClient/bin/Debug/Ets2SdkClient.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll" afterPath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.pdb" afterPath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csproj.CoreCompileInputs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csproj.GenerateResource.Cache" afterPath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csproj.GenerateResource.Cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/obj/Debug/NextteamBr.Frm_Escolha.resources" afterPath="$PROJECT_DIR$/NextteamBr/obj/Debug/NextteamBr.Frm_Escolha.resources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/obj/Debug/NextteamBr.Frm_Login.resources" afterPath="$PROJECT_DIR$/NextteamBr/obj/Debug/NextteamBr.Frm_Login.resources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/obj/Debug/NextteamBr.Frm_Principal.resources" afterPath="$PROJECT_DIR$/NextteamBr/obj/Debug/NextteamBr.Frm_Principal.resources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/Ets2SdkClient/obj/Debug/Ets2SdkClient.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/Ranking/RankingService.cs" afterPath="$PROJECT_DIR$/NextteamBr/Ranking/RankingService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/NextteamBr/obj/Debug/LogBook NextteamBr.csproj.FileListAbsolute.txt" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="RankingService.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NextteamBr/Ranking/RankingService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1077">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <marker date="1512132863921" expanded="true" signature="6:99" ph="..." />
+                <marker date="1512132863921" expanded="true" signature="121:4203" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="148:4201" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="235:1056" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="1119:1592" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="1222:1474" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="1506:1582" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="1655:2131" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="1761:2013" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="2045:2121" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="2193:2729" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="2387:2611" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="2643:2719" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="2799:3335" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="2993:3217" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="3249:3325" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="3384:3765" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="3467:3637" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="3669:3755" ph="{...}" />
+                <marker date="1512132863921" expanded="false" signature="3814:4195" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="3897:4067" ph="{...}" />
+                <marker date="1512132863921" expanded="true" signature="4099:4185" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2SdkTelemetry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NextteamBr/Ranking/RankingService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2Telemetry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2SdkBoolean.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ets2SdkClient/SharedMemory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2SdkData.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/NextteamBr/Ranking/RankingService.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="1366" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NextTeamBr (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NextTeamBr (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="LogBook NextteamBr" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NextTeamBr (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="LogBook NextteamBr" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Ranking" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="123cea7e-ff64-476b-937c-ed3fee928cb8" name="Default" comment="" />
+      <created>1512132430720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1512132430720</updated>
+      <workItem from="1512132437417" duration="1103000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1103000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2SdkBoolean.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511776140252" expanded="true" signature="23:681" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="56:679" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2SdkData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1458">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511776140252" expanded="true" signature="62:6735" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="134:6733" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="4092:4139" ph="/* [FieldOffset(576)] ... */" />
+            <marker date="1511776140252" expanded="true" signature="6581:6727" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2SdkTelemetry.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1440">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511776140252" expanded="false" signature="6:53" ph="..." />
+            <marker date="1511776140252" expanded="true" signature="78:3362" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="194:3360" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="859:945" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="990:1057" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1104:1177" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1236:1290" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1308:1568" ph="/// Set up ETS2 telemetry provider. ... " />
+            <marker date="1511776140252" expanded="true" signature="1621:2088" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1819:1923" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="2158:3354" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="2866:3067" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="3120:3301" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ets2SdkClient/Ets2Telemetry.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5778">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511776140252" expanded="false" signature="6:32" ph="..." />
+            <marker date="1511776140252" expanded="true" signature="57:15816" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="90:15671" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="445:1176" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1211:3729" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="3761:4254" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="4281:5291" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="5324:5800" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="5830:6211" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="6241:7036" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="7067:7258" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="7787:15665" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="15706:15814" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ets2SdkClient/SharedMemory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511776140252" expanded="false" signature="6:86" ph="..." />
+            <marker date="1511776140252" expanded="true" signature="111:3242" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="143:3240" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="528:632" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="687:1483" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="721:779" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="863:1290" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1322:1473" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1517:1648" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1678:1809" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1839:2079" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="1902:1954" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="2089:2376" ph="/// Cast a set of bytes to a managed C## object. ... " />
+            <marker date="1511776140252" expanded="true" signature="2435:3232" ph="{...}" />
+            <marker date="1511776140252" expanded="true" signature="2731:2885" ph="/* Reserve unmanaged memory, copy structureDataBytes bytes to there, and convert this unmanaged memory to a manag ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NextteamBr/Ranking/RankingService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1077">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <marker date="1512132863921" expanded="true" signature="6:99" ph="..." />
+            <marker date="1512132863921" expanded="true" signature="121:4203" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="148:4201" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="235:1056" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="1119:1592" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="1222:1474" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="1506:1582" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="1655:2131" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="1761:2013" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="2045:2121" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="2193:2729" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="2387:2611" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="2643:2719" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="2799:3335" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="2993:3217" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="3249:3325" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="3384:3765" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="3467:3637" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="3669:3755" ph="{...}" />
+            <marker date="1512132863921" expanded="false" signature="3814:4195" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="3897:4067" ph="{...}" />
+            <marker date="1512132863921" expanded="true" signature="4099:4185" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
