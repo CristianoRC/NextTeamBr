@@ -1,19 +1,25 @@
-C:\Users\Cristiano Cunha\Downloads\ets2-client\C#\Ets2SdkClient\bin\Debug\Ets2SdkClient.dll
-C:\Users\Cristiano Cunha\Downloads\ets2-client\C#\Ets2SdkClient\bin\Debug\Ets2SdkClient.pdb
-C:\Users\Cristiano Cunha\Downloads\ets2-client\C#\Ets2SdkClient\obj\Debug\Ets2SdkClient.csprojResolveAssemblyReference.cache
-C:\Users\Cristiano Cunha\Downloads\ets2-client\C#\Ets2SdkClient\obj\Debug\Ets2SdkClient.dll
-C:\Users\Cristiano Cunha\Downloads\ets2-client\C#\Ets2SdkClient\obj\Debug\Ets2SdkClient.pdb
-C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\bin\Debug\Ets2SdkClient.dll
-C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\bin\Debug\Ets2SdkClient.pdb
-C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\obj\Debug\Ets2SdkClient.dll
-C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\Ets2SdkClient\obj\Debug\Ets2SdkClient.pdb
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\bin\Debug\Ets2SdkClient.dll
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\bin\Debug\Ets2SdkClient.pdb
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\obj\Debug\Ets2SdkClient.csprojResolveAssemblyReference.cache
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\obj\Debug\Ets2SdkClient.dll
-C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\Ets2SdkClient\obj\Debug\Ets2SdkClient.pdb
-D:\NextTeamBr\Ets2SdkClient\bin\Debug\Ets2SdkClient.dll
-D:\NextTeamBr\Ets2SdkClient\bin\Debug\Ets2SdkClient.pdb
-D:\NextTeamBr\Ets2SdkClient\obj\Debug\Ets2SdkClient.csprojResolveAssemblyReference.cache
-D:\NextTeamBr\Ets2SdkClient\obj\Debug\Ets2SdkClient.dll
-D:\NextTeamBr\Ets2SdkClient\obj\Debug\Ets2SdkClient.pdb
+C:/Users/Cristiano Cunha/Downloads/ets2-client/C#/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll
+C:/Users/Cristiano Cunha/Downloads/ets2-client/C#/Ets2SdkClient/bin/Debug/Ets2SdkClient.pdb
+C:/Users/Cristiano Cunha/Downloads/ets2-client/C#/Ets2SdkClient/obj/Debug/Ets2SdkClient.csprojResolveAssemblyReference.cache
+C:/Users/Cristiano Cunha/Downloads/ets2-client/C#/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll
+C:/Users/Cristiano Cunha/Downloads/ets2-client/C#/Ets2SdkClient/obj/Debug/Ets2SdkClient.pdb
+C:/Users/Cristiano Cunha/Downloads/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll
+C:/Users/Cristiano Cunha/Downloads/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/bin/Debug/Ets2SdkClient.pdb
+C:/Users/Cristiano Cunha/Downloads/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll
+C:/Users/Cristiano Cunha/Downloads/Projetos/LogBookEletronico-Ets2/Ets2SdkClient/obj/Debug/Ets2SdkClient.pdb
+C:/Users/Cristiano Cunha/Downloads/Projetos/NextTeamBr/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll
+C:/Users/Cristiano Cunha/Downloads/Projetos/NextTeamBr/Ets2SdkClient/bin/Debug/Ets2SdkClient.pdb
+C:/Users/Cristiano Cunha/Downloads/Projetos/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.csprojResolveAssemblyReference.cache
+C:/Users/Cristiano Cunha/Downloads/Projetos/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll
+C:/Users/Cristiano Cunha/Downloads/Projetos/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.pdb
+D:/NextTeamBr/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll
+D:/NextTeamBr/Ets2SdkClient/bin/Debug/Ets2SdkClient.pdb
+D:/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.csprojResolveAssemblyReference.cache
+D:/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll
+D:/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.pdb
+/home/cristiano/Projetos/NextTeamBr/Ets2SdkClient/bin/Debug/Ets2SdkClient.dll
+/home/cristiano/Projetos/NextTeamBr/Ets2SdkClient/bin/Debug/Ets2SdkClient.pdb
+/home/cristiano/Projetos/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.csprojResolveAssemblyReference.cache
+/home/cristiano/Projetos/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.csproj.CoreCompileInputs.cache
+/home/cristiano/Projetos/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.dll
+/home/cristiano/Projetos/NextTeamBr/Ets2SdkClient/obj/Debug/Ets2SdkClient.pdb
