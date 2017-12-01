@@ -8,19 +8,19 @@ namespace NextteamBr
 {
     class RankingService
     {
-        public static void AtualizarPontuacao(int IDMotorista, double Pontuacao)
+        public static void AtualizarPontuacao(int IDMotorista, double Pontuacao, double KM)
         {
             var antigaPontuacao = ObterPontuacao(IDMotorista);
             Pontuacao += antigaPontuacao;
-            var sql = "UPDATE Ranking SET Pontos=@pontuacao WHERE IDMotorista = @IDMotorista";
+            var sql = "UPDATE Ranking SET Pontos=@pontuacao SET KM=@km WHERE IDMotorista = @IDMotorista";
             BancoDeDados.abrirConexao();
-            BancoDeDados.conexao.Execute(sql, new { IDMotorista = IDMotorista, pontuacao = Pontuacao });
+            BancoDeDados.conexao.Execute(sql, new { IDMotorista = IDMotorista, pontuacao = Pontuacao, KM = KM });
             BancoDeDados.fecharConexao();
         }
 
         public static double ObterPontuacao(int idUsuario)
         {
-            var sql = $"SELECT sum(Pontos)FROM Ranking WHERE IDMotorista = @id";
+            var sql = $"SELECT Pontos FROM Ranking WHERE IDMotorista = @id";
             try
             {
                 BancoDeDados.abrirConexao();
@@ -37,7 +37,7 @@ namespace NextteamBr
 
         public static IEnumerable<Ranking> ObterRanking()
         {
-            var sql = $"SELECT m.Nome as Motorista,r.Pontos FROM Ranking r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
+            var sql = $"SELECT m.Nome as Motorista,r.KM,r.Pontos FROM Ranking r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
             try
             {
                 BancoDeDados.abrirConexao();
@@ -51,9 +51,10 @@ namespace NextteamBr
                 throw new Exception(e.Message);
             }
         }
+
         public static void Resetar()
         {
-            var sql = "UPDATE Ranking SET Pontos=0";
+            var sql = "UPDATE Ranking SET Pontos=0,SET KM=0";
 
             try
             {

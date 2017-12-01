@@ -50,6 +50,7 @@ namespace NextteamBr
             foreach (var item in rankingAtual)
             {
                 item.Pontos = Math.Round(item.Pontos, 2);
+                item.KM = Math.Round(item.KM, 2);
             }
 
             dataFretes.DataSource = rankingAtual;
@@ -58,12 +59,12 @@ namespace NextteamBr
             dataFretes.Columns["Posicao"].DisplayIndex = 0;
             dataFretes.Columns["Posicao"].Width = 50;
             dataFretes.Columns[0].HeaderText = "Motorista";
-            dataFretes.Columns[1].HeaderText = "Pontuação";
+            dataFretes.Columns[2].HeaderText = "Pontuação";
 
             for (int i = 0; i < dataFretes.Rows.Count; i++)
             {
                 dataFretes.Rows[i].Height = 25;
-                dataFretes.Rows[i].Cells[2].Value = (i + 1);
+                dataFretes.Rows[i].Cells[3].Value = (i + 1);
             }
         }
     }

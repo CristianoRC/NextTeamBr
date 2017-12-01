@@ -38,8 +38,6 @@
             this.resetarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rankingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -48,8 +46,7 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.motoristaToolStripMenuItem,
-            this.rankingToolStripMenuItem,
-            this.toolsMenu});
+            this.rankingToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1020, 24);
@@ -106,23 +103,9 @@
             // resetarToolStripMenuItem
             // 
             this.resetarToolStripMenuItem.Name = "resetarToolStripMenuItem";
-            this.resetarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.resetarToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.resetarToolStripMenuItem.Text = "&Resetar";
             this.resetarToolStripMenuItem.Click += new System.EventHandler(this.resetarToolStripMenuItem_Click);
-            // 
-            // toolsMenu
-            // 
-            this.toolsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionsToolStripMenuItem});
-            this.toolsMenu.Name = "toolsMenu";
-            this.toolsMenu.Size = new System.Drawing.Size(84, 20);
-            this.toolsMenu.Text = "&Ferramentas";
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.optionsToolStripMenuItem.Text = "&Opções";
             // 
             // Frm_MDI
             // 
@@ -150,8 +133,6 @@
 
 
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem toolsMenu;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem motoristaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ativarToolStripMenuItem;

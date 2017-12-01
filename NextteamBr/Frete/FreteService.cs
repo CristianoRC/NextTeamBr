@@ -27,7 +27,7 @@ namespace NextteamBr
                 });
                 BancoDeDados.fecharConexao();
 
-                RankingService.AtualizarPontuacao(InformacoesFrete.IdMotorista, InformacoesFrete.Pontuacao);
+                RankingService.AtualizarPontuacao(InformacoesFrete.IdMotorista, InformacoesFrete.Pontuacao,InformacoesFrete.KmRodado);
 
                 return true;
             }
