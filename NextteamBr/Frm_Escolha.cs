@@ -50,5 +50,34 @@ namespace NextteamBr
                 MessageBox.Show("Somente administradores podem ter acesso a essa funcionalidade!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btn_Plugin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Plugin.VerificarPastaETS())//Verfica se a pasta do ETS esta padrão
+                {
+                    Plugin.Copiar($@"{Application.StartupPath}\Plugins\", Plugin.DiretorioPadraoETS);
+
+                    MessageBox.Show("Os plugins foram instalads com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível encontrar o diretório do Eurotruck 2 automaticamente. Por favor indique o direório do seu jogo para que os plugins possam ser instalados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    if(folderBrowserDialogets.ShowDialog()  == DialogResult.OK)
+                    {
+                        Plugin.Copiar($@"{Application.StartupPath}\Plugins\", folderBrowserDialogets.SelectedPath);
+
+                        MessageBox.Show("Os plugins foram instalads com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("Não foi possível efetuar a instalação dos plugins! Execute o software como administrador.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

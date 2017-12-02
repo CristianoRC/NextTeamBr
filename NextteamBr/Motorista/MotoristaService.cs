@@ -221,12 +221,14 @@ namespace NextteamBr
 
         private static void InsetirNoRanking(int IDusuario)
         {
-            var sql = $@"INSERT INTO Ranking(IDMotorista, Pontos) VALUES (@IDMotorista,0)";
+            var sqlMes = $@"INSERT INTO Ranking(IDMotorista, Pontos) VALUES (@IDMotorista,0)";
+            var sqlAno = $@"INSERT INTO RankingAno(IDMotorista, Pontos) VALUES (@IDMotorista,0)";
+
             try
             {
                 BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sql, new { IDMotorista = IDusuario });
-
+                BancoDeDados.conexao.Execute(sqlAno, new { IDMotorista = IDusuario });
+                BancoDeDados.conexao.Execute(sqlMes, new { IDMotorista = IDusuario });
                 BancoDeDados.fecharConexao();
             }
             catch (Exception e)

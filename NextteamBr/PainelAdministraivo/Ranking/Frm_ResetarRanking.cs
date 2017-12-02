@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace NextteamBr.PainelAdministraivo
@@ -18,14 +12,20 @@ namespace NextteamBr.PainelAdministraivo
 
         private void btn_Zerar_Click(object sender, EventArgs e)
         {
-            if (txt_Senha.Text == "@#VBH51)(*")
+            var senha = Ferramentas.getMD5Hash(txt_Senha.Text);
+            if (senha == "67f683b2b9d5b0eecfe46f0d9119961d" && radioMes.Checked)
             {
-                RankingService.Resetar();
-                MessageBox.Show("O ranking foi resetado com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RankingService.Resetar(ERanking.Mensal);
+                MessageBox.Show("O ranking mensal foi resetado com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (senha == "496f366709619f761f5802d1ece99e7d" && radioAnual.Checked)
+            {
+                RankingService.Resetar(ERanking.Mensal);
+                MessageBox.Show("O ranking anual foi resetado com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Senha inválida","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Senha inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

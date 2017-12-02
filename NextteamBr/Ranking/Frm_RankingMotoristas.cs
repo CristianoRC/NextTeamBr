@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace NextteamBr
 {
     public partial class Frm_RankingMotoristas : Form
     {
+        IEnumerable<Ranking> RankingMensal = new List<Ranking>();
+        IEnumerable<Ranking> RankingAnual = new List<Ranking>();
         public Frm_RankingMotoristas()
         {
             InitializeComponent();
@@ -19,7 +18,9 @@ namespace NextteamBr
         private void Frm_RankingMotoristas_Load(object sender, EventArgs e)
         {
             dataFretes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            preencherGrid();
+            dataFretes.Columns.Add("Posicao", "Posição");
+            preencherGrid(ERanking.Mensal);
+            formatarGrid();
         }
 
         private void dataFretes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -43,29 +44,61 @@ namespace NextteamBr
             this.dataFretes.ClearSelection();
         }
 
-        private void preencherGrid()
+        private void preencherGrid(ERanking tipo)
         {
-            var rankingAtual = RankingService.ObterRanking();
-
-            foreach (var item in rankingAtual)
+            if (tipo == ERanking.Mensal)
             {
-                item.Pontos = Math.Round(item.Pontos, 2);
-                item.KM = Math.Round(item.KM, 2);
+                if (RankingMensal.ToList().Count == 0)
+                    RankingMensal = RankingService.ObterRanking(tipo);
+
+                foreach (var item in RankingMensal)
+                {
+                    item.Pontos = Math.Round(item.Pontos, 2);
+                    item.KM = Math.Round(item.KM, 2);
+                }
+
+                dataFretes.DataSource = RankingMensal;
+            }
+            else
+            {
+                if (RankingAnual.ToList().Count == 0)
+                    RankingAnual = RankingService.ObterRanking(tipo);
+
+                foreach (var item in RankingAnual)
+                {
+                    item.Pontos = Math.Round(item.Pontos, 2);
+                    item.KM = Math.Round(item.KM, 2);
+                }
+
+                dataFretes.DataSource = RankingAnual;
             }
 
-            dataFretes.DataSource = rankingAtual;
+            formatarGrid();
+        }
 
-            dataFretes.Columns.Add("Posicao", "Posição");
+        private void formatarGrid()
+        {
             dataFretes.Columns["Posicao"].DisplayIndex = 0;
             dataFretes.Columns["Posicao"].Width = 50;
-            dataFretes.Columns[0].HeaderText = "Motorista";
-            dataFretes.Columns[2].HeaderText = "Pontuação";
+            dataFretes.Columns[1].HeaderText = "Motorista";
+            dataFretes.Columns[3].HeaderText = "Pontuação";
 
             for (int i = 0; i < dataFretes.Rows.Count; i++)
             {
                 dataFretes.Rows[i].Height = 25;
-                dataFretes.Rows[i].Cells[3].Value = (i + 1);
+                dataFretes.Rows[i].Cells["Posicao"].Value = (i + 1);
             }
+        }
+
+
+        private void radioAnual_Click(object sender, EventArgs e)
+        {
+            preencherGrid(ERanking.Anual);
+        }
+
+        private void radioMes_Click(object sender, EventArgs e)
+        {
+            preencherGrid(ERanking.Mensal);
         }
     }
 }

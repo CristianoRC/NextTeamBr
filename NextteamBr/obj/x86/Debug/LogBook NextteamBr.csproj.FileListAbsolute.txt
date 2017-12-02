@@ -56,8 +56,15 @@ D:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook NextteamBr.csproj.GenerateResourc
 D:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook Zero Hora.exe.config
 D:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook Zero Hora.exe
 D:\NextTeamBr\NextteamBr\bin\x86\Debug\LogBook Zero Hora.pdb
-D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Ranking.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_InformacoesPessoais.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook Zero Hora.exe
 D:\NextTeamBr\NextteamBr\obj\x86\Debug\LogBook Zero Hora.pdb
 D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_RankingMotoristas.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_AlterarNome.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_RedefinirSenha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_ResetarSenha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_InformacoesFrete.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_Desativar.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_Ativar.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_MDI.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_ResetarRanking.resources

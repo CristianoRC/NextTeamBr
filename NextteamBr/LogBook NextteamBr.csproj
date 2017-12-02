@@ -98,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\BancoDeDados.cs" />
+    <Compile Include="Ferramentas\Frm_Plugin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ferramentas\Frm_Plugin.Designer.cs">
+      <DependentUpon>Frm_Plugin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Motorista\Frm_AlterarNome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,8 @@
     <Compile Include="PainelAdministraivo\Frm_MDI .Designer.cs">
       <DependentUpon>Frm_MDI .cs</DependentUpon>
     </Compile>
+    <Compile Include="Ferramentas\Plugin.cs" />
+    <Compile Include="Ranking\ERanking.cs" />
     <Compile Include="Ranking\Frm_RankingMotoristas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,13 +271,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Tela1.png" />
+    <None Include="Resources\Tela.png" />
+    <None Include="Resources\Header1.png" />
+    <None Include="Resources\Header.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\Painel1.png" />
+    <None Include="Resources\Painel.png" />
+    <None Include="Resources\FundoEscolha.png" />
+    <None Include="Resources\System-tools-icon.png" />
     <None Include="Resources\podium.png" />
     <None Include="Resources\Cadastro.png" />
     <None Include="Resources\truckSFndo.png" />
     <None Include="Resources\truck.png" />
     <None Include="Resources\Report.png" />
     <None Include="Imagens\New Design\Tela2.png" />
-    <None Include="Resources\Tela.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\Logo1.png" />
     <None Include="Resources\ZH.png" />

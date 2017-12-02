@@ -56,77 +56,71 @@ namespace NextteamBr
 
         private void Telemetry_Data(Ets2Telemetry data, bool updated)
         {
-            try
+            if (this.InvokeRequired)
             {
-                if (this.InvokeRequired)
-                {
-                    this.Invoke(new TelemetryData(Telemetry_Data), new object[2] { data, updated });
-                    return;
-                }
-
-                VelocidadeAtual = data.Drivetrain.SpeedKmh;
-                IDCarreta = data.Job.TrailerId;
-
-                #region Informações Iniciais
-
-                if (ObterInformacoesIniciais)
-                {
-                    v_OdometroInical = data.Drivetrain.TruckOdometer;
-                    informacoesFrete.CidadeInicial = data.Job.CitySource.ToString();
-                    informacoesFrete.CidadeDestino = data.Job.CityDestination.ToString();
-                    informacoesFrete.Carga = String.Format("{0} {1}t", data.Job.TrailerName.ToString(), (data.Job.Mass / 1000).ToString());
-                    ObterInformacoesIniciais = false;
-                    timerTs3.Enabled = true;
-                    IDCarretaInicio = data.Job.TrailerId;
-
-                    Lbl_Destino.Text = data.Job.CityDestination;
-                    Lbl_Partida.Text = data.Job.CitySource;
-
-                    SetarIconeDasEmpresas(data.Job.CompanySource, data.Job.CompanyDestination);
-                }
-                #endregion
-
-                #region Informações Finais
-                if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 100 && data.Job.NavigationDistanceLeft >= 10)
-                {
-                    informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
-                    informacoesFrete.IdMotorista = IDMotorista;
-                    informacoesFrete.Pontuacao = informacoesFrete.CalcularPontuacao(Convert.ToDouble(data.Damage.WearTrailer), controleDeMultas.ObterNumeroDeMultas());
-                    informacoesFrete.Dano = data.Damage.WearTrailer * 100;
-                    informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
-                    //informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
-
-                    cargaEntregue = true;
-                    FinaliziarFrete();
-
-                    Lbl_Destino.Text = String.Empty;
-                    Lbl_Partida.Text = String.Empty;
-                }
-                #endregion
-
-                #region Controle imagem do caminhao carregado ou descarregado
-
-                if (data.Job.TrailerAttached)
-                {
-                    PicCarga.Image = Properties.Resources.Carregado;
-                }
-                else
-                {
-                    PicCarga.Image = Properties.Resources.Descarregado;
-                }
-
-                #endregion
-
-                #region Label Velocidade e Distancia
-                Lbl_InfoGame.Text = String.Format("Velocidade {0} km/h  Distância {1} km",
-                    VelocidadeAtual.ToString("0"), (data.Job.NavigationDistanceLeft / 1000).ToString("0"));
-
-                #endregion
+                this.Invoke(new TelemetryData(Telemetry_Data), new object[2] { data, updated });
+                return;
             }
-            catch (Exception ex)
+
+            VelocidadeAtual = data.Drivetrain.SpeedKmh;
+            IDCarreta = data.Job.TrailerId;
+
+            #region Informações Iniciais
+
+            if (ObterInformacoesIniciais)
             {
-                MessageBox.Show(String.Format("Erro: {0}", ex.Message), "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                v_OdometroInical = data.Drivetrain.TruckOdometer;
+                informacoesFrete.CidadeInicial = data.Job.CitySource.ToString();
+                informacoesFrete.CidadeDestino = data.Job.CityDestination.ToString();
+                informacoesFrete.Carga = String.Format("{0} {1}t", data.Job.TrailerName.ToString(), (data.Job.Mass / 1000).ToString());
+                ObterInformacoesIniciais = false;
+                timerTs3.Enabled = true;
+                IDCarretaInicio = data.Job.TrailerId;
+
+                Lbl_Destino.Text = data.Job.CityDestination;
+                Lbl_Partida.Text = data.Job.CitySource;
+
+                SetarIconeDasEmpresas(data.Job.CompanySource, data.Job.CompanyDestination);
             }
+            #endregion
+
+            #region Informações Finais
+            if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 100 && data.Job.NavigationDistanceLeft >= 10)
+            {
+                informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
+                informacoesFrete.IdMotorista = IDMotorista;
+                informacoesFrete.Pontuacao = informacoesFrete.CalcularPontuacao(Convert.ToDouble(data.Damage.WearTrailer), controleDeMultas.ObterNumeroDeMultas());
+                informacoesFrete.Dano = data.Damage.WearTrailer * 100;
+                informacoesFrete.Pontuacao = Math.Round(informacoesFrete.Pontuacao, 1);
+                //informacoesFrete.ListaDeMultas = controleDeMultas.ObterListaDeMultas();
+
+                cargaEntregue = true;
+                FinaliziarFrete();
+
+                Lbl_Destino.Text = String.Empty;
+                Lbl_Partida.Text = String.Empty;
+            }
+            #endregion
+
+            #region Controle imagem do caminhao carregado ou descarregado
+
+            if (data.Job.TrailerAttached)
+            {
+                PicCarga.Image = Properties.Resources.Carregado;
+            }
+            else
+            {
+                PicCarga.Image = Properties.Resources.Descarregado;
+            }
+
+            #endregion
+
+            #region Label Velocidade e Distancia
+            Lbl_InfoGame.Text = String.Format("Velocidade {0} km/h  Distância {1} km",
+                VelocidadeAtual.ToString("0"), (data.Job.NavigationDistanceLeft / 1000).ToString("0"));
+
+            #endregion
+
         }
 
         #endregion

@@ -72,20 +72,20 @@ D:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
 D:\NextTeamBr\NextteamBr\bin\x86\Release\Dapper.xml
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_AlterarNome.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RedefinirSenha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarSenha.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_InformacoesFrete.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Desativar.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Ativar.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_MDI.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarRanking.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RankingMotoristas.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Cadastro.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_InformacoesPessoais.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Login.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.exe
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.pdb
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_InformacoesPessoais.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RankingMotoristas.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RedefinirSenha.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_AlterarNome.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_MDI.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Ativar.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Desativar.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarSenha.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_InformacoesFrete.resources
-D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarRanking.resources

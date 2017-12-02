@@ -58,7 +58,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImage = global::NextteamBr.Properties.Resources.Tela1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.Controls.Add(this.Pic_EmpresaDestino);
             this.panel1.Controls.Add(this.Pic_EmrpesaPartida);

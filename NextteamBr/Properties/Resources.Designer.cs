@@ -63,9 +63,49 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Address_Book_100 {
+        internal static System.Drawing.Bitmap _1 {
             get {
-                object obj = ResourceManager.GetObject("Address Book-100", resourceCulture);
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2 {
+            get {
+                object obj = ResourceManager.GetObject("_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3 {
+            get {
+                object obj = ResourceManager.GetObject("_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4 {
+            get {
+                object obj = ResourceManager.GetObject("_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5 {
+            get {
+                object obj = ResourceManager.GetObject("_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -167,16 +207,6 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Connection_Sync_100 {
-            get {
-                object obj = ResourceManager.GetObject("Connection Sync-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Descarregado {
             get {
                 object obj = ResourceManager.GetObject("Descarregado", resourceCulture);
@@ -196,9 +226,9 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fundo1 {
+        internal static System.Drawing.Bitmap FundoEscolha {
             get {
-                object obj = ResourceManager.GetObject("Fundo1", resourceCulture);
+                object obj = ResourceManager.GetObject("FundoEscolha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,9 +236,9 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fundo2 {
+        internal static System.Drawing.Bitmap Header {
             get {
-                object obj = ResourceManager.GetObject("Fundo2", resourceCulture);
+                object obj = ResourceManager.GetObject("Header", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,16 +263,6 @@ namespace NextteamBr.Properties {
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Medium_Volume_50 {
-            get {
-                object obj = ResourceManager.GetObject("Medium Volume-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream MP {
@@ -254,29 +274,9 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Mute_50 {
-            get {
-                object obj = ResourceManager.GetObject("Mute-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap podium {
             get {
                 object obj = ResourceManager.GetObject("podium", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Registro_de_Carga {
-            get {
-                object obj = ResourceManager.GetObject("Registro de Carga", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -294,9 +294,29 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap System_tools_icon {
+            get {
+                object obj = ResourceManager.GetObject("System-tools-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tela {
             get {
                 object obj = ResourceManager.GetObject("Tela", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tela1 {
+            get {
+                object obj = ResourceManager.GetObject("Tela1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,0 +1,10 @@
+D:\NextTeamBr\VelocidadeZeroHora\bin\Release\Velocidade ZeroHora.exe
+D:\NextTeamBr\VelocidadeZeroHora\bin\Release\Velocidade ZeroHora.pdb
+D:\NextTeamBr\VelocidadeZeroHora\bin\Release\Ets2SdkClient.dll
+D:\NextTeamBr\VelocidadeZeroHora\bin\Release\Ets2SdkClient.pdb
+D:\NextTeamBr\VelocidadeZeroHora\obj\Release\VelocidadeZeroHora.csprojResolveAssemblyReference.cache
+D:\NextTeamBr\VelocidadeZeroHora\obj\Release\VelocidadeZeroHora.Frm_Principal.resources
+D:\NextTeamBr\VelocidadeZeroHora\obj\Release\VelocidadeZeroHora.Properties.Resources.resources
+D:\NextTeamBr\VelocidadeZeroHora\obj\Release\VelocidadeZeroHora.csproj.GenerateResource.Cache
+D:\NextTeamBr\VelocidadeZeroHora\obj\Release\Velocidade ZeroHora.exe
+D:\NextTeamBr\VelocidadeZeroHora\obj\Release\Velocidade ZeroHora.pdb

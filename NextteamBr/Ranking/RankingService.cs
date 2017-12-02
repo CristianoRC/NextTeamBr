@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Dapper;
 
 namespace NextteamBr
@@ -10,31 +8,33 @@ namespace NextteamBr
     {
         public static void AtualizarPontuacao(int IDMotorista, double Pontuacao, double KM)
         {
-<<<<<<< HEAD
-            var antigaPontuacao = ObterPontuacao(IDMotorista);
-            Pontuacao += antigaPontuacao;
-            var sql = "UPDATE Ranking SET Pontos=@pontuacao SET KM=@km WHERE IDMotorista = @IDMotorista";
-            BancoDeDados.abrirConexao();
-            BancoDeDados.conexao.Execute(sql, new { IDMotorista = IDMotorista, pontuacao = Pontuacao, KM = KM });
-=======
-            var antigaPontuacaoMes = ObterPontuacaoMes(IDMotorista);
-            var pontuacaoMes Pontuacao + antigaPontuacaoMes;
-            
-            var antigaPontuacaoAno = ObterPontuacaoAno(IDMotorista);
-            var pontuacaoMes Pontuacao + antigaPontuacaoAno;
-            
-            var sqlMes = "UPDATE RankingMes SET Pontos=@pontuacao WHERE IDMotorista = @IDMotorista";
-            var sqlAno = "UPDATE RankingAno SET Pontos=@pontuacao WHERE IDMotorista = @IDMotorista";
+            var antigaPontuacaoMes = ObterPontuacao(IDMotorista, ERanking.Mensal);
+            var pontuacaoMes = Pontuacao + antigaPontuacaoMes;
 
-            
+            var antigaPontuacaoAno = ObterPontuacao(IDMotorista, ERanking.Anual);
+            var pontuacaoAno = Pontuacao + antigaPontuacaoAno;
+
+            var sqlMes = "UPDATE Ranking SET Pontos=@pontuacao,KM=@KM WHERE IDMotorista = @IDMotorista";
+            var sqlAno = "UPDATE RankingAno SET Pontos=@pontuacao,KM=@KM WHERE IDMotorista = @IDMotorista";
+
+
             BancoDeDados.abrirConexao();
-            BancoDeDados.conexao.Execute(sqlMes, new { IDMotorista = IDMotorista, pontuacao = Pontuacao });
-            BancoDeDados.conexao.Execute(sqlAno, new { IDMotorista = IDMotorista, pontuacao = Pontuacao });
->>>>>>> master
+            BancoDeDados.conexao.Execute(sqlMes, new { IDMotorista = IDMotorista, pontuacao = Pontuacao, KM = KM });
+            BancoDeDados.conexao.Execute(sqlAno, new { IDMotorista = IDMotorista, pontuacao = Pontuacao, KM = KM });
             BancoDeDados.fecharConexao();
         }
 
-        public static double ObterPontuacaoMes(int idUsuario)
+        public static double ObterPontuacao(int IdUsuario, ERanking tipo)
+        {
+            if (tipo == ERanking.Mensal)
+            {
+                return obterPontuacaoMes(IdUsuario);
+            }
+
+            return obterPontuacaoAno(IdUsuario);
+        }
+
+        private static double obterPontuacaoMes(int idUsuario)
         {
             var sql = $"SELECT Pontos FROM Ranking WHERE IDMotorista = @id";
             try
@@ -51,13 +51,9 @@ namespace NextteamBr
             }
         }
 
-        public static double ObterPontuacaoAno(int idUsuario)
+        private static double obterPontuacaoAno(int idUsuario)
         {
-<<<<<<< HEAD
-            var sql = $"SELECT Pontos FROM Ranking WHERE IDMotorista = @id";
-=======
             var sql = $"SELECT Pontos FROM RankingAno WHERE IDMotorista = @id";
->>>>>>> master
             try
             {
                 BancoDeDados.abrirConexao();
@@ -72,13 +68,20 @@ namespace NextteamBr
             }
         }
 
-        public static IEnumerable<Ranking> ObterRankingMes()
+
+        public static IEnumerable<Ranking> ObterRanking(ERanking tipo)
         {
-<<<<<<< HEAD
-            var sql = $"SELECT m.Nome as Motorista,r.KM,r.Pontos FROM Ranking r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
-=======
-            var sql = $"SELECT m.Nome as Motorista,r.Pontos FROM RankingMes r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
->>>>>>> master
+            if (tipo == ERanking.Mensal)
+            {
+                return obterRankingMes();
+            }
+            return obterRankingAno();
+        }
+
+        private static IEnumerable<Ranking> obterRankingMes()
+        {
+            var sql = $"SELECT m.Nome as Motorista,r.Pontos,r.KM FROM Ranking r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
+
             try
             {
                 BancoDeDados.abrirConexao();
@@ -92,16 +95,10 @@ namespace NextteamBr
                 throw new Exception(e.Message);
             }
         }
-<<<<<<< HEAD
 
-        public static void Resetar()
+        private static IEnumerable<Ranking> obterRankingAno()
         {
-            var sql = "UPDATE Ranking SET Pontos=0,SET KM=0";
-=======
-        
-        public static IEnumerable<Ranking> ObterRankingAno()
-        {
-            var sql = $"SELECT m.Nome as Motorista,r.Pontos FROM RankingAno r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
+            var sql = $"SELECT m.Nome as Motorista,r.Pontos,r.KM FROM RankingAno r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 order by r.Pontos DESC";
             try
             {
                 BancoDeDados.abrirConexao();
@@ -115,10 +112,23 @@ namespace NextteamBr
                 throw new Exception(e.Message);
             }
         }
-        
-        public static void ResetarMes()
+
+
+        public static void Resetar(ERanking tipo)
         {
-            var sql = "UPDATE RankingMes SET Pontos=0";
+            if (tipo == ERanking.Mensal)
+            {
+                ResetarMes();
+            }
+            else
+            {
+                ResetarAno();
+            }
+        }
+
+        private static void ResetarMes()
+        {
+            var sql = "UPDATE Ranking SET Pontos=0,KM=0";
 
             try
             {
@@ -131,11 +141,10 @@ namespace NextteamBr
                 throw new Exception($"Erro:{e.Message}");
             }
         }
-        
-        public static void ResetarAno()
+
+        private static void ResetarAno()
         {
-            var sql = "UPDATE RankingAno SET Pontos=0";
->>>>>>> master
+            var sql = "UPDATE RankingAno SET Pontos=0,km=0";
 
             try
             {

@@ -39,7 +39,7 @@ namespace NextteamBr
                 }
                 else
                 {
-                    e.CellStyle.BackColor = Color.DarkRed;
+                    e.CellStyle.BackColor = Color.DarkGray;
                     e.CellStyle.ForeColor = Color.White;
                 }
             }
@@ -87,7 +87,7 @@ namespace NextteamBr
 
         private void atualizarPontos()
         {
-            var pontos = RankingService.ObterPontuacao(usuarioInfo.ID);
+            var pontos = RankingService.ObterPontuacao(usuarioInfo.ID, ERanking.Mensal);
 
             lbl_pontuacao.Text = Math.Round(pontos, 2).ToString();
         }

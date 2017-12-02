@@ -38,15 +38,14 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Lbl_Versao = new System.Windows.Forms.ToolStripStatusLabel();
             this.btn_Cadastrar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 46);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(28, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 0;
@@ -55,7 +54,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 110);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(28, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
@@ -63,14 +63,14 @@
             // 
             // Txt_Login
             // 
-            this.Txt_Login.Location = new System.Drawing.Point(75, 43);
+            this.Txt_Login.Location = new System.Drawing.Point(67, 63);
             this.Txt_Login.Name = "Txt_Login";
             this.Txt_Login.Size = new System.Drawing.Size(264, 20);
             this.Txt_Login.TabIndex = 2;
             // 
             // Txt_Senha
             // 
-            this.Txt_Senha.Location = new System.Drawing.Point(75, 107);
+            this.Txt_Senha.Location = new System.Drawing.Point(67, 127);
             this.Txt_Senha.Name = "Txt_Senha";
             this.Txt_Senha.Size = new System.Drawing.Size(264, 20);
             this.Txt_Senha.TabIndex = 3;
@@ -78,35 +78,37 @@
             // 
             // Btm_Logar
             // 
+            this.Btm_Logar.BackColor = System.Drawing.Color.Transparent;
             this.Btm_Logar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btm_Logar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_Logar.Location = new System.Drawing.Point(75, 187);
+            this.Btm_Logar.Location = new System.Drawing.Point(67, 172);
             this.Btm_Logar.Name = "Btm_Logar";
             this.Btm_Logar.Size = new System.Drawing.Size(122, 34);
             this.Btm_Logar.TabIndex = 4;
             this.Btm_Logar.Text = "Logar";
-            this.Btm_Logar.UseVisualStyleBackColor = true;
+            this.Btm_Logar.UseVisualStyleBackColor = false;
             this.Btm_Logar.Click += new System.EventHandler(this.Btm_Logar_Click);
             // 
             // Btm_Sair
             // 
+            this.Btm_Sair.BackColor = System.Drawing.Color.Transparent;
             this.Btm_Sair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btm_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btm_Sair.Location = new System.Drawing.Point(217, 187);
+            this.Btm_Sair.Location = new System.Drawing.Point(209, 172);
             this.Btm_Sair.Name = "Btm_Sair";
             this.Btm_Sair.Size = new System.Drawing.Size(122, 34);
             this.Btm_Sair.TabIndex = 5;
             this.Btm_Sair.Text = "Sair";
-            this.Btm_Sair.UseVisualStyleBackColor = true;
+            this.Btm_Sair.UseVisualStyleBackColor = false;
             this.Btm_Sair.Click += new System.EventHandler(this.Btm_Sair_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Lbl_Versao});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 283);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 323);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(667, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(651, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -120,32 +122,24 @@
             // 
             // btn_Cadastrar
             // 
+            this.btn_Cadastrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cadastrar.Location = new System.Drawing.Point(75, 236);
+            this.btn_Cadastrar.Location = new System.Drawing.Point(67, 225);
             this.btn_Cadastrar.Name = "btn_Cadastrar";
             this.btn_Cadastrar.Size = new System.Drawing.Size(264, 29);
             this.btn_Cadastrar.TabIndex = 7;
             this.btn_Cadastrar.Text = "Cadastrar";
-            this.btn_Cadastrar.UseVisualStyleBackColor = true;
+            this.btn_Cadastrar.UseVisualStyleBackColor = false;
             this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(361, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(306, 253);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(667, 305);
-            this.Controls.Add(this.pictureBox1);
+            this.BackgroundImage = global::NextteamBr.Properties.Resources._1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(651, 345);
             this.Controls.Add(this.btn_Cadastrar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.Btm_Sair);
@@ -154,16 +148,15 @@
             this.Controls.Add(this.Txt_Login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Zero Hora";
+            this.Text = "Zero Hora Virtual";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +173,5 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Versao;
         private System.Windows.Forms.Button btn_Cadastrar;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

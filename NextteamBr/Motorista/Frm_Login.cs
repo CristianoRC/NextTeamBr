@@ -56,6 +56,34 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
+
+            var randon = new Random();
+
+            var img = randon.Next(1, 5);
+
+            switch (img)
+            {
+                case 1:
+                    this.BackgroundImage = Properties.Resources._1;
+                    break;
+                case 2:
+                    this.BackgroundImage = Properties.Resources._2;
+                    break;
+                case 3:
+                    this.BackgroundImage = Properties.Resources._3;
+                    break;
+                case 4:
+                    this.BackgroundImage = Properties.Resources._4;
+                    break;
+                case 5:
+                    this.BackgroundImage = Properties.Resources._5;
+                    break;
+            }
+
+
+
+
+
             Lbl_Versao.Text = "Versão: " + Application.ProductVersion;
 
 
