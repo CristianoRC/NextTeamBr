@@ -65,7 +65,7 @@ namespace NextteamBr
                 {
                     MessageBox.Show("Não foi possível encontrar o diretório do Eurotruck 2 automaticamente. Por favor indique o direório do seu jogo para que os plugins possam ser instalados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    if(folderBrowserDialogets.ShowDialog()  == DialogResult.OK)
+                    if (folderBrowserDialogets.ShowDialog() == DialogResult.OK)
                     {
                         Plugin.Copiar($@"{Application.StartupPath}\Plugins\", folderBrowserDialogets.SelectedPath);
 
@@ -78,6 +78,11 @@ namespace NextteamBr
             {
                 MessageBox.Show("Não foi possível efetuar a instalação dos plugins! Execute o software como administrador.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

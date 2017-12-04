@@ -90,6 +90,7 @@
             this.Name = "Frm_Cadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de motorista";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Frm_Cadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

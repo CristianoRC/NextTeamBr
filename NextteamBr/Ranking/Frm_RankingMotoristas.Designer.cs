@@ -43,6 +43,7 @@
             this.dataFretes.AllowUserToAddRows = false;
             this.dataFretes.AllowUserToDeleteRows = false;
             this.dataFretes.AllowUserToOrderColumns = true;
+            this.dataFretes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataFretes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataFretes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataFretes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
@@ -58,9 +59,8 @@
             this.dataFretes.Location = new System.Drawing.Point(0, 52);
             this.dataFretes.Name = "dataFretes";
             this.dataFretes.ReadOnly = true;
-            this.dataFretes.Size = new System.Drawing.Size(506, 452);
+            this.dataFretes.Size = new System.Drawing.Size(778, 452);
             this.dataFretes.TabIndex = 4;
-            this.dataFretes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataFretes_CellFormatting);
             this.dataFretes.SelectionChanged += new System.EventHandler(this.dataFretes_SelectionChanged);
             // 
             // groupBox1
@@ -105,9 +105,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 504);
+            this.ClientSize = new System.Drawing.Size(779, 504);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataFretes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_RankingMotoristas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

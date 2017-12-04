@@ -271,6 +271,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Escolha1.png" />
+    <None Include="Resources\Painel2.png" />
+    <None Include="Resources\RT.png" />
+    <None Include="Resources\RA.png" />
+    <None Include="Resources\R3.png" />
+    <None Include="Resources\R2.png" />
+    <None Include="Resources\R1.png" />
     <None Include="Resources\Tela1.png" />
     <None Include="Resources\Tela.png" />
     <None Include="Resources\Header1.png" />
