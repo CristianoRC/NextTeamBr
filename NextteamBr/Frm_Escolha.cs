@@ -73,6 +73,10 @@ namespace NextteamBr
                     }
                 }
 
+                if (MessageBox.Show("Continua com problemas no APP? Instale o Visual C++.", "Visual C++", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start("https://www.microsoft.com/en-us/download/details.aspx?id=30679");
+                }
             }
             catch (UnauthorizedAccessException)
             {

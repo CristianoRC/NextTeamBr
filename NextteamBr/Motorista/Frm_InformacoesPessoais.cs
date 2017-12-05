@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace NextteamBr
@@ -87,7 +86,7 @@ namespace NextteamBr
 
         private void atualizarPontos()
         {
-            var pontos = RankingService.ObterPontuacao(usuarioInfo.ID, ERanking.Mensal);
+            var pontos = RankingService.ObterPontuacao(usuarioInfo.ID, ERanking.Anual);
 
             lbl_pontuacao.Text = Math.Round(pontos, 2).ToString();
         }

@@ -119,7 +119,7 @@
             this.btn_Plugin.Name = "btn_Plugin";
             this.btn_Plugin.Size = new System.Drawing.Size(120, 68);
             this.btn_Plugin.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.btn_Plugin, "Plugin");
+            this.toolTip1.SetToolTip(this.btn_Plugin, "Manutenção");
             this.btn_Plugin.UseVisualStyleBackColor = false;
             this.btn_Plugin.Click += new System.EventHandler(this.btn_Plugin_Click);
             // 

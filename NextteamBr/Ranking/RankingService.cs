@@ -10,17 +10,21 @@ namespace NextteamBr
         {
             var antigaPontuacaoMes = ObterPontuacao(IDMotorista, ERanking.Mensal);
             var pontuacaoMes = Pontuacao + antigaPontuacaoMes;
+            var antigoKMMes = ObterKM(IDMotorista, ERanking.Mensal);
+            var KMMes = KM + antigoKMMes;
 
             var antigaPontuacaoAno = ObterPontuacao(IDMotorista, ERanking.Anual);
             var pontuacaoAno = Pontuacao + antigaPontuacaoAno;
+            var antigoKMAno = ObterKM(IDMotorista, ERanking.Mensal);
+            var KMAno = KM + antigoKMAno;
 
             var sqlMes = "UPDATE Ranking SET Pontos=@pontuacao,KM=@KM WHERE IDMotorista = @IDMotorista";
             var sqlAno = "UPDATE RankingAno SET Pontos=@pontuacao,KM=@KM WHERE IDMotorista = @IDMotorista";
 
 
             BancoDeDados.abrirConexao();
-            BancoDeDados.conexao.Execute(sqlMes, new { IDMotorista = IDMotorista, pontuacao = Pontuacao, KM = KM });
-            BancoDeDados.conexao.Execute(sqlAno, new { IDMotorista = IDMotorista, pontuacao = Pontuacao, KM = KM });
+            BancoDeDados.conexao.Execute(sqlMes, new { IDMotorista = IDMotorista, pontuacao = pontuacaoMes, KM = KMMes });
+            BancoDeDados.conexao.Execute(sqlAno, new { IDMotorista = IDMotorista, pontuacao = pontuacaoAno, KM = KMAno });
             BancoDeDados.fecharConexao();
         }
 
@@ -32,6 +36,16 @@ namespace NextteamBr
             }
 
             return obterPontuacaoAno(IdUsuario);
+        }
+
+        public static double ObterKM(int IdUsuario, ERanking tipo)
+        {
+            if (tipo == ERanking.Mensal)
+            {
+                return obterKMMes(IdUsuario);
+            }
+
+            return obterKMAno(IdUsuario);
         }
 
         private static double obterPontuacaoMes(int idUsuario)
@@ -68,6 +82,39 @@ namespace NextteamBr
             }
         }
 
+        private static double obterKMMes(int idUsuario)
+        {
+            var sql = $"SELECT KM FROM Ranking WHERE IDMotorista = @id";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.QueryFirst<double>(sql, new { id = idUsuario });
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        private static double obterKMAno(int idUsuario)
+        {
+            var sql = $"SELECT KM FROM RankingAno WHERE IDMotorista = @id";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.QueryFirst<double>(sql, new { id = idUsuario });
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
 
         public static IEnumerable<Ranking> ObterRanking(ERanking tipo)
         {
