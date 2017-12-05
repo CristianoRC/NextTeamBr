@@ -5,7 +5,7 @@ namespace NextteamBr
     public class Ranking
     {
         public string Motorista { get; set; }
-        public double KM { get; set; }
+        public uint KM { get; set; }
         public double Pontos { get; set; }
 
         public static string ObterCategoria(double KM)

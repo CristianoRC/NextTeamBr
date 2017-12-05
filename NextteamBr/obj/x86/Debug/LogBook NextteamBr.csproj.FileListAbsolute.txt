@@ -68,3 +68,5 @@ D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_Desati
 D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_Ativar.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_MDI.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_ResetarRanking.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.PainelAdministraivo.Frm_SetarEmpresa.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Debug\NextteamBr.Frm_Empresas.resources

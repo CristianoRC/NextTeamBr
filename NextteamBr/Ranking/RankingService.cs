@@ -38,7 +38,7 @@ namespace NextteamBr
             return obterPontuacaoAno(IdUsuario);
         }
 
-        public static double ObterKM(int IdUsuario, ERanking tipo)
+        public static uint ObterKM(int IdUsuario, ERanking tipo)
         {
             if (tipo == ERanking.Mensal)
             {
@@ -82,13 +82,13 @@ namespace NextteamBr
             }
         }
 
-        private static double obterKMMes(int idUsuario)
+        private static uint obterKMMes(int idUsuario)
         {
             var sql = $"SELECT KM FROM Ranking WHERE IDMotorista = @id";
             try
             {
                 BancoDeDados.abrirConexao();
-                var usuario = BancoDeDados.conexao.QueryFirst<double>(sql, new { id = idUsuario });
+                var usuario = BancoDeDados.conexao.QueryFirst<uint>(sql, new { id = idUsuario });
                 BancoDeDados.fecharConexao();
 
                 return usuario;
@@ -99,13 +99,13 @@ namespace NextteamBr
             }
         }
 
-        private static double obterKMAno(int idUsuario)
+        private static uint obterKMAno(int idUsuario)
         {
             var sql = $"SELECT KM FROM RankingAno WHERE IDMotorista = @id";
             try
             {
                 BancoDeDados.abrirConexao();
-                var usuario = BancoDeDados.conexao.QueryFirst<double>(sql, new { id = idUsuario });
+                var usuario = BancoDeDados.conexao.QueryFirst<uint>(sql, new { id = idUsuario });
                 BancoDeDados.fecharConexao();
 
                 return usuario;
@@ -160,6 +160,50 @@ namespace NextteamBr
             }
         }
 
+        public static IEnumerable<Ranking> ObterRankingEmpresa(ERanking tipo, int IDempresa)
+        {
+            if (tipo == ERanking.Mensal)
+            {
+                return obterRankingMesEmpresa(IDempresa);
+            }
+            return obterRankingAnoEmpresa(IDempresa);
+        }
+
+        private static IEnumerable<Ranking> obterRankingMesEmpresa(int IDempresa)
+        {
+            var sql = $"SELECT m.Nome as Motorista,r.Pontos,r.KM FROM Ranking r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 AND IDEmpresa = @empresa order by r.Pontos DESC";
+
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.Query<Ranking>(sql, new { empresa = IDempresa });
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        private static IEnumerable<Ranking> obterRankingAnoEmpresa(int IDempresa)
+        {
+            var sql = $"SELECT m.Nome as Motorista,r.Pontos,r.KM FROM RankingAno r inner JOIN Motorista m on r.IDMotorista = m.ID where m.Ativo = 1 AND IDEmpresa = @empresa order by r.Pontos DESC";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.Query<Ranking>(sql, new { empresa = IDempresa });
+
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
 
         public static void Resetar(ERanking tipo)
         {

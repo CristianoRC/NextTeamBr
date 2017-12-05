@@ -10,6 +10,7 @@ namespace NextteamBr
         public string Login { get; set; }
         public string Senha { get; set; }
         public bool Admin { get; set; }
+        public int IDEmpresa { get; set; }
 
         public Motorista() { }
 

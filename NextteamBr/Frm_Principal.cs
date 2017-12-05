@@ -87,7 +87,7 @@ namespace NextteamBr
             #region Informações Finais
             if (data.Job.TrailerAttached && (cargaEntregue == false) && data.Job.NavigationDistanceLeft < 100 && data.Job.NavigationDistanceLeft >= 10)
             {
-                informacoesFrete.KmRodado = data.Drivetrain.TruckOdometer - v_OdometroInical;
+                informacoesFrete.KmRodado = Convert.ToUInt32(data.Drivetrain.TruckOdometer - v_OdometroInical);
                 informacoesFrete.IdMotorista = IDMotorista;
                 informacoesFrete.Pontuacao = informacoesFrete.CalcularPontuacao(Convert.ToDouble(data.Damage.WearTrailer), controleDeMultas.ObterNumeroDeMultas());
                 informacoesFrete.Dano = data.Damage.WearTrailer * 100;

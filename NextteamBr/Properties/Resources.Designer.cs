@@ -236,6 +236,16 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ftt {
+            get {
+                object obj = ResourceManager.GetObject("Ftt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FundoEscolha {
             get {
                 object obj = ResourceManager.GetObject("FundoEscolha", resourceCulture);
@@ -249,6 +259,16 @@ namespace NextteamBr.Properties {
         internal static System.Drawing.Bitmap Header {
             get {
                 object obj = ResourceManager.GetObject("Header", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Header2 {
+            get {
+                object obj = ResourceManager.GetObject("Header2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -278,6 +298,16 @@ namespace NextteamBr.Properties {
         internal static System.IO.UnmanagedMemoryStream MP {
             get {
                 return ResourceManager.GetStream("MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap office {
+            get {
+                object obj = ResourceManager.GetObject("office", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -36,6 +36,7 @@
             this.ativarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desativarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.rankingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -59,6 +60,7 @@
             this.relatórioDeFretesToolStripMenuItem,
             this.ativarToolStripMenuItem,
             this.desativarToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.resetarSenhaToolStripMenuItem});
             this.motoristaToolStripMenuItem.Name = "motoristaToolStripMenuItem";
             this.motoristaToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
@@ -92,6 +94,13 @@
             this.resetarSenhaToolStripMenuItem.Text = "&Resetar Senha";
             this.resetarSenhaToolStripMenuItem.Click += new System.EventHandler(this.resetarSenhaToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
+            this.toolStripMenuItem1.Text = "Setar Empresa";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // rankingToolStripMenuItem
             // 
             this.rankingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,7 +112,7 @@
             // resetarToolStripMenuItem
             // 
             this.resetarToolStripMenuItem.Name = "resetarToolStripMenuItem";
-            this.resetarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.resetarToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.resetarToolStripMenuItem.Text = "&Resetar";
             this.resetarToolStripMenuItem.Click += new System.EventHandler(this.resetarToolStripMenuItem_Click);
             // 
@@ -141,6 +150,7 @@
         private System.Windows.Forms.ToolStripMenuItem relatórioDeFretesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rankingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

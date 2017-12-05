@@ -46,5 +46,12 @@ namespace NextteamBr.PainelAdministraivo
             frm_ResetarRanking.MdiParent = this;
             frm_ResetarRanking.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm_Empresa = new Frm_SetarEmpresa();
+            frm_Empresa.MdiParent = this;
+            frm_Empresa.Show();
+        }
     }
 }

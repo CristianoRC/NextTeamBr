@@ -8,26 +8,30 @@ namespace NextteamBr
 {
     public partial class Frm_RankingMotoristas : Form
     {
-        IEnumerable<Ranking> RankingMensal = RankingService.ObterRanking(ERanking.Mensal);
-        IEnumerable<Ranking> RankingAnual = RankingService.ObterRanking(ERanking.Anual);
+        int IDEmpresa;
+        IEnumerable<Ranking> RankingMensal;
+        IEnumerable<Ranking> RankingAnual;
 
-        public Frm_RankingMotoristas()
+        public Frm_RankingMotoristas(int empresa)
         {
             InitializeComponent();
+
+            IDEmpresa = empresa;
         }
 
         private void Frm_RankingMotoristas_Load(object sender, EventArgs e)
         {
+            RankingMensal = RankingService.ObterRankingEmpresa(ERanking.Mensal, IDEmpresa);
+            RankingAnual = RankingService.ObterRankingEmpresa(ERanking.Anual, IDEmpresa);
+
             foreach (var item in RankingAnual)
             {
                 item.Pontos = Math.Round(item.Pontos, 2);
-                item.KM = Math.Round(item.KM, 2);
             }
 
             foreach (var item in RankingMensal)
             {
                 item.Pontos = Math.Round(item.Pontos, 2);
-                item.KM = Math.Round(item.KM, 2);
             }
 
             dataFretes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

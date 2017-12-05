@@ -89,3 +89,5 @@ D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resourc
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.exe
 D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.pdb
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_SetarEmpresa.resources
+D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Empresas.resources

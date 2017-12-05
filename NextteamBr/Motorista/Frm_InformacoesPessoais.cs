@@ -54,7 +54,6 @@ namespace NextteamBr
             foreach (var item in fretes)
             {
                 item.Dano = Math.Round(item.Dano, 2);
-                item.KmRodado = Math.Round(item.KmRodado, 2);
             }
 
             dataFretes.DataSource = fretes;

@@ -7,13 +7,15 @@ namespace NextteamBr
     public partial class Frm_Escolha : Form
     {
         int IdUsuario;
+        int IDEmpresa;
         bool Admin;
 
-        public Frm_Escolha(int p_id, bool admin)
+        public Frm_Escolha(int p_id, bool admin, int IDempresa)
         {
             InitializeComponent();
             Admin = admin;
             IdUsuario = p_id;
+            IDEmpresa = IDempresa;
         }
 
         private void Btm_LogBook_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace NextteamBr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var frm_rankings = new Frm_RankingMotoristas();
+            var frm_rankings = new Frm_RankingMotoristas(IDEmpresa);
 
             frm_rankings.Show();
         }
@@ -75,7 +77,7 @@ namespace NextteamBr
 
                 if (MessageBox.Show("Continua com problemas no APP? Instale o Visual C++.", "Visual C++", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    System.Diagnostics.Process.Start("https://www.microsoft.com/en-us/download/details.aspx?id=30679");
+                    System.Diagnostics.Process.Start("https://www.microsoft.com/en-gb/download/details.aspx?id=48145");
                 }
             }
             catch (UnauthorizedAccessException)
@@ -87,6 +89,13 @@ namespace NextteamBr
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var frm_Empresa = new Frm_Empresas();
+
+            frm_Empresa.Show();
         }
     }
 }

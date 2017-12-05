@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using Dapper;
 using System.Collections.Generic;
 
@@ -136,6 +135,21 @@ namespace NextteamBr
             catch (Exception e)
             {
                 throw new Exception(e.Message);
+            }
+        }
+
+        public static void SetarEmpresa(int IDMotorista, int IDEmpresa)
+        {
+            var sql = $@"update Motorista set IDEmpresa=@Empresa where ID=@ID";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { ID = IDMotorista, Empresa = IDEmpresa });
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro:" + e.Message);
             }
         }
 

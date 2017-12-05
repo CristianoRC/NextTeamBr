@@ -8,7 +8,7 @@ namespace NextteamBr
         public int IdMotorista { get; set; }
         public string CidadeInicial { get; set; }
         public string CidadeDestino { get; set; }
-        public double KmRodado { get; set; }
+        public uint KmRodado { get; set; }
         public string Carga { get; set; }
         public double Dano { get; set; }
         public DateTime DataFinalFrete { get; private set; }

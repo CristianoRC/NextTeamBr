@@ -18,8 +18,6 @@ namespace NextteamBr
 
         private void Btm_Logar_Click(object sender, EventArgs e)
         {
-
-
             if (!String.IsNullOrWhiteSpace(Txt_Login.Text) && !String.IsNullOrWhiteSpace(Txt_Senha.Text))
             {
                 var usuario = new Motorista(Txt_Login.Text, Txt_Senha.Text);
@@ -32,7 +30,7 @@ namespace NextteamBr
 
                     var usuarioTemp = MotoristaService.ObterInformacoes(Txt_Login.Text);
 
-                    ChamarFormularioDeEscolha(usuarioTemp.ID, usuarioTemp.Admin);
+                    ChamarFormularioDeEscolha(usuarioTemp.ID, usuarioTemp.Admin,usuarioTemp.IDEmpresa);
                 }
                 else
                 {
@@ -46,9 +44,9 @@ namespace NextteamBr
         }
 
 
-        private void ChamarFormularioDeEscolha(int p_ID, bool admin)
+        private void ChamarFormularioDeEscolha(int p_ID, bool admin,int empresa)
         {
-            var frm_Principal = new Frm_Escolha(p_ID, admin);
+            var frm_Principal = new Frm_Escolha(p_ID, admin,empresa);
             this.Visible = false;
             frm_Principal.ShowDialog();
             this.Dispose();
