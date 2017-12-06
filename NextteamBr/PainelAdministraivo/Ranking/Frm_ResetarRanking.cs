@@ -20,7 +20,7 @@ namespace NextteamBr.PainelAdministraivo
             }
             else if (senha == "496f366709619f761f5802d1ece99e7d" && radioAnual.Checked)
             {
-                RankingService.Resetar(ERanking.Mensal);
+                RankingService.Resetar(ERanking.Anual);
                 MessageBox.Show("O ranking anual foi resetado com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
