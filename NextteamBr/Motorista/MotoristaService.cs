@@ -104,6 +104,23 @@ namespace NextteamBr
             }
         }
 
+        public static IEnumerable<Motorista> ListarSemEmpresa()
+        {
+            var sql = $"SELECT ID,Nome,Login,Ativo,Admin FROM Motorista WHERE IDEmpresa = 0";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                var usuario = BancoDeDados.conexao.Query<Motorista>(sql);
+                BancoDeDados.fecharConexao();
+
+                return usuario;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public static IEnumerable<Motorista> ListarAtivos()
         {
             var sql = $"SELECT ID,Nome,Login,Ativo,Admin FROM Motorista WHERE Ativo = 1";

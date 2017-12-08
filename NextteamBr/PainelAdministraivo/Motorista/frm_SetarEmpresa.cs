@@ -1,5 +1,4 @@
 ﻿using System;
-using NextteamBr;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,13 +17,48 @@ namespace NextteamBr.PainelAdministraivo
 
         private void Frm_Ativar_Load(object sender, EventArgs e)
         {
-            Motoristas = MotoristaService.Listar().ToList();
+            Motoristas = MotoristaService.ListarSemEmpresa().ToList();
             Empresas = EmpresaService.Listar().ToList();
 
-            AtualizarComboBox();
+            AtualizarComboEmpresas();
+            AtualizarComboMotoristas();
         }
 
-        private void Btm_Ativar_Click(object sender, EventArgs e)
+        private void AtualizarComboEmpresas()
+        {
+            foreach (var item in Empresas)
+            {
+                comboEmpresa.Items.Add(item.Nome);
+            }
+        }
+
+        private void AtualizarComboMotoristas()
+        {
+            comboMotoristas.Items.Clear();
+
+            foreach (var item in Motoristas)
+            {
+                var valorCombobox = $"{item.ID} - {item.Nome}";
+
+                comboMotoristas.Items.Add(valorCombobox);
+            }
+        }
+
+        private void checkMotorista_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkMotorista.Checked)
+            {
+                Motoristas = MotoristaService.ListarSemEmpresa().ToList();
+                AtualizarComboMotoristas();
+            }
+            else
+            {
+                Motoristas = MotoristaService.Listar().ToList();
+                AtualizarComboMotoristas();
+            }
+        }
+
+        private void Btm_Setar_Click(object sender, EventArgs e)
         {
             if (comboMotoristas.Text.Length != 0)
             {
@@ -62,21 +96,6 @@ namespace NextteamBr.PainelAdministraivo
             else
             {
                 MessageBox.Show("Selecione um motoristas para setar a empresa!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void AtualizarComboBox()
-        {
-            foreach (var item in Empresas)
-            {
-                comboEmpresa.Items.Add(item.Nome);
-            }
-
-            foreach (var item in Motoristas)
-            {
-                var valorCombobox = $"{item.ID} - {item.Nome}";
-
-                comboMotoristas.Items.Add(valorCombobox);
             }
         }
     }
