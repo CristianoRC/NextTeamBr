@@ -53,5 +53,14 @@ namespace NextteamBr.PainelAdministraivo
             frm_Empresa.MdiParent = this;
             frm_Empresa.Show();
         }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm_ExcluirMotorista = new frm_ExcluirMotorista();
+
+            frm_ExcluirMotorista.MdiParent = this;
+
+            frm_ExcluirMotorista.Show();
+        }
     }
 }

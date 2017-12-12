@@ -125,6 +125,12 @@
     <Compile Include="Motorista\Frm_RedefinirSenha.Designer.cs">
       <DependentUpon>Frm_RedefinirSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\frm_ExcluirMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PainelAdministraivo\Motorista\frm_ExcluirMotorista.Designer.cs">
+      <DependentUpon>frm_ExcluirMotorista.cs</DependentUpon>
+    </Compile>
     <Compile Include="PainelAdministraivo\Motorista\frm_SetarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Motorista\Frm_RedefinirSenha.resx">
       <DependentUpon>Frm_RedefinirSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PainelAdministraivo\Motorista\frm_ExcluirMotorista.resx">
+      <DependentUpon>frm_ExcluirMotorista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PainelAdministraivo\Motorista\frm_SetarEmpresa.resx">
       <DependentUpon>frm_SetarEmpresa.cs</DependentUpon>

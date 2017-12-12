@@ -35,11 +35,12 @@
             this.relatórioDeFretesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ativarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desativarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rankingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +62,8 @@
             this.ativarToolStripMenuItem,
             this.desativarToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.resetarSenhaToolStripMenuItem});
+            this.resetarSenhaToolStripMenuItem,
+            this.excluirToolStripMenuItem});
             this.motoristaToolStripMenuItem.Name = "motoristaToolStripMenuItem";
             this.motoristaToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.motoristaToolStripMenuItem.Text = "&Motorista";
@@ -87,19 +89,19 @@
             this.desativarToolStripMenuItem.Text = "&Desativar";
             this.desativarToolStripMenuItem.Click += new System.EventHandler(this.desativarToolStripMenuItem_Click);
             // 
-            // resetarSenhaToolStripMenuItem
-            // 
-            this.resetarSenhaToolStripMenuItem.Name = "resetarSenhaToolStripMenuItem";
-            this.resetarSenhaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.resetarSenhaToolStripMenuItem.Text = "&Resetar Senha";
-            this.resetarSenhaToolStripMenuItem.Click += new System.EventHandler(this.resetarSenhaToolStripMenuItem_Click);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
             this.toolStripMenuItem1.Text = "Setar Empresa";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // resetarSenhaToolStripMenuItem
+            // 
+            this.resetarSenhaToolStripMenuItem.Name = "resetarSenhaToolStripMenuItem";
+            this.resetarSenhaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.resetarSenhaToolStripMenuItem.Text = "&Resetar Senha";
+            this.resetarSenhaToolStripMenuItem.Click += new System.EventHandler(this.resetarSenhaToolStripMenuItem_Click);
             // 
             // rankingToolStripMenuItem
             // 
@@ -115,6 +117,13 @@
             this.resetarToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.resetarToolStripMenuItem.Text = "&Resetar";
             this.resetarToolStripMenuItem.Click += new System.EventHandler(this.resetarToolStripMenuItem_Click);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // Frm_MDI
             // 
@@ -151,6 +160,7 @@
         private System.Windows.Forms.ToolStripMenuItem rankingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }
 

@@ -87,6 +87,135 @@ namespace NextteamBr
             }
         }
 
+        public static void SetarEmpresa(int IDMotorista, int IDEmpresa)
+        {
+            var sql = $@"update Motorista set IDEmpresa=@Empresa where ID=@ID";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { ID = IDMotorista, Empresa = IDEmpresa });
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro:" + e.Message);
+            }
+        }
+
+        public static void Ativar(int id)
+        {
+            var sql = "update Motorista set Ativo=true where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        public static void Desativar(int id)
+        {
+            var sql = "update Motorista set Ativo=false where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        public static void Deletar(int id)
+        {
+            var sql = @"DELETE FROM Motorista WHERE ID = @IDMotorista;
+                        DELETE FROM Ranking WHERE IDMotorista = @IDMotorista;
+                        DELETE FROM RankingAno WHERE IDMotorista = @IDMotorista; ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id });
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        public static void RedefinirSenha(int id, string senha)
+        {
+            var sql = "update Motorista set senha=@senha where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, senha = Ferramentas.getMD5Hash(senha) });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        public static void ResetarSenha(int id)
+        {
+            var sql = "update Motorista set senha=@senha where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, senha = Ferramentas.getMD5Hash("123456") });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        public static void AletrarNome(int id, string Nome)
+        {
+            var sql = "update Motorista set Nome=@Nome where ID = @IDMotorista ";
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, Nome = Nome });
+
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
+            }
+        }
+
+        private static void InsetirNoRanking(int IDusuario)
+        {
+            var sql = $@"INSERT INTO Ranking(IDMotorista, Pontos) VALUES (@IDMotorista,0);
+                         INSERT INTO RankingAno(IDMotorista, Pontos) VALUES (@IDMotorista,0)";
+
+            try
+            {
+                BancoDeDados.abrirConexao();
+                BancoDeDados.conexao.Execute(sql, new { IDMotorista = IDusuario });
+                BancoDeDados.fecharConexao();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro:" + e.Message);
+            }
+        }
+
         public static IEnumerable<Motorista> Listar()
         {
             var sql = $"SELECT ID,Nome,Login,Ativo,Admin FROM Motorista";
@@ -152,119 +281,6 @@ namespace NextteamBr
             catch (Exception e)
             {
                 throw new Exception(e.Message);
-            }
-        }
-
-        public static void SetarEmpresa(int IDMotorista, int IDEmpresa)
-        {
-            var sql = $@"update Motorista set IDEmpresa=@Empresa where ID=@ID";
-            try
-            {
-                BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sql, new { ID = IDMotorista, Empresa = IDEmpresa });
-                BancoDeDados.fecharConexao();
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro:" + e.Message);
-            }
-        }
-
-        public static void Ativar(int id)
-        {
-            var sql = "update Motorista set Ativo=true where ID = @IDMotorista ";
-            try
-            {
-                BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id });
-
-                BancoDeDados.fecharConexao();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
-            }
-        }
-
-        public static void Desativar(int id)
-        {
-            var sql = "update Motorista set Ativo=false where ID = @IDMotorista ";
-            try
-            {
-                BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id });
-
-                BancoDeDados.fecharConexao();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
-            }
-        }
-
-        public static void RedefinirSenha(int id, string senha)
-        {
-            var sql = "update Motorista set senha=@senha where ID = @IDMotorista ";
-            try
-            {
-                BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, senha = Ferramentas.getMD5Hash(senha) });
-
-                BancoDeDados.fecharConexao();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
-            }
-        }
-
-        public static void ResetarSenha(int id)
-        {
-            var sql = "update Motorista set senha=@senha where ID = @IDMotorista ";
-            try
-            {
-                BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, senha = Ferramentas.getMD5Hash("123456") });
-
-                BancoDeDados.fecharConexao();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
-            }
-        }
-
-        public static void AletrarNome(int id, string Nome)
-        {
-            var sql = "update Motorista set Nome=@Nome where ID = @IDMotorista ";
-            try
-            {
-                BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sql, new { IDMotorista = id, Nome = Nome });
-
-                BancoDeDados.fecharConexao();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Ocorreu um erro! Tire uma print e mande para os ADM's. {ex.Message}");
-            }
-        }
-
-        private static void InsetirNoRanking(int IDusuario)
-        {
-            var sqlMes = $@"INSERT INTO Ranking(IDMotorista, Pontos) VALUES (@IDMotorista,0)";
-            var sqlAno = $@"INSERT INTO RankingAno(IDMotorista, Pontos) VALUES (@IDMotorista,0)";
-
-            try
-            {
-                BancoDeDados.abrirConexao();
-                BancoDeDados.conexao.Execute(sqlAno, new { IDMotorista = IDusuario });
-                BancoDeDados.conexao.Execute(sqlMes, new { IDMotorista = IDusuario });
-                BancoDeDados.fecharConexao();
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro:" + e.Message);
             }
         }
     }
