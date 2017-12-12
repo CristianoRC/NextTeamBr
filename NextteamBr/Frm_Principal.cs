@@ -17,6 +17,7 @@ namespace NextteamBr
 
         int ControleVelocidade = 0;
         int IDMotorista;
+        int IDEmpresa;
         float VelocidadeAtual = 0;
         double v_OdometroInical;
 
@@ -25,11 +26,12 @@ namespace NextteamBr
 
         public Ets2SdkTelemetry Telemetry;
 
-        public Frm_Principal(int p_IDmotorista)
+        public Frm_Principal(int p_IDmotorista, int Empresa)
         {
             InitializeComponent();
 
             IDMotorista = p_IDmotorista;
+            IDEmpresa = Empresa;
 
             Telemetry = new Ets2SdkTelemetry();
             Telemetry.Data += Telemetry_Data;
@@ -235,6 +237,14 @@ namespace NextteamBr
                 ControleVelocidade = 0;
 
                 Multar();
+            }
+        }
+
+        private void Frm_Principal_Load(object sender, EventArgs e)
+        {
+            if (IDEmpresa == 2)
+            {
+                panel1.BackgroundImage = Properties.Resources.FundoFTT;
             }
         }
     }

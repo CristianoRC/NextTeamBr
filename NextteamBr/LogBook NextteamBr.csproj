@@ -301,6 +301,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\FundoFTT.png" />
     <None Include="Resources\Ftt.png" />
     <None Include="Resources\Header2.png" />
     <None Include="Resources\office.png" />

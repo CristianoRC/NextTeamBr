@@ -20,7 +20,7 @@ namespace NextteamBr
 
         private void Btm_LogBook_Click(object sender, EventArgs e)
         {
-            var frm_Principal = new Frm_Principal(IdUsuario);
+            var frm_Principal = new Frm_Principal(IdUsuario, IDEmpresa);
 
             frm_Principal.Show();
         }

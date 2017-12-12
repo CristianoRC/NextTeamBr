@@ -11,12 +11,7 @@ namespace NextteamBr
             InitializeComponent();
         }
 
-        private void Btm_Sair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Btm_Logar_Click(object sender, EventArgs e)
+        private void logar()
         {
             if (!String.IsNullOrWhiteSpace(Txt_Login.Text) && !String.IsNullOrWhiteSpace(Txt_Senha.Text))
             {
@@ -30,7 +25,7 @@ namespace NextteamBr
 
                     var usuarioTemp = MotoristaService.ObterInformacoes(Txt_Login.Text);
 
-                    ChamarFormularioDeEscolha(usuarioTemp.ID, usuarioTemp.Admin,usuarioTemp.IDEmpresa);
+                    ChamarFormularioDeEscolha(usuarioTemp.ID, usuarioTemp.Admin, usuarioTemp.IDEmpresa);
                 }
                 else
                 {
@@ -43,10 +38,19 @@ namespace NextteamBr
             }
         }
 
-
-        private void ChamarFormularioDeEscolha(int p_ID, bool admin,int empresa)
+        private void Btm_Sair_Click(object sender, EventArgs e)
         {
-            var frm_Principal = new Frm_Escolha(p_ID, admin,empresa);
+            Application.Exit();
+        }
+
+        private void Btm_Logar_Click(object sender, EventArgs e)
+        {
+            logar();
+        }
+
+        private void ChamarFormularioDeEscolha(int p_ID, bool admin, int empresa)
+        {
+            var frm_Principal = new Frm_Escolha(p_ID, admin, empresa);
             this.Visible = false;
             frm_Principal.ShowDialog();
             this.Dispose();
@@ -107,6 +111,18 @@ namespace NextteamBr
             var frm_Cadastro = new Frm_Cadastro();
 
             frm_Cadastro.ShowDialog();
+        }
+
+        private void Txt_Senha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                logar();
+        }
+
+        private void Txt_Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                logar();    
         }
     }
 }

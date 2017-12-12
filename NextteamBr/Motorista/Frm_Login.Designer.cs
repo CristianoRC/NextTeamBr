@@ -67,6 +67,7 @@
             this.Txt_Login.Name = "Txt_Login";
             this.Txt_Login.Size = new System.Drawing.Size(264, 20);
             this.Txt_Login.TabIndex = 2;
+            this.Txt_Login.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Login_KeyPress);
             // 
             // Txt_Senha
             // 
@@ -75,6 +76,7 @@
             this.Txt_Senha.Size = new System.Drawing.Size(264, 20);
             this.Txt_Senha.TabIndex = 3;
             this.Txt_Senha.UseSystemPasswordChar = true;
+            this.Txt_Senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Senha_KeyPress);
             // 
             // Btm_Logar
             // 

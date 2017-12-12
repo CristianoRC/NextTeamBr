@@ -149,7 +149,8 @@
             this.MaximizeBox = false;
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LogBook Zero Hora";
+            this.Text = "LogBook Eletrônico";
+            this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_EmpresaDestino)).EndInit();
