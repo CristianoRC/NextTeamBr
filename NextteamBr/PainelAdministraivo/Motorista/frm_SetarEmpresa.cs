@@ -67,7 +67,7 @@ namespace NextteamBr.PainelAdministraivo
 
                 if (empresa.ID == 1)
                 {
-                    if (Ferramentas.getMD5Hash(txt_senha.Text) == "1b780e134393c9e42d8fa00950f4823b")
+                    if (Ferramentas.getMD5Hash(txt_senha.Text) == "f4220089b2bca783ef7a47dfdf68fe54")
                     {
                         MotoristaService.SetarEmpresa(motorista.ID, empresa.ID);
 
