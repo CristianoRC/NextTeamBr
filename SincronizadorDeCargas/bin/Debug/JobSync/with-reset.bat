@@ -1,1 +1,0 @@
-LoogBookSync.exe -reset ".\new_game.json" ".\game.sii"

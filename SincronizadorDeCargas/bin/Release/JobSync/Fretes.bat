@@ -1,1 +1,0 @@
-D:\NextTeamBr\SincronizadorDeCargas\bin\Release\JobSync\LoogBookSync.exe -reset  "C:\Users\Cristiano\AppData\Local\Temp\Cargas.json" "D:\NextTeamBr\JobSync\Release\game.sii"
