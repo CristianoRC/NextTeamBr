@@ -1,0 +1,188 @@
+/**
+* Daily UI :: 001
+* Design a sign up page, modal, form, app screen, etc.
+**/
+
+// Color Palette
+// Inspired by 'Adrift in Dreams' - Skyblue2u - Colourlovers.com
+
+$sunlit-sea: rgb(207,240,158);
+$sea-foaming: rgb(168,219,168);
+$sea-showing-green: rgb(121,189,154);
+$there-we-could-sail: rgb(59,134,134);
+$adrift-in-dreams: rgb(11,72,107);
+
+$lucky-sevens: rgb(119,119,119);
+$emptiness: rgb(255,255,255);
+
+// Additional Variables
+
+$modal-width: 430px;
+$modal-shadow-opacity: .32;
+$modal-inner-shadow-opacity: .2;
+$modal-shadow-color: rgb(0,0,0);
+$modal-shadow-blur: 27px;
+$modal-shadow-offset: 34px;
+
+// Gradient Mixins
+
+@mixin primary-gradient {   // $sea-showing-green->$there-we-could-sail
+  background: $there-we-could-sail;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2I4Njg2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc5YmQ5YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(-45deg,  rgba($there-we-could-sail,1) 0%, rgba($sea-showing-green,1) 100%);
+  background: -webkit-linear-gradient(-45deg,  rgba($there-we-could-sail,1) 0%,rgba($sea-showing-green,1) 100%);
+  background: linear-gradient(135deg,  rgba($there-we-could-sail,1) 0%,rgba($sea-showing-green,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str($there-we-could-sail)}', endColorstr='#{ie-hex-str($sea-showing-green)}',GradientType=1 );
+}
+
+@mixin button-gradient {  // $there-we-could-sail->$adrift-in-dreams
+  background: $there-we-could-sail;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2I4Njg2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBiNDg2YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(-45deg,  rgba($there-we-could-sail,1) 0%, rgba($adrift-in-dreams,1) 100%);
+  background: -webkit-linear-gradient(-45deg,  rgba($there-we-could-sail,1) 0%,rgba($adrift-in-dreams,1) 100%);
+  background: linear-gradient(135deg,  rgba($there-we-could-sail,1) 0%,rgba($adrift-in-dreams,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str($there-we-could-sail)}', endColorstr='#{ie-hex-str($adrift-in-dreams)}',GradientType=1 );
+}
+
+/**
+* Style Declarations
+**/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url('https://res.cloudinary.com/exards/image/upload/v1447941004/Majestic_mountains_1920x1080-blue_rr4ucd.jpg');
+	background-size: cover;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+#page-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  #modal-wrapper {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+#modal {
+  margin: 0 auto;
+  box-shadow: 0px $modal-shadow-offset $modal-shadow-blur rgba($modal-shadow-color,$modal-shadow-opacity), inset 0 0 1px rgba($modal-shadow-color, $modal-inner-shadow-opacity);;
+  max-width: $modal-width;
+  background: $emptiness;
+}
+
+.box {
+  @include primary-gradient;
+	padding: 40px;
+  text-align: center;
+  position: relative;
+  .box-header {
+    font-size: 1.75em;
+    font-weight: 300;
+    color: white;
+    text-align: left;
+    margin: 0 0 36px;
+  }
+	svg {
+		fill: white;
+	}
+}
+
+button.proceed {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  color: $emptiness;
+  @include button-gradient;
+  border: 0;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  i {
+    font-size: .8em;
+  }
+}
+
+#login-form {
+  padding: 40px;
+  input {
+    border: 1px solid #ddd;
+    color: $sea-showing-green;
+  }
+  label {
+    color: $lucky-sevens;
+  }
+}
+
+#register-form {
+  input {
+    border: 1px solid $emptiness;
+    color: $emptiness - #111;
+  }
+  label {
+    color: $emptiness;
+  }
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 20px 0 6px;
+  font-family: 'Proxima Nova', sans-serif;
+  &:first-child {
+		margin-top: 0;
+	}
+  .tip {
+    float: right;
+		font-size: 13px;
+		text-decoration: underline;
+		cursor: pointer;
+		color: #3B8686;
+		font-weight: bold;
+  }
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background: transparent;
+}
+
+#toggle-tabs {
+  display: table;
+  width: 100%;
+  .tab {
+    font-size: 1em;
+    display: table-cell;
+    width: 50%;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    &#toggle-login {
+      color: $sea-showing-green;
+    }
+    &#toggle-register {
+      color: $emptiness;
+      background: $sea-showing-green;
+    }
+  }
+}
+
+#branding-small {
+  position: absolute;
+  top: 36px; right: 36px;
+  svg {
+		fill: white;
+	}
+}

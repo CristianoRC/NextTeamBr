@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Zero Hora Virtual</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+  <div id="page-wrapper">
+    <div id="modal-wrapper">
+      <div id="modal">
+        <div id="cards">
+          <div class="card" id="login">
+            <div class="box">
+                <div id="branding-small">
+                  </div>
+                <div class="box-header">Zero Hora Virtual</div>
+            </div>
+            <form id="login-form">
+              <label>Login
+              </label>
+              <input type="text" id="login" class="textbox">
+              <label>Senha
+              </label>
+              <input type="password" id="login-password" class="textbox">
+            </form>
+            <button type="submit" class="proceed">Logar
+              <i class="ion-ios-arrow-thin-right"></i>
+            </button>
+          </div>
+
+          <div class="card" id="register">
+            <div class="box">
+              <div id="branding-small">
+              </div>
+              <div class="box-header">Cadastro</div>
+              <form id="register-form">
+                <label>Usuario</label>
+                <input type="text" id="register-email" class="textbox">
+                <label>Senha</label>
+                <input type="password" id="register-password" class="textbox">
+                <label>Confirme a senha</label>
+                <input type="password" id="register-password-conf" class="textbox">
+              </form>
+            </div>
+            <button type="submit" class="proceed">Cadastrar
+              <i class="ion-ios-arrow-thin-right"></i>
+            </button>
+          </div>
+        </div>
+        <div id="toggle-tabs">
+          <div class="tab" id="toggle-login">Login</div>
+          <div class="tab" id="toggle-register">Cadastro</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+  <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

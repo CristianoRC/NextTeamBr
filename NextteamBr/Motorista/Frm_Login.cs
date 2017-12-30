@@ -58,7 +58,6 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-
             var randon = new Random();
 
             var img = randon.Next(1, 5);

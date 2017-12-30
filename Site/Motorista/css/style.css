@@ -1,0 +1,167 @@
+/**
+* Daily UI :: 001
+* Design a sign up page, modal, form, app screen, etc.
+**/
+
+/**
+* Style Declarations
+**/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url("http://cdn.edgecast.steamstatic.com/steam/apps/304214/ss_01abd002bf5d681ecceca8bbb8d52717e1be2cc0.1920x1080.jpg");
+  background-size: cover;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+#page-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+#page-wrapper #modal-wrapper {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#modal {
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 34px 27px rgba(0, 0, 0, 0.32), inset 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 34px 27px rgba(0, 0, 0, 0.32), inset 0 0 1px rgba(0, 0, 0, 0.2);
+  max-width: 430px;
+  background: white;
+}
+
+.box {
+  background: #3b8686;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2I4Njg2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc5YmQ5YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: linear-gradient(135deg, #B71C1C 0%, #5e0505 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3B8686', endColorstr='#FF79BD9A', GradientType=1);
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.box .box-header {
+  font-size: 1.75em;
+  font-weight: 300;
+  color: white;
+  text-align: left;
+  margin: 0 0 36px;
+}
+
+.box svg {
+  fill: white;
+}
+
+button.proceed {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  color: white;
+  background: #B71C1C;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2I4Njg2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBiNDg2YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: linear-gradient(135deg, #B71C1C 0%, #680303 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3B8686', endColorstr='#FF0B486B', GradientType=1);
+  border: 0;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+button.proceed i {
+  font-size: .8em;
+}
+
+#login-form {
+  padding: 40px;
+}
+
+#login-form input {
+  border: 1px solid #ddd;
+  color: #B71C1C;
+}
+
+#login-form label {
+  color: #777777;
+}
+
+#register-form input {
+  border: 1px solid white;
+  color: #eeeeee;
+}
+
+#register-form label {
+  color: white;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 20px 0 6px;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+label:first-child {
+  margin-top: 0;
+}
+
+label .tip {
+  float: right;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #B71C1C;
+  font-weight: bold;
+}
+
+input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background: transparent;
+}
+
+#toggle-tabs {
+  display: table;
+  width: 100%;
+}
+
+#toggle-tabs .tab {
+  font-size: 1em;
+  display: table-cell;
+  width: 50%;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+#toggle-tabs .tab#toggle-login {
+  color: #B71C1C;
+}
+
+#toggle-tabs .tab#toggle-register {
+  color: white;
+  background: #B71C1C;
+}
+
+#branding-small {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+
+#branding-small svg {
+  fill: white;
+}

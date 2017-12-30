@@ -28,5 +28,10 @@ namespace NextteamBr.PainelAdministraivo
                 MessageBox.Show("Senha inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Frm_ResetarRanking_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

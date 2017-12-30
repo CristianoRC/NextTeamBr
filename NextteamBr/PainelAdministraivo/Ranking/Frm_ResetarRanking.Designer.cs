@@ -32,8 +32,8 @@
             this.btn_Zerar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioMes = new System.Windows.Forms.RadioButton();
             this.radioAnual = new System.Windows.Forms.RadioButton();
+            this.radioMes = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ranking";
             // 
+            // radioAnual
+            // 
+            this.radioAnual.AutoSize = true;
+            this.radioAnual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioAnual.Location = new System.Drawing.Point(120, 19);
+            this.radioAnual.Name = "radioAnual";
+            this.radioAnual.Size = new System.Drawing.Size(51, 17);
+            this.radioAnual.TabIndex = 5;
+            this.radioAnual.TabStop = true;
+            this.radioAnual.Text = "Anual";
+            this.radioAnual.UseVisualStyleBackColor = true;
+            // 
             // radioMes
             // 
             this.radioMes.AutoSize = true;
@@ -89,18 +101,6 @@
             this.radioMes.TabStop = true;
             this.radioMes.Text = "Mensal";
             this.radioMes.UseVisualStyleBackColor = true;
-            // 
-            // radioAnual
-            // 
-            this.radioAnual.AutoSize = true;
-            this.radioAnual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioAnual.Location = new System.Drawing.Point(120, 19);
-            this.radioAnual.Name = "radioAnual";
-            this.radioAnual.Size = new System.Drawing.Size(51, 17);
-            this.radioAnual.TabIndex = 5;
-            this.radioAnual.TabStop = true;
-            this.radioAnual.Text = "Anual";
-            this.radioAnual.UseVisualStyleBackColor = true;
             // 
             // Frm_ResetarRanking
             // 
@@ -115,6 +115,7 @@
             this.Name = "Frm_ResetarRanking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resetar Ranking - Mensal";
+            this.Load += new System.EventHandler(this.Frm_ResetarRanking_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -65,32 +65,9 @@ namespace NextteamBr.PainelAdministraivo
                 var motorista = Motoristas[comboMotoristas.SelectedIndex];
                 var empresa = Empresas[comboEmpresa.SelectedIndex];
 
-                if (empresa.ID == 1)
-                {
-                    if (Ferramentas.getMD5Hash(txt_senha.Text) == "f4220089b2bca783ef7a47dfdf68fe54")
-                    {
-                        MotoristaService.SetarEmpresa(motorista.ID, empresa.ID);
+                MotoristaService.SetarEmpresa(motorista.ID, empresa.ID);
 
-                        MessageBox.Show("Empresa setada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Senha inválida!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else if (empresa.ID == 2)
-                {
-                    if (Ferramentas.getMD5Hash(txt_senha.Text) == "4dfb85a70638e689d8bbd141b53fa22f")
-                    {
-                        MotoristaService.SetarEmpresa(motorista.ID, empresa.ID);
-
-                        MessageBox.Show("Empresa setada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Senha inválida!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                MessageBox.Show("Empresa setada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
