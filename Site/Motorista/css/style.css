@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background: url("http://cdn.edgecast.steamstatic.com/steam/apps/304214/ss_01abd002bf5d681ecceca8bbb8d52717e1be2cc0.1920x1080.jpg");
+  background-image: url("../img/bg.jpg");
   background-size: cover;
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
 }
@@ -98,6 +98,11 @@ button.proceed i {
   color: #eeeeee;
 }
 
+#register-form selec {
+  border: 1px solid #ddd;
+  color: #B71C1C;
+}
+
 #register-form label {
   color: white;
 }
@@ -130,6 +135,16 @@ input {
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
   font-size: 1em;
   background: transparent;
+}
+select{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background: transparent;
+  color: white;
 }
 
 #toggle-tabs {

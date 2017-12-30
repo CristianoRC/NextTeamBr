@@ -15,16 +15,16 @@
 </head>
 
 <body>
-
+  <div class="background-image"></div>
   <div id="page-wrapper">
     <div id="modal-wrapper">
       <div id="modal">
         <div id="cards">
           <div class="card" id="login">
             <div class="box">
-                <div id="branding-small">
-                  </div>
-                <div class="box-header">Zero Hora Virtual</div>
+              <div id="branding-small">
+              </div>
+              <div class="box-header">Zero Hora Virtual</div>
             </div>
             <form id="login-form">
               <label>Login
@@ -45,12 +45,19 @@
               </div>
               <div class="box-header">Cadastro</div>
               <form id="register-form">
-                <label>Usuario</label>
-                <input type="text" id="register-email" class="textbox">
+                <label>Nome</label>
+                <input type="text" id="nome" name="nome" class="textbox">
+                <label>Login</label>
+                <input type="text" id="login" name="login" class="textbox">
                 <label>Senha</label>
-                <input type="password" id="register-password" class="textbox">
+                <input type="password" id="senha" name="senha" class="textbox">
                 <label>Confirme a senha</label>
-                <input type="password" id="register-password-conf" class="textbox">
+                <input type="password" id="senha-conf" class="textbox">
+                <label class="form-control">Empresa</label>
+                <select class="form-control" id="sel1">
+                  <option style="text-align: left">Zero Hora Virtual</option>
+                  <option style="text-align: left">FTT</option>
+                </select>
               </form>
             </div>
             <button type="submit" class="proceed">Cadastrar
