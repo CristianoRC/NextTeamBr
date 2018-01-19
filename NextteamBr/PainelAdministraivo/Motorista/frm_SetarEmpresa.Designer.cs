@@ -29,22 +29,18 @@
         private void InitializeComponent()
         {
             this.info = new System.Windows.Forms.GroupBox();
-            this.txt_senha = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.checkMotorista = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboEmpresa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboMotoristas = new System.Windows.Forms.ComboBox();
             this.Btm_Setar = new System.Windows.Forms.Button();
-            this.checkMotorista = new System.Windows.Forms.CheckBox();
             this.info.SuspendLayout();
             this.SuspendLayout();
             // 
             // info
             // 
             this.info.Controls.Add(this.checkMotorista);
-            this.info.Controls.Add(this.txt_senha);
-            this.info.Controls.Add(this.label3);
             this.info.Controls.Add(this.label2);
             this.info.Controls.Add(this.comboEmpresa);
             this.info.Controls.Add(this.label1);
@@ -52,27 +48,23 @@
             this.info.Controls.Add(this.Btm_Setar);
             this.info.Location = new System.Drawing.Point(20, 12);
             this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(528, 192);
+            this.info.Size = new System.Drawing.Size(528, 171);
             this.info.TabIndex = 7;
             this.info.TabStop = false;
             this.info.Text = "Informações";
             // 
-            // txt_senha
+            // checkMotorista
             // 
-            this.txt_senha.Location = new System.Drawing.Point(71, 119);
-            this.txt_senha.Name = "txt_senha";
-            this.txt_senha.Size = new System.Drawing.Size(309, 20);
-            this.txt_senha.TabIndex = 13;
-            this.txt_senha.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Senha";
+            this.checkMotorista.AutoSize = true;
+            this.checkMotorista.Checked = true;
+            this.checkMotorista.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkMotorista.Location = new System.Drawing.Point(71, 121);
+            this.checkMotorista.Name = "checkMotorista";
+            this.checkMotorista.Size = new System.Drawing.Size(183, 17);
+            this.checkMotorista.TabIndex = 14;
+            this.checkMotorista.Text = "Somente motoristas sem empresa";
+            this.checkMotorista.UseVisualStyleBackColor = true;
+            this.checkMotorista.CheckedChanged += new System.EventHandler(this.checkMotorista_CheckedChanged);
             // 
             // label2
             // 
@@ -123,24 +115,11 @@
             this.Btm_Setar.UseVisualStyleBackColor = true;
             this.Btm_Setar.Click += new System.EventHandler(this.Btm_Setar_Click);
             // 
-            // checkMotorista
-            // 
-            this.checkMotorista.AutoSize = true;
-            this.checkMotorista.Checked = true;
-            this.checkMotorista.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkMotorista.Location = new System.Drawing.Point(71, 162);
-            this.checkMotorista.Name = "checkMotorista";
-            this.checkMotorista.Size = new System.Drawing.Size(183, 17);
-            this.checkMotorista.TabIndex = 14;
-            this.checkMotorista.Text = "Somente motoristas sem empresa";
-            this.checkMotorista.UseVisualStyleBackColor = true;
-            this.checkMotorista.CheckedChanged += new System.EventHandler(this.checkMotorista_CheckedChanged);
-            // 
             // Frm_SetarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 213);
+            this.ClientSize = new System.Drawing.Size(560, 190);
             this.Controls.Add(this.info);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Frm_SetarEmpresa";
@@ -156,8 +135,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox info;
-        private System.Windows.Forms.TextBox txt_senha;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboEmpresa;
         private System.Windows.Forms.Label label1;

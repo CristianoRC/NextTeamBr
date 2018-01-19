@@ -12,20 +12,13 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\ob
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\LogBookEletronico-Ets2\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
-E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
-E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
-E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
 E:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.dll
-E:\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.dll
 E:\NextTeamBr\NextteamBr\bin\x86\Release\Ets2SdkClient.pdb
-E:\NextTeamBr\NextteamBr\bin\x86\Release\Newtonsoft.Json.xml
 E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csprojResolveAssemblyReference.cache
 E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Login.resources
 E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Principal.resources
 E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Properties.Resources.resources
 E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
-E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
-E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.pdb
@@ -41,9 +34,6 @@ C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Releas
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.csproj.GenerateResource.Cache
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
 C:\Users\Cristiano Cunha\Downloads\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.pdb
-E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe
-E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.pdb
-E:\NextTeamBr\NextteamBr\bin\x86\Release\SincronizadorDeCargas.exe.config
 E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Escolha.resources
 \\VBOXSVR\Projetos\NextTeamBr\NextteamBr\bin\x86\Release\LogBook NextteamBr.exe.config
 \\VBOXSVR\Projetos\NextTeamBr\NextteamBr\obj\x86\Release\LogBook NextteamBr.exe
@@ -92,3 +82,25 @@ D:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.pdb
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_SetarEmpresa.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Empresas.resources
 D:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.frm_ExcluirMotorista.resources
+E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook Zero Hora.exe.config
+E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.exe
+E:\NextTeamBr\NextteamBr\obj\x86\Release\LogBook Zero Hora.pdb
+E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook Zero Hora.exe
+E:\NextTeamBr\NextteamBr\bin\x86\Release\LogBook Zero Hora.pdb
+E:\NextTeamBr\NextteamBr\bin\x86\Release\Dapper.dll
+E:\NextTeamBr\NextteamBr\bin\x86\Release\MySql.Data.dll
+E:\NextTeamBr\NextteamBr\bin\x86\Release\Dapper.xml
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Empresas.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_AlterarNome.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RedefinirSenha.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.frm_ExcluirMotorista.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_SetarEmpresa.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarSenha.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_InformacoesFrete.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Desativar.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_Ativar.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_MDI.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.PainelAdministraivo.Frm_ResetarRanking.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_RankingMotoristas.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_Cadastro.resources
+E:\NextTeamBr\NextteamBr\obj\x86\Release\NextteamBr.Frm_InformacoesPessoais.resources

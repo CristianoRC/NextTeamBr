@@ -35,13 +35,17 @@ namespace NextteamBr
         {
             var idEmpresa = Empresas[comboEmpresas.SelectedIndex].ID;
 
-            if (idEmpresa != 1)
+            if (idEmpresa == 1)
+            {
+                pictureEmpresa.BackgroundImage = NextteamBr.Properties.Resources.Logo;
+            }
+            else if (idEmpresa == 2)
             {
                 pictureEmpresa.BackgroundImage = NextteamBr.Properties.Resources.Ftt;
             }
             else
             {
-                pictureEmpresa.BackgroundImage = NextteamBr.Properties.Resources.Logo;
+                pictureEmpresa.BackgroundImage = NextteamBr.Properties.Resources.TC_Log;
             }
 
             lbl_NumeroMotoristas.Text = EmpresaService.ObterNumeroDeMembros(idEmpresa).ToString();

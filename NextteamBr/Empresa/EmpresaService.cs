@@ -56,9 +56,9 @@ namespace NextteamBr
 
                 return numeroDeMotoristas;
             }
-            catch (Exception ex)
+            catch
             {
-                throw new Exception($"Erro! entre em conato com o desenvolvedor:{ex.Message}");
+                return 0;
             }
         }
 
@@ -73,9 +73,9 @@ namespace NextteamBr
 
                 return numeroDeMotoristas;
             }
-            catch (Exception ex)
+            catch
             {
-                throw new Exception($"Erro! entre em conato com o desenvolvedor:{ex.Message}");
+                return 0;
             }
         }
     }

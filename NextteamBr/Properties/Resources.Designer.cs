@@ -404,6 +404,16 @@ namespace NextteamBr.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TC_Log {
+            get {
+                object obj = ResourceManager.GetObject("TC_Log", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tela {
             get {
                 object obj = ResourceManager.GetObject("Tela", resourceCulture);
