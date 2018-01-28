@@ -70,3 +70,34 @@ C:/Users/Cristiano Cunha/Downloads/Projetos/LogBookEletronico-Ets2/NextteamBr/ob
 /home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/NextteamBr.Frm_Login.resources
 /home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/NextteamBr.Frm_Principal.resources
 /home/cristiano/Projetos/NextTeamBr/NextteamBr/obj/Debug/LogBook NextteamBr.csproj.GenerateResource.Cache
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\LogBook Zero Hora.exe.config
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\LogBook Zero Hora.exe
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\LogBook Zero Hora.pdb
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\Dapper.dll
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\Ets2SdkClient.dll
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\MySql.Data.dll
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\Ets2SdkClient.pdb
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\bin\Debug\Dapper.xml
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.csprojResolveAssemblyReference.cache
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_Empresas.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_Escolha.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_AlterarNome.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_RedefinirSenha.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.frm_ExcluirMotorista.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.Frm_SetarEmpresa.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.Frm_ResetarSenha.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.Frm_InformacoesFrete.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.Frm_Desativar.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.Frm_Ativar.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.Frm_MDI.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.PainelAdministraivo.Frm_ResetarRanking.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_RankingMotoristas.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_Cadastro.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_InformacoesPessoais.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_Login.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Frm_Principal.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\NextteamBr.Properties.Resources.resources
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.GenerateResource.Cache
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\LogBook NextteamBr.csproj.CoreCompileInputs.cache
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\LogBook Zero Hora.exe
+C:\Users\Deivid\Source\Repos\NextTeamBr\NextteamBr\obj\Debug\LogBook Zero Hora.pdb

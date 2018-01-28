@@ -58,6 +58,12 @@ namespace NextteamBr
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
+            if(MessageBox.Show("Aplicativo desabilitado, utilize o novo app!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                var link = "http://zerohoravirtual.com/index.php?p=app";
+                Process.Start(link);
+                Application.Exit();
+            }
             var randon = new Random();
 
             var img = randon.Next(1, 5);

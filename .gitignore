@@ -48,3 +48,5 @@ Temporary Items
 
 #Pastas
 NextteamBr/bin/
+/Ets2SdkClient/obj/Release
+/.vs
